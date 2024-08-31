@@ -4,6 +4,8 @@ import { ThemeProvider } from 'styled-components';
 import { theme } from './styles/theme';
 import GlobalStyle from './styles/GlobalStyle';
 
+import BreakpointDebug from './components/ui/BreakpointDebug';
+
 import Home from './pages/Home';
 
 export default class App extends Component {
@@ -11,6 +13,7 @@ export default class App extends Component {
     return (
       <ThemeProvider theme={theme}>
         <GlobalStyle />
+        <BreakpointDebug />
         <Home />
       </ThemeProvider>
     );

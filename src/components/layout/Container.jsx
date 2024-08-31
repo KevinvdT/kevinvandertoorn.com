@@ -1,20 +1,38 @@
 import styled from 'styled-components';
 
-const Container = styled.section`
-  max-width: 1200px;       // Ensures the container doesn't stretch too wide on larger screens
-  margin: 0 auto;          // Centers the container
-  padding: 2rem;           // Provides some spacing inside the container
-  display: flex;           // Flexbox layout for internal alignment
-  flex-direction: column;  // Stack children vertically by default
-  align-items: center;     // Centers children horizontally
+// PageContainer Component: Provides padding for the entire page
+const PageContainer = styled.main`
+  max-width: 71.25rem; // Sets maximum width for the entire page
+  /* padding: 0 2rem; Adds padding to the left and right sides */
+  margin: 0 auto; /* Centers the container */
+  padding: 0 4rem;
 
   @media (max-width: ${({ theme }) => theme.breakpoints.md}) {
-    padding: 1rem;         // Smaller padding on smaller screens
+    padding: 0 2rem; /* Adjust side padding on medium screens */
   }
 
-  @media (max-width: ${({ theme }) => theme.breakpoints.sm}) {
-    padding: 0.5rem;       // Even smaller padding on mobile devices
+  @media (max-width: ${({ theme }) => theme.breakpoints.xs}) {
+    padding: 0 1rem; /* Adjust side padding on medium screens */
   }
 `;
 
-export default Container;
+// Container Component: Provides internal padding for its content
+const Container = styled.section`
+  //border: 1px solid red;
+  max-width: 100%; /* Ensures the container doesn't stretch too wide on larger screens */
+  margin: 0 auto; /* Centers the container */
+  padding: 8.125rem 4rem; /* Provides top/bottom and side padding for the container content */
+  display: flex; /* Flexbox layout for internal alignment */
+  flex-direction: column; /* Stack children vertically by default */
+
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.md}) {
+    padding: 8.125rem 2rem; /* Adjust side padding for small screens */
+  }
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.xs}) {
+    padding: 8.125rem 1rem; /* Adjust side padding for small screens */
+  }
+`;
+
+export { PageContainer, Container };
