@@ -6,7 +6,7 @@ import TwoCol from '../../components/layout/TwoCol';
 import { HeroTitle, SectionTitle } from '../../components/ui/Title';
 import { HeroText, SectionText } from '../../components/ui/Text';
 import ProfilePicture from './ProfilePicture';
-import { FlagNL } from '../../components/ui/Flags';
+import Menu from '../../components/ui/Menu';
 
 const HeroIntro = styled.div`
   @media (max-width: ${({ theme }) => theme.breakpoints.sm}) {
@@ -17,13 +17,14 @@ const HeroIntro = styled.div`
 const Home = () => {
   return (
     <PageContainer>
+      <Menu />
       <Container>
         <TwoCol reverse>
 
           <ProfilePicture />
           <HeroIntro>
             <HeroTitle>Good morning!<br />I'm Kevin</HeroTitle>
-            <HeroText>A web developer based in the <FlagNL /> Netherlands.</HeroText>
+            <HeroText>A web developer based in the Netherlands.</HeroText>
           </HeroIntro>
         </TwoCol>
       </Container>
