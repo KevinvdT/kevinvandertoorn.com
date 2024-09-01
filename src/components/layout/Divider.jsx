@@ -4,7 +4,7 @@ import styled from 'styled-components';
 const Divider = styled.hr`
   /* max-width: 75.25rem; // Full width of its parent container */
   border: none; // Removes default border styling
-  border-top: 1px solid #979797; // Divider styling
+  border-top: 1px solid #c8c8c8; // Divider styling
   margin: 0 auto;
   width: 100%;
 
@@ -17,7 +17,7 @@ const Divider = styled.hr`
   } */
 
   @media (prefers-color-scheme: dark) {
-    border-top: 1px solid #686868;
+    border-top: 1px solid #404040;
   }
 `;
 
