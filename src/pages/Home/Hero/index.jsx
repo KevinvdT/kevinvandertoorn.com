@@ -1,11 +1,14 @@
 import React from 'react';
 import styled from 'styled-components';
+import { connect } from 'react-redux';
 import { Container } from '../../../components/layout/Container';
 import TwoCol from '../../../components/layout/TwoCol';
 import { HeroTitle } from '../../../components/ui/Title';
 import { HeroText } from '../../../components/ui/Text';
 import Button from '../../../components/ui/Button';
 import ProfilePicture from './ProfilePicture';
+// import { setActiveSection } from '../../../redux/slices/activeSectionSlice'; // Import the Redux action
+import { setActiveSection } from '../../../redux/slices/activeSectionSlice';
 
 const HeroIntro = styled.div`
   @media (max-width: ${({ theme }) => theme.breakpoints.sm}) {
@@ -24,7 +27,11 @@ const getGreeting = () => {
   }
 };
 
-const Hero = () => {
+const Hero = ({ setActiveSection }) => {
+  const handleScrollToContact = () => {
+    setActiveSection({ sectionId: 'contact' }); // Dispatch the action to scroll to the contact section
+  };
+
   const greeting = getGreeting();
 
   return (
@@ -34,11 +41,17 @@ const Hero = () => {
         <HeroIntro>
           <HeroTitle>{greeting}<br />I’m Kevin</HeroTitle>
           <HeroText>A web developer based in the Netherlands.</HeroText>
-          <Button>Say “Hello”</Button> <Button secondary>Résumé</Button>
+          <Button onClick={handleScrollToContact}>Say “Hello”</Button> <Button secondary onClick={() => window.open('/resume.pdf', '_blank')}>Résumé</Button>
         </HeroIntro>
       </TwoCol>
     </Container>
   );
 };
 
-export default Hero;
+// Map dispatch to props
+const mapDispatchToProps = {
+  setActiveSection,
+};
+
+// Connect the component to the Redux store
+export default connect(null, mapDispatchToProps)(Hero);
