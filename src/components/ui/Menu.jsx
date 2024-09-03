@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { connect } from 'react-redux';  // Import connect from react-redux
 import { setActiveSection } from '../../redux/slices/activeSectionSlice';  // Import the action to update the active section
 
+
 // Styled component for the Menu container
 const MenuContainer = styled.nav`
   position: ${({ isFixed }) => (isFixed ? 'fixed' : 'fixed')};
@@ -70,7 +71,7 @@ class Menu extends Component {
       isFixed: false,
     };
 
-    this.handleScroll = this.handleScroll.bind(this);
+    // this.handleScroll = this.handleScroll.bind(this);
   }
 
   componentDidMount() {
@@ -81,25 +82,32 @@ class Menu extends Component {
     window.removeEventListener('scroll', this.handleScroll);
   }
 
-  handleScroll() {
+  handleScroll = () => {
     const { setActiveSection } = this.props;
-    const sections = ['home', 'about', 'work', 'skills', 'contact']; // Updated with the new section "skills"
+    const sections = ['home', 'about', 'work', 'skills', 'contact'];
     let activeSectionId = 'home';
 
-    // Determine which section is currently active
-    for (let i = 0; i < sections.length; i++) {
-      const section = document.getElementById(sections[i]);
-      if (section) {
-        const sectionTop = section.getBoundingClientRect().top;
-        if (sectionTop <= 50) {
-          activeSectionId = sections[i];
+    // Check if scrolled to the bottom
+    const isBottom = window.innerHeight + window.scrollY >= document.body.offsetHeight - 25;
+
+    if (isBottom) {
+      activeSectionId = 'contact';
+    }
+    else {
+      // Determine which section is currently active
+      for (let i = 0; i < sections.length; i++) {
+        const section = document.getElementById(sections[i]);
+        if (section) {
+          const sectionTop = section.getBoundingClientRect().top;
+          if (sectionTop <= 50) {
+            activeSectionId = sections[i];
+          }
         }
       }
     }
-
     // Update the active section in Redux if it has changed
     if (activeSectionId !== this.props.activeSection) {
-      setActiveSection(activeSectionId);
+      setActiveSection({ sectionId: activeSectionId, scroll: false });
     }
 
     // Toggle the menu's fixed state based on scroll position
@@ -108,18 +116,12 @@ class Menu extends Component {
     } else {
       this.setState({ isFixed: false });
     }
-  }
+  };
 
-  scrollToSection(event, id) {
-    event.preventDefault(); // Prevent the default anchor click behavior
-
-    const section = document.getElementById(id);
-    if (section) {
-      section.scrollIntoView({ behavior: 'smooth' }); // Ensure smooth scrolling
-    }
-
-    this.props.setActiveSection(id); // Update the active section in Redux
-  }
+  handleMenuItemClick = (event, sectionId) => {
+    event.preventDefault();
+    this.props.setActiveSection({ sectionId });
+  };
 
   render() {
     const { isFixed } = this.state;
@@ -127,19 +129,19 @@ class Menu extends Component {
 
     return (
       <MenuContainer isFixed={isFixed}>
-        <MenuItem href="#home" isActive={activeSection === 'home'} onClick={() => this.scrollToSection('home')}>
+        <MenuItem href="#home" isActive={activeSection === 'home'} onClick={() => this.handleMenuItemClick(e, 'home')}>
           Home
         </MenuItem>
-        <MenuItem href="#about" isActive={activeSection === 'about'} onClick={() => this.scrollToSection('about')}>
+        <MenuItem href="#about" isActive={activeSection === 'about'} onClick={() => this.handleMenuItemClick(e, 'about')}>
           About
         </MenuItem>
-        <MenuItem href="#work" isActive={activeSection === 'work'} onClick={() => this.scrollToSection('work')}>
+        <MenuItem href="#work" isActive={activeSection === 'work'} onClick={() => this.handleMenuItemClick(e, 'work')}>
           Work
         </MenuItem>
-        <MenuItem href="#skills" isActive={activeSection === 'skills'} onClick={() => this.scrollToSection('skills')}>
+        <MenuItem href="#skills" isActive={activeSection === 'skills'} onClick={() => this.handleMenuItemClick(e, 'skills')}>
           Skills
         </MenuItem>
-        <MenuItem href="#contact" isActive={activeSection === 'contact'} onClick={() => this.scrollToSection('contact')}>
+        <MenuItem href="#contact" isActive={activeSection === 'contact'} onClick={() => this.handleMenuItemClick(e, 'contact')}>
           Contact
         </MenuItem>
       </MenuContainer>

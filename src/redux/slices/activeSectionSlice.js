@@ -1,7 +1,8 @@
 import { createSlice } from '@reduxjs/toolkit';
+import sectionNames from '../../constants/sectionNames';
 
 const initialState = {
-  activeSection: 'home', // Default active section
+  activeSection: 'home',
 };
 
 const activeSectionSlice = createSlice({
@@ -9,11 +10,32 @@ const activeSectionSlice = createSlice({
   initialState,
   reducers: {
     setActiveSection: (state, action) => {
-      state.activeSection = action.payload;
+      const { sectionId, scroll = true } = action.payload; // Destructure with a default value for `scroll`
+      const section = document.getElementById(sectionId);
 
-      // Update the URL whenever the active section changes
-      const url = action.payload === 'home' ? '/' : `/${action.payload}`;
-      window.history.pushState(null, '', url);
+      if (section) {
+        if (scroll) {
+          const sectionTop = section.getBoundingClientRect().top + window.scrollY;
+          const currentScrollPosition = window.scrollY;
+
+          // Scroll if not already at the section
+          if (Math.abs(sectionTop - currentScrollPosition) > 1) {
+            section.scrollIntoView({ behavior: 'smooth' });
+          }
+        }
+
+        // Update the active section in the state
+        state.activeSection = sectionId;
+
+        // Update the URL to reflect the current section
+        if (sectionId === 'home') {
+          window.history.pushState(null, '', '/');
+          document.title = `Kevin van der Toorn`;
+        } else {
+          window.history.pushState(null, '', `${sectionId}`);
+          document.title = `Kevin van der Toorn · ${sectionNames[sectionId]}`;
+        }
+      }
     },
   },
 });
