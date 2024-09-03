@@ -5,8 +5,9 @@ const TwoCol = styled.div`
   display: flex;
   flex-direction: ${({ reverse }) => (reverse ? 'row-reverse' : 'row')};  /* Reverse the row if reverse prop is true */
   justify-content: space-between;
-  align-items: ${({ alignTop }) => (alignTop ? 'flex-start' : 'center')}; /* Conditionally align items */
+  align-items: ${({ aligntop }) => (aligntop ? 'flex-start' : 'center')}; /* Conditionally align items */
   width: 100%;
+  row-gap: 2.5rem;
 
   > * {
     flex: 1;  /* Ensures that each child (column) takes up equal space */

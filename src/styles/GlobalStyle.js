@@ -1,12 +1,15 @@
 import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyle = createGlobalStyle`
-  @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
-  @import url('https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
-
   /* Reset some basic elements */
   *, *::before, *::after {
     box-sizing: border-box;
+    font-family: 'Inter', 'Arial', sans-serif;
+  }
+
+  *, html {
+
+  scroll-behavior: smooth !important;
   }
 
   /* Remove default margin and padding */

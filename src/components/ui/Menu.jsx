@@ -13,7 +13,7 @@ const MenuContainer = styled.nav`
   backdrop-filter: saturate(1.8) blur(20px);
   padding: 10px 20px;
   border-radius: 30px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: ${({ isFixed }) => (isFixed ? '0 2px 10px rgba(0, 0, 0, 0.1)' : 'none')};
   display: flex;
   justify-content: space-between;
   gap: ${({ isFixed }) => (isFixed ? '15px' : '35px')};
@@ -30,6 +30,7 @@ const MenuContainer = styled.nav`
     top: auto;
     bottom: 20px;
     outline: 1px solid #dbdbdb;
+    gap: 0px;
     @media (prefers-color-scheme: dark) {
       outline: 1px solid #424242;
     }

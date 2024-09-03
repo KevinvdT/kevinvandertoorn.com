@@ -4,6 +4,8 @@ import { Container, PageContainer } from '../../../components/layout/Container';
 import TwoCol from '../../../components/layout/TwoCol';
 import { SectionTitle } from '../../../components/ui/Title';
 import { SectionText } from '../../../components/ui/Text';
+import Email from './Email';
+import { ButtonLinkedIn, ButtonGithub, ButtonStackOverflow } from "./Buttons";
 
 const Footer = styled.div`
   background: #F5F5F7;
@@ -31,12 +33,14 @@ const Contact = () => {
         <Container id="contact">
           <SectionTitle>Contact Me</SectionTitle>
           <SectionText>Ready to elevate your business?<br />Let’s make it happen!</SectionText>
-          <TwoCol>
+          <TwoCol aligntop>
             <div>
               <Label as="div">Connect</Label>
+              <Email />
             </div>
             <div>
               <Label as="div">Follow</Label>
+              <div><ButtonLinkedIn /><ButtonGithub /></div>
             </div>
           </TwoCol>
         </Container>

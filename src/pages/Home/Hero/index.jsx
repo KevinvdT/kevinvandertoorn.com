@@ -4,6 +4,7 @@ import { Container } from '../../../components/layout/Container';
 import TwoCol from '../../../components/layout/TwoCol';
 import { HeroTitle } from '../../../components/ui/Title';
 import { HeroText } from '../../../components/ui/Text';
+import Button from '../../../components/ui/Button';
 import ProfilePicture from './ProfilePicture';
 
 const HeroIntro = styled.div`
@@ -15,11 +16,11 @@ const HeroIntro = styled.div`
 const getGreeting = () => {
   const hour = new Date().getHours();
   if (hour >= 6 && hour < 12) {
-    return 'Good morning!';
+    return 'Good Morning!';
   } else if (hour >= 12 && hour < 18) {
-    return 'Good afternoon!';
+    return 'Good Afternoon!';
   } else {
-    return 'Good evening!';
+    return 'Good Evening!';
   }
 };
 
@@ -33,6 +34,7 @@ const Hero = () => {
         <HeroIntro>
           <HeroTitle>{greeting}<br />I’m Kevin</HeroTitle>
           <HeroText>A web developer based in the Netherlands.</HeroText>
+          <Button>Say “Hello”</Button> <Button secondary>Résumé</Button>
         </HeroIntro>
       </TwoCol>
     </Container>

@@ -12,7 +12,7 @@ const PageContainer = styled.main`
   }
 
   @media (max-width: ${({ theme }) => theme.breakpoints.xs}) {
-    padding: 0 1rem; /* Adjust side padding on medium screens */
+    padding: 0 0.8rem; /* Adjust side padding on medium screens */
   }
 `;
 
@@ -31,7 +31,7 @@ const Container = styled.section`
   }
 
   @media (max-width: ${({ theme }) => theme.breakpoints.xs}) {
-    padding: 8.125rem 1rem; /* Adjust side padding for small screens */
+    padding: 8.125rem 0.8rem; /* Adjust side padding for small screens */
   }
 `;
 
