@@ -14,6 +14,10 @@ const Footer = styled.div`
   }
 `;
 
+const ContactText = styled(SectionText)`
+  margin-bottom: 30px;
+`;
+
 // New Label Component
 export const Label = styled(SectionText)`
   color: ${({ theme }) => theme.colors.light.primaryText}; /* Set to primary color */
@@ -25,6 +29,7 @@ export const Label = styled(SectionText)`
 `;
 
 
+
 const Contact = () => {
   return (
     <Footer>
@@ -32,17 +37,17 @@ const Contact = () => {
 
         <Container id="contact">
           <SectionTitle>Contact Me</SectionTitle>
-          <SectionText>Ready to elevate your business?<br />Let’s make it happen!</SectionText>
-          <TwoCol aligntop>
+          <ContactText>Ready to elevate your business?<br />Let’s make it happen!</ContactText>
+          {/* <TwoCol aligntop>
             <div>
               <Label as="div">Connect</Label>
               <Email />
-            </div>
-            <div>
-              <Label as="div">Follow</Label>
-              <div><ButtonLinkedIn /><ButtonGithub /></div>
-            </div>
-          </TwoCol>
+            </div> */}
+          <div>
+            <Label as="div">Follow</Label>
+            <div><ButtonLinkedIn /><ButtonGithub /></div>
+          </div>
+          {/* </TwoCol> */}
         </Container>
       </PageContainer>
     </Footer>

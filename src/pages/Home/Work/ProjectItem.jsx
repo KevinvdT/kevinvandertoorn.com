@@ -16,6 +16,9 @@ const ProjectItemContainer = styled(TwoCol)`
   @media (max-width: ${({ theme }) => theme.breakpoints.sm}) {
     margin-bottom: 60px;
   }
+  &:last-of-type {
+     margin-bottom: 0px; 
+    }
 `;
 
 const ProjectImage = styled.img`
@@ -25,7 +28,8 @@ const ProjectImage = styled.img`
   box-shadow: 0 4px 6px 0 rgba(0,0,0,0.12);
   border-radius: 20px;
   @media (max-width: ${({ theme }) => theme.breakpoints.sm}) {
-    max-width: 300px;
+    max-width: 100%;
+    margin-bottom: 10px;
   }
 `;
 
@@ -35,10 +39,16 @@ const ProjectContent = styled.div`
 
 const ProjectDescription = styled(SectionText)`
   font-size:  0.9375rem; // Description font size
-  /* line-height: 1.71875rem; */
+  @media (max-width: ${({ theme }) => theme.breakpoints.sm}) {
+    line-height: 1.71875rem;
+  }
 `;
 const ProjectTitle = styled(SectionTitle)`
+font-family: 'Inter','Arial',sans-serif;
   font-size:  1.0625rem;
+  @media (max-width: ${({ theme }) => theme.breakpoints.sm}) {
+    line-height: 0.5rem;
+  }
   /* font-weight: 600; */
 `;
 

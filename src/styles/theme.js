@@ -18,3 +18,5 @@ export const theme = {
     lg: '1200px',
   },
 };
+
+export default theme;

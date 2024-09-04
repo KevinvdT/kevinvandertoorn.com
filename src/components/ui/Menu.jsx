@@ -12,6 +12,9 @@ const MenuContainer = styled.nav`
   transform: translateX(-50%);
   background-color: ${({ theme }) => theme.colors.light.background}88;
   backdrop-filter: saturate(1.8) blur(20px);
+  @supports not (backdrop-filter: saturate(1.8) blur(20px)) {
+    background-color: ${({ theme }) => theme.colors.light.background}EE;
+  }
   padding: 10px 20px;
   border-radius: 30px;
   box-shadow: ${({ isFixed }) => (isFixed ? '0 2px 10px rgba(0, 0, 0, 0.1)' : 'none')};
@@ -24,9 +27,16 @@ const MenuContainer = styled.nav`
   @media (prefers-color-scheme: dark) {
     background-color: ${({ theme }) => theme.colors.dark.background}88;
     outline: ${({ isFixed }) => (isFixed ? '1px' : '0')} solid #424242;
+    @supports not (backdrop-filter: saturate(1.8) blur(20px)) {
+      background-color: ${({ theme }) => theme.colors.dark.background}E4;
+    }
   }
 
   @media (max-width: ${({ theme }) => theme.breakpoints.sm}) {
+    padding: 10px 10px;
+    ${({ isFixed }) => (!isFixed ? 'pointer-events: none;' : null)}
+    opacity: ${({ isFixed }) => (!isFixed ? '0' : '1')};
+    transition: opacity 0.3s;
     position: fixed;
     top: auto;
     bottom: 20px;

@@ -9,11 +9,57 @@ import Button from '../../../components/ui/Button';
 import ProfilePicture from './ProfilePicture';
 // import { setActiveSection } from '../../../redux/slices/activeSectionSlice'; // Import the Redux action
 import { setActiveSection } from '../../../redux/slices/activeSectionSlice';
+import downarrow from './downarrow.svg';
 
 const HeroIntro = styled.div`
+  margin-bottom: 25px;
   @media (max-width: ${({ theme }) => theme.breakpoints.sm}) {
     text-align: center;
   }
+`;
+
+const HeroContainer = styled(Container)`
+  padding-top: 150px;
+  @media (max-width: ${({ theme }) => theme.breakpoints.sm}) {
+    padding-top: 7vh;
+  }
+`;
+
+const ButtonRow = styled.div`
+  display: flex;
+  flex-direction: row;
+  margin-top: 27px;
+  gap: 1.3125rem;
+  @media (max-width: ${({ theme }) => theme.breakpoints.sm}) {
+    justify-content: center;
+  }
+`;
+
+const DownArrow = styled.div`
+  @keyframes jumpInfinite {
+    0% {
+      transform: translateY(0);
+    }
+    40% {
+      transform: translateY(20px);
+    }
+    80% {
+      transform: translateY(0);
+    }
+  }
+  display: none;
+  @media (max-width: ${({ theme }) => theme.breakpoints.sm}) {
+    display:flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 30px;
+    & > img {
+      display: relative;
+      width: 16px;
+      animation: jumpInfinite 4s infinite;
+    }
+  }
+  
 `;
 
 const getGreeting = () => {
@@ -35,16 +81,20 @@ const Hero = ({ setActiveSection }) => {
   const greeting = getGreeting();
 
   return (
-    <Container id="home">
+    <HeroContainer id="home">
       <TwoCol reverse>
         <ProfilePicture />
         <HeroIntro>
           <HeroTitle>{greeting}<br />I’m Kevin</HeroTitle>
           <HeroText>A web developer based in the Netherlands.</HeroText>
-          <Button onClick={handleScrollToContact}>Say “Hello”</Button> <Button secondary onClick={() => window.open('/resume.pdf', '_blank')}>Résumé</Button>
+          <ButtonRow>
+            <Button onClick={handleScrollToContact}>Say “Hello”</Button>
+            {/* <Button secondary onClick={() => window.open('/resume.pdf', '_blank')}>Résumé</Button> */}
+          </ButtonRow>
         </HeroIntro>
       </TwoCol>
-    </Container>
+      <DownArrow><img src={downarrow} /></DownArrow>
+    </HeroContainer>
   );
 };
 

@@ -31,7 +31,7 @@ const Container = styled.section`
   }
 
   @media (max-width: ${({ theme }) => theme.breakpoints.xs}) {
-    padding: 8.125rem 0.8rem; /* Adjust side padding for small screens */
+    padding: 85px 0.8rem 75px 0.8rem; /* Adjust side padding for small screens */
   }
 `;
 

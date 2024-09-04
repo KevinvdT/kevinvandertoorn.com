@@ -23,13 +23,13 @@ const About = () => {
 
         <ProjectItem
           imageSrc={imgSaysimple}
-          title="Interactive website elements"
-          description="Create and implement interactive components for a company's website, improving user experience and functionality. Work on projects for prominent clients, contributing to responsive and accessible web design. Collaborate with cross-functional teams, share knowledge, and develop reusable components to enhance efficiency within the engineering department."
+          title="Interactive Web Tools"
+          description="Created interactive elements for Saysimple's website, including a pricing calculator based on configurable options, and a customizable chat widget generator. These tools enhance website functionality and offer practical solutions to boost client interaction and engagement."
         />
         <ProjectItem
           imageSrc={imgAh}
-          title="Employee dashboard"
-          description="Design and implement a dynamic dashboard display system for the staff room, enhancing communication and real-time information sharing. Develop responsive and visually engaging signage that integrates seamlessly with existing systems. Collaborate with IT and design teams to ensure smooth deployment, and create reusable components for easy updates and maintenance."
+          title="Digital Signage Software"
+          description="Created a versatile signage software for Albert Heijn's staff room display. The software showcases the current time and date, photo slideshows, announcements, and more, enhancing internal communication and creating a dynamic and informative environment for employees."
         />
       </ProjectItemsWrapper>
     </Container>

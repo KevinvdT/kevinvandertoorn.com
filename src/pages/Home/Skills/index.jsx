@@ -5,12 +5,23 @@ import TwoCol from '../../../components/layout/TwoCol';
 import { SectionTitle } from '../../../components/ui/Title';
 import { SectionText } from '../../../components/ui/Text';
 import SkillSet, { Skill } from './SkillSet';
+import useWindowWidth from './useWindowWidth';
+// import theme from '../../../styles/theme';
 
 const SkillSetsWrapper = styled.div`
   margin-top: 30px;
 `;
 
 const About = () => {
+  const windowWidth = useWindowWidth(); // Get the current window width
+  const xsBreakpoint = 436; // Convert the xs breakpoint to a number
+  const customBreakpoint = 383; // Define the custom breakpoint for 383px
+
+  // Determine if the screen width is smaller than the custom or xs breakpoint
+  const isVerySmallScreen = windowWidth <= customBreakpoint;
+  const isSmallScreen = windowWidth > customBreakpoint && windowWidth < xsBreakpoint;
+
+
   return (
     <Container id="skills">
       <SectionTitle>Tools I Rock With</SectionTitle>
@@ -26,7 +37,8 @@ const About = () => {
           </SkillSet>
           <SkillSet title="Back-End">
             <Skill>Django (Python)</Skill>
-            <Skill>Django REST Framework</Skill>
+            <Skill>{isVerySmallScreen ? 'Django REST Fw.' : isSmallScreen ? 'Django REST Framew.' : 'Django REST Framework'}
+            </Skill>
           </SkillSet>
         </TwoCol>
         <SkillSet title="Data Science & Scientific Computing">
