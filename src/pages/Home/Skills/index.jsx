@@ -7,6 +7,18 @@ import { SectionText } from '../../../components/ui/Text';
 import SkillSet, { Skill } from './SkillSet';
 import useWindowWidth from './useWindowWidth';
 // import theme from '../../../styles/theme';
+import {
+  FaReact as IconReact,
+  FaHtml5 as IconHtml,
+  FaPython as IconPython
+} from "react-icons/fa";
+import { IoLogoJavascript as IconJs } from "react-icons/io5";
+import {
+  SiJulia as IconJulia,
+  SiOctave as IconMatlab,
+  SiDjango as IconDjango
+} from "react-icons/si";
+import { LuBraces as IconDrf } from "react-icons/lu";
 
 const SkillSetsWrapper = styled.div`
   margin-top: 30px;
@@ -31,20 +43,20 @@ const About = () => {
         <TwoCol aligntop fixed>
 
           <SkillSet title="Front-End">
-            <Skill>HTML & CSS</Skill>
-            <Skill>JavaScript</Skill>
-            <Skill>React & Redux</Skill>
+            <Skill icon={IconHtml} iconColor='#e44d25'>HTML & CSS</Skill>
+            <Skill icon={IconJs} iconColor='#f1dc55'>JavaScript</Skill>
+            <Skill icon={IconReact} iconColor='#61dbfb'>React & Redux</Skill>
           </SkillSet>
           <SkillSet title="Back-End">
-            <Skill>Django (Python)</Skill>
-            <Skill>{isVerySmallScreen ? 'Django REST Fw.' : isSmallScreen ? 'Django REST Framew.' : 'Django REST Framework'}
+            <Skill icon={IconDjango}>Django (Python)</Skill>
+            <Skill icon={IconDrf}>{isVerySmallScreen ? 'Django REST Fw.' : isSmallScreen ? 'Django REST Framew.' : 'Django REST Framework'}
             </Skill>
           </SkillSet>
         </TwoCol>
         <SkillSet title="Data Science & Scientific Computing">
-          <Skill>Python, Numpy, Matplotlib</Skill>
-          <Skill>Julia</Skill>
-          <Skill>Matlab / Octave</Skill>
+          <Skill icon={IconPython}>Python, Numpy, Matplotlib</Skill>
+          <Skill icon={IconJulia}>Julia</Skill>
+          <Skill icon={IconMatlab}>Matlab / Octave</Skill>
         </SkillSet>
       </SkillSetsWrapper>
     </Container>
