@@ -21,7 +21,7 @@ const HeroIntro = styled.div`
 const HeroContainer = styled(Container)`
   padding-top: 150px;
   @media (max-width: ${({ theme }) => theme.breakpoints.sm}) {
-    padding-top: 7vh;
+    height: 100vh;
   }
 `;
 
@@ -50,14 +50,15 @@ const DownArrow = styled.div`
   display: none;
   @media (max-width: ${({ theme }) => theme.breakpoints.sm}) {
     display:flex;
-  flex-direction: row;
-  justify-content: center;
-  margin-top: 30px;
-    & > img {
-      display: relative;
-      width: 16px;
-      animation: jumpInfinite 4s infinite;
-    }
+    flex-direction: row;
+    justify-content: center;
+    cursor: pointer;
+    margin-top: 30px;
+      & > img {
+        display: relative;
+        width: 16px;
+        animation: jumpInfinite 4s infinite;
+      }
   }
   
 `;
@@ -74,6 +75,10 @@ const getGreeting = () => {
 };
 
 const Hero = ({ setActiveSection }) => {
+  const handleScrollToAbout = () => {
+    setActiveSection({ sectionId: 'about' }); // Dispatch the action to scroll to the contact section
+  };
+
   const handleScrollToContact = () => {
     setActiveSection({ sectionId: 'contact' }); // Dispatch the action to scroll to the contact section
   };
@@ -93,7 +98,7 @@ const Hero = ({ setActiveSection }) => {
           </ButtonRow>
         </HeroIntro>
       </TwoCol>
-      <DownArrow><img src={downarrow} /></DownArrow>
+      <DownArrow><img src={downarrow} onClick={handleScrollToAbout} /></DownArrow>
     </HeroContainer>
   );
 };

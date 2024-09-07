@@ -12,6 +12,9 @@ const Footer = styled.div`
   @media (prefers-color-scheme: dark) {
     background: #0d0d0d;
   }
+  @media (max-width: ${({ theme }) => theme.breakpoints.sm}) {
+    padding-bottom: 60px;
+  }
 `;
 
 const ContactText = styled(SectionText)`

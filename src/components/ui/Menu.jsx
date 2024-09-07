@@ -39,7 +39,7 @@ const MenuContainer = styled.nav`
     transition: opacity 0.3s;
     position: fixed;
     top: auto;
-    bottom: 20px;
+    bottom: 11px;
     outline: 1px solid #dbdbdb;
     gap: 0px;
     @media (prefers-color-scheme: dark) {
