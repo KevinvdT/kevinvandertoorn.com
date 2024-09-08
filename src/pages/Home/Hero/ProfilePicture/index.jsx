@@ -1,6 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
-import profileImage from './profile-picture.jpg';  // Adjust the path to match the new location
+import profileImage from './profile-picture.jpg';
+import back from './back.png';
+import front from './front.png';
+import ParallaxImage from '../../../../components/ui/ParallaxImage';
 
 // Styled component for the circular profile picture
 const StyledProfilePicture = styled.img`
@@ -31,11 +34,19 @@ const ProfileWrapper = styled.div`
 `;
 
 const ProfilePicture = () => {
+  // return (
+  //   <ProfileWrapper>
+  //     <StyledProfilePicture
+  //       src={profileImage}  /* Use the imported image */
+  //       alt="Kevin's Profile Picture"  /* Replace with your actual alt text */
+  //     />
+  //   </ProfileWrapper>
+  // );
   return (
     <ProfileWrapper>
-      <StyledProfilePicture
-        src={profileImage}  /* Use the imported image */
-        alt="Kevin's Profile Picture"  /* Replace with your actual alt text */
+      <ParallaxImage
+        front={front}
+        back={back}
       />
     </ProfileWrapper>
   );
