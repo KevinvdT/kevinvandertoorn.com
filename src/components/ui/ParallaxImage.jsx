@@ -10,6 +10,10 @@ const ParallaxContainer = styled.div`
   overflow: hidden; /* Ensures the images are clipped inside the circle */
   perspective: 1000px;
   /* margin: auto; */
+  @media (max-width: ${({ theme }) => theme.breakpoints.sm}) {
+    width: 195px;
+    height: 195px;
+  }
 `;
 
 const BackgroundLayer = styled.img`

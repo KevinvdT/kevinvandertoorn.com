@@ -5,6 +5,7 @@ const GlobalStyle = createGlobalStyle`
   *, *::before, *::after {
     box-sizing: border-box;
     font-family: 'Inter', 'Arial', sans-serif;
+    hanging-punctuation: first last;
   }
 
   *, html {
