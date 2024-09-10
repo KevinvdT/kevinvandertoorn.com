@@ -20,8 +20,11 @@ const HeroIntro = styled.div`
 
 const HeroContainer = styled(Container)`
   padding-top: 150px;
+  
   @media (max-width: ${({ theme }) => theme.breakpoints.sm}) {
     height: 100vh;
+    padding: 0;
+    justify-content: center;
   }
 `;
 
@@ -32,6 +35,7 @@ const ButtonRow = styled.div`
   gap: 1.3125rem;
   @media (max-width: ${({ theme }) => theme.breakpoints.sm}) {
     justify-content: center;
+    
   }
 `;
 
