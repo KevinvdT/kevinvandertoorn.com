@@ -22,7 +22,7 @@ const HeroContainer = styled(Container)`
   padding-top: 150px;
   
   @media (max-width: ${({ theme }) => theme.breakpoints.sm}) {
-    height: 100vh;
+    height: calc(98vh - 25px);
     padding: 0;
     justify-content: center;
   }
