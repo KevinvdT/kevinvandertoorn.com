@@ -5,12 +5,10 @@ const GlobalStyle = createGlobalStyle`
   *, *::before, *::after {
     box-sizing: border-box;
     font-family: 'Inter', 'Arial', sans-serif;
-    hanging-punctuation: first last;
   }
 
   *, html {
-
-  scroll-behavior: smooth !important;
+    scroll-behavior: smooth !important;
   }
 
   /* Remove default margin and padding */
