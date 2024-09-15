@@ -4,7 +4,7 @@ import { useTranslation } from 'react-i18next';
 
 const SwitcherContainer = styled.div`
   position: absolute;
-  top: 30px;
+  top: 34px;
   right: 20px;
   z-index: 1000; /* Ensures the switcher is always on top of other content */
   display: flex;
@@ -28,9 +28,9 @@ const LanguageButton = styled.button`
   background: ${({ isActive, theme }) =>
     isActive ? theme.colors.light.secondaryText : 'transparent'};
   color: ${({ isActive, theme }) =>
-    isActive ? 'white' : theme.colors.light.secondaryText};
+    isActive ? theme.colors.light.background : theme.colors.light.secondaryText};
   font-weight: 600;
-  padding: 5px 10px;
+  padding: 3px 8px;
   border-radius: 20px;
   border: none;
   cursor: pointer;
@@ -47,7 +47,7 @@ const LanguageButton = styled.button`
     background: ${({ isActive, theme }) =>
     isActive ? theme.colors.dark.secondaryText : 'transparent'};
     color: ${({ isActive, theme }) =>
-    isActive ? 'white' : theme.colors.dark.secondaryText};
+    isActive ? theme.colors.dark.background : theme.colors.dark.secondaryText};
 
     &:hover {
       background-color: ${({ isActive, theme }) =>
