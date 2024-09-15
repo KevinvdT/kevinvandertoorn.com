@@ -1,0 +1,62 @@
+{
+  "hero": {
+    "greeting": {
+      "morning": "Godmorgen!",
+      "afternoon": "God eftermiddag!",
+      "evening": "God aften!"
+    },
+    "introduction": "Jeg er Kevin",
+    "developer_intro": "En webudvikler fra Holland.",
+    "contact_button": "Sig “hej”",
+    "resume_button": "CV"
+  },
+  "about": {
+    "title": "Min historie",
+    "story": "Jeg er en webudvikler fra Holland med over {{years}} års erfaring, der startede med MS Frontpage og har udviklet mig kontinuerligt siden da.",
+    "skills": "Jeg arbejder nu med React og Django for at skabe dynamiske web-løsninger. Jeg er også altid på udkig efter nye værktøjer til at levere exceptionelle resultater.",
+    "hobbies": "Når jeg ikke arbejder, nyder jeg at slentre i <0>Efteling</0>, en hollandsk eventyrpark inspireret af mange klassiske fortællinger, herunder dem af H.C. Andersen. Parken har en helt særlig, fortryllende atmosfære. Jeg elsker også at lære nye sprog."
+  },
+  "work": {
+    "title": "Projekter jeg har arbejdet på",
+    "projects": {
+      "saysimple": {
+        "title": "Interaktive webværktøjer",
+        "description": "Jeg har udviklet interaktive elementer til Saysimple's hjemmeside, herunder en prisberegner baseret på konfigurerbare muligheder og en tilpasselig chat-widget-generator. Disse værktøjer forbedrer webstedets funktionalitet og giver praktiske løsninger til at øge kundeinteraktionen."
+      },
+      "ah": {
+        "title": "Digital skiltning software",
+        "description": "Jeg udviklede alsidig software til digital skiltning til personalerummet hos Albert Heijn. Softwaren viser det aktuelle tidspunkt, fotoslideshows, meddelelser og mere, hvilket forbedrer intern kommunikation og skaber et dynamisk og informativt miljø for medarbejderne."
+      }
+    }
+  },
+  "skills": {
+    "title": "Værktøjer jeg arbejder med",
+    "description": "Jeg har udviklet ekspertise i de nedenfor nævnte teknologier. Jeg er også altid begejstret for at udforske og mestre nye værktøjer og frameworks, der kan hjælpe mig med at levere endnu bedre løsninger.",
+    "frontend": {
+      "title": "Front-End"
+    },
+    "backend": {
+      "title": "Back-End",
+      "drf": {
+        "full": "Django REST Framework",
+        "short": "Django REST Framew.",
+        "shortest": "Django REST Fw."
+      }
+    },
+    "datascience": {
+      "title": "Datavidenskab og videnskabelig beregning"
+    }
+  },
+  "contact": {
+    "title": "Kontakt mig",
+    "text": "Klar til at tage din virksomhed til næste niveau? Lad os gøre det!",
+    "follow": "Følg"
+  },
+  "menu": {
+    "home": "Hjem",
+    "about": "Om mig",
+    "work": "Projekter",
+    "skills": "Færdigheder",
+    "contact": "Kontakt"
+  }
+}

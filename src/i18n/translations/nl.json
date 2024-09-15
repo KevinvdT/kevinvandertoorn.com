@@ -1,0 +1,62 @@
+{
+  "hero": {
+    "greeting": {
+      "morning": "Goedemorgen!",
+      "afternoon": "Goedemiddag!",
+      "evening": "Goedenavond!"
+    },
+    "introduction": "Ik ben Kevin",
+    "developer_intro": "Een web-developer uit Delft.",
+    "contact_button": "Zeg “hallo”",
+    "resume_button": "Curriculum Vitae"
+  },
+  "about": {
+    "title": "Mijn verhaal",
+    "story": "Ik ben een web-developer uit Nederland met {{years}}+ jaar ervaring, ooit begonnen met MS\u00A0Frontpage en sindsdien voortdurend gegroeid.",
+    "skills": "Tegenwoordig gebruik ik React en Django om dynamische weboplossingen te bouwen. Ik ben ook altijd bezig met het verkennen van nieuwe tools om de beste resultaten te leveren.",
+    "hobbies": "Buiten werk dwarrel ik graag in het Kaatsheuvelse <0>Efteling</0>. Ook leer ik graag vreemde talen."
+  },
+  "work": {
+    "title": "Waar ik aan gewerkt heb",
+    "projects": {
+      "saysimple": {
+        "title": "Interactieve web-tools",
+        "description": "Interactieve elementen gemaakt voor de website van Saysimple, waaronder een prijs-calculator op basis van aanpasbare opties, en een configureerbare chatwidget-generator. Deze tools vergroten de functionaliteit van de website en versterken de interactie met klanten."
+      },
+      "ah": {
+        "title": "Digitale signage-software",
+        "description": "Een veelzijdige informatie-display gemaakt voor de personeelsruimte van Albert\u00A0Heijn. De software toont de huidige tijd en datum, diavoorstellingen van foto's, aankondigingen en meer, wat de interne communicatie verbetert en een dynamische en informatieve omgeving voor medewerkers creëert."
+      }
+    }
+  },
+  "skills": {
+    "title": "De tools die ik gebruik",
+    "description": "Ik heb expertise ontwikkeld in onderstaande technologieën. Ook ben ik altijd enthousiast om nieuwe tools en frameworks te verkennen en leren, die helpen om nog betere oplossingen te leveren.",
+    "frontend": {
+      "title": "Front-end"
+    },
+    "backend": {
+      "title": "Back-end",
+      "drf": {
+        "full": "Django REST Framework",
+        "short": "Django REST Framew.",
+        "shortest": "Django REST Fw."
+      }
+    },
+    "datascience": {
+      "title": "Data science & scientific computing"
+    }
+  },
+  "contact": {
+    "title": "Neem contact op",
+    "text": "Klaar om je bedrijf naar een hoger niveau te tillen?\nLaten we aan de slag gaan!",
+    "follow": "Volg"
+  },
+  "menu": {
+    "home": "Home",
+    "about": "Over mij",
+    "work": "Werk",
+    "skills": "Skills",
+    "contact": "Contact"
+  }
+}

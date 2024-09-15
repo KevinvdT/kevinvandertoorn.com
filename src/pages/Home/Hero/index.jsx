@@ -1,13 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
-import { connect } from 'react-redux';
+import { useTranslation } from 'react-i18next'; // Import useTranslation hook
 import { Container } from '../../../components/layout/Container';
 import TwoCol from '../../../components/layout/TwoCol';
 import { HeroTitle } from '../../../components/ui/Title';
 import { HeroText } from '../../../components/ui/Text';
 import Button from '../../../components/ui/Button';
 import ProfilePicture from './ProfilePicture';
-// import { setActiveSection } from '../../../redux/slices/activeSectionSlice'; // Import the Redux action
 import { setActiveSection } from '../../../redux/slices/activeSectionSlice';
 import downarrow from './downarrow.svg';
 
@@ -35,7 +34,6 @@ const ButtonRow = styled.div`
   gap: 1.3125rem;
   @media (max-width: ${({ theme }) => theme.breakpoints.sm}) {
     justify-content: center;
-    
   }
 `;
 
@@ -64,41 +62,45 @@ const DownArrow = styled.div`
         animation: jumpInfinite 4s infinite;
       }
   }
-  
 `;
 
-const getGreeting = () => {
+const getGreetingKey = () => {
   const hour = new Date().getHours();
   if (hour >= 6 && hour < 12) {
-    return 'Good Morning!';
+    return 'hero.greeting.morning';
   } else if (hour >= 12 && hour < 18) {
-    return 'Good Afternoon!';
+    return 'hero.greeting.afternoon';
   } else {
-    return 'Good Evening!';
+    return 'hero.greeting.evening';
   }
 };
 
 const Hero = ({ setActiveSection }) => {
+  const { t } = useTranslation(); // Hook to get translation function
+
   const handleScrollToAbout = () => {
-    setActiveSection({ sectionId: 'about' }); // Dispatch the action to scroll to the contact section
+    setActiveSection({ sectionId: 'about' });
   };
 
   const handleScrollToContact = () => {
-    setActiveSection({ sectionId: 'contact' }); // Dispatch the action to scroll to the contact section
+    setActiveSection({ sectionId: 'contact' });
   };
 
-  const greeting = getGreeting();
+  const greetingKey = getGreetingKey(); // Get greeting key based on the time of day
 
   return (
     <HeroContainer id="home">
       <TwoCol reverse>
         <ProfilePicture />
         <HeroIntro>
-          <HeroTitle>{greeting}<br />I’m Kevin</HeroTitle>
-          <HeroText>A web developer based in the Netherlands.</HeroText>
+          <HeroTitle>{t(greetingKey)}<br />{t('hero.introduction')}</HeroTitle>
+          <HeroText>{t('hero.developer_intro')}</HeroText>
           <ButtonRow>
-            <Button onClick={handleScrollToContact}>Say “Hello”</Button>
-            {/* <Button secondary onClick={() => window.open('/resume.pdf', '_blank')}>Résumé</Button> */}
+            <Button onClick={handleScrollToContact}>{t('hero.contact_button')}</Button>
+            {/* Uncomment this when needed */}
+            {/* <Button secondary onClick={() => window.open('/resume.pdf', '_blank')}>
+                {t('hero.resume_button')}
+            </Button> */}
           </ButtonRow>
         </HeroIntro>
       </TwoCol>
@@ -107,10 +109,4 @@ const Hero = ({ setActiveSection }) => {
   );
 };
 
-// Map dispatch to props
-const mapDispatchToProps = {
-  setActiveSection,
-};
-
-// Connect the component to the Redux store
-export default connect(null, mapDispatchToProps)(Hero);
+export default Hero;

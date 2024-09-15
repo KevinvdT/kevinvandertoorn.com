@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 import { connect } from 'react-redux';  // Import connect from react-redux
 import { setActiveSection } from '../../redux/slices/activeSectionSlice';  // Import the action to update the active section
-
+import { withTranslation } from 'react-i18next';  // Import i18next for translations
 
 // Styled component for the Menu container
 const MenuContainer = styled.nav`
@@ -80,8 +80,6 @@ class Menu extends Component {
     this.state = {
       isFixed: false,
     };
-
-    // this.handleScroll = this.handleScroll.bind(this);
   }
 
   componentDidMount() {
@@ -97,14 +95,11 @@ class Menu extends Component {
     const sections = ['home', 'about', 'work', 'skills', 'contact'];
     let activeSectionId = 'home';
 
-    // Check if scrolled to the bottom
     const isBottom = window.innerHeight + window.scrollY >= document.body.offsetHeight - 25;
 
     if (isBottom) {
       activeSectionId = 'contact';
-    }
-    else {
-      // Determine which section is currently active
+    } else {
       for (let i = 0; i < sections.length; i++) {
         const section = document.getElementById(sections[i]);
         if (section) {
@@ -115,12 +110,11 @@ class Menu extends Component {
         }
       }
     }
-    // Update the active section in Redux if it has changed
+
     if (activeSectionId !== this.props.activeSection) {
       setActiveSection({ sectionId: activeSectionId, scroll: false });
     }
 
-    // Toggle the menu's fixed state based on scroll position
     if (window.scrollY > 40) {
       this.setState({ isFixed: true });
     } else {
@@ -135,24 +129,24 @@ class Menu extends Component {
 
   render() {
     const { isFixed } = this.state;
-    const { activeSection } = this.props;
+    const { activeSection, t } = this.props;  // Extract t() from props
 
     return (
       <MenuContainer isFixed={isFixed}>
-        <MenuItem href="#home" isActive={activeSection === 'home'} onClick={() => this.handleMenuItemClick(e, 'home')}>
-          Home
+        <MenuItem href="#home" isActive={activeSection === 'home'} onClick={(e) => this.handleMenuItemClick(e, 'home')}>
+          {t('menu.home')}
         </MenuItem>
-        <MenuItem href="#about" isActive={activeSection === 'about'} onClick={() => this.handleMenuItemClick(e, 'about')}>
-          About
+        <MenuItem href="#about" isActive={activeSection === 'about'} onClick={(e) => this.handleMenuItemClick(e, 'about')}>
+          {t('menu.about')}
         </MenuItem>
-        <MenuItem href="#work" isActive={activeSection === 'work'} onClick={() => this.handleMenuItemClick(e, 'work')}>
-          Work
+        <MenuItem href="#work" isActive={activeSection === 'work'} onClick={(e) => this.handleMenuItemClick(e, 'work')}>
+          {t('menu.work')}
         </MenuItem>
-        <MenuItem href="#skills" isActive={activeSection === 'skills'} onClick={() => this.handleMenuItemClick(e, 'skills')}>
-          Skills
+        <MenuItem href="#skills" isActive={activeSection === 'skills'} onClick={(e) => this.handleMenuItemClick(e, 'skills')}>
+          {t('menu.skills')}
         </MenuItem>
-        <MenuItem href="#contact" isActive={activeSection === 'contact'} onClick={() => this.handleMenuItemClick(e, 'contact')}>
-          Contact
+        <MenuItem href="#contact" isActive={activeSection === 'contact'} onClick={(e) => this.handleMenuItemClick(e, 'contact')}>
+          {t('menu.contact')}
         </MenuItem>
       </MenuContainer>
     );
@@ -169,4 +163,5 @@ const mapDispatchToProps = {
   setActiveSection,
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(Menu);
+// Export with translation support
+export default connect(mapStateToProps, mapDispatchToProps)(withTranslation()(Menu));
