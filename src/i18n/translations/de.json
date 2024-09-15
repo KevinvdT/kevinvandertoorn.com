@@ -1,0 +1,62 @@
+{
+  "hero": {
+    "greeting": {
+      "morning": "Guten Morgen!",
+      "afternoon": "Guten Tag!",
+      "evening": "Guten Abend!"
+    },
+    "introduction": "Ich bin Kevin",
+    "developer_intro": "Ein Webentwickler aus\u00A0den Niederlanden.",
+    "contact_button": "Sag „Hallo“",
+    "resume_button": "Lebenslauf"
+  },
+  "about": {
+    "title": "Meine Geschichte",
+    "story": "Ich bin ein Webentwickler aus den Niederlanden mit über 18 Jahren Erfahrung. Ich habe einst mit MS Frontpage begonnen und mich seitdem kontinuierlich weiterentwickelt.",
+    "skills": "Ich arbeite derzeit mit React und Django, um dynamische Weblösungen zu entwickeln. Ich entdecke auch immer gerne neue Tools, um die besten Ergebnisse zu liefern.",
+    "hobbies": "In meiner Freizeit genieße ich Spaziergänge im Efteling-Park in Kaatsheuvel und beschäftige mich gerne mit dem Erlernen neuer Sprachen."
+  },
+  "work": {
+    "title": "Woran ich gearbeitet habe",
+    "projects": {
+      "saysimple": {
+        "title": "Interaktive Webtools",
+        "description": "Ich habe interaktive Elemente für die Website von Saysimple entwickelt, darunter ein Preisrechner basierend auf konfigurierbaren Optionen und einen anpassbaren Chat-Widget-Generator. Diese Tools verbessern die Funktionalität der Website und bieten praktische Lösungen, um die Interaktion mit Kunden zu fördern."
+      },
+      "ah": {
+        "title": "Digitale Beschilderungssoftware",
+        "description": "Ich habe eine vielseitige Beschilderungssoftware für den Aufenthaltsraum von Albert Heijn entwickelt. Die Software zeigt die aktuelle Uhrzeit, Fotodiashows, Ankündigungen und mehr, was die interne Kommunikation verbessert und eine dynamische und informative Umgebung für die Mitarbeiter schafft."
+      }
+    }
+  },
+  "skills": {
+    "title": "Tools die ich benutze",
+    "description": "Ich habe Fachkenntnisse in den unten aufgeführten Technologien entwickelt. Ich bin auch immer begeistert, neue Tools und Frameworks zu erkunden und zu meistern, die mir helfen, noch bessere Lösungen zu liefern.",
+    "frontend": {
+      "title": "Front-End"
+    },
+    "backend": {
+      "title": "Back-End",
+      "drf": {
+        "full": "Django REST Framework",
+        "short": "Django REST Framew.",
+        "shortest": "Django REST Fw."
+      }
+    },
+    "datascience": {
+      "title": "Datenwissenschaft & wissenschaftliches Rechnen"
+    }
+  },
+  "contact": {
+    "title": "Kontaktieren Sie mich",
+    "text": "Bereit, Ihr Unternehmen voranzubringen?\nLassen Sie es uns möglich machen!",
+    "follow": "Folgen"
+  },
+  "menu": {
+    "home": "Start",
+    "about": "Über mich",
+    "work": "Arbeiten",
+    "skills": "Fähigkeiten",
+    "contact": "Kontakt"
+  }
+}

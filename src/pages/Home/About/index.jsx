@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Trans, useTranslation } from 'react-i18next'; // Import Trans for rich text handling
 import { Container } from '../../../components/layout/Container';
 import TwoCol from '../../../components/layout/TwoCol';
 import { SectionTitle } from '../../../components/ui/Title';
@@ -7,11 +8,7 @@ import { SectionText } from '../../../components/ui/Text';
 import Photos from './Photos';
 
 // Styled components specific to About
-const Emph = styled.em`
-  /* color: white;
-  font-style: normal; */
-`;
-
+const Emph = styled.em``;
 
 const PlusSup = styled.sup`
   position: relative;
@@ -29,19 +26,28 @@ const Efteling = styled.span`
 `;
 
 const About = () => {
+  const { t } = useTranslation();
+
   return (
     <Container id="about">
       <TwoCol reverse>
         <div>
-          <SectionTitle>My Story</SectionTitle>
+          <SectionTitle>{t('about.title')}</SectionTitle>
           <SectionText>
-            I’m a web developer from the Netherlands with <Emph>18<PlusSup>+</PlusSup> years of experience</Emph>, starting with MS Frontpage back in the day and continually advancing since then.
+            <Trans
+              i18nKey="about.story"
+              values={{ years: 18 }} // Pass the dynamic number of years
+              components={{ sup: <PlusSup /> }}
+            >
+              I’m a web developer from the Netherlands with 18<sup>+</sup> years of experience.
+            </Trans>
           </SectionText>
           <SectionText>
-            I’m now working with <Emph>React and Django to create dynamic web solutions</Emph>. I’m also always exploring new tools to deliver exceptional results.
+            {t('about.skills')}
           </SectionText>
           <SectionText>
-            Outside of work, I enjoy strolling in <Efteling>Efteling</Efteling>, a Dutch park with a unique enchanting charm. I also like to learn (human) languages.
+            {/* Use Trans and pass Efteling as a direct component */}
+            <Trans i18nKey="about.hobbies" components={{ 0: <Efteling /> }} />
           </SectionText>
         </div>
         <Photos />

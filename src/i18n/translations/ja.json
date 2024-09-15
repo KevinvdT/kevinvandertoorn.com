@@ -1,0 +1,62 @@
+{
+  "hero": {
+    "greeting": {
+      "morning": "おはようございます！",
+      "afternoon": "こんにちは！",
+      "evening": "こんばんは！"
+    },
+    "introduction": "ケビンです",
+    "developer_intro": "オランダ在住のウェブ開発者です。",
+    "contact_button": "「こんにちは」と言ってください",
+    "resume_button": "履歴書"
+  },
+  "about": {
+    "title": "About",
+    "story": "私はオランダ出身のウェブ開発者で、MS Frontpageを使って{{years}}年以上の経験を積んできました。それ以来、常にスキルを向上させてきました。",
+    "skills": "現在、ReactとDjangoを使用してダイナミックなウェブソリューションを作成しています。また、新しいツールを探求し、優れた結果を提供することに常に情熱を注いでいます。",
+    "hobbies": "仕事の外では、<0>Efteling</0>という、ユニークで魅力的なオランダの公園で散歩するのが好きです。また、新しい言語を学ぶことも大好きです。"
+  },
+  "work": {
+    "title": "Work",
+    "projects": {
+      "saysimple": {
+        "title": "インタラクティブなウェブツール",
+        "description": "Saysimpleのウェブサイト向けに、オプションで構成可能な価格計算ツールや、カスタマイズ可能なチャットウィジェットジェネレーターなどのインタラクティブな要素を作成しました。これらのツールは、ウェブサイトの機能を向上させ、顧客とのやり取りを強化するための実用的なソリューションを提供します。"
+      },
+      "ah": {
+        "title": "デジタルサイネージソフトウェア",
+        "description": "Albert Heijnのスタッフルーム用に、多機能なデジタルサイネージソフトウェアを作成しました。このソフトウェアは、現在の時刻、写真のスライドショー、告知などを表示し、内部コミュニケーションを改善し、従業員にとってダイナミックで情報豊富な環境を作り出します。"
+      }
+    }
+  },
+  "skills": {
+    "title": "Skills",
+    "description": "私は、以下の技術において専門知識を身につけてきました。また、新しいツールやフレームワークを探求し、マスターすることに常に熱意を持っており、それによってさらに優れたソリューションを提供できるよう努めています。",
+    "frontend": {
+      "title": "フロントエンド"
+    },
+    "backend": {
+      "title": "バックエンド",
+      "drf": {
+        "full": "Django REST Framework",
+        "short": "Django REST Framew.",
+        "shortest": "Django REST Fw."
+      }
+    },
+    "datascience": {
+      "title": "データサイエンス＆科学計算"
+    }
+  },
+  "contact": {
+    "title": "Contact",
+    "text": "ビジネスを次のレベルに引き上げる準備はできましたか？一緒に実現しましょう！",
+    "follow": "Follow"
+  },
+  "menu": {
+    "home": "Home",
+    "about": "About",
+    "work": "Work",
+    "skills": "Skills",
+    "contact": "Contact"
+  }
+}

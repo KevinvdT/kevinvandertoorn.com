@@ -1,11 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
+import { useTranslation } from 'react-i18next'; // Import useTranslation hook
 import { Container, PageContainer } from '../../../components/layout/Container';
-import TwoCol from '../../../components/layout/TwoCol';
 import { SectionTitle } from '../../../components/ui/Title';
 import { SectionText } from '../../../components/ui/Text';
-import Email from './Email';
-import { ButtonLinkedIn, ButtonGithub, ButtonStackOverflow } from "./Buttons";
+import { ButtonLinkedIn, ButtonGithub } from "./Buttons";
 
 const Footer = styled.div`
   background: #F5F5F7;
@@ -19,6 +18,7 @@ const Footer = styled.div`
 
 const ContactText = styled(SectionText)`
   margin-bottom: 30px;
+  white-space: pre-line;
 `;
 
 // New Label Component
@@ -31,26 +31,23 @@ export const Label = styled(SectionText)`
   }
 `;
 
-
-
 const Contact = () => {
+  const { t } = useTranslation(); // Get the translation function
+
   return (
     <Footer>
       <PageContainer>
-
         <Container id="contact">
-          <SectionTitle>Contact Me</SectionTitle>
-          <ContactText>Ready to elevate your business?<br />Let’s make it happen!</ContactText>
-          {/* <TwoCol aligntop>
-            <div>
-              <Label as="div">Connect</Label>
-              <Email />
-            </div> */}
+          <SectionTitle>{t('contact.title')}</SectionTitle>
+          <ContactText>{t('contact.text')}</ContactText>
+
           <div>
-            <Label as="div">Follow</Label>
-            <div><ButtonLinkedIn /><ButtonGithub /></div>
+            <Label as="div">{t('contact.follow')}</Label>
+            <div>
+              <ButtonLinkedIn />
+              <ButtonGithub />
+            </div>
           </div>
-          {/* </TwoCol> */}
         </Container>
       </PageContainer>
     </Footer>

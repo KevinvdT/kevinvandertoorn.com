@@ -1,12 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
+import { useTranslation } from 'react-i18next'; // Import useTranslation hook
 import { Container } from '../../../components/layout/Container';
 import TwoCol from '../../../components/layout/TwoCol';
 import { SectionTitle } from '../../../components/ui/Title';
 import { SectionText } from '../../../components/ui/Text';
 import SkillSet, { Skill } from './SkillSet';
 import useWindowWidth from './useWindowWidth';
-// import theme from '../../../styles/theme';
 import {
   FaReact as IconReact,
   FaHtml5 as IconHtml,
@@ -24,7 +24,8 @@ const SkillSetsWrapper = styled.div`
   margin-top: 30px;
 `;
 
-const About = () => {
+const Skills = () => {
+  const { t } = useTranslation(); // Hook to get translation function
   const windowWidth = useWindowWidth(); // Get the current window width
   const xsBreakpoint = 436; // Convert the xs breakpoint to a number
   const customBreakpoint = 383; // Define the custom breakpoint for 383px
@@ -33,27 +34,32 @@ const About = () => {
   const isVerySmallScreen = windowWidth <= customBreakpoint;
   const isSmallScreen = windowWidth > customBreakpoint && windowWidth < xsBreakpoint;
 
-
   return (
     <Container id="skills">
-      <SectionTitle>Tools I Rock With</SectionTitle>
-      <SectionText>I have honed my expertise in the technologies listed below. I am also always excited to explore and master new tools and frameworks that can help me deliver even better solutions.</SectionText>
+      <SectionTitle>{t('skills.title')}</SectionTitle>
+      <SectionText>{t('skills.description')}</SectionText>
 
       <SkillSetsWrapper>
         <TwoCol aligntop fixed>
-
-          <SkillSet title="Front-End">
+          <SkillSet title={t('skills.frontend.title')}>
             <Skill icon={IconHtml} iconColor='#e44d25'>HTML & CSS</Skill>
             <Skill icon={IconJs} iconColor='#f1dc55'>JavaScript</Skill>
             <Skill icon={IconReact} iconColor='#61dbfb'>React & Redux</Skill>
           </SkillSet>
-          <SkillSet title="Back-End">
+
+          <SkillSet title={t('skills.backend.title')}>
             <Skill icon={IconDjango}>Django (Python)</Skill>
-            <Skill icon={IconDrf}>{isVerySmallScreen ? 'Django REST Fw.' : isSmallScreen ? 'Django REST Framew.' : 'Django REST Framework'}
+            <Skill icon={IconDrf}>
+              {isVerySmallScreen
+                ? t('skills.backend.drf.shortest')
+                : isSmallScreen
+                  ? t('skills.backend.drf.short')
+                  : t('skills.backend.drf.full')}
             </Skill>
           </SkillSet>
         </TwoCol>
-        <SkillSet title="Data Science & Scientific Computing">
+
+        <SkillSet title={t('skills.datascience.title')}>
           <Skill icon={IconPython}>Python, Numpy, Matplotlib</Skill>
           <Skill icon={IconJulia}>Julia</Skill>
           <Skill icon={IconMatlab}>Matlab / Octave</Skill>
@@ -63,4 +69,4 @@ const About = () => {
   );
 };
 
-export default About;
+export default Skills;

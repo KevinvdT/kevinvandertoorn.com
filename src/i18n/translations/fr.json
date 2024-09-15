@@ -1,0 +1,62 @@
+{
+  "hero": {
+    "greeting": {
+      "morning": "Bonjour !",
+      "afternoon": "Bonjour !",
+      "evening": "Bonsoir !"
+    },
+    "introduction": "Je suis Kevin",
+    "developer_intro": "Développeur web basé aux Pays-Bas.",
+    "contact_button": "Dites « bonjour »",
+    "resume_button": "Curriculum Vitae"
+  },
+  "about": {
+    "title": "Mon parcours",
+    "story": "Je suis un développeur web des Pays-Bas avec plus de {{years}} ans d’expérience, ayant commencé avec MS Frontpage et évolué continuellement depuis.",
+    "skills": "Je travaille maintenant avec React et Django pour créer des solutions web dynamiques. Je suis également toujours à la recherche de nouveaux outils pour offrir des résultats exceptionnels.",
+    "hobbies": "En dehors du travail, j’aime me balader dans le parc <0>Efteling</0>, un parc néerlandais avec un charme unique et enchanteur. J’aime aussi apprendre de nouvelles langues."
+  },
+  "work": {
+    "title": "Projets sur lesquels j’ai travaillé",
+    "projects": {
+      "saysimple": {
+        "title": "Outils web interactifs",
+        "description": "J’ai développé des éléments interactifs pour le site web de Saysimple, y compris un calculateur de prix basé sur des options configurables et un générateur de widget de chat personnalisable. Ces outils améliorent la fonctionnalité du site et offrent des solutions pratiques pour renforcer l’interaction client."
+      },
+      "ah": {
+        "title": "Logiciel de signalisation numérique",
+        "description": "J’ai créé un logiciel de signalisation polyvalent pour la salle du personnel d’Albert Heijn, affichant l’heure, des diaporamas de photos, des annonces et bien plus encore. Ce logiciel améliore la communication interne et crée un environnement dynamique et informatif pour les employés."
+      }
+    }
+  },
+  "skills": {
+    "title": "Les outils avec lesquels je travaille",
+    "description": "J’ai développé mon expertise dans les technologies ci-dessous. Je suis également enthousiaste à l’idée de découvrir et maîtriser de nouveaux outils et frameworks pour offrir des solutions encore plus efficaces.",
+    "frontend": {
+      "title": "Front-End"
+    },
+    "backend": {
+      "title": "Back-End",
+      "drf": {
+        "full": "Django REST Framework",
+        "short": "Django REST Framew.",
+        "shortest": "Django REST Fw."
+      }
+    },
+    "datascience": {
+      "title": "Science des données et calcul scientifique"
+    }
+  },
+  "contact": {
+    "title": "Contactez-moi",
+    "text": "Prêt à faire évoluer votre entreprise ? Travaillons ensemble !",
+    "follow": "Suivez-moi"
+  },
+  "menu": {
+    "home": "Accueil",
+    "about": "À propos",
+    "work": "Projets",
+    "skills": "Compétences",
+    "contact": "Contact"
+  }
+}
