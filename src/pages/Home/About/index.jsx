@@ -36,11 +36,10 @@ const About = () => {
           <SectionText>
             <Trans
               i18nKey="about.story"
-              values={{ years: 18 }} // Pass the dynamic number of years
-              components={{ sup: <PlusSup /> }}
-            >
-              I’m a web developer from the Netherlands with 18<sup>+</sup> years of experience.
-            </Trans>
+              components={{
+                0: <em />
+              }}
+            />
           </SectionText>
           <SectionText>
             {t('about.skills')}
