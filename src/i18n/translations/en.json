@@ -12,7 +12,7 @@
   },
   "about": {
     "title": "My Story",
-    "story": "I’m a web developer from the Netherlands with {{years}} years of experience, starting with MS\u00A0Frontpage back in the day and continually advancing since then.",
+    "story": "I’m a web developer from the Netherlands with 15+ years of experience, starting with MS\u00A0Frontpage back in the day and continually advancing since then.",
     "skills": "I’m now working with React and Django to create dynamic web solutions. I’m also always exploring new tools to deliver exceptional results.",
     "hobbies": "Outside of work, I enjoy strolling in <0>Efteling</0>, a Dutch park with a unique enchanting charm. I also like to learn (human) languages."
   },
