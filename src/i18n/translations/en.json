@@ -6,18 +6,19 @@
       "evening": "Good Evening!"
     },
     "introduction": "I’m Kevin",
-    "developer_intro": "A web\u00A0developer based in the\u00A0Netherlands.",
-    "contact_button": "Say “Hello”",
+    "developer_intro": "A web developer who turns tricky problems into smooth web experiences.",
+    "contact_button": "Say “Hi”",
     "resume_button": "Résumé"
   },
   "about": {
     "title": "My Story",
-    "story": "I’m a web developer from the Netherlands with 15+ years of experience, starting with MS\u00A0Frontpage back in the day and continually advancing since then.",
-    "skills": "I’m now working with React and Django to create dynamic web solutions. I’m also always exploring new tools to deliver exceptional results.",
-    "hobbies": "Outside of work, I enjoy strolling in <0>Efteling</0>, a Dutch park with a unique enchanting charm. I also like to learn (human) languages."
+    "story": "Web developer from the Netherlands with <1>18 years of experience</1>, starting with MS Frontpage back in the day and continually advancing since then.",
+    "uvp": "I'm passionate about <1>solving complex problems with code</1> and delivering <1>innovative solutions</1> that help businesses grow.",
+    "skills": "I'm now working with <1>React</1> and <1>Django</1> to create dynamic web solutions. I'm also always exploring new tools to deliver <1>exceptional results</1>.",
+    "hobbies": "Outside of work, I enjoy strolling in <1>Efteling</1>, a Dutch park with a unique enchanting charm. I also like to learn (human) languages."
   },
   "work": {
-    "title": "Things I’ve Worked On",
+    "title": "Exciting Projects, Impactful Results",
     "projects": {
       "saysimple": {
         "title": "Interactive Web Tools",
@@ -48,8 +49,8 @@
     }
   },
   "contact": {
-    "title": "Contact Me",
-    "text": "Ready to elevate your business? Let’s make it happen!",
+    "title": "Let’s Connect",
+    "text": "Together, we can bring your business goals to life.",
     "follow": "Follow"
   },
   "menu": {

@@ -34,19 +34,22 @@ const About = () => {
         <div>
           <SectionTitle>{t('about.title')}</SectionTitle>
           <SectionText>
-            <Trans
-              i18nKey="about.story"
-              components={{
-                0: <em />
-              }}
-            />
+            <Trans i18nKey="about.story">
+              Web developer from the Netherlands with <em>18 years of experience</em>, starting with MS Frontpage back in the day and continually advancing since then.
+            </Trans>
           </SectionText>
           <SectionText>
-            {t('about.skills')}
+            <Trans i18nKey="about.uvp">
+              I'm passionate about <em>solving complex problems with code</em> and delivering <em>innovative solutions</em> that help businesses grow.
+            </Trans>
           </SectionText>
           <SectionText>
-            {/* Use Trans and pass Efteling as a direct component */}
-            <Trans i18nKey="about.hobbies" components={{ 0: <Efteling /> }} />
+            <Trans i18nKey="about.skills">
+              I'm now working with <em>React</em> and <em>Django</em> to create dynamic web solutions. I'm also always exploring new tools to deliver <em>exceptional results</em>.
+            </Trans>
+          </SectionText>
+          <SectionText>
+            <Trans i18nKey="about.hobbies" components={{ 1: <Efteling /> }} />
           </SectionText>
         </div>
         <Photos />

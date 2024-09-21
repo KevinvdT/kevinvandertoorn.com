@@ -25,7 +25,7 @@ const ProjectImage = styled.img`
   width: 356px; // Adjust width as needed
   height: auto; // Maintain aspect ratio
   flex-shrink: 0; // Prevent image from shrinking
-  box-shadow: 0 4px 6px 0 rgba(0,0,0,0.12);
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,0.08); // More subtle shadow
   border-radius: 20px;
   @media (max-width: ${({ theme }) => theme.breakpoints.sm}) {
     max-width: 100%;

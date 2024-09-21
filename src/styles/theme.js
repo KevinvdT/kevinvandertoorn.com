@@ -7,6 +7,7 @@ export const theme = {
     },
     dark: {
       background: '#1a1a1a',
+      // background: '#030b2d',
       primaryText: '#ffffff',
       secondaryText: '#aaaaaa',
     },

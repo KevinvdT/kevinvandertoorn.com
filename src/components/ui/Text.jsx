@@ -9,6 +9,7 @@ export const SectionText = styled.p`
   line-height: 1.875rem;
   & em {
     font-style: normal;
+    font-weight: 600;
     color: ${({ theme }) => theme.colors.light.primaryText} 
   }
 
