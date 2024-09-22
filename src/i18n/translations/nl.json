@@ -6,7 +6,7 @@
       "evening": "Goedenavond!"
     },
     "introduction": "Ik ben Kevin",
-    "developer_intro": "Een web-developer uit Delft.",
+    "developer_intro": "Een web-developer die lastige problemen omzet in soepele web-ervaringen.",
     "contact_button": "Zeg “hallo”",
     "resume_button": "Curriculum Vitae"
   },
@@ -22,11 +22,11 @@
     "projects": {
       "saysimple": {
         "title": "Interactieve web-tools",
-        "description": "Interactieve elementen gemaakt voor de website van Saysimple, waaronder een prijs-calculator op basis van aanpasbare opties, en een configureerbare chatwidget-generator. Deze tools vergroten de functionaliteit van de website en versterken de interactie met klanten."
+        "description": "Interactieve elementen gemaakt voor de website van Saysimple, waaronder een prijs-calculator op basis van aanpasbare opties, en een configureerbare chatwidget-generator. Deze tools <1>vergroten de functionaliteit van de website</1> en bieden praktische oplossingen om <1>de interactie en betrokkenheid van klanten te vergroten</1>."
       },
       "ah": {
         "title": "Digitale signage-software",
-        "description": "Een veelzijdige informatie-display gemaakt voor de personeelsruimte van Albert\u00A0Heijn. De software toont de huidige tijd en datum, diavoorstellingen van foto's, aankondigingen en meer, wat de interne communicatie verbetert en een dynamische en informatieve omgeving voor medewerkers creëert."
+        "description": "Een veelzijdige informatie-display gemaakt voor de personeelsruimte van Albert\u00A0Heijn. De software toont de huidige tijd en datum, diavoorstellingen van foto's, aankondigingen en meer, wat de <1>interne communicatie verbetert</1> en een <1>dynamische en informatieve omgeving</1> voor medewerkers creëert."
       }
     }
   },

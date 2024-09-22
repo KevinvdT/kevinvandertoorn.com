@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { useTranslation } from 'react-i18next'; // Import useTranslation hook
+import { Trans, useTranslation } from 'react-i18next'; // Import Trans component
 import { Container } from '../../../components/layout/Container';
 import { SectionTitle } from '../../../components/ui/Title';
 import ProjectItem from './ProjectItem';
@@ -22,12 +22,20 @@ const Work = () => {
         <ProjectItem
           imageSrc={imgSaysimple}
           title={t('work.projects.saysimple.title')}
-          description={t('work.projects.saysimple.description')}
+          description={
+            <Trans i18nKey="work.projects.saysimple.description">
+              Created interactive elements for Saysimple's website, including a <em>pricing calculator</em> based on configurable options, and a <em>customizable chat widget generator</em>. These tools enhance website functionality and offer practical solutions to boost client interaction and engagement.
+            </Trans>
+          }
         />
         <ProjectItem
           imageSrc={imgAh}
           title={t('work.projects.ah.title')}
-          description={t('work.projects.ah.description')}
+          description={
+            <Trans i18nKey="work.projects.ah.description">
+              Created a versatile signage software for Albert&nbsp;Heijn's staff room display. The software showcases the <em>current time and date</em>, <em>photo slideshows</em>, <em>announcements</em>, and more, enhancing internal communication and creating a dynamic and informative environment for employees.
+            </Trans>
+          }
         />
       </ProjectItemsWrapper>
     </Container>

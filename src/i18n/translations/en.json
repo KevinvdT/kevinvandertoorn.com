@@ -22,11 +22,11 @@
     "projects": {
       "saysimple": {
         "title": "Interactive Web Tools",
-        "description": "Created interactive elements for Saysimple's website, including a pricing calculator based on configurable options, and a customizable chat widget generator. These tools enhance website functionality and offer practical solutions to boost client interaction and engagement."
+        "description": "Created interactive elements for Saysimple's website, including a pricing calculator based on configurable options, and a customizable chat widget generator. These tools <1>enhance website functionality</1> and offer practical solutions to <1>boost client interaction and engagement</1>."
       },
       "ah": {
         "title": "Digital Signage Software",
-        "description": "Created a versatile signage software for Albert\u00A0Heijn's staff room display. The software showcases the current time and date, photo slideshows, announcements, and more, enhancing internal communication and creating a dynamic and informative environment for employees."
+        "description": "Created a versatile signage software for Albert\u00A0Heijn's staff room display. The software showcases the current time and date, photo slideshows, announcements, and more, <1>enhancing internal communication</1> and creating a <1>dynamic and informative environment</1> for employees."
       }
     }
   },
