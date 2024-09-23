@@ -104,7 +104,7 @@ const Hero = ({ setActiveSection }) => {
           </ButtonRow>
         </HeroIntro>
       </TwoCol>
-      <DownArrow><img src={downarrow} onClick={handleScrollToAbout} /></DownArrow>
+      <DownArrow><img src={downarrow} onClick={handleScrollToAbout} alt="Scroll down" /></DownArrow>
     </HeroContainer>
   );
 };
