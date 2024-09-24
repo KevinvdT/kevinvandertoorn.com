@@ -18,8 +18,15 @@
     "hobbies": "Outside of work, I enjoy strolling in <1>Efteling</1>, a Dutch park with a unique enchanting charm. I also like to learn (human) languages."
   },
   "work": {
-    "title": "Exciting Projects, Impactful Results",
+    "title": "Exciting\u00A0Projects, Impactful\u00A0Results",
     "projects": {
+      "delfthyperloop": {
+        "title": "Control Interface & Website",
+        "description": {
+          "part1": "I was part of the Delft Hyperloop team in the <1>SpaceX Hyperloop Pod Competition 2018</1>, founded by Elon Musk. I developed the Delft Hyperloop website, <1>attracting sponsors and media attention</1>.",
+          "part2": "Additionally, I created a test system to optimize the pod’s performance and a control interface for real-time vehicle management and safety checks, ensuring <1>smooth and safe operations</1> during tests and the competition."
+        }
+      },
       "saysimple": {
         "title": "Interactive Web Tools",
         "description": "Created interactive elements for Saysimple’s website, including a pricing calculator based on configurable options, and a customizable chat widget generator. These tools <1>enhance website functionality</1> and offer practical solutions to <1>boost client interaction and engagement</1>."

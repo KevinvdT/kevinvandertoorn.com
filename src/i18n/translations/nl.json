@@ -18,8 +18,15 @@
     "hobbies": "Buiten werk dwarrel ik graag in het Kaatsheuvelse <1>Efteling</1>. Ook leer ik graag vreemde talen."
   },
   "work": {
-    "title": "Inspirerende projecten,\nimpactvolle resultaten",
+    "title": "Inspirerende\u00A0projecten,\nimpactvolle\u00A0resultaten",
     "projects": {
+      "delfthyperloop": {
+        "title": "Bedieningsinterface & website",
+        "description": {
+          "part1": "Ik was onderdeel van het Delft Hyperloop-team in de <1>SpaceX Hyperloop Pod Competition 2018</1>, opgericht door Elon Musk. Ik ontwikkelde de Delft Hyperloop-website (met Django), waarmee we <1>sponsors en media-aandacht aantrokken</1>.",
+          "part2": "Daarnaast werkte ik aan een testsysteem om de prestaties van de pod te optimaliseren en een bedieningsinterface voor real-time voertuigbeheer en veiligheidscontroles, wat zorgde voor <1>soepele en veilige operaties</1> tijdens tests en de competitie."
+        }
+      },
       "saysimple": {
         "title": "Interactieve web-tools",
         "description": "Interactieve elementen gemaakt voor de website van Saysimple, waaronder een prijs-calculator op basis van aanpasbare opties, en een configureerbare chatwidget-generator. Deze tools <1>vergroten de functionaliteit van de website</1> en bieden praktische oplossingen om <1>de interactie en betrokkenheid van klanten te vergroten</1>."

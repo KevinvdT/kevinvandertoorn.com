@@ -7,6 +7,7 @@ export const SectionTitle = styled.h2`
   font-weight: 600;  // Semibold font weight
   color: ${({ theme }) => theme.colors.light.primaryText};
   margin-bottom: 1rem;
+  line-height: 1.45; // Adjusted line-height for better readability
 
   @media (prefers-color-scheme: dark) {
     color: ${({ theme }) => theme.colors.dark.primaryText};

@@ -35,14 +35,17 @@ const ProjectImage = styled.img`
 
 const ProjectContent = styled.div`
   flex-grow: 1; // Allow content to grow
-  `;
+`;
 
 const ProjectDescription = styled(SectionText)`
-  font-size:  0.9375rem; // Description font size
+  font-size: 0.9375rem; // Description font size
+  white-space: pre-line; // Support newlines
+  margin-bottom: 0.5em;
   @media (max-width: ${({ theme }) => theme.breakpoints.sm}) {
     line-height: 1.71875rem;
   }
 `;
+
 const ProjectTitle = styled(SectionTitle)`
 font-family: 'Inter','Arial',sans-serif;
   font-size:  1.0625rem;
@@ -52,13 +55,21 @@ font-family: 'Inter','Arial',sans-serif;
   /* font-weight: 600; */
 `;
 
-
+// ProjectItem component that can handle both single and multiple descriptions
 const ProjectItem = ({ imageSrc, title, description }) => (
   <ProjectItemContainer aligntop>
     <ProjectImage src={imageSrc} alt={title} />
     <ProjectContent>
       <ProjectTitle as="h3">{title}</ProjectTitle>
-      <ProjectDescription>{description}</ProjectDescription>
+      {Array.isArray(description) ? (
+        // If description is an array, map over it and render each item in its own ProjectDescription
+        description.map((desc, index) => (
+          <ProjectDescription key={index}>{desc}</ProjectDescription>
+        ))
+      ) : (
+        // If description is a single string, render it in a single ProjectDescription
+        <ProjectDescription>{description}</ProjectDescription>
+      )}
     </ProjectContent>
   </ProjectItemContainer>
 );
