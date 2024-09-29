@@ -37,6 +37,7 @@ const LanguageButton = styled.button`
   font-size: 1rem;
   transition: all 0.3s ease;
   font-size: 0.8rem;
+  text-transform: uppercase; /* Transform text to uppercase */
   
   &:hover {
     background-color: ${({ isActive, theme }) =>
@@ -63,14 +64,14 @@ const LanguageButton = styled.button`
 const LanguageSwitcher = () => {
   const { i18n } = useTranslation();
   const languages = [
-    'EN',
-    'NL',
-    // 'DE',
+    'en',
+    'nl',
+    'de',
   ];
   const currentLanguage = i18n.language; // Get the current language
 
   const handleLanguageChange = (language) => {
-    i18n.changeLanguage(language.toLowerCase()); // Switch to the selected language
+    i18n.changeLanguage(language); // Switch to the selected language
   };
 
   return (
@@ -78,10 +79,10 @@ const LanguageSwitcher = () => {
       {languages.map((language) => (
         <LanguageButton
           key={language}
-          isActive={currentLanguage === language.toLowerCase()}
+          isActive={currentLanguage === language}
           onClick={() => handleLanguageChange(language)}
         >
-          {language}
+          {language.toUpperCase()}
         </LanguageButton>
       ))}
     </SwitcherContainer>

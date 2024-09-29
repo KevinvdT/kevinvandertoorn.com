@@ -35,7 +35,9 @@
         "title": "Digitale signage-software",
         "description": "Een veelzijdige informatie-display gemaakt voor de personeelsruimte van Albert\u00A0Heijn. De software toont de huidige tijd en datum, diavoorstellingen van foto's, aankondigingen en meer, wat de <1>interne communicatie verbetert</1> en een <1>dynamische en informatieve omgeving</1> voor medewerkers creëert."
       }
-    }
+    },
+    "seeMore": "Meer zien",
+    "seeLess": "Minder zien"
   },
   "skills": {
     "title": "De tools die ik gebruik",

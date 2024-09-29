@@ -12,13 +12,12 @@ const ProjectItemContainer = styled(TwoCol)`
     flex: initial;  /* Ensures that each child (column) DOESN'T take up equal space */
   }
 
-  margin-bottom: 75px;
+  padding-top: 2.25rem; /* Adjusted padding */
+  padding-bottom: 2.25rem; /* Adjusted padding */
   @media (max-width: ${({ theme }) => theme.breakpoints.sm}) {
-    margin-bottom: 60px;
+    padding-top: 1.5rem; /* Adjusted padding */
+    padding-bottom: 1.5rem; /* Adjusted padding */
   }
-  &:last-of-type {
-     margin-bottom: 0px; 
-    }
 `;
 
 const ProjectImage = styled.img`

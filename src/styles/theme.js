@@ -4,12 +4,14 @@ export const theme = {
       background: '#ffffff',
       primaryText: '#000000',
       secondaryText: '#555555',
+      primary: '#006FD0',
     },
     dark: {
       background: '#1a1a1a',
       // background: '#030b2d',
       primaryText: '#ffffff',
       secondaryText: '#aaaaaa',
+      primary: '#1f7cce',
     },
   },
   breakpoints: {

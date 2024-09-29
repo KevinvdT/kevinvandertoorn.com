@@ -6,10 +6,10 @@ import LanguageDetector from 'i18next-browser-languagedetector'; // Add this
 import translationEN from './translations/en.json';
 import translationNL from './translations/nl.json';
 import translationDE from './translations/de.json';
-import translationDA from './translations/da.json';
-import translationFR from './translations/fr.json';
-import translationES from './translations/es.json';
-import translationJA from './translations/ja.json';
+// import translationDA from './translations/da.json';
+// import translationFR from './translations/fr.json';
+// import translationES from './translations/es.json';
+// import translationJA from './translations/ja.json';
 
 const resources = {
   en: {
@@ -21,18 +21,18 @@ const resources = {
   de: {
     translation: translationDE,
   },
-  da: {
-    translation: translationDA,
-  },
-  fr: {
-    translation: translationFR,
-  },
-  es: {
-    translation: translationES,
-  },
-  ja: {
-    translation: translationJA,
-  },
+  // da: {
+  //   translation: translationDA,
+  // },
+  // fr: {
+  //   translation: translationFR,
+  // },
+  // es: {
+  //   translation: translationES,
+  // },
+  // ja: {
+  //   translation: translationJA,
+  // },
 };
 
 i18n
