@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import { useTranslation } from 'react-i18next';
 
@@ -68,7 +68,12 @@ const LanguageSwitcher = () => {
     'nl',
     'de',
   ];
-  const currentLanguage = i18n.language; // Get the current language
+  const [currentLanguage, setCurrentLanguage] = useState(i18n.resolvedLanguage);
+
+  useEffect(() => {
+    // Update currentLanguage whenever i18n.resolvedLanguage changes
+    setCurrentLanguage(i18n.resolvedLanguage);
+  }, [i18n.resolvedLanguage]);
 
   const handleLanguageChange = (language) => {
     i18n.changeLanguage(language); // Switch to the selected language
