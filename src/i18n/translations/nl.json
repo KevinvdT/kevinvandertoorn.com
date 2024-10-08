@@ -23,7 +23,7 @@
       "delfthyperloop": {
         "title": "Bedieningsinterface & website",
         "description": {
-          "part1": "Ik was onderdeel van het Delft Hyperloop-team in de <1>SpaceX Hyperloop Pod Competition 2018</1>, opgericht door Elon Musk. Ik ontwikkelde de Delft Hyperloop-website (met Django), waarmee we <1>sponsors en media-aandacht aantrokken</1>.",
+          "part1": "Was onderdeel van het Delft Hyperloop-team in de <1>SpaceX Hyperloop Pod Competition 2018</1>, opgericht door Elon Musk. Ontwikkelde de Delft Hyperloop-website (met Django), waarmee we <1>sponsors en media-aandacht aantrokken</1>.",
           "part2": "Daarnaast werkte ik aan een testsysteem om de prestaties van de pod te optimaliseren en een bedieningsinterface voor real-time voertuigbeheer en veiligheidscontroles, wat zorgde voor <1>soepele en veilige operaties</1> tijdens tests en de competitie."
         }
       },
