@@ -18,6 +18,7 @@ import {
   SiOctave as IconMatlab,
   SiDjango as IconDjango
 } from "react-icons/si";
+import { FaDocker as IconDocker } from "react-icons/fa";
 import { LuBraces as IconDrf } from "react-icons/lu";
 
 const SkillSetsWrapper = styled.div`
@@ -48,21 +49,22 @@ const Skills = () => {
           </SkillSet>
 
           <SkillSet title={t('skills.backend.title')}>
-            <Skill icon={IconDjango}>Django (Python)</Skill>
-            <Skill icon={IconDrf}>
+            <Skill icon={IconDjango} iconColor='#20cc8a'>Django (Python)</Skill>
+            <Skill icon={IconDrf} iconColor='#ec3939'>
               {isVerySmallScreen
                 ? t('skills.backend.drf.shortest')
                 : isSmallScreen
                   ? t('skills.backend.drf.short')
                   : t('skills.backend.drf.full')}
             </Skill>
+            <Skill icon={IconDocker} iconColor='#1d63ed'>Docker</Skill>
           </SkillSet>
         </TwoCol>
 
         <SkillSet title={t('skills.datascience.title')}>
-          <Skill icon={IconPython}>Python, Numpy, Matplotlib</Skill>
-          <Skill icon={IconJulia}>Julia</Skill>
-          <Skill icon={IconMatlab}>Matlab / Octave</Skill>
+          <Skill icon={IconPython} iconColor='#409de3'>Python, Numpy, Matplotlib</Skill>
+          <Skill icon={IconJulia} iconColor='#c869f4'>Julia</Skill>
+          <Skill icon={IconMatlab} iconColor='#ff680a'>Matlab / Octave</Skill>
         </SkillSet>
       </SkillSetsWrapper>
     </Container>

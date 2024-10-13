@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { useTranslation } from 'react-i18next'; // Import useTranslation hook
+import { useDispatch } from 'react-redux'; // Import useDispatch
 import { Container } from '../../../components/layout/Container';
 import TwoCol from '../../../components/layout/TwoCol';
 import { HeroTitle } from '../../../components/ui/Title';
@@ -75,15 +76,16 @@ const getGreetingKey = () => {
   }
 };
 
-const Hero = ({ setActiveSection }) => {
+const Hero = () => {
   const { t } = useTranslation(); // Hook to get translation function
+  const dispatch = useDispatch(); // Initialize useDispatch
 
   const handleScrollToAbout = () => {
-    setActiveSection({ sectionId: 'about' });
+    dispatch(setActiveSection({ sectionId: 'about' })); // Use dispatch to call setActiveSection
   };
 
   const handleScrollToContact = () => {
-    setActiveSection({ sectionId: 'contact' });
+    dispatch(setActiveSection({ sectionId: 'contact' })); // Use dispatch to call setActiveSection
   };
 
   const greetingKey = getGreetingKey(); // Get greeting key based on the time of day
