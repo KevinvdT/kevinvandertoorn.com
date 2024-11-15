@@ -34,6 +34,7 @@ const ProjectImage = styled.img`
 
 const ProjectContent = styled.div`
   flex-grow: 1; // Allow content to grow
+  
 `;
 
 const ProjectDescription = styled(SectionText)`
@@ -43,6 +44,9 @@ const ProjectDescription = styled(SectionText)`
   @media (max-width: ${({ theme }) => theme.breakpoints.sm}) {
     line-height: 1.71875rem;
   }
+  // &::selection, & em::selection {
+  //   background-color: ${({ color }) => color}55;
+  // }
 `;
 
 const ProjectTitle = styled(SectionTitle)`
@@ -52,22 +56,25 @@ font-family: 'Inter','Arial',sans-serif;
     line-height: 0.5rem;
   }
   /* font-weight: 600; */
+  // &::selection {
+  //   background-color: ${({ color }) => color}55;
+  // }
 `;
 
 // ProjectItem component that can handle both single and multiple descriptions
-const ProjectItem = ({ imageSrc, title, description }) => (
+const ProjectItem = ({ imageSrc, title, description, color }) => (
   <ProjectItemContainer aligntop>
     <ProjectImage src={imageSrc} alt={title} />
     <ProjectContent>
-      <ProjectTitle as="h3">{title}</ProjectTitle>
+      <ProjectTitle as="h3" color={color}>{title}</ProjectTitle>
       {Array.isArray(description) ? (
         // If description is an array, map over it and render each item in its own ProjectDescription
         description.map((desc, index) => (
-          <ProjectDescription key={index}>{desc}</ProjectDescription>
+          <ProjectDescription key={index} color={color}>{desc}</ProjectDescription>
         ))
       ) : (
         // If description is a single string, render it in a single ProjectDescription
-        <ProjectDescription>{description}</ProjectDescription>
+        <ProjectDescription color={color}>{description}</ProjectDescription>
       )}
     </ProjectContent>
   </ProjectItemContainer>

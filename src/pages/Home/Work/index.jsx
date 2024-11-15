@@ -72,6 +72,7 @@ const Work = () => {
               Additionally, I created a test system to optimize the pod's performance and a control interface for real-time vehicle management and safety checks, ensuring <em>smooth and safe operations</em> during tests and the competition.
             </Trans>
           ]}
+          color='#20cc8a'
         />
 
         <ProjectItem
@@ -82,6 +83,7 @@ const Work = () => {
               Created a versatile signage software for Albert&nbsp;Heijn's staff room display. The software showcases the <em>current time and date</em>, <em>photo slideshows</em>, <em>announcements</em>, and more, enhancing internal communication and creating a dynamic and informative environment for employees.
             </Trans>
           }
+          color='#52c2df'
         />
       </ProjectItemsWrapper>
       <ShowMoreWrapper showMore={showMore}>
@@ -93,6 +95,7 @@ const Work = () => {
               Created interactive elements for Saysimple's website, including a <em>pricing calculator</em> based on configurable options, and a <em>customizable chat widget generator</em>. These tools enhance website functionality and offer practical solutions to boost client interaction and engagement.
             </Trans>
           }
+          color='#aa88fd'
         />
       </ShowMoreWrapper>
       <SeeMoreButtonWrapper showMore={showMore}>

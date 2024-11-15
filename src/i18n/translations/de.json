@@ -6,13 +6,13 @@
       "evening": "Guten Abend!"
     },
     "introduction": "Ich bin Kevin",
-    "developer_intro": "Ein Webentwickler, der schwierige Probleme in reibungslose Web-Erlebnisse verwandelt.",
-    "contact_button": "Sag „Hallo“",
+    "developer_intro": "Ein Web-Developer, der schwierige Probleme in reibungslose Web-Erlebnisse verwandelt.",
+    "contact_button": "Kontaktiere mich",
     "resume_button": "Lebenslauf"
   },
   "about": {
     "title": "Meine Geschichte",
-    "story": "Webentwickler aus den Niederlanden mit <1>über 18 Jahren Erfahrung</1>, angefangen mit MS Frontpage und seitdem kontinuierlich weiterentwickelt.",
+    "story": "Web-Deve aus den Niederlanden mit <1>über 18 Jahren Erfahrung</1>, angefangen mit MS Frontpage und seitdem kontinuierlich weiterentwickelt.",
     "uvp": "Bin begeistert davon, <1>komplexe Probleme mit Code zu lösen</1> und <1>innovative Lösungen</1> zu liefern, die Unternehmen helfen zu wachsen.",
     "skills": "Arbeite derzeit mit <1>React</1> und <1>Django</1>, um dynamische Weblösungen zu entwickeln. Entdecke auch immer gerne neue Tools, um <1>die besten Ergebnisse</1> zu liefern.",
     "hobbies": "In meiner Freizeit genieße ich Spaziergänge im <1>Efteling</1>, einem niederländischen Park mit einzigartigem Charme. Außerdem lerne ich gerne Fremdsprachen."
