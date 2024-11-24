@@ -6,32 +6,42 @@
       "evening": "Guten Abend!"
     },
     "introduction": "Ich bin Kevin",
-    "developer_intro": "Ein Webentwickler aus\u00A0den Niederlanden.",
-    "contact_button": "Sag „Hallo“",
+    "developer_intro": "Ein Web-Developer, der schwierige Probleme in reibungslose Web-Erlebnisse verwandelt.",
+    "contact_button": "Kontaktiere mich",
     "resume_button": "Lebenslauf"
   },
   "about": {
     "title": "Meine Geschichte",
-    "story": "Ich bin ein Webentwickler aus den Niederlanden mit über 18 Jahren Erfahrung. Ich habe einst mit MS Frontpage begonnen und mich seitdem kontinuierlich weiterentwickelt.",
-    "skills": "Ich arbeite derzeit mit React und Django, um dynamische Weblösungen zu entwickeln. Ich entdecke auch immer gerne neue Tools, um die besten Ergebnisse zu liefern.",
-    "hobbies": "In meiner Freizeit genieße ich Spaziergänge im Efteling-Park in Kaatsheuvel und beschäftige mich gerne mit dem Erlernen neuer Sprachen."
+    "story": "Web-Deve aus den Niederlanden mit <1>über 18 Jahren Erfahrung</1>, angefangen mit MS Frontpage und seitdem kontinuierlich weiterentwickelt.",
+    "uvp": "Bin begeistert davon, <1>komplexe Probleme mit Code zu lösen</1> und <1>innovative Lösungen</1> zu liefern, die Unternehmen helfen zu wachsen.",
+    "skills": "Arbeite derzeit mit <1>React</1> und <1>Django</1>, um dynamische Weblösungen zu entwickeln. Entdecke auch immer gerne neue Tools, um <1>die besten Ergebnisse</1> zu liefern.",
+    "hobbies": "In meiner Freizeit genieße ich Spaziergänge im <1>Efteling</1>, einem niederländischen Park mit einzigartigem Charme. Außerdem lerne ich gerne Fremdsprachen."
   },
   "work": {
-    "title": "Inspirierende Projekte, wirkungsvolle Ergebnisse",
+    "title": "Inspirierende\u00A0Projekte,\nwirkungsvolle\u00A0Ergebnisse",
     "projects": {
+      "delfthyperloop": {
+        "title": "Steuerungsoberfläche & Website",
+        "description": {
+          "part1": "War Teil des Delft Hyperloop-Teams bei der <1>SpaceX Hyperloop Pod Competition 2018</1>, gegründet von Elon Musk. Habe die Delft Hyperloop-Website entwickelt, <1>um Sponsoren und Medienaufmerksamkeit zu gewinnen</1>.",
+          "part2": "Habe ein Testsystem entwickelt, um die Leistung der Kapsel zu optimieren, und eine Steuerungsoberfläche für das Echtzeit-Fahrzeugmanagement und Sicherheitskontrollen erstellt, was <1>reibungslose und sichere Abläufe</1> während der Tests und des Wettbewerbs gewährleistet."
+        }
+      },
       "saysimple": {
         "title": "Interaktive Webtools",
-        "description": "Ich habe interaktive Elemente für die Website von Saysimple entwickelt, darunter ein Preisrechner basierend auf konfigurierbaren Optionen und einen anpassbaren Chat-Widget-Generator. Diese Tools verbessern die Funktionalität der Website und bieten praktische Lösungen, um die Interaktion mit Kunden zu fördern."
+        "description": "Habe interaktive Elemente für die Website von Saysimple entwickelt, darunter ein Preisrechner basierend auf konfigurierbaren Optionen und einen anpassbaren Chat-Widget-Generator. Diese Tools <1>verbessern die Funktionalität der Website</1> und bieten praktische Lösungen, um <1>die Interaktion und das Engagement der Kunden zu fördern</1>."
       },
       "ah": {
         "title": "Digitale Beschilderungssoftware",
-        "description": "Ich habe eine vielseitige Beschilderungssoftware für den Aufenthaltsraum von Albert Heijn entwickelt. Die Software zeigt die aktuelle Uhrzeit, Fotodiashows, Ankündigungen und mehr, was die interne Kommunikation verbessert und eine dynamische und informative Umgebung für die Mitarbeiter schafft."
+        "description": "Habe eine vielseitige Beschilderungssoftware für den Aufenthaltsraum von Albert\u00A0Heijn entwickelt. Die Software zeigt die aktuelle Uhrzeit, Fotodiashows, Ankündigungen und mehr, was <1>die interne Kommunikation verbessert</1> und eine <1>dynamische und informative Umgebung</1> für die Mitarbeiter schafft."
       }
-    }
+    },
+    "seeMore": "Mehr sehen",
+    "seeLess": "Weniger sehen"
   },
   "skills": {
     "title": "Tools die ich benutze",
-    "description": "Ich habe Fachkenntnisse in den unten aufgeführten Technologien entwickelt. Ich bin auch immer begeistert, neue Tools und Frameworks zu erkunden und zu meistern, die mir helfen, noch bessere Lösungen zu liefern.",
+    "description": "Ich habe Fachkenntnisse in den unten aufgeführten Technologien entwickelt. Bin auch immer begeistert, neue Tools und Frameworks zu erkunden und zu meistern, die mir helfen, noch bessere Lösungen zu liefern.",
     "frontend": {
       "title": "Front-End"
     },
@@ -44,19 +54,19 @@
       }
     },
     "datascience": {
-      "title": "Datenwissenschaft & wissenschaftliches Rechnen"
+      "title": "Data-Science & Scientific Computing"
     }
   },
   "contact": {
-    "title": "Kontaktieren Sie mich",
+    "title": "Lassen Sie uns verbinden",
     "text": "Bereit, Ihr Unternehmen voranzubringen?\nLassen Sie es uns möglich machen!",
     "follow": "Folgen"
   },
   "menu": {
     "home": "Start",
-    "about": "Über mich",
+    "about": "Über",
     "work": "Arbeiten",
-    "skills": "Fähigkeiten",
+    "skills": "Skills",
     "contact": "Kontakt"
   }
 }

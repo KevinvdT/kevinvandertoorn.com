@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import { useTranslation } from 'react-i18next';
 
@@ -37,6 +37,7 @@ const LanguageButton = styled.button`
   font-size: 1rem;
   transition: all 0.3s ease;
   font-size: 0.8rem;
+  text-transform: uppercase; /* Transform text to uppercase */
   
   &:hover {
     background-color: ${({ isActive, theme }) =>
@@ -63,14 +64,19 @@ const LanguageButton = styled.button`
 const LanguageSwitcher = () => {
   const { i18n } = useTranslation();
   const languages = [
-    'EN',
-    'NL',
-    // 'DE',
+    'en',
+    'nl',
+    'de',
   ];
-  const currentLanguage = i18n.language; // Get the current language
+  const [currentLanguage, setCurrentLanguage] = useState(i18n.resolvedLanguage);
+
+  useEffect(() => {
+    // Update currentLanguage whenever i18n.resolvedLanguage changes
+    setCurrentLanguage(i18n.resolvedLanguage);
+  }, [i18n.resolvedLanguage]);
 
   const handleLanguageChange = (language) => {
-    i18n.changeLanguage(language.toLowerCase()); // Switch to the selected language
+    i18n.changeLanguage(language); // Switch to the selected language
   };
 
   return (
@@ -78,10 +84,10 @@ const LanguageSwitcher = () => {
       {languages.map((language) => (
         <LanguageButton
           key={language}
-          isActive={currentLanguage === language.toLowerCase()}
+          isActive={currentLanguage === language}
           onClick={() => handleLanguageChange(language)}
         >
-          {language}
+          {language.toUpperCase()}
         </LanguageButton>
       ))}
     </SwitcherContainer>

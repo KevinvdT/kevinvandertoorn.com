@@ -90,12 +90,14 @@ const ParallaxImage = ({ front, back }) => {
     <ParallaxContainer>
       <BackgroundLayer
         src={back}
+        alt="Background of profile picture"
         style={{
           transform: `translate(${-offsetX}px, ${-offsetY - 30}px) scale(1.05)`, // Combine scale and translate
         }}
       />
       <ForegroundLayer
         src={front}
+        alt="Foreground of profile picture"
         style={{
           transform: `translate(${offsetX / 2}px, ${offsetY / 2}px)`, // Only translate for foreground
         }}

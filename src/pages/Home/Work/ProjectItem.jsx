@@ -12,13 +12,12 @@ const ProjectItemContainer = styled(TwoCol)`
     flex: initial;  /* Ensures that each child (column) DOESN'T take up equal space */
   }
 
-  margin-bottom: 75px;
+  padding-top: 2.25rem; /* Adjusted padding */
+  padding-bottom: 2.25rem; /* Adjusted padding */
   @media (max-width: ${({ theme }) => theme.breakpoints.sm}) {
-    margin-bottom: 60px;
+    padding-top: 1.5rem; /* Adjusted padding */
+    padding-bottom: 1.5rem; /* Adjusted padding */
   }
-  &:last-of-type {
-     margin-bottom: 0px; 
-    }
 `;
 
 const ProjectImage = styled.img`
@@ -35,14 +34,21 @@ const ProjectImage = styled.img`
 
 const ProjectContent = styled.div`
   flex-grow: 1; // Allow content to grow
-  `;
+  
+`;
 
 const ProjectDescription = styled(SectionText)`
-  font-size:  0.9375rem; // Description font size
+  font-size: 0.9375rem; // Description font size
+  white-space: pre-line; // Support newlines
+  margin-bottom: 0.5em;
   @media (max-width: ${({ theme }) => theme.breakpoints.sm}) {
     line-height: 1.71875rem;
   }
+  // &::selection, & em::selection {
+  //   background-color: ${({ color }) => color}55;
+  // }
 `;
+
 const ProjectTitle = styled(SectionTitle)`
 font-family: 'Inter','Arial',sans-serif;
   font-size:  1.0625rem;
@@ -50,15 +56,26 @@ font-family: 'Inter','Arial',sans-serif;
     line-height: 0.5rem;
   }
   /* font-weight: 600; */
+  // &::selection {
+  //   background-color: ${({ color }) => color}55;
+  // }
 `;
 
-
-const ProjectItem = ({ imageSrc, title, description }) => (
+// ProjectItem component that can handle both single and multiple descriptions
+const ProjectItem = ({ imageSrc, title, description, color }) => (
   <ProjectItemContainer aligntop>
     <ProjectImage src={imageSrc} alt={title} />
     <ProjectContent>
-      <ProjectTitle as="h3">{title}</ProjectTitle>
-      <ProjectDescription>{description}</ProjectDescription>
+      <ProjectTitle as="h3" color={color}>{title}</ProjectTitle>
+      {Array.isArray(description) ? (
+        // If description is an array, map over it and render each item in its own ProjectDescription
+        description.map((desc, index) => (
+          <ProjectDescription key={index} color={color}>{desc}</ProjectDescription>
+        ))
+      ) : (
+        // If description is a single string, render it in a single ProjectDescription
+        <ProjectDescription color={color}>{description}</ProjectDescription>
+      )}
     </ProjectContent>
   </ProjectItemContainer>
 );

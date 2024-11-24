@@ -7,28 +7,37 @@
     },
     "introduction": "I’m Kevin",
     "developer_intro": "A web developer who turns tricky problems into smooth web experiences.",
-    "contact_button": "Say “Hi”",
+    "contact_button": "Contact Me",
     "resume_button": "Résumé"
   },
   "about": {
     "title": "My Story",
-    "story": "Web developer from the Netherlands with <1>18 years of experience</1>, starting with MS Frontpage back in the day and continually advancing since then.",
-    "uvp": "I'm passionate about <1>solving complex problems with code</1> and delivering <1>innovative solutions</1> that help businesses grow.",
-    "skills": "I'm now working with <1>React</1> and <1>Django</1> to create dynamic web solutions. I'm also always exploring new tools to deliver <1>exceptional results</1>.",
+    "story": "Web developer from the Netherlands with <1>18+ years of experience</1>, starting with MS Frontpage back in the day and continually advancing since then.",
+    "uvp": "I’m passionate about <1>solving complex problems with code</1> and delivering <1>innovative solutions</1> that help businesses grow.",
+    "skills": "I’m now working with <1>React</1> and <1>Django</1> to create dynamic web solutions. I’m also always exploring new tools to deliver <1>exceptional results</1>.",
     "hobbies": "Outside of work, I enjoy strolling in <1>Efteling</1>, a Dutch park with a unique enchanting charm. I also like to learn (human) languages."
   },
   "work": {
-    "title": "Exciting Projects, Impactful Results",
+    "title": "Exciting\u00A0Projects, Impactful\u00A0Results",
     "projects": {
+      "delfthyperloop": {
+        "title": "Control Interface & Website",
+        "description": {
+          "part1": "Contributed to the Delft Hyperloop team in the <1>SpaceX Hyperloop Pod Competition 2018</1>, founded by Elon Musk. Developed the Delft Hyperloop website, <1>attracting sponsors and media attention</1>.",
+          "part2": "Created a test system to optimize the pod’s performance and a control interface for real-time vehicle management and safety checks, ensuring <1>smooth and safe operations</1> during tests and the competition."
+        }
+      },
       "saysimple": {
         "title": "Interactive Web Tools",
-        "description": "Created interactive elements for Saysimple's website, including a pricing calculator based on configurable options, and a customizable chat widget generator. These tools <1>enhance website functionality</1> and offer practical solutions to <1>boost client interaction and engagement</1>."
+        "description": "Created interactive elements for Saysimple’s website, including a pricing calculator based on configurable options, and a customizable chat widget generator. These tools <1>enhance website functionality</1> and offer practical solutions to <1>boost client interaction and engagement</1>."
       },
       "ah": {
         "title": "Digital Signage Software",
-        "description": "Created a versatile signage software for Albert\u00A0Heijn's staff room display. The software showcases the current time and date, photo slideshows, announcements, and more, <1>enhancing internal communication</1> and creating a <1>dynamic and informative environment</1> for employees."
+        "description": "Created a versatile signage software for Albert\u00A0Heijn’s staff room display. The software showcases the current time and date, photo slideshows, announcements, and more, <1>enhancing internal communication</1> and creating a <1>dynamic and informative environment</1> for employees."
       }
-    }
+    },
+    "seeMore": "See More",
+    "seeLess": "See Less"
   },
   "skills": {
     "title": "Tools I Rock With",

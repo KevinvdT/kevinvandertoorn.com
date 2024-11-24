@@ -16,7 +16,7 @@ const SkillList = styled.ul`
   margin: 0.5rem 0 0 0; // Add margin at the top
 `;
 
-const SkillItem = styled.div`
+const SkillItem = styled.li`
   display: flex;
   flex-direction: row;
 `;
@@ -61,7 +61,7 @@ const SkillSet = ({ title, children }) => (
 export const Skill = ({ icon: Icon, iconColor, children }) => (
   <SkillItem>
     <SkillItemIcon >{Icon ? <Icon /> : null}</SkillItemIcon>
-    <SkillItemName as="li" color={iconColor}>{children}</SkillItemName>
+    <SkillItemName color={iconColor}>{children}</SkillItemName>
   </SkillItem>
 );
 

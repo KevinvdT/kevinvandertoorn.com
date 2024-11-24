@@ -6,20 +6,27 @@
       "evening": "Goedenavond!"
     },
     "introduction": "Ik ben Kevin",
-    "developer_intro": "Een web-developer die lastige problemen omzet in soepele web-ervaringen.",
-    "contact_button": "Zeg “hallo”",
+    "developer_intro": "Een web-developer die complexe problemen omzet in soepele web-experiences.",
+    "contact_button": "Contact",
     "resume_button": "Curriculum Vitae"
   },
   "about": {
     "title": "Mijn verhaal",
     "story": "Webontwikkelaar uit Nederland met <1>18+ jaar ervaring</1>, ooit begonnen met MS Frontpage en sindsdien voortdurend gegroeid.",
-    "uvp": "Ik ben een toegewijde ontwikkelaar, gepassioneerd over het <1>oplossen van complexe problemen met code</1>. Ik lever <1>innovatieve oplossingen</1> die bedrijven helpen groeien.",
-    "skills": "Tegenwoordig gebruik ik <1>React</1> en <1>Django</1> om dynamische weboplossingen te bouwen. Ik ben ook altijd bezig met het verkennen van nieuwe tools om <1>de beste resultaten</1> te leveren.",
-    "hobbies": "Buiten werk dwarrel ik graag in het Kaatsheuvelse <1>Efteling</1>. Ook leer ik graag vreemde talen."
+    "uvp": "Ik ben een toegewijde ontwikkelaar, met een passie voor het <1>oplossen van complexe problemen met code</1>. Ik lever <1>innovatieve oplossingen</1> die bedrijven helpen groeien.",
+    "skills": "Tegenwoordig gebruik ik <1>React</1> en <1>Django</1> om dynamische webtoepassingen te bouwen. Ik ben ook altijd bezig met het leren van nieuwe tools om <1>de beste resultaten</1> te leveren.",
+    "hobbies": "Buiten werk dwarrel ik graag rond in de Kaatsheuvelse <1>Efteling</1>. Ook leer ik graag vreemde talen."
   },
   "work": {
-    "title": "Inspirerende projecten,\nimpactvolle resultaten",
+    "title": "Inspirerende\u00A0projecten,\nimpactvolle\u00A0resultaten",
     "projects": {
+      "delfthyperloop": {
+        "title": "Bedieningsinterface & website",
+        "description": {
+          "part1": "Was onderdeel van het Delft Hyperloop-team in de <1>SpaceX Hyperloop Pod Competition 2018</1>, opgericht door Elon Musk. Ontwikkelde de Delft Hyperloop-website (met Django), waarmee we <1>sponsors en media-aandacht aantrokken</1>.",
+          "part2": "Daarnaast werkte ik aan een testsysteem om de prestaties van de pod te optimaliseren en een bedieningsinterface voor real-time voertuigbeheer en veiligheidscontroles, wat zorgde voor <1>soepele en veilige operaties</1> tijdens tests en de competitie."
+        }
+      },
       "saysimple": {
         "title": "Interactieve web-tools",
         "description": "Interactieve elementen gemaakt voor de website van Saysimple, waaronder een prijs-calculator op basis van aanpasbare opties, en een configureerbare chatwidget-generator. Deze tools <1>vergroten de functionaliteit van de website</1> en bieden praktische oplossingen om <1>de interactie en betrokkenheid van klanten te vergroten</1>."
@@ -28,7 +35,9 @@
         "title": "Digitale signage-software",
         "description": "Een veelzijdige informatie-display gemaakt voor de personeelsruimte van Albert\u00A0Heijn. De software toont de huidige tijd en datum, diavoorstellingen van foto's, aankondigingen en meer, wat de <1>interne communicatie verbetert</1> en een <1>dynamische en informatieve omgeving</1> voor medewerkers creëert."
       }
-    }
+    },
+    "seeMore": "Meer zien",
+    "seeLess": "Minder zien"
   },
   "skills": {
     "title": "De tools die ik gebruik",

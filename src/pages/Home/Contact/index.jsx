@@ -5,7 +5,8 @@ import { Container, PageContainer } from '../../../components/layout/Container';
 import { SectionTitle } from '../../../components/ui/Title';
 import { SectionText } from '../../../components/ui/Text';
 import { ButtonLinkedIn, ButtonGithub } from "./Buttons";
-
+import TwoCol from '../../../components/layout/TwoCol';
+import Email from './Email';
 const Footer = styled.div`
   background: #F5F5F7;
   @media (prefers-color-scheme: dark) {
@@ -41,13 +42,19 @@ const Contact = () => {
           <SectionTitle>{t('contact.title')}</SectionTitle>
           <ContactText>{t('contact.text')}</ContactText>
 
-          <div>
-            <Label as="div">{t('contact.follow')}</Label>
+          <TwoCol aligntop>
             <div>
-              <ButtonLinkedIn />
-              <ButtonGithub />
+              <Label as="div">Connect</Label>
+              <Email />
             </div>
-          </div>
+            <div>
+              <Label as="div">{t('contact.follow')}</Label>
+              <div>
+                <ButtonLinkedIn />
+                <ButtonGithub />
+              </div>
+            </div>
+          </TwoCol>
         </Container>
       </PageContainer>
     </Footer>
