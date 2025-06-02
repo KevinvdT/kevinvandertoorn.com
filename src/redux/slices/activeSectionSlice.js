@@ -2,6 +2,8 @@ import { createSlice } from '@reduxjs/toolkit';
 import i18next from 'i18next'; // Import i18next
 import sectionNames from '../../constants/sectionNames';
 
+// TODO: Add a way to set the active section from the URL
+
 const initialState = {
   activeSection: 'home',
 };
@@ -46,12 +48,11 @@ const activeSectionSlice = createSlice({
         const urlSectionName = toUrlFriendly(translatedSectionName);
 
         // Update the URL and document title with the translated section name
-        // @TODO: Replace pushState with replaceState to avoid polluting browser history
         if (sectionId === 'home') {
-          window.history.pushState(null, '', '/');
+          window.history.replaceState(null, '', '/');
           document.title = `Kevin van der Toorn`;
         } else {
-          window.history.pushState(null, '', `/${urlSectionName}`);
+          window.history.replaceState(null, '', `/${urlSectionName}`);
           document.title = `Kevin van der Toorn · ${translatedSectionName}`;
         }
       }
