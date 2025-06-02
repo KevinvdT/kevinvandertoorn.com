@@ -46,6 +46,7 @@ const activeSectionSlice = createSlice({
         const urlSectionName = toUrlFriendly(translatedSectionName);
 
         // Update the URL and document title with the translated section name
+        // @TODO: Replace pushState with replaceState to avoid polluting browser history
         if (sectionId === 'home') {
           window.history.pushState(null, '', '/');
           document.title = `Kevin van der Toorn`;
