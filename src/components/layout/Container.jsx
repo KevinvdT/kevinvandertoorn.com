@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 // PageContainer Component: Provides padding for the entire page
 const PageContainer = styled.main`
-  max-width: 71.25rem; // Sets maximum width for the entire page
+  max-width: 75rem; // Sets maximum width for the entire page
   /* padding: 0 2rem; Adds padding to the left and right sides */
   margin: 0 auto; /* Centers the container */
   padding: 0 4rem;

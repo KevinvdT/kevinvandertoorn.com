@@ -23,6 +23,7 @@ export const HeroTitle = styled(SectionTitle).attrs({
   as: 'h1'
 })` 
   font-size: 3.4375rem;
+  line-height: 1.3;
 
   @media (max-width: ${({ theme }) => theme.breakpoints.sm}) {
     font-size: 2.5rem;
