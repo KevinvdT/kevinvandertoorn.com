@@ -6,16 +6,16 @@
       "evening": "Goedenavond!"
     },
     "introduction": "Ik ben Kevin",
-    "developer_intro": "Een web-developer die complexe problemen omzet in soepele web-experiences.",
+    "developer_intro": "Een webdeveloper die complexe problemen vertaalt naar gebruiksvriendelijke websites en apps.",
     "contact_button": "Contact",
     "resume_button": "Curriculum Vitae"
   },
   "about": {
     "title": "Mijn verhaal",
-    "story": "Webontwikkelaar uit Nederland met <1>18+ jaar ervaring</1>, ooit begonnen met MS Frontpage en sindsdien voortdurend gegroeid.",
-    "uvp": "Ik ben een toegewijde ontwikkelaar, met een passie voor het <1>oplossen van complexe problemen met code</1>. Ik lever <1>innovatieve oplossingen</1> die bedrijven helpen groeien.",
-    "skills": "Tegenwoordig gebruik ik <1>React</1> en <1>Django</1> om dynamische webtoepassingen te bouwen. Ik ben ook altijd bezig met het leren van nieuwe tools om <1>de beste resultaten</1> te leveren.",
-    "hobbies": "Buiten werk dwarrel ik graag rond in de Kaatsheuvelse <1>Efteling</1>. Ook leer ik graag vreemde talen."
+    "story": "Webdeveloper uit Nederland met <1>ruim 18 jaar ervaring</1> – ooit begonnen met MS Frontpage en sindsdien continu blijven groeien.",
+    "uvp": "Ik ben een gedreven ontwikkelaar, met een passie voor het <1>vertalen van complexe vraagstukken naar slimme code</1>. Ik maak <1>innovatieve toepassingen</1> die bedrijven helpen groeien.",
+    "skills": "Tegenwoordig werk ik vooral met <1>React</1> en <1>Django</1> om dynamische webapplicaties te bouwen. Daarnaast blijf ik altijd bijleren en experimenteren met nieuwe tools – alles om <1>het beste resultaat</1> te leveren.",
+    "hobbies": "Buiten werk vertoef ik graag in de <1>Efteling</1>. Ook leer ik graag vreemde talen."
   },
   "work": {
     "title": "Inspirerende\u00A0projecten,\nimpactvolle\u00A0resultaten",
@@ -23,7 +23,7 @@
       "delfthyperloop": {
         "title": "Bedieningsinterface & website",
         "description": {
-          "part1": "Was onderdeel van het Delft Hyperloop-team in de <1>SpaceX Hyperloop Pod Competition 2018</1>, opgericht door Elon Musk. Ontwikkelde de Delft Hyperloop-website (met Django), waarmee we <1>sponsors en media-aandacht aantrokken</1>.",
+          "part1": "Was onderdeel van het Delft Hyperloop-team in de <1>SpaceX Hyperloop Pod Competition 2018</1>. Ontwikkelde de Delft Hyperloop-website (met Django), waarmee we <1>sponsors en media-aandacht aantrokken</1>.",
           "part2": "Daarnaast werkte ik aan een testsysteem om de prestaties van de pod te optimaliseren en een bedieningsinterface voor real-time voertuigbeheer en veiligheidscontroles, wat zorgde voor <1>soepele en veilige operaties</1> tijdens tests en de competitie."
         }
       },
@@ -41,7 +41,7 @@
   },
   "skills": {
     "title": "De tools die ik gebruik",
-    "description": "Ik heb expertise ontwikkeld in onderstaande technologieën. Ook ben ik altijd enthousiast om nieuwe tools en frameworks te verkennen en leren, die helpen om nog betere oplossingen te leveren.",
+    "description": "Ik heb expertise opgebouwd in de onderstaande technologieën – en blijf me continu verdiepen in nieuwe tools en frameworks om nóg betere oplossingen te leveren.",
     "frontend": {
       "title": "Front-end"
     },
