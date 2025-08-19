@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { useTranslation } from 'react-i18next'; // Import useTranslation hook
 import { useDispatch } from 'react-redux'; // Import useDispatch
+import i18next from 'i18next';
 import { Container } from '../../../components/layout/Container';
 import TwoCol from '../../../components/layout/TwoCol';
 import { HeroTitle } from '../../../components/ui/Title';
@@ -98,11 +99,16 @@ const Hero = () => {
           <HeroTitle>{t(greetingKey)}<br />{t('hero.introduction')}</HeroTitle>
           <HeroText>{t('hero.developer_intro')}</HeroText>
           <ButtonRow>
-            <Button onClick={handleScrollToContact}>{t('hero.contact_button')}</Button>
-            {/* Uncomment this when needed */}
-            {/* <Button secondary onClick={() => window.open('/resume.pdf', '_blank')}>
-                {t('hero.resume_button')}
-            </Button> */}
+            {/* <Button onClick={handleScrollToContact}>{t('hero.contact_button')}</Button> */}
+            <Button onClick={() => {
+              const currentLang = i18next.language;
+              const pdfPath = currentLang === 'nl'
+                ? '/resume/Kevin-van-der-Toorn-CV.pdf'
+                : '/resume/Kevin-van-der-Toorn-Resume.pdf';
+              window.open(pdfPath, '_blank');
+            }}>
+              {t('hero.resume_button')}
+            </Button>
           </ButtonRow>
         </HeroIntro>
       </TwoCol>
