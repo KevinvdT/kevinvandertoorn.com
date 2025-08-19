@@ -9,6 +9,10 @@ const StyledButton = styled.button`
   font-weight: 600; /* Semi-bold font weight */
   cursor: pointer; /* Cursor changes to pointer on hover */
   transition: all 0.3s ease; /* Smooth transition for hover effect */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
 
   /* Conditional styling based on the secondary prop */
   background-color: ${({ secondary }) =>

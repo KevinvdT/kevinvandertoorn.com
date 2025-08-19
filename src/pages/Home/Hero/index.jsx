@@ -3,6 +3,8 @@ import styled from 'styled-components';
 import { useTranslation } from 'react-i18next'; // Import useTranslation hook
 import { useDispatch } from 'react-redux'; // Import useDispatch
 import i18next from 'i18next';
+import { FaRegFilePdf } from "react-icons/fa6";
+import { LuExternalLink } from "react-icons/lu";
 import { Container } from '../../../components/layout/Container';
 import TwoCol from '../../../components/layout/TwoCol';
 import { HeroTitle } from '../../../components/ui/Title';
@@ -107,7 +109,7 @@ const Hero = () => {
                 : '/resume/Kevin-van-der-Toorn-Resume.pdf';
               window.open(pdfPath, '_blank');
             }}>
-              {t('hero.resume_button')}
+              {/* <FaRegFilePdf /> */} {t('hero.resume_button')} <LuExternalLink />
             </Button>
           </ButtonRow>
         </HeroIntro>
