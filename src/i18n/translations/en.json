@@ -23,17 +23,17 @@
       "delfthyperloop": {
         "title": "Control Interface & Website",
         "description": {
-          "part1": "Contributed to the Delft Hyperloop team in the <1>SpaceX Hyperloop Pod Competition 2018</1>, founded by Elon Musk. Developed the Delft Hyperloop website, <1>attracting sponsors and media attention</1>.",
-          "part2": "Created a test system to optimize the pod’s performance and a control interface for real-time vehicle management and safety checks, ensuring <1>smooth and safe operations</1> during tests and the competition."
+          "part1": "Built the Delft Hyperloop website to attract sponsors and press.",
+          "part2": "Created a real‑time control UI and a test system for safe operations."
         }
       },
       "saysimple": {
         "title": "Interactive Web Tools",
-        "description": "Created interactive elements for Saysimple’s website, including a pricing calculator based on configurable options, and a customizable chat widget generator. These tools <1>enhance website functionality</1> and offer practical solutions to <1>boost client interaction and engagement</1>."
+        "description": "Built a pricing calculator and configurable chat‑widget for Saysimple."
       },
       "ah": {
         "title": "Digital Signage Software",
-        "description": "Created a versatile signage software for Albert\u00A0Heijn’s staff room display. The software showcases the current time and date, photo slideshows, announcements, and more, <1>enhancing internal communication</1> and creating a <1>dynamic and informative environment</1> for employees."
+        "description": "Staff‑room signage for Albert\u00A0Heijn showing time, slideshows and announcements."
       }
     },
     "seeMore": "See More",

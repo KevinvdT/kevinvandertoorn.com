@@ -23,17 +23,17 @@
       "delfthyperloop": {
         "title": "Steuerungsoberfläche & Website",
         "description": {
-          "part1": "War Teil des Delft Hyperloop-Teams bei der <1>SpaceX Hyperloop Pod Competition 2018</1>, gegründet von Elon Musk. Habe die Delft Hyperloop-Website entwickelt, <1>um Sponsoren und Medienaufmerksamkeit zu gewinnen</1>.",
-          "part2": "Habe ein Testsystem entwickelt, um die Leistung der Kapsel zu optimieren, und eine Steuerungsoberfläche für das Echtzeit-Fahrzeugmanagement und Sicherheitskontrollen erstellt, was <1>reibungslose und sichere Abläufe</1> während der Tests und des Wettbewerbs gewährleistet."
+          "part1": "Entwickelte die Delft‑Hyperloop‑Website, um Sponsoren und Medien zu gewinnen.",
+          "part2": "Baute eine Echtzeit‑Oberfläche und ein Testsysten für sichere Abläufe."
         }
       },
       "saysimple": {
         "title": "Interaktive Webtools",
-        "description": "Habe interaktive Elemente für die Website von Saysimple entwickelt, darunter ein Preisrechner basierend auf konfigurierbaren Optionen und einen anpassbaren Chat-Widget-Generator. Diese Tools <1>verbessern die Funktionalität der Website</1> und bieten praktische Lösungen, um <1>die Interaktion und das Engagement der Kunden zu fördern</1>."
+        "description": "Preisrechner und konfigurierbares Chat‑Widget für Saysimple."
       },
       "ah": {
         "title": "Digitale Beschilderungssoftware",
-        "description": "Habe eine vielseitige Beschilderungssoftware für den Aufenthaltsraum von Albert\u00A0Heijn entwickelt. Die Software zeigt die aktuelle Uhrzeit, Fotodiashows, Ankündigungen und mehr, was <1>die interne Kommunikation verbessert</1> und eine <1>dynamische und informative Umgebung</1> für die Mitarbeiter schafft."
+        "description": "Anzeige für den Aufenthaltsraum von Albert\u00A0Heijn mit Uhrzeit, Diashows und Ansagen."
       }
     },
     "seeMore": "Mehr sehen",

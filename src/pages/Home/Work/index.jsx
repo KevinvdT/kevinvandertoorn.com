@@ -10,8 +10,14 @@ import imgDelfthyperloop from './img/delfthyperloop.png';
 import downArrow from './downarrow.svg';
 
 const ProjectItemsWrapper = styled.div`
-  // margin-top: 1.5rem; /* Adjusted margin */
-  // margin-bottom: 1.5rem; /* Adjusted margin */
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.5rem;
+  margin-top: 0.5rem;
+  @media (max-width: ${({ theme }) => theme.breakpoints.sm}) {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
 `;
 
 const SeeMoreButtonWrapper = styled.div`
@@ -62,39 +68,35 @@ const Work = () => {
       <ProjectItemsWrapper>
         <ProjectItem
           imageSrc={imgDelfthyperloop}
+          eyebrow="Delft Hyperloop"
           title={t('work.projects.delfthyperloop.title')}
           description={[
-            // Split the description into two parts, each wrapped in a Trans component
-            <Trans i18nKey="work.projects.delfthyperloop.description.part1">
-              I was part of the Delft Hyperloop team in the <em>SpaceX Hyperloop Pod Competition 2018</em>, founded by Elon Musk. I developed the Delft Hyperloop website (using Django), attracting <em>sponsors and media attention</em>.
-            </Trans>,
-            <Trans i18nKey="work.projects.delfthyperloop.description.part2">
-              Additionally, I created a test system to optimize the pod's performance and a control interface for real-time vehicle management and safety checks, ensuring <em>smooth and safe operations</em> during tests and the competition.
-            </Trans>
+            <Trans i18nKey="work.projects.delfthyperloop.description.part1" />,
+            // <Trans i18nKey="work.projects.delfthyperloop.description.part2" />
           ]}
+          tags={["React", "Electron"]}
+          ctaHref="#"
           color='#20cc8a'
         />
 
         <ProjectItem
           imageSrc={imgAh}
+          eyebrow="Albert Heijn"
           title={t('work.projects.ah.title')}
-          description={
-            <Trans i18nKey="work.projects.ah.description">
-              Created a versatile signage software for Albert&nbsp;Heijn's staff room display. The software showcases the <em>current time and date</em>, <em>photo slideshows</em>, <em>announcements</em>, and more, enhancing internal communication and creating a dynamic and informative environment for employees.
-            </Trans>
-          }
+          description={<Trans i18nKey="work.projects.ah.description" />}
+          tags={["React", "Django REST"]}
+          ctaHref="#"
           color='#52c2df'
         />
       </ProjectItemsWrapper>
       <ShowMoreWrapper showMore={showMore}>
         <ProjectItem
           imageSrc={imgSaysimple}
+          eyebrow="Saysimple"
           title={t('work.projects.saysimple.title')}
-          description={
-            <Trans i18nKey="work.projects.saysimple.description">
-              Created interactive elements for Saysimple's website, including a <em>pricing calculator</em> based on configurable options, and a <em>customizable chat widget generator</em>. These tools enhance website functionality and offer practical solutions to boost client interaction and engagement.
-            </Trans>
-          }
+          description={<Trans i18nKey="work.projects.saysimple.description" />}
+          tags={["React"]}
+          ctaHref="#"
           color='#aa88fd'
         />
       </ShowMoreWrapper>
