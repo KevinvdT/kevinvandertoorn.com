@@ -64,7 +64,7 @@ const Skills = () => {
         <SkillSet title={t('skills.datascience.title')}>
           <Skill icon={IconPython} iconColor='#409de3'>Python, Numpy, Matplotlib</Skill>
           <Skill icon={IconJulia} iconColor='#c869f4'>Julia</Skill>
-          <Skill icon={IconMatlab} iconColor='#ff680a'>Matlab / Octave</Skill>
+          <Skill icon={IconMatlab} iconColor='#ff680a'><span style={{ fontVariant: 'small-caps' }}>Matlab</span> / Octave</Skill>
         </SkillSet>
       </SkillSetsWrapper>
     </Container>

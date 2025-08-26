@@ -43,7 +43,7 @@ const SkillItemName = styled(SectionText)`
     color: ${({ theme }) => theme.colors.dark.primaryText}; // Dark mode skill item color
   }
 
-  &::selection {
+  &::selection, & *::selection {
     background-color: ${({ color }) => color || 'inherit'}55;
   }
 `;
