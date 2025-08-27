@@ -1,0 +1,39 @@
+{
+  "title": "Delft Hyperloop",
+  "description": {
+    "part1": "Ich war Teil des Delft Hyperloop Teams beim SpaceX Hyperloop Pod Wettbewerb 2018, gegründet von Elon Musk. Ich entwickelte die Delft Hyperloop Website (mit Django), die Sponsoren und Medienaufmerksamkeit anzog.",
+    "part2": "Zusätzlich erstellte ich ein Testsystem zur Optimierung der Pod-Leistung und eine Steuerungsschnittstelle für Echtzeit-Fahrzeugmanagement und Sicherheitsprüfungen, die einen reibungslosen und sicheren Betrieb während Tests und des Wettbewerbs gewährleistete."
+  },
+  "modal": {
+    "title": "Delft Hyperloop",
+    "description": "Ich war Teil des Delft Hyperloop Teams beim SpaceX Hyperloop Pod Wettbewerb 2018, gegründet von Elon Musk. Ich entwickelte die Delft Hyperloop Website (mit Django), die Sponsoren und Medienaufmerksamkeit anzog. Zusätzlich erstellte ich ein Testsystem zur Optimierung der Pod-Leistung und eine Steuerungsschnittstelle für Echtzeit-Fahrzeugmanagement und Sicherheitsprüfungen, die einen reibungslosen und sicheren Betrieb während Tests und des Wettbewerbs gewährleistete.",
+    "technologies": {
+      "title": "Verwendete Technologien",
+      "list": [
+        "Django",
+        "Python",
+        "JavaScript",
+        "HTML/CSS",
+        "Echtzeit-Systeme"
+      ]
+    },
+    "challenges": {
+      "title": "Herausforderungen & Lösungen",
+      "description": "Implementierung von Echtzeit-Datenvisualisierung für Fahrzeugtelemetrie unter Beibehaltung der Systemleistung bei hochfrequenten Sensordaten-Updates und kritischen Wettbewerbsszenarien."
+    },
+    "features": {
+      "title": "Hauptfunktionen",
+      "list": [
+        "Dynamische Website mit Sponsor-Showcase und Mediengalerie",
+        "Echtzeit-Fahrzeugtelemetrie-Dashboard",
+        "Leistungsoptimierungs-Testsystem",
+        "Sicherheitsüberwachungs- und Warnsystem",
+        "Wettbewerbsbereite Steuerungsschnittstelle"
+      ]
+    },
+    "liveDemo": "Live Demo",
+    "viewCode": "Code anzeigen",
+    "liveDemoUrl": "#",
+    "codeUrl": "#"
+  }
+}

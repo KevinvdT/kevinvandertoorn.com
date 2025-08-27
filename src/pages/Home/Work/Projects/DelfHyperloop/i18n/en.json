@@ -1,0 +1,39 @@
+{
+  "title": "Delft Hyperloop",
+  "description": {
+    "part1": "I was part of the Delft Hyperloop team in the SpaceX Hyperloop Pod Competition 2018, founded by Elon Musk. I developed the Delft Hyperloop website (using Django), attracting sponsors and media attention.",
+    "part2": "Additionally, I created a test system to optimize the pod's performance and a control interface for real-time vehicle management and safety checks, ensuring smooth and safe operations during tests and the competition."
+  },
+  "modal": {
+    "title": "Delft Hyperloop",
+    "description": "I was part of the Delft Hyperloop team in the SpaceX Hyperloop Pod Competition 2018, founded by Elon Musk. I developed the Delft Hyperloop website (using Django), attracting sponsors and media attention. Additionally, I created a test system to optimize the pod's performance and a control interface for real-time vehicle management and safety checks, ensuring smooth and safe operations during tests and the competition.",
+    "technologies": {
+      "title": "Technologies Used",
+      "list": [
+        "Django",
+        "Python",
+        "JavaScript",
+        "HTML/CSS",
+        "Real-time Systems"
+      ]
+    },
+    "challenges": {
+      "title": "Challenges & Solutions",
+      "description": "Implementing real-time data visualization for vehicle telemetry while ensuring the system could handle high-frequency sensor data updates and maintain performance during critical competition scenarios."
+    },
+    "features": {
+      "title": "Key Features",
+      "list": [
+        "Dynamic website with sponsor showcase and media gallery",
+        "Real-time vehicle telemetry dashboard",
+        "Performance optimization test system",
+        "Safety monitoring and alert system",
+        "Competition-ready control interface"
+      ]
+    },
+    "liveDemo": "Live Demo",
+    "viewCode": "View Code",
+    "liveDemoUrl": "#",
+    "codeUrl": "#"
+  }
+}

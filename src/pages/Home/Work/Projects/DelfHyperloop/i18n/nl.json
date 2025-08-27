@@ -1,0 +1,39 @@
+{
+  "title": "Delft Hyperloop",
+  "description": {
+    "part1": "Ik was onderdeel van het Delft Hyperloop team in de SpaceX Hyperloop Pod Competition 2018, opgericht door Elon Musk. Ik ontwikkelde de Delft Hyperloop website (met Django), wat sponsors en media-aandacht aantrok.",
+    "part2": "Daarnaast creëerde ik een testsysteem om de prestaties van de pod te optimaliseren en een besturingsinterface voor real-time voertuigbeheer en veiligheidscontroles, wat zorgde voor soepele en veilige operaties tijdens tests en de competitie."
+  },
+  "modal": {
+    "title": "Delft Hyperloop",
+    "description": "Ik was onderdeel van het Delft Hyperloop team in de SpaceX Hyperloop Pod Competition 2018, opgericht door Elon Musk. Ik ontwikkelde de Delft Hyperloop website (met Django), wat sponsors en media-aandacht aantrok. Daarnaast creëerde ik een testsysteem om de prestaties van de pod te optimaliseren en een besturingsinterface voor real-time voertuigbeheer en veiligheidscontroles, wat zorgde voor soepele en veilige operaties tijdens tests en de competitie.",
+    "technologies": {
+      "title": "Gebruikte Technologieën",
+      "list": [
+        "Django",
+        "Python",
+        "JavaScript",
+        "HTML/CSS",
+        "Real-time Systemen"
+      ]
+    },
+    "challenges": {
+      "title": "Uitdagingen & Oplossingen",
+      "description": "Het implementeren van real-time datavisualisatie voor voertuigtelemetrie terwijl het systeem hoogfrequente sensordata-updates kon verwerken en de prestaties behield tijdens kritieke competitie-scenario's."
+    },
+    "features": {
+      "title": "Belangrijkste Functies",
+      "list": [
+        "Dynamische website met sponsor showcase en media galerij",
+        "Real-time voertuigtelemetrie dashboard",
+        "Prestatie-optimalisatie testsysteem",
+        "Veiligheidsmonitoring en waarschuwingssysteem",
+        "Competitie-klare besturingsinterface"
+      ]
+    },
+    "liveDemo": "Live Demo",
+    "viewCode": "Bekijk Code",
+    "liveDemoUrl": "#",
+    "codeUrl": "#"
+  }
+}

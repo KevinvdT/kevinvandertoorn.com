@@ -1,0 +1,30 @@
+{
+  "title": "Albert Heijn",
+  "description": "Created a versatile signage software for Albert Heijn's staff room display. The software showcases the current time and date, photo slideshows, announcements, and more, enhancing internal communication and creating a dynamic and informative environment for employees.",
+  "modal": {
+    "title": "Albert Heijn",
+    "description": "Created a versatile signage software for Albert Heijn's staff room display. The software showcases the current time and date, photo slideshows, announcements, and more, enhancing internal communication and creating a dynamic and informative environment for employees.",
+    "technologies": {
+      "title": "Technologies Used",
+      "list": ["JavaScript", "HTML/CSS", "Digital Signage", "Employee Communication"]
+    },
+    "challenges": {
+      "title": "Challenges & Solutions",
+      "description": "Designing an intuitive interface that could be easily updated by non-technical staff while ensuring reliable operation in a corporate environment with minimal maintenance requirements."
+    },
+    "features": {
+      "title": "Key Features",
+      "list": [
+        "Real-time clock and date display",
+        "Dynamic photo slideshow system",
+        "Announcement management system",
+        "Staff-friendly interface",
+        "Automated content rotation"
+      ]
+    },
+    "liveDemo": "Live Demo",
+    "viewCode": "View Code",
+    "liveDemoUrl": "#",
+    "codeUrl": "#"
+  }
+}
