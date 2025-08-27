@@ -1,11 +1,8 @@
-import React, { useState } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import { SectionTitle } from '../../../components/ui/Title';
 import { SectionText } from '../../../components/ui/Text';
 import TwoCol from '../../../components/layout/TwoCol';
-import Modal from '../../../components/ui/Modal';
-import Button from '../../../components/ui/Button';
-import ProjectDetails from '../../../components/ui/ProjectDetails';
 
 // Styled components for ProjectItem
 const ProjectItemContainer = styled(TwoCol)`
@@ -64,56 +61,23 @@ font-family: 'Inter','Arial',sans-serif;
   // }
 `;
 
-const ProjectActions = styled.div`
-  margin-top: 1.5rem;
-  display: flex;
-  gap: 10px;
-`;
-
 // ProjectItem component that can handle both single and multiple descriptions
-const ProjectItem = ({ imageSrc, title, description, color, projectDetails }) => {
-  const [isModalOpen, setIsModalOpen] = useState(false);
-
-  const openModal = () => setIsModalOpen(true);
-  const closeModal = () => setIsModalOpen(false);
-
-  return (
-    <>
-      <ProjectItemContainer aligntop>
-        <ProjectImage src={imageSrc} alt={title} />
-        <ProjectContent>
-          <ProjectTitle as="h3" color={color}>{title}</ProjectTitle>
-          {Array.isArray(description) ? (
-            // If description is an array, map over it and render each item in its own ProjectDescription
-            description.map((desc, index) => (
-              <ProjectDescription key={index} color={color}>{desc}</ProjectDescription>
-            ))
-          ) : (
-            // If description is a single string, render it in a single ProjectDescription
-            <ProjectDescription color={color}>{description}</ProjectDescription>
-          )}
-          {projectDetails && (
-            <ProjectActions>
-              <Button onClick={openModal} secondary>
-                Read More
-              </Button>
-            </ProjectActions>
-          )}
-        </ProjectContent>
-      </ProjectItemContainer>
-
-      {projectDetails && (
-        <Modal
-          isOpen={isModalOpen}
-          onClose={closeModal}
-          title={title}
-          maxWidth="700px"
-        >
-          <ProjectDetails {...projectDetails} />
-        </Modal>
+const ProjectItem = ({ imageSrc, title, description, color }) => (
+  <ProjectItemContainer aligntop>
+    <ProjectImage src={imageSrc} alt={title} />
+    <ProjectContent>
+      <ProjectTitle as="h3" color={color}>{title}</ProjectTitle>
+      {Array.isArray(description) ? (
+        // If description is an array, map over it and render each item in its own ProjectDescription
+        description.map((desc, index) => (
+          <ProjectDescription key={index} color={color}>{desc}</ProjectDescription>
+        ))
+      ) : (
+        // If description is a single string, render it in a single ProjectDescription
+        <ProjectDescription color={color}>{description}</ProjectDescription>
       )}
-    </>
-  );
-};
+    </ProjectContent>
+  </ProjectItemContainer>
+);
 
 export default ProjectItem;
