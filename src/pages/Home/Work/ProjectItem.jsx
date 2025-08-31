@@ -107,7 +107,6 @@ const ProjectItem = ({ imageSrc, title, description, color, projectDetails }) =>
           isOpen={isModalOpen}
           onClose={closeModal}
           title={title}
-          maxWidth="700px"
         >
           <ProjectDetails {...projectDetails} />
         </Modal>

@@ -33,7 +33,7 @@ const AlbertHeijn = () => {
       />
       <ReadMoreLink onClick={() => setIsOpen(true)} />
 
-      <Modal isOpen={isOpen} onClose={() => setIsOpen(false)} title={t.title} maxWidth="700px">
+      <Modal isOpen={isOpen} onClose={() => setIsOpen(false)} title={t.title}>
         <PMContainer>
           <PMTitle>{t.modal.title}</PMTitle>
           <PMText>{t.modal.description}</PMText>

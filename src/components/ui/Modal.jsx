@@ -1,5 +1,7 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import styled from 'styled-components';
+
+const ANIMATION_MS = 300;
 
 const ModalOverlay = styled.div`
   position: fixed;
@@ -10,11 +12,17 @@ const ModalOverlay = styled.div`
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 1000;
   opacity: 0;
-  animation: fadeIn 0.3s ease-out forwards;
+  animation: ${({ closing }) => (closing ? 'fadeOut' : 'fadeIn')} 0.3s ease-out forwards;
 
   @keyframes fadeIn {
     to {
       opacity: 1;
+    }
+  }
+
+  @keyframes fadeOut {
+    to {
+      opacity: 0;
     }
   }
 `;
@@ -24,12 +32,13 @@ const ModalContent = styled.div`
   bottom: 0;
   left: 50%;
   transform: translateX(-50%) translateY(100%);
-  background: white;
+  background: ${({ theme }) => theme.colors.light.background};
+  color: ${({ theme }) => theme.colors.light.primaryText};
   border-radius: 20px 20px 0 0;
   width: 100%;
-  max-width: ${({ maxWidth }) => maxWidth || '600px'};
-  max-height: 90vh;
-  animation: slideUp 0.3s ease-out forwards;
+  max-width: ${({ maxWidth }) => maxWidth || '800px'};
+  max-height: calc(100svh - 50px);
+  animation: ${({ closing }) => (closing ? 'slideDown' : 'slideUp')} 0.3s ease-out forwards;
   overflow: hidden;
   display: flex;
   flex-direction: column;
@@ -41,9 +50,30 @@ const ModalContent = styled.div`
     }
   }
 
+  @keyframes slideDown {
+    to {
+      transform: translateX(-50%) translateY(100%);
+    }
+  }
+
   @media (max-width: ${({ theme }) => theme.breakpoints.sm}) {
     max-width: 95vw;
-    max-height: 95vh;
+    max-height: 90vh;
+
+    @supports (height: 100svh) {
+      max-height: calc(100svh - 15px);
+    }
+
+    @supports (height: 100dvh) {
+      max-height: calc(100dvh - 15px);
+    }
+  }
+
+  /* Dark mode */
+  @media (prefers-color-scheme: dark) {
+    background: ${({ theme }) => theme.colors.dark.background};
+    color: ${({ theme }) => theme.colors.dark.primaryText};
+    box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.6);
   }
 `;
 
@@ -53,14 +83,17 @@ const ModalHeader = styled.div`
   align-items: center;
   padding: 20px 24px 16px 24px;
   border-bottom: 1px solid #f0f0f0;
-  background: white;
+  background: inherit;
   flex-shrink: 0;
+
+  @media (prefers-color-scheme: dark) {
+    border-bottom-color: rgba(255, 255, 255, 0.1);
+  }
 `;
 
 const ModalTitle = styled.h2`
   font-size: 1.5rem;
   font-weight: 600;
-  color: #333;
   margin: 0;
   font-family: 'Inter', 'Arial', sans-serif;
 `;
@@ -69,7 +102,7 @@ const CloseButton = styled.button`
   width: 32px;
   height: 32px;
   border-radius: 50%;
-  background-color: #006FD0;
+  background-color: gray;
   color: white;
   border: none;
   cursor: pointer;
@@ -85,8 +118,20 @@ const CloseButton = styled.button`
   }
 
   &:focus {
-    outline: 2px solid #006FD0;
+    outline: 2px solid ${({ theme }) => theme.colors.light.primary};
     outline-offset: 2px;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    background-color: ${({ theme }) => theme.colors.dark.primary};
+
+    &:hover {
+      background-color: #166bb3;
+    }
+
+    &:focus {
+      outline-color: ${({ theme }) => theme.colors.dark.primary};
+    }
   }
 `;
 
@@ -102,17 +147,29 @@ const ModalBody = styled.div`
   }
   
   &::-webkit-scrollbar-track {
-    background: #f1f1f1;
+    background: rgba(0,0,0,0.04);
     border-radius: 3px;
   }
   
   &::-webkit-scrollbar-thumb {
-    background: #c1c1c1;
+    background: rgba(0,0,0,0.2);
     border-radius: 3px;
   }
   
   &::-webkit-scrollbar-thumb:hover {
-    background: #a8a8a8;
+    background: rgba(0,0,0,0.35);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    &::-webkit-scrollbar-track {
+      background: rgba(255,255,255,0.06);
+    }
+    &::-webkit-scrollbar-thumb {
+      background: rgba(255,255,255,0.22);
+    }
+    &::-webkit-scrollbar-thumb:hover {
+      background: rgba(255,255,255,0.32);
+    }
   }
 `;
 
@@ -121,34 +178,46 @@ const Modal = ({
   onClose,
   title,
   children,
-  maxWidth = '600px'
+  maxWidth,
 }) => {
+  const [shouldRender, setShouldRender] = useState(isOpen);
+  const [closing, setClosing] = useState(false);
+  const listenerRef = useRef(null);
+
   useEffect(() => {
     const handleEscape = (e) => {
       if (e.key === 'Escape') {
         onClose();
       }
     };
+    listenerRef.current = handleEscape;
+  }, [onClose]);
 
+  useEffect(() => {
     if (isOpen) {
-      document.addEventListener('keydown', handleEscape);
+      setShouldRender(true);
+      setClosing(false);
+      document.addEventListener('keydown', listenerRef.current);
       document.body.style.overflow = 'hidden';
+    } else if (shouldRender) {
+      setClosing(true);
+      document.removeEventListener('keydown', listenerRef.current);
+      const timeout = setTimeout(() => {
+        document.body.style.overflow = 'unset';
+        setShouldRender(false);
+        setClosing(false);
+      }, ANIMATION_MS);
+      return () => clearTimeout(timeout);
     }
 
-    return () => {
-      document.removeEventListener('keydown', handleEscape);
-      document.body.style.overflow = 'unset';
-    };
-  }, [isOpen, onClose]);
+    return () => { };
+  }, [isOpen, shouldRender]);
 
-  if (!isOpen) return null;
+  if (!shouldRender) return null;
 
   return (
-    <ModalOverlay onClick={onClose}>
-      <ModalContent
-        onClick={(e) => e.stopPropagation()}
-        maxWidth={maxWidth}
-      >
+    <ModalOverlay closing={closing} onClick={onClose}>
+      <ModalContent closing={closing} onClick={(e) => e.stopPropagation()} maxWidth={maxWidth}>
         <ModalHeader>
           <ModalTitle>{title}</ModalTitle>
           <CloseButton onClick={onClose} aria-label="Close modal">

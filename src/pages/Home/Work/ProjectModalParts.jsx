@@ -1,31 +1,30 @@
+import React from 'react';
 import styled from 'styled-components';
+import { SectionText } from '../../../components/ui/Text';
+import { SectionTitle as BaseTitle } from '../../../components/ui/Title';
+import Tag from '../../../components/ui/Tag';
 
 export const PMContainer = styled.div`
   color: #333;
   padding-bottom: 20px;
+
+  @media (prefers-color-scheme: dark) {
+    color: ${({ theme }) => theme.colors.dark.primaryText};
+  }
 `;
 
-export const PMTitle = styled.h3`
+export const PMTitle = styled(BaseTitle).attrs({ as: 'h3' })`
   font-size: 1.25rem;
-  font-weight: 600;
   margin: 0 0 16px 0;
-  color: #333;
-  font-family: 'Inter', 'Arial', sans-serif;
 `;
 
-export const PMText = styled.p`
-  font-size: 1rem;
-  line-height: 1.6;
+export const PMText = styled(SectionText)`
   margin: 0 0 24px 0;
-  color: #555;
 `;
 
-export const PMSectionTitle = styled.h4`
+export const PMSectionTitle = styled(BaseTitle).attrs({ as: 'h4' })`
   font-size: 1rem;
-  font-weight: 600;
   margin: 24px 0 12px 0;
-  color: #333;
-  font-family: 'Inter', 'Arial', sans-serif;
 `;
 
 export const PMTechTags = styled.div`
@@ -35,14 +34,7 @@ export const PMTechTags = styled.div`
   margin-bottom: 20px;
 `;
 
-export const PMTechTag = styled.span`
-  background-color: #006FD0;
-  color: white;
-  padding: 6px 12px;
-  border-radius: 20px;
-  font-size: 14px;
-  font-weight: 500;
-`;
+export const PMTechTag = styled(Tag)``;
 
 export const PMFeatureList = styled.ul`
   text-align: left;
@@ -53,6 +45,10 @@ export const PMFeatureList = styled.ul`
     margin-bottom: 8px;
     line-height: 1.5;
     color: #555;
+
+    @media (prefers-color-scheme: dark) {
+      color: ${({ theme }) => theme.colors.dark.secondaryText};
+    }
   }
 `;
 
@@ -64,3 +60,101 @@ export const PMActions = styled.div`
   flex-wrap: wrap;
   padding-bottom: 10px;
 `;
+
+// Links container used by LinkList
+export const PMLinkList = styled.div`
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin: 16px 0 24px 0;
+`;
+
+// Simple gallery grid
+export const PMGallery = styled.div`
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 12px;
+  margin: 16px 0 24px 0;
+`;
+
+export const PMGalleryImage = styled.img`
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12);
+`;
+
+// Reusable building blocks
+export const Section = ({ title, children }) => (
+  <section>
+    {title ? <PMSectionTitle>{title}</PMSectionTitle> : null}
+    {children}
+  </section>
+);
+
+export const BulletList = ({ items, children }) => {
+  if (items && items.length) {
+    return (
+      <PMFeatureList>
+        {items.map((item, index) => (
+          <li key={index}>{item}</li>
+        ))}
+      </PMFeatureList>
+    );
+  }
+  return <PMFeatureList>{children}</PMFeatureList>;
+};
+
+export const Bullet = ({ children }) => <li>{children}</li>;
+
+export const LinkList = ({ links = [], children }) => {
+  const hasArray = links && links.length;
+  return (
+    <PMLinkList>
+      {hasArray && links.map(({ label, href }, index) => (
+        <a key={index} href={href} target="_blank" rel="noreferrer noopener">{label}</a>
+      ))}
+      {!hasArray && children}
+    </PMLinkList>
+  );
+};
+
+export const LinkItem = ({ href, children }) => (
+  <a href={href} target="_blank" rel="noreferrer noopener">{children}</a>
+);
+
+export const TagList = ({ tags = [], children }) => {
+  const hasArray = tags && tags.length;
+  return (
+    <PMTechTags>
+      {hasArray && tags.map((tag, index) => {
+        const { label, color } = typeof tag === 'string' ? { label: tag, color: undefined } : tag;
+        return (
+          <PMTechTag key={`${label}-${index}`} color={color}>{label}</PMTechTag>
+        );
+      })}
+      {!hasArray && children}
+    </PMTechTags>
+  );
+};
+
+export const TagItem = ({ color, children }) => (
+  <PMTechTag color={color}>{children}</PMTechTag>
+);
+
+export const Gallery = ({ images = [], children }) => {
+  const hasArray = images && images.length;
+  return (
+    <PMGallery>
+      {hasArray && images.map((img, index) => {
+        const { src, alt } = typeof img === 'string' ? { src: img, alt: '' } : img;
+        return <PMGalleryImage key={`${src}-${index}`} src={src} alt={alt} />;
+      })}
+      {!hasArray && children}
+    </PMGallery>
+  );
+};
+
+export const GalleryImage = ({ src, alt = '' }) => (
+  <PMGalleryImage src={src} alt={alt} />
+);
