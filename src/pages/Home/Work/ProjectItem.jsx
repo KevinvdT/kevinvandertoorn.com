@@ -7,6 +7,8 @@ import Modal from '../../../components/ui/Modal';
 import Button from '../../../components/ui/Button';
 import ProjectDetails from '../../../components/ui/ProjectDetails';
 import ReadMoreLink from './ReadMoreLink';
+import Tag from '../../../components/ui/Tag';
+import { resolveTags } from './tagsRegistry';
 
 // Styled components for ProjectItem
 const ProjectItemContainer = styled(TwoCol)`
@@ -44,7 +46,8 @@ const ProjectContent = styled.div`
 const ProjectDescription = styled(SectionText)`
   font-size: 0.9375rem; // Description font size
   white-space: pre-line; // Support newlines
-  margin-bottom: 0.5em;
+  line-height: 1.7rem;
+  margin-bottom: 10px;
   @media (max-width: ${({ theme }) => theme.breakpoints.sm}) {
     line-height: 1.71875rem;
   }
@@ -57,25 +60,41 @@ const ProjectTitle = styled(SectionTitle)`
 font-family: 'Inter','Arial',sans-serif;
   font-size:  1.0625rem;
   @media (max-width: ${({ theme }) => theme.breakpoints.sm}) {
-    line-height: 0.5rem;
+    // line-height: 0.5rem;
   }
-  /* font-weight: 600; */
-  // &::selection {
-  //   background-color: ${({ color }) => color}55;
-  // }
+  margin-bottom: 6px;
 `;
 
-const ProjectActions = styled.div`
-  margin-top: 1.5rem;
+const TagsRow = styled.div`
   display: flex;
-  gap: 10px;
+  align-items: center; /* center items vertically */
+  gap: 12px;
+  min-height: 32px; /* approximate chip height to stabilize alignment */
+  margin-bottom: 14px;
+`;
+
+const TagsWrap = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center; /* ensure chips align center */
+`;
+
+const ReadMoreRow = styled.div`
+  margin-top: 6px;
 `;
 
 // ProjectItem component that can handle both single and multiple descriptions
-const ProjectItem = ({ imageSrc, title, description, color, projectDetails, setIsOpen }) => {
+const ProjectItem = ({ imageSrc, title, description, color, projectDetails, onReadMore, setIsOpen, tagKeys = [] }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const openModal = () => setIsModalOpen(true);
+  // Back-compat: if legacy setIsOpen prop is provided, prefer it; else use onReadMore
+  const handleReadMore = () => {
+    if (typeof onReadMore === 'function') onReadMore();
+    else if (typeof setIsOpen === 'function') setIsOpen(true);
+    else setIsModalOpen(true);
+  };
+
   const closeModal = () => setIsModalOpen(false);
 
   return (
@@ -85,23 +104,28 @@ const ProjectItem = ({ imageSrc, title, description, color, projectDetails, setI
         <ProjectContent>
           <ProjectTitle as="h3" color={color}>{title}</ProjectTitle>
           {Array.isArray(description) ? (
-            // If description is an array, map over it and render each item in its own ProjectDescription
             description.map((desc, index) => (
               <ProjectDescription key={index} color={color}>{desc}</ProjectDescription>
             ))
           ) : (
-            // If description is a single string, render it in a single ProjectDescription
             <ProjectDescription color={color}>{description}</ProjectDescription>
           )}
-          {/* {projectDetails && (
-            <ProjectActions>
-              <Button onClick={openModal} secondary>
-              </Button>
-            </ProjectActions>
-          )} */}
-          {setIsOpen && (
-            <ReadMoreLink onClick={() => setIsOpen(true)} />
+
+          {tagKeys.length > 0 && (
+            <TagsRow>
+              <TagsWrap>
+                {resolveTags(tagKeys).map(tag => (
+                  <Tag key={tag.key} color={tag.color}>{tag.label}</Tag>
+                ))}
+              </TagsWrap>
+            </TagsRow>
           )}
+
+          {/* {(onReadMore || setIsOpen) && (
+            <ReadMoreRow>
+              <ReadMoreLink onClick={handleReadMore} />
+            </ReadMoreRow>
+          )} */}
         </ProjectContent>
       </ProjectItemContainer>
 

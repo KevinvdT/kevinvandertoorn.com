@@ -1,0 +1,29 @@
+{
+  "title": "Albert Heijn",
+  "description": "Vielseitige Digital‑Signage für den Mitarbeiterraum von Albert Heijn. Zeigt Uhrzeit/Datum, Fotoslideshows und Ankündigungen und stärkt so die interne Kommunikation.",
+  "modal": {
+    "title": "Albert Heijn",
+    "description": "Entwickelte eine vielseitige Signage‑Software für den Aufenthaltsraum von Albert Heijn. Die Software zeigt aktuelle Uhrzeit und Datum, Fotopräsentationen, Ankündigungen und mehr und verbessert so die interne Kommunikation und schafft eine dynamische, informative Umgebung.",
+    "technologies": {
+      "title": "Verwendete Technologien"
+    },
+    "challenges": {
+      "title": "Herausforderungen & Lösungen",
+      "description": "Entwurf einer intuitiven Oberfläche, die von nicht‑technischem Personal leicht aktualisiert werden kann, bei zuverlässigem Betrieb in einer Unternehmensumgebung mit minimalem Wartungsaufwand."
+    },
+    "features": {
+      "title": "Hauptfunktionen",
+      "list": [
+        "Echtzeit‑Uhr und Datumsanzeige",
+        "Dynamisches Fotoslideshow‑System",
+        "Ankündigungsverwaltungssystem",
+        "Mitarbeiterfreundliche Oberfläche",
+        "Automatisierte Inhaltsrotation"
+      ]
+    },
+    "liveDemo": "Live Demo",
+    "viewCode": "Code ansehen",
+    "liveDemoUrl": "#",
+    "codeUrl": "#"
+  }
+}

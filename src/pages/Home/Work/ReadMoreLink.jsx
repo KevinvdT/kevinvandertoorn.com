@@ -6,14 +6,17 @@ const Link = styled.a`
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  margin-top: 0.75rem;
+  /* Remove top margin to allow perfect vertical centering in flex row */
+  margin-top: 0;
+  line-height: 1; /* avoid baseline misalignment */
   color: ${({ theme }) => theme.colors.light.primary};
   text-decoration: none;
   font-weight: 600;
   cursor: pointer;
+  font-size: 0.9375rem;
 
   &:hover {
-    text-decoration: underline;
+    // text-decoration: underline;
   }
 `;
 

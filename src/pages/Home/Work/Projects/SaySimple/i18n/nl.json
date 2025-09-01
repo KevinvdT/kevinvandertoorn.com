@@ -1,0 +1,29 @@
+{
+  "title": "Saysimple",
+  "description": "Interactieve elementen gebouwd, waaronder een configureerbare prijscalculator en een aanpasbare chatwidget‑generator om de betrokkenheid te vergroten.",
+  "modal": {
+    "title": "Saysimple",
+    "description": "Ontwikkelde interactieve elementen voor Saysimple's website, inclusief een prijscalculator gebaseerd op configureerbare opties, en een aanpasbare chatwidget‑generator. Deze tools verbeteren de functionaliteit en vergroten de klantbetrokkenheid.",
+    "technologies": {
+      "title": "Gebruikte Technologieën"
+    },
+    "challenges": {
+      "title": "Uitdagingen & Oplossingen",
+      "description": "Het bouwen van flexibele, configureerbare componenten die eenvoudig door klanten konden worden aangepast, met behoud van consistente functionaliteit en prestaties."
+    },
+    "features": {
+      "title": "Belangrijkste Functies",
+      "list": [
+        "Interactieve prijscalculator",
+        "Aanpasbare chatwidget‑generator",
+        "Configureerbare opties en instellingen",
+        "Responsive design integratie",
+        "Tools voor klantaanpassing"
+      ]
+    },
+    "liveDemo": "Live Demo",
+    "viewCode": "Bekijk Code",
+    "liveDemoUrl": "#",
+    "codeUrl": "#"
+  }
+}

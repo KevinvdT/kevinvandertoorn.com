@@ -9,13 +9,27 @@ import {
   PMTitle,
   PMText,
   PMSectionTitle,
-  PMTechTags,
-  PMTechTag,
   PMFeatureList,
-  PMActions
+  PMActions,
+  PMTechTagList
 } from '../../ProjectModalParts';
 import imgDelfthyperloop from '../../img/delfthyperloop.png';
 import delfthyperloopTranslations from './i18n';
+
+// Tags are language-agnostic; add a leading "*" to mark tags that
+// should appear on the ProjectItem preview as well as the modal.
+// Non-starred tags are modal-only. If none are starred, all are shown in preview.
+const TECH_TAG_KEYS = ['html', 'css', 'javascript', '*react', '*electron', 'python', 'django', 'linux', 'obs', '*matlab', 'mqtt', '*rabbitmq'];
+
+const splitPreviewAndAll = (keys = []) => {
+  const cleaned = keys.map(k => String(k).trim());
+  const all = cleaned.map(k => k.replace(/^\*/, '').toLowerCase());
+  const starred = cleaned
+    .filter(k => k.startsWith('*'))
+    .map(k => k.replace(/^\*/, '').toLowerCase());
+  const preview = starred.length ? starred : all;
+  return { preview, all };
+};
 
 // Card component (default export) - manages its own modal
 const DelfHyperloop = () => {
@@ -24,29 +38,32 @@ const DelfHyperloop = () => {
   const t = delfthyperloopTranslations[currentLanguage] || delfthyperloopTranslations.en;
   const [isOpen, setIsOpen] = useState(false);
 
+  const { preview, all } = splitPreviewAndAll(TECH_TAG_KEYS);
+
   return (
     <>
       <ProjectItem
         imageSrc={imgDelfthyperloop}
         title={t.title}
-        description={[t.description.part1, t.description.part2]}
+        description={t.description}
         color='#20cc8a'
+        tagKeys={preview}
         setIsOpen={setIsOpen}
       />
       {/* <ReadMoreLink onClick={() => setIsOpen(true)} /> */}
 
-      <Modal isOpen={isOpen} onClose={() => setIsOpen(false)} title={t.title}>
-        <DelfHyperloopModal />
+      <Modal isOpen={isOpen} onClose={() => setIsOpen(false)} title={t.title} maxWidth="700px">
+        <DelfHyperloopModal t={t} tagKeys={all} />
       </Modal>
     </>
   );
 };
 
 // Modal content (named export)
-export const DelfHyperloopModal = () => {
+export const DelfHyperloopModal = ({ t: injected, tagKeys }) => {
   const { i18n } = useTranslation();
   const currentLanguage = i18n.language || 'en';
-  const t = delfthyperloopTranslations[currentLanguage] || delfthyperloopTranslations.en;
+  const t = injected || (delfthyperloopTranslations[currentLanguage] || delfthyperloopTranslations.en);
 
   return (
     <PMContainer>
@@ -65,17 +82,13 @@ export const DelfHyperloopModal = () => {
         <p style={{ margin: 0, opacity: 0.9 }}>Founded by Elon Musk • International Competition • Real-time Systems</p>
       </div>
 
-      <PMSectionTitle>{t.modal.technologies.title}</PMSectionTitle>
-      <PMTechTags>
-        {t.modal.technologies.list.map((tech, index) => (
-          <PMTechTag key={index}>{tech}</PMTechTag>
-        ))}
-      </PMTechTags>
+      <PMSectionTitle>| {t.modal.technologies.title}</PMSectionTitle>
+      <PMTechTagList items={tagKeys} />
 
-      <PMSectionTitle>{t.modal.challenges.title}</PMSectionTitle>
+      <PMSectionTitle>| {t.modal.challenges.title}</PMSectionTitle>
       <PMText>{t.modal.challenges.description}</PMText>
 
-      <PMSectionTitle>{t.modal.features.title}</PMSectionTitle>
+      <PMSectionTitle>| {t.modal.features.title}</PMSectionTitle>
       <PMFeatureList>
         {t.modal.features.list.map((feature, index) => (
           <li key={index}>{feature}</li>

@@ -1,21 +1,11 @@
 {
   "title": "Delft Hyperloop",
-  "description": {
-    "part1": "Ich war Teil des Delft Hyperloop Teams beim SpaceX Hyperloop Pod Wettbewerb 2018, gegründet von Elon Musk. Ich entwickelte die Delft Hyperloop Website (mit Django), die Sponsoren und Medienaufmerksamkeit anzog.",
-    "part2": "Zusätzlich erstellte ich ein Testsystem zur Optimierung der Pod-Leistung und eine Steuerungsschnittstelle für Echtzeit-Fahrzeugmanagement und Sicherheitsprüfungen, die einen reibungslosen und sicheren Betrieb während Tests und des Wettbewerbs gewährleistete."
-  },
+  "description": "Mitglied des Delft Hyperloop Teams für den SpaceX Pod-Wettbewerb. Entwickelte die öffentliche Website (Django) und ein Test- und Steuerungssystem für Echtzeit-Fahrzeugbetrieb.",
   "modal": {
     "title": "Delft Hyperloop",
     "description": "Ich war Teil des Delft Hyperloop Teams beim SpaceX Hyperloop Pod Wettbewerb 2018, gegründet von Elon Musk. Ich entwickelte die Delft Hyperloop Website (mit Django), die Sponsoren und Medienaufmerksamkeit anzog. Zusätzlich erstellte ich ein Testsystem zur Optimierung der Pod-Leistung und eine Steuerungsschnittstelle für Echtzeit-Fahrzeugmanagement und Sicherheitsprüfungen, die einen reibungslosen und sicheren Betrieb während Tests und des Wettbewerbs gewährleistete.",
     "technologies": {
-      "title": "Verwendete Technologien",
-      "list": [
-        "Django",
-        "Python",
-        "JavaScript",
-        "HTML/CSS",
-        "Echtzeit-Systeme"
-      ]
+      "title": "Verwendete Technologien"
     },
     "challenges": {
       "title": "Herausforderungen & Lösungen",

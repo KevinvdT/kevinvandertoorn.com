@@ -1,0 +1,29 @@
+{
+  "title": "Saysimple",
+  "description": "Interaktive Seitenelemente entwickelt, darunter ein konfigurierbarer Preisrechner und ein anpassbarer Chat‑Widget‑Generator zur Steigerung der Nutzerbindung.",
+  "modal": {
+    "title": "Saysimple",
+    "description": "Entwickelte interaktive Elemente für die Saysimple‑Website, darunter ein Preisrechner mit konfigurierbaren Optionen und ein anpassbarer Chat‑Widget‑Generator. Diese Tools verbessern die Funktionalität und erhöhen die Kundenbindung.",
+    "technologies": {
+      "title": "Verwendete Technologien"
+    },
+    "challenges": {
+      "title": "Herausforderungen & Lösungen",
+      "description": "Aufbau flexibler, konfigurierbarer Komponenten, die von Kunden einfach angepasst werden können, bei gleichzeitiger Wahrung konsistenter Funktionalität und Performance."
+    },
+    "features": {
+      "title": "Hauptfunktionen",
+      "list": [
+        "Interaktiver Preisrechner",
+        "Anpassbarer Chat‑Widget‑Generator",
+        "Konfigurierbare Optionen und Einstellungen",
+        "Responsive Design‑Integration",
+        "Tools zur Kundenanpassung"
+      ]
+    },
+    "liveDemo": "Live Demo",
+    "viewCode": "Code ansehen",
+    "liveDemoUrl": "#",
+    "codeUrl": "#"
+  }
+}

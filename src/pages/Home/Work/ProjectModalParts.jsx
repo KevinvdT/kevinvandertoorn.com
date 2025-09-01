@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { SectionText } from '../../../components/ui/Text';
 import { SectionTitle as BaseTitle } from '../../../components/ui/Title';
 import Tag from '../../../components/ui/Tag';
+import { TAGS } from './tagsRegistry';
 
 export const PMContainer = styled.div`
   color: #333;
@@ -60,6 +61,19 @@ export const PMActions = styled.div`
   flex-wrap: wrap;
   padding-bottom: 10px;
 `;
+
+// Renders a list of technology tags using the central TAGS registry for colors/labels.
+// Falls back to plain tags when an item isn't present in the registry.
+export const PMTechTagList = ({ items = [] }) => (
+  <PMTechTags>
+    {items.map((item, idx) => {
+      const key = String(item).toLowerCase();
+      const reg = TAGS[key];
+      if (reg) return <PMTechTag key={reg.key} color={reg.color}>{reg.label}</PMTechTag>;
+      return <PMTechTag key={`${key}-${idx}`}>{String(item)}</PMTechTag>;
+    })}
+  </PMTechTags>
+);
 
 // Links container used by LinkList
 export const PMLinkList = styled.div`

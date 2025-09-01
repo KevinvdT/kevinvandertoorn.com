@@ -6,7 +6,7 @@ export const SectionText = styled.p`
   font-weight: 500;  // Medium font weight
   color: ${({ theme }) => theme.colors.light.secondaryText};
   margin-bottom: 1rem;
-  line-height: 1.875rem;
+  line-height: 1.8rem;
   & em {
     font-style: normal;
     font-weight: 600;

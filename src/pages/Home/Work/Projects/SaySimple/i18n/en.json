@@ -1,0 +1,29 @@
+{
+  "title": "Saysimple",
+  "description": "Built interactive site elements including a configurable pricing calculator and a customizable chat widget generator to improve engagement.",
+  "modal": {
+    "title": "Saysimple",
+    "description": "Created interactive elements for Saysimple's website, including a pricing calculator based on configurable options, and a customizable chat widget generator. These tools enhance website functionality and offer practical solutions to boost client interaction and engagement.",
+    "technologies": {
+      "title": "Technologies Used"
+    },
+    "challenges": {
+      "title": "Challenges & Solutions",
+      "description": "Building flexible, configurable components that could be easily customized by clients while maintaining consistent functionality and performance across different website implementations."
+    },
+    "features": {
+      "title": "Key Features",
+      "list": [
+        "Interactive pricing calculator",
+        "Customizable chat widget generator",
+        "Configurable options and settings",
+        "Responsive design integration",
+        "Client customization tools"
+      ]
+    },
+    "liveDemo": "Live Demo",
+    "viewCode": "View Code",
+    "liveDemoUrl": "#",
+    "codeUrl": "#"
+  }
+}

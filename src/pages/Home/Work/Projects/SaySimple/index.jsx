@@ -9,34 +9,33 @@ import {
   PMTitle,
   PMText,
   PMSectionTitle,
-  PMTechTags,
-  PMTechTag,
   PMFeatureList,
-  PMActions
+  PMActions,
+  PMTechTagList
 } from '../../ProjectModalParts';
 import imgSaysimple from '../../img/saysimple.svg';
+import saySimpleTranslations from './i18n';
 
-// Simple inline translations as placeholder (can move to i18n like others)
-const translations = {
-  en: {
-    title: 'Saysimple',
-    description: `Created interactive elements for Saysimple's website, including a pricing calculator based on configurable options, and a customizable chat widget generator. These tools enhance website functionality and offer practical solutions to boost client interaction and engagement.`,
-    modal: {
-      title: 'Saysimple',
-      description: `Created interactive elements for Saysimple's website, including a pricing calculator based on configurable options, and a customizable chat widget generator. These tools enhance website functionality and offer practical solutions to boost client interaction and engagement.`,
-      technologies: { title: 'Technologies Used', list: ['JavaScript', 'React', 'CSS', 'Interactive Components', 'Widget Development'] },
-      challenges: { title: 'Challenges & Solutions', description: 'Building flexible, configurable components that could be easily customized by clients while maintaining consistent functionality and performance across different website implementations.' },
-      features: { title: 'Key Features', list: ['Interactive pricing calculator', 'Customizable chat widget generator', 'Configurable options and settings', 'Responsive design integration', 'Client customization tools'] },
-      liveDemo: 'Live Demo', viewCode: 'View Code', liveDemoUrl: '#', codeUrl: '#'
-    }
-  }
+// Language-agnostic technology tags for this project with star logic
+const TECH_TAG_KEYS = ['*react', '*javascript', 'css'];
+
+const splitPreviewAndAll = (keys = []) => {
+  const cleaned = keys.map(k => String(k).trim());
+  const all = cleaned.map(k => k.replace(/^\*/, '').toLowerCase());
+  const starred = cleaned
+    .filter(k => k.startsWith('*'))
+    .map(k => k.replace(/^\*/, '').toLowerCase());
+  const preview = starred.length ? starred : all;
+  return { preview, all };
 };
 
 const SaySimple = () => {
   const { i18n } = useTranslation();
   const lang = (i18n.language || 'en').split('-')[0];
-  const t = translations[lang] || translations.en;
+  const t = saySimpleTranslations[lang] || saySimpleTranslations.en;
   const [isOpen, setIsOpen] = useState(false);
+
+  const { preview, all } = splitPreviewAndAll(TECH_TAG_KEYS);
 
   return (
     <>
@@ -45,21 +44,18 @@ const SaySimple = () => {
         title={t.title}
         description={t.description}
         color='#aa88fd'
+        tagKeys={preview}
         setIsOpen={setIsOpen}
       />
       {/* <ReadMoreLink onClick={() => setIsOpen(true)} /> */}
 
-      <Modal isOpen={isOpen} onClose={() => setIsOpen(false)} title={t.title}>
+      <Modal isOpen={isOpen} onClose={() => setIsOpen(false)} title={t.title} maxWidth="700px">
         <PMContainer>
           <PMTitle>{t.modal.title}</PMTitle>
           <PMText>{t.modal.description}</PMText>
 
           <PMSectionTitle>| {t.modal.technologies.title}</PMSectionTitle>
-          <PMTechTags>
-            {t.modal.technologies.list.map((tech, index) => (
-              <PMTechTag key={index}>{tech}</PMTechTag>
-            ))}
-          </PMTechTags>
+          <PMTechTagList items={all} />
 
           <PMSectionTitle>| {t.modal.challenges.title}</PMSectionTitle>
           <PMText>{t.modal.challenges.description}</PMText>

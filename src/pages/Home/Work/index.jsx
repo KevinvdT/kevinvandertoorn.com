@@ -61,10 +61,10 @@ const Work = () => {
       <ProjectItemsWrapper>
         <DelfHyperloop />
         <AlbertHeijn />
+        <SaySimple />
       </ProjectItemsWrapper>
 
-      <ShowMoreWrapper showMore={showMore}>
-        <SaySimple />
+      {/* <ShowMoreWrapper showMore={showMore}>
       </ShowMoreWrapper>
 
       <SeeMoreButtonWrapper showMore={showMore}>
@@ -72,7 +72,7 @@ const Work = () => {
           <ArrowIcon src={downArrow} showMore={showMore} />
           {showMore ? t('work.seeLess') : t('work.seeMore')}
         </SeeMoreButton>
-      </SeeMoreButtonWrapper>
+      </SeeMoreButtonWrapper> */}
     </Container>
   );
 };

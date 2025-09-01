@@ -1,16 +1,15 @@
 {
   "title": "Albert Heijn",
-  "description": "Ontwikkelde veelzijdige signage software voor Albert Heijn's personeelsruimte display. De software toont de huidige tijd en datum, fotopresentaties, aankondigingen en meer, wat de interne communicatie verbetert en een dynamische en informatieve omgeving voor werknemers creëert.",
+  "description": "Veelzijdige digital signage voor de personeelsruimte van Albert Heijn. Toont klok en datum, fotoslideshows en aankondigingen en versterkt zo de interne communicatie.",
   "modal": {
     "title": "Albert Heijn",
     "description": "Ontwikkelde veelzijdige signage software voor Albert Heijn's personeelsruimte display. De software toont de huidige tijd en datum, fotopresentaties, aankondigingen en meer, wat de interne communicatie verbetert en een dynamische en informatieve omgeving voor werknemers creëert.",
     "technologies": {
-      "title": "Gebruikte Technologieën",
-      "list": ["JavaScript", "HTML/CSS", "Digitale Signage", "Werknemerscommunicatie"]
+      "title": "Gebruikte Technologieën"
     },
     "challenges": {
       "title": "Uitdagingen & Oplossingen",
-      "description": "Het ontwerpen van een intuïtieve interface die eenvoudig kon worden bijgewerkt door niet-technisch personeel, terwijl betrouwbare werking in een zakelijke omgeving met minimale onderhoudsvereisten werd gegarandeerd."
+      "description": "Het ontwerpen van een intuïtieve interface die eenvoudig kon worden bijgewerkt door niet‑technisch personeel, terwijl betrouwbare werking in een zakelijke omgeving met minimale onderhoudsvereisten werd gegarandeerd."
     },
     "features": {
       "title": "Belangrijkste Functies",
