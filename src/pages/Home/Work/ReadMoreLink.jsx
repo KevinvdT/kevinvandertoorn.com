@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { useTranslation } from 'react-i18next';
 
 const Link = styled.a`
   display: inline-flex;
@@ -16,10 +17,14 @@ const Link = styled.a`
   }
 `;
 
-const ReadMoreLink = ({ onClick, children = 'Read More' }) => (
-  <Link href="#" onClick={(e) => { e.preventDefault(); onClick && onClick(); }}>
-    {children}
-  </Link>
-);
+const ReadMoreLink = ({ onClick, children }) => {
+  const { t } = useTranslation();
+
+  return (
+    <Link href="#" onClick={(e) => { e.preventDefault(); onClick && onClick(); }}>
+      {children || t('work.readMore')} ›
+    </Link>
+  );
+};
 
 export default ReadMoreLink;

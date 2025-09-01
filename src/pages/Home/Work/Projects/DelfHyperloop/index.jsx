@@ -31,8 +31,9 @@ const DelfHyperloop = () => {
         title={t.title}
         description={[t.description.part1, t.description.part2]}
         color='#20cc8a'
+        setIsOpen={setIsOpen}
       />
-      <ReadMoreLink onClick={() => setIsOpen(true)} />
+      {/* <ReadMoreLink onClick={() => setIsOpen(true)} /> */}
 
       <Modal isOpen={isOpen} onClose={() => setIsOpen(false)} title={t.title}>
         <DelfHyperloopModal />
@@ -64,17 +65,17 @@ export const DelfHyperloopModal = () => {
         <p style={{ margin: 0, opacity: 0.9 }}>Founded by Elon Musk • International Competition • Real-time Systems</p>
       </div>
 
-      <PMSectionTitle>| {t.modal.technologies.title}</PMSectionTitle>
+      <PMSectionTitle>{t.modal.technologies.title}</PMSectionTitle>
       <PMTechTags>
         {t.modal.technologies.list.map((tech, index) => (
           <PMTechTag key={index}>{tech}</PMTechTag>
         ))}
       </PMTechTags>
 
-      <PMSectionTitle>| {t.modal.challenges.title}</PMSectionTitle>
+      <PMSectionTitle>{t.modal.challenges.title}</PMSectionTitle>
       <PMText>{t.modal.challenges.description}</PMText>
 
-      <PMSectionTitle>| {t.modal.features.title}</PMSectionTitle>
+      <PMSectionTitle>{t.modal.features.title}</PMSectionTitle>
       <PMFeatureList>
         {t.modal.features.list.map((feature, index) => (
           <li key={index}>{feature}</li>

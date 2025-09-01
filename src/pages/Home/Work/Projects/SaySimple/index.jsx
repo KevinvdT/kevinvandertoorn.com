@@ -45,8 +45,9 @@ const SaySimple = () => {
         title={t.title}
         description={t.description}
         color='#aa88fd'
+        setIsOpen={setIsOpen}
       />
-      <ReadMoreLink onClick={() => setIsOpen(true)} />
+      {/* <ReadMoreLink onClick={() => setIsOpen(true)} /> */}
 
       <Modal isOpen={isOpen} onClose={() => setIsOpen(false)} title={t.title}>
         <PMContainer>

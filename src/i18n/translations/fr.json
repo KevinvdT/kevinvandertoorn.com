@@ -17,17 +17,18 @@
     "hobbies": "En dehors du travail, j’aime me balader dans le parc <0>Efteling</0>, un parc néerlandais avec un charme unique et enchanteur. J’aime aussi apprendre de nouvelles langues."
   },
   "work": {
-    "title": "Projets sur lesquels j’ai travaillé",
+    "title": "Projets sur lesquels j'ai travaillé",
     "projects": {
       "saysimple": {
         "title": "Outils web interactifs",
-        "description": "J’ai développé des éléments interactifs pour le site web de Saysimple, y compris un calculateur de prix basé sur des options configurables et un générateur de widget de chat personnalisable. Ces outils améliorent la fonctionnalité du site et offrent des solutions pratiques pour renforcer l’interaction client."
+        "description": "J'ai développé des éléments interactifs pour le site web de Saysimple, y compris un calculateur de prix basé sur des options configurables et un générateur de widget de chat personnalisable. Ces outils améliorent la fonctionnalité du site et offrent des solutions pratiques pour renforcer l'interaction client."
       },
       "ah": {
         "title": "Logiciel de signalisation numérique",
-        "description": "J’ai créé un logiciel de signalisation polyvalent pour la salle du personnel d’Albert Heijn, affichant l’heure, des diaporamas de photos, des annonces et bien plus encore. Ce logiciel améliore la communication interne et crée un environnement dynamique et informatif pour les employés."
+        "description": "J'ai créé un logiciel de signalisation polyvalent pour la salle du personnel d'Albert Heijn, affichant l'heure, des diaporamas de photos, des annonces et bien plus encore. Ce logiciel améliore la communication interne et crée un environnement dynamique et informatif pour les employés."
       }
-    }
+    },
+    "readMore": "Voir plus"
   },
   "skills": {
     "title": "Les outils avec lesquels je travaille",

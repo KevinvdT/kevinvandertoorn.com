@@ -6,6 +6,7 @@ import TwoCol from '../../../components/layout/TwoCol';
 import Modal from '../../../components/ui/Modal';
 import Button from '../../../components/ui/Button';
 import ProjectDetails from '../../../components/ui/ProjectDetails';
+import ReadMoreLink from './ReadMoreLink';
 
 // Styled components for ProjectItem
 const ProjectItemContainer = styled(TwoCol)`
@@ -71,7 +72,7 @@ const ProjectActions = styled.div`
 `;
 
 // ProjectItem component that can handle both single and multiple descriptions
-const ProjectItem = ({ imageSrc, title, description, color, projectDetails }) => {
+const ProjectItem = ({ imageSrc, title, description, color, projectDetails, setIsOpen }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const openModal = () => setIsModalOpen(true);
@@ -92,12 +93,14 @@ const ProjectItem = ({ imageSrc, title, description, color, projectDetails }) =>
             // If description is a single string, render it in a single ProjectDescription
             <ProjectDescription color={color}>{description}</ProjectDescription>
           )}
-          {projectDetails && (
+          {/* {projectDetails && (
             <ProjectActions>
               <Button onClick={openModal} secondary>
-                Read More
               </Button>
             </ProjectActions>
+          )} */}
+          {setIsOpen && (
+            <ReadMoreLink onClick={() => setIsOpen(true)} />
           )}
         </ProjectContent>
       </ProjectItemContainer>

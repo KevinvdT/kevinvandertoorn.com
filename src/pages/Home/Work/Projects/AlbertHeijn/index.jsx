@@ -30,25 +30,26 @@ const AlbertHeijn = () => {
         title={t.title}
         description={t.description}
         color='#52c2df'
+        setIsOpen={setIsOpen}
       />
-      <ReadMoreLink onClick={() => setIsOpen(true)} />
+
 
       <Modal isOpen={isOpen} onClose={() => setIsOpen(false)} title={t.title}>
         <PMContainer>
           <PMTitle>{t.modal.title}</PMTitle>
           <PMText>{t.modal.description}</PMText>
 
-          <PMSectionTitle>| {t.modal.technologies.title}</PMSectionTitle>
+          <PMSectionTitle>{t.modal.technologies.title}</PMSectionTitle>
           <PMTechTags>
             {t.modal.technologies.list.map((tech, index) => (
               <PMTechTag key={index}>{tech}</PMTechTag>
             ))}
           </PMTechTags>
 
-          <PMSectionTitle>| {t.modal.challenges.title}</PMSectionTitle>
+          <PMSectionTitle>{t.modal.challenges.title}</PMSectionTitle>
           <PMText>{t.modal.challenges.description}</PMText>
 
-          <PMSectionTitle>| {t.modal.features.title}</PMSectionTitle>
+          <PMSectionTitle>{t.modal.features.title}</PMSectionTitle>
           <PMFeatureList>
             {t.modal.features.list.map((feature, index) => (
               <li key={index}>{feature}</li>
