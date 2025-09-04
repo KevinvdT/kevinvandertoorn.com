@@ -121,11 +121,11 @@ const ProjectItem = ({ imageSrc, title, description, color, projectDetails, onRe
             </TagsRow>
           )}
 
-          {/* {(onReadMore || setIsOpen) && (
+          {(onReadMore || setIsOpen) && (
             <ReadMoreRow>
               <ReadMoreLink onClick={handleReadMore} />
             </ReadMoreRow>
-          )} */}
+          )}
         </ProjectContent>
       </ProjectItemContainer>
 
@@ -135,7 +135,7 @@ const ProjectItem = ({ imageSrc, title, description, color, projectDetails, onRe
           onClose={closeModal}
           title={title}
         >
-          <ProjectDetails {...projectDetails} />
+          <div>Project details would go here</div>
         </Modal>
       )}
     </>
