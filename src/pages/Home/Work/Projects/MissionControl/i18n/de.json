@@ -1,32 +1,31 @@
 {
   "title": "Mission Control",
-  "description": "Echtzeit‑Fahrzeugmanagement und Sicherheitsüberwachungssystem für die Delft Hyperloop‑Kapsel während des SpaceX‑Wettbewerbs.",
+  "description": "Echtzeit-Bedienoberfläche für die Delft Hyperloop-Kapsel bei der SpaceX Hyperloop Pod Competition 2018, mit Telemetrie, Navigationsdaten und sicherheitskritischen Befehlen.",
   "modal": {
     "title": "Mission Control",
-    "intro": "Entwickelte eine umfassende Echtzeit‑Steueroberfläche zur Überwachung und Steuerung der Delft Hyperloop‑Kapsel während des SpaceX Hyperloop Pod Competition 2018. Das System bot kritische Sicherheitsüberwachung und Leistungsoptimierung.",
+    "intro": "Entwickelte die <1>Echtzeit-Bedienoberfläche</1> für die <1>Delft Hyperloop-Kapsel</1> bei der <1>SpaceX Hyperloop Pod Competition (2018)</1>. Mission Control war die externe Hälfte des Kommunikationssystems und arbeitete eng mit dem On-Board Communication Hub zusammen. Es sammelte <1>Live-Telemetrie aus über 20 Sensorströmen</1>, stellte den Kapselzustand innerhalb von 30 Sekunden dar (wie von SpaceX gefordert) und ermöglichte den Operatoren, <1>sicherheitskritische Befehle</1> wie Start und Notstopp auszuführen.",
     "video": {
-      "title": "Wettbewerbs‑Aftermovie",
-      "alt": "Delft Hyperloop Wettbewerbs‑Aftermovie"
+      "title": "Wettbewerbs-Aftermovie",
+      "alt": "Delft Hyperloop Wettbewerbs-Aftermovie"
     },
     "technologies": {
       "title": "Technologien"
     },
     "features": {
-      "title": "Hauptfunktionen",
+      "title": "Wichtigste Funktionen",
       "list": [
-        "Echtzeit‑Fahrzeugtelemetrie‑Überwachung",
-        "Automatisierte Sicherheitsprüfungen und Warnungen",
-        "Algorithmen zur Leistungsoptimierung",
-        "Live‑Datenvisualisierungs‑Dashboard",
-        "Not‑Aus und Steuerungssysteme",
-        "MQTT‑basiertes Kommunikationsprotokoll"
+        "<1>Live-Telemetrie & Status</1>: Echtzeit-Dashboards mit über 20 Sensorströmen (IMU, Encoder, Reflektionsstreifensensoren, Bremsdrücke, BMS, Temperaturen, Federung) mit farbcodierten Statusanzeigen.",
+        "<1>Befehlsweg mit Sicherheitsinterlocks</1>: Start, Zustandswechsel und Pod Stop mit eingebauten Sicherheitsmechanismen; <1>Heartbeat-Überwachung löste automatische Notbremsung aus</1> bei Kommunikationsverlust.",
+        "<1>Navigationsübersicht</1>: Anzeige von Position, Geschwindigkeit und Beschleunigung, berechnet über einen <1>Kalman-Filter</1>, der mehrere Sensoren kombinierte, inklusive Bremspunkt-Kontext.",
+        "<1>Anomalieerkennung</1>: Klare Alarme, Grenzwerte und Redundanzanzeigen für sicherheitskritische Systeme wie Bremsen, Antrieb und Batterien.",
+        "<1>Mobiles Wettbewerbstool</1>: <1>Cross-Plattform Electron-App</1>, für den Einsatz vor Ort entwickelt, integriert mit den SpaceX-Systemen und mit redundanter Datenaufzeichnung."
       ]
     },
     "impact": {
       "title": "Impact",
       "text": [
-        "Mission Control war die zentrale Schnittstelle des Teams für sichere Hochgeschwindigkeitsläufe. Es ermöglichte den Operatoren, den Zustand der Kapsel auf einen Blick zu überprüfen, sofort auf Abweichungen zu reagieren und die Wettbewerbsregeln einzuhalten (Statusanzeige, externe Überwachung, Notstopp, Startfreigabe).",
-        "Das System wurde gründlich mit Unit‑Tests, End‑to‑End‑Tests und Vakuumtests des Communication Hubs validiert und erwies sich so als zuverlässig unter Wettbewerbsbedingungen. In der Praxis schlug Mission Control eine Brücke zwischen deterministischer Steuerung auf dem TI Hercules und flexibler Kommunikation auf dem Raspberry Pi und lieferte die notwendige Übersicht für sicheres Hochleistungstesten."
+        "Mission Control war die <1>zentrale Schnittstelle</1> des Teams für <1>sichere Hochgeschwindigkeitsläufe</1>. Es ermöglichte den Operatoren, den Zustand der Kapsel <1>auf einen Blick zu prüfen</1>, sofort auf Abweichungen zu reagieren und die Wettbewerbsregeln einzuhalten (Statusanzeige, externe Überwachung, Notstopp, Startfreigabe).",
+        "Das System wurde <1>gründlich validiert</1> durch Unit-Tests, End-to-End-Tests und Vakuumtests des Communication Hubs und erwies sich als <1>zuverlässig unter Wettbewerbsbedingungen</1>. In der Praxis schlug Mission Control eine Brücke zwischen <1>deterministischer Steuerung</1> auf dem TI Hercules und <1>flexibler Kommunikation</1> auf dem Raspberry Pi und bot die <1>Übersicht, die sicheres Hochleistungstesten möglich machte</1>."
       ]
     }
   }

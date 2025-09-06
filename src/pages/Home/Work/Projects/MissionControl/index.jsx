@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useTranslation } from 'react-i18next';
+import { Trans, useTranslation } from 'react-i18next';
 import styled from 'styled-components';
 import ProjectItem from '../../ProjectItem';
 import ReadMoreLink from '../../ReadMoreLink';
@@ -12,7 +12,8 @@ import {
   PMSectionTitle,
   PMFeatureList,
   PMActions,
-  PMTechTagList
+  PMTechTagList,
+  BulletList
 } from '../../ProjectModalParts';
 import image from './img/image.webp';
 import podImage from './img/pod_light_background.png';
@@ -144,7 +145,7 @@ const MissionControl = () => {
         <PMContainer>
           {/* <PMTitle>Mission Control System</PMTitle> */}
           <PMText>
-            {t.modal.intro}
+            <Trans components={{ 1: <em /> }}>{t.modal.intro}</Trans>
           </PMText>
           <PMSectionTitle>{t.modal.video.title}</PMSectionTitle>
           {!showVideo ? (
@@ -174,34 +175,38 @@ const MissionControl = () => {
           <PMTechTagList items={all} />
 
           <PMSectionTitle>{t.modal.features.title}</PMSectionTitle>
-          <PMFeatureList>
-            {t.modal.features.list.map((feature, index) => (
-              <li key={index}>{feature}</li>
-            ))}
-          </PMFeatureList>
-
-          <PMSectionTitle>{t.modal.impact.title}</PMSectionTitle>
-          {Array.isArray(t.modal.impact.text) ? (
-            t.modal.impact.text.map((paragraph, index) => (
-              <PMText key={index}>{paragraph}</PMText>
-            ))
-          ) : (
-            <PMText>{t.modal.impact.text}</PMText>
-          )}
+          <BulletList items={t.modal.features.list} />
 
 
-
-          {/* <PodImageContainer>
-            <PodImage
-              src={podImage}
-              alt="Delft Hyperloop ATLAS Pod"
-            />
-          </PodImageContainer> */}
 
           <ScreenshotImage
             src={screenshot}
             alt="Mission Control Screenshot"
           />
+
+          <PMSectionTitle>{t.modal.impact.title}</PMSectionTitle>
+          {Array.isArray(t.modal.impact.text) ? (
+            t.modal.impact.text.map((paragraph, index) => (
+              <PMText key={index}>
+                <Trans components={{ 1: <em /> }}>{paragraph}</Trans>
+              </PMText>
+            ))
+          ) : (
+            <PMText>
+              <Trans components={{ 1: <em /> }}>{t.modal.impact.text}</Trans>
+            </PMText>
+          )}
+
+
+
+
+
+          <PodImageContainer>
+            <PodImage
+              src={podImage}
+              alt="Delft Hyperloop ATLAS Pod"
+            />
+          </PodImageContainer>
 
           {/* <PMActions>
             <Button as='a' href="#" target='_blank' rel='noopener noreferrer'>

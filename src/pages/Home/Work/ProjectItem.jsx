@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Trans } from 'react-i18next';
 import styled from 'styled-components';
 import { SectionTitle } from '../../../components/ui/Title';
 import { SectionText } from '../../../components/ui/Text';
@@ -115,10 +116,14 @@ const ProjectItem = ({ imageSrc, title, description, color, projectDetails, onRe
           <ProjectTitle as="h3" color={color}>{title}</ProjectTitle>
           {Array.isArray(description) ? (
             description.map((desc, index) => (
-              <ProjectDescription key={index} color={color}>{desc}</ProjectDescription>
+              <ProjectDescription key={index} color={color}>
+                <Trans components={{ 1: <em /> }}>{desc}</Trans>
+              </ProjectDescription>
             ))
           ) : (
-            <ProjectDescription color={color}>{description}</ProjectDescription>
+            <ProjectDescription color={color}>
+              <Trans components={{ 1: <em /> }}>{description}</Trans>
+            </ProjectDescription>
           )}
 
           {tagKeys.length > 0 && (
