@@ -56,6 +56,15 @@ const ProjectDescription = styled(SectionText)`
   // }
 `;
 
+const ProjectCompany = styled.div`
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: #666;
+  margin-bottom: 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+`;
+
 const ProjectTitle = styled(SectionTitle)`
 font-family: 'Inter','Arial',sans-serif;
   font-size:  1.0625rem;
@@ -85,7 +94,7 @@ const ReadMoreRow = styled.div`
 `;
 
 // ProjectItem component that can handle both single and multiple descriptions
-const ProjectItem = ({ imageSrc, title, description, color, projectDetails, onReadMore, setIsOpen, tagKeys = [] }) => {
+const ProjectItem = ({ imageSrc, title, description, color, projectDetails, onReadMore, setIsOpen, tagKeys = [], company }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   // Back-compat: if legacy setIsOpen prop is provided, prefer it; else use onReadMore
@@ -102,6 +111,7 @@ const ProjectItem = ({ imageSrc, title, description, color, projectDetails, onRe
       <ProjectItemContainer aligntop>
         <ProjectImage src={imageSrc} alt={title} />
         <ProjectContent>
+          {company && <ProjectCompany>{company}</ProjectCompany>}
           <ProjectTitle as="h3" color={color}>{title}</ProjectTitle>
           {Array.isArray(description) ? (
             description.map((desc, index) => (

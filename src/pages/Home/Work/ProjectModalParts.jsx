@@ -41,11 +41,13 @@ export const PMFeatureList = styled.ul`
   text-align: left;
   padding-left: 20px;
   margin: 16px 0 24px 0;
+  list-style-type: disc;
   
   li {
     margin-bottom: 8px;
     line-height: 1.5;
-    color: #555;
+    color: ${({ theme }) => theme.colors.light.secondaryText};
+    font-weight: 500;
 
     @media (prefers-color-scheme: dark) {
       color: ${({ theme }) => theme.colors.dark.secondaryText};
