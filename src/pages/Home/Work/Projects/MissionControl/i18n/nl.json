@@ -14,18 +14,18 @@
     "features": {
       "title": "Belangrijkste functies",
       "list": [
-        "<1>Live telemetrie & status</1>: Realtime dashboards met <1>meer dan 20 sensorstromen</1> (IMU, encoder, reflectiestripsensoren, remdrukken, BMS, temperaturen, vering) met kleurgecodeerde statusindicatoren.",
-        "<1>Commando’s met veiligheidsinterlocks</1>: Lancering, toestandovergangen en Pod Stop met ingebouwde veiligheidsmechanismen; heartbeat-bewaking activeerde automatische noodrem bij verlies van communicatie.",
+        "<1>Live telemetrie & status</1>: Realtime dashboard met <1>meer dan 20 sensorstromen</1> (IMU, encoder, reflectiestripsensoren, remdrukken, BMS, temperaturen, vering) met kleurgecodeerde statusindicatoren.",
+        "<1>Commando’s met veiligheidsinterlocks</1>: Lancering, toestandovergangen en Pod Stop met ingebouwde veiligheidsmechanismen; heartbeat-bewaking activeert automatische de noodrem bij verlies van communicatie.",
         "<1>Navigatie-inzichten</1>: Toonde positie, snelheid en versnelling, geschat via een <1>Kalmanfilter</1> dat meerdere sensoren combineerde, inclusief rempuntcontext.",
         "<1>Anomaliebewaking</1>: Duidelijke alarmen, drempels en redundantie-indicatoren voor veiligheidskritieke systemen zoals remmen, aandrijving en batterijen.",
-        "<1>Draagbaar wedstrijdhulpmiddel</1>: <1>Cross-platform Electron-app</1> ontworpen voor gebruik ter plaatse, geïntegreerd met SpaceX-systemen en voorzien van redundante logging."
+        "<1>Draagbare tool</1>: <1>Cross-platform Electron-app</1> ontworpen voor gebruik ter plaatse, geïntegreerd met SpaceX-systemen en voorzien van redundante logging."
       ]
     },
     "impact": {
       "title": "Impact",
       "text": [
-        "Mission Control was de <1>primaire interface</1> van het team tijdens veilige, hogesnelheidsritten. Operators konden in één oogopslag de gezondheid van de pod verifiëren, direct reageren op afwijkingen en voldoen aan de strikte wedstrijdregels (statusdisplay, externe monitoring, noodstop, lanceringstoestemming).",
-        "Het systeem werd <1>grondig gevalideerd</1> met unittests, end-to-end tests en vacuümtesten van de Communication Hub, en bewees zo <1>betrouwbaar te zijn onder wedstrijdcondities</1>. In de praktijk sloeg Mission Control een brug tussen deterministische besturing op de TI Hercules en flexibele communicatie op de Raspberry Pi, waardoor het team veilig de grenzen van de prestaties kon opzoeken."
+        "Mission Control was de <1>primaire interface</1> van het team tijdens veilige, hogesnelheidsritten. Operators konden in één oogopslag de gezondheid van de pod verifiëren, direct reageren op afwijkingen en voldoen aan de strikte wedstrijdregels van SpaceX (statusdisplay, externe monitoring, noodstop, lanceringstoestemming).",
+        "Het systeem werd <1>grondig gevalideerd</1> met unittests, end-to-end tests en vacuümtesten van de Communication Hub, en bewees zo <1>betrouwbaar te zijn onder wedstrijdcondities</1>. Mission Control sloeg een brug tussen deterministische besturing op de TI Hercules en flexibele communicatie op de Raspberry Pi, waardoor het team veilig de grenzen van de prestaties kon opzoeken."
       ]
     }
   }

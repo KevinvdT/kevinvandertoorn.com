@@ -14,7 +14,7 @@
     "features": {
       "title": "Key Features",
       "list": [
-        "<1>Live telemetry & health</1>: Real-time dashboards showing 20+ sensor streams (IMU, encoder, reflective stripe detectors, brake pressures, BMS, temperatures, suspension) with color-coded status indicators.",
+        "<1>Live telemetry & health</1>: Real-time dashboard showing 20+ sensor streams (IMU, encoder, reflective stripe detectors, brake pressures, BMS, temperatures, suspension) with color-coded status indicators.",
         "<1>Command path with safety interlocks</1>: Launch, state transitions, and Pod Stop with built-in safeguards; <1>heartbeat monitoring triggered fail-safe braking</1> on communication loss.",
         "<1>Navigation awareness</1>: Displayed position, velocity, and acceleration estimated through a <1>Kalman filter</1>, combining multiple sensor inputs with braking-point context.",
         "<1>Anomaly visibility</1>: Clear alarms, thresholds, and redundancy indicators for safety-critical systems such as brakes, propulsion, and batteries.",
@@ -25,7 +25,7 @@
       "title": "Impact",
       "text": [
         "Mission Control was the team’s <1>primary interface for safe, high-speed runs</1>. It enabled operators to <1>verify pod health at a glance</1>, react instantly to anomalies, and comply with competition rules (health display, external monitoring, remote stop, launch gating).",
-        "The system was <1>thoroughly validated</1> through unit tests, end-to-end chain tests, and vacuum testing of the Communication Hub, ensuring <1>reliability under competition conditions</1>. In practice, Mission Control bridged deterministic control on the TI Hercules with flexible comms on the Raspberry Pi, providing the <1>oversight that made safe high-performance testing possible</1>."
+        "The system was <1>thoroughly validated</1> through unit tests, end-to-end chain tests, and vacuum testing of the Communication Hub, ensuring <1>reliability under competition conditions</1>. Mission Control bridged deterministic control on the TI Hercules with flexible communication on the Raspberry Pi, providing the <1>oversight that made safe high-performance testing possible</1>."
       ]
     }
   }

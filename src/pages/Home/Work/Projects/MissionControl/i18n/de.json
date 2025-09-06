@@ -14,7 +14,7 @@
     "features": {
       "title": "Wichtigste Funktionen",
       "list": [
-        "<1>Live-Telemetrie & Status</1>: Echtzeit-Dashboards mit über 20 Sensorströmen (IMU, Encoder, Reflektionsstreifensensoren, Bremsdrücke, BMS, Temperaturen, Federung) mit farbcodierten Statusanzeigen.",
+        "<1>Live-Telemetrie & Status</1>: Echtzeit-Dashboard mit über 20 Sensorströmen (IMU, Encoder, Reflektionsstreifensensoren, Bremsdrücke, BMS, Temperaturen, Federung) mit farbcodierten Statusanzeigen.",
         "<1>Befehlsweg mit Sicherheitsinterlocks</1>: Start, Zustandswechsel und Pod Stop mit eingebauten Sicherheitsmechanismen; <1>Heartbeat-Überwachung löste automatische Notbremsung aus</1> bei Kommunikationsverlust.",
         "<1>Navigationsübersicht</1>: Anzeige von Position, Geschwindigkeit und Beschleunigung, berechnet über einen <1>Kalman-Filter</1>, der mehrere Sensoren kombinierte, inklusive Bremspunkt-Kontext.",
         "<1>Anomalieerkennung</1>: Klare Alarme, Grenzwerte und Redundanzanzeigen für sicherheitskritische Systeme wie Bremsen, Antrieb und Batterien.",
@@ -25,7 +25,7 @@
       "title": "Impact",
       "text": [
         "Mission Control war die <1>zentrale Schnittstelle</1> des Teams für <1>sichere Hochgeschwindigkeitsläufe</1>. Es ermöglichte den Operatoren, den Zustand der Kapsel <1>auf einen Blick zu prüfen</1>, sofort auf Abweichungen zu reagieren und die Wettbewerbsregeln einzuhalten (Statusanzeige, externe Überwachung, Notstopp, Startfreigabe).",
-        "Das System wurde <1>gründlich validiert</1> durch Unit-Tests, End-to-End-Tests und Vakuumtests des Communication Hubs und erwies sich als <1>zuverlässig unter Wettbewerbsbedingungen</1>. In der Praxis schlug Mission Control eine Brücke zwischen <1>deterministischer Steuerung</1> auf dem TI Hercules und <1>flexibler Kommunikation</1> auf dem Raspberry Pi und bot die <1>Übersicht, die sicheres Hochleistungstesten möglich machte</1>."
+        "Das System wurde <1>gründlich validiert</1> durch Unit-Tests, End-to-End-Tests und Vakuumtests des Communication Hubs und erwies sich als <1>zuverlässig unter Wettbewerbsbedingungen</1>. Mission Control schlug eine Brücke zwischen <1>deterministischer Steuerung</1> auf dem TI Hercules und <1>flexibler Kommunikation</1> auf dem Raspberry Pi und bot die <1>Übersicht, die sicheres Hochleistungstesten möglich machte</1>."
       ]
     }
   }
