@@ -94,7 +94,7 @@ const ReadMoreRow = styled.div`
 `;
 
 // ProjectItem component that can handle both single and multiple descriptions
-const ProjectItem = ({ imageSrc, title, description, color, projectDetails, onReadMore, setIsOpen, tagKeys = [], company }) => {
+const ProjectItem = ({ imageSrc, title, description, color, projectDetails, onReadMore, setIsOpen, tagKeys = [], company, readMore = true }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   // Back-compat: if legacy setIsOpen prop is provided, prefer it; else use onReadMore
@@ -131,7 +131,7 @@ const ProjectItem = ({ imageSrc, title, description, color, projectDetails, onRe
             </TagsRow>
           )}
 
-          {(onReadMore || setIsOpen) && (
+          {readMore && (onReadMore || setIsOpen) && (
             <ReadMoreRow>
               <ReadMoreLink onClick={handleReadMore} />
             </ReadMoreRow>

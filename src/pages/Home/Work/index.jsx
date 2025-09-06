@@ -26,7 +26,7 @@ const Work = () => {
         <MissionControl />
         {/* <TestSetup /> */}
         {/* <MainWebsite /> */}
-        <InteractiveTools />
+        <InteractiveTools readMore={false} />
         {/* <TransportNetworkModel /> */}
       </ProjectItemsWrapper>
 

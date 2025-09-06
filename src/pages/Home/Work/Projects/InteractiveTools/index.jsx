@@ -14,6 +14,7 @@ import {
   PMTechTagList
 } from '../../ProjectModalParts';
 import image from './img/image.webp';
+import itTranslations from './i18n';
 
 // Technology tags for Interactive Tools
 const TECH_TAG_KEYS = ['html', 'css', 'javascript', '*react', '*svelte'];
@@ -28,22 +29,27 @@ const splitPreviewAndAll = (keys = []) => {
   return { preview, all };
 };
 
-const InteractiveTools = () => {
-  const { t } = useTranslation();
+const InteractiveTools = ({ readMore = true }) => {
+  const { i18n } = useTranslation();
   const [isOpen, setIsOpen] = useState(false);
 
   const { preview, all } = splitPreviewAndAll(TECH_TAG_KEYS);
+
+  // Resolve current language and project-local translations for title/description
+  const lang = (i18n.language || 'en').split('-')[0];
+  const t = itTranslations[lang] || itTranslations.en;
 
   return (
     <>
       <ProjectItem
         imageSrc={image}
-        title="Chat Widget for WhatsApp"
-        description="Developed a customizable WhatsApp chat widget generator for Saysimple's website, enabling seamless customer communication integration."
+        title={t.title}
+        description={t.description}
         color='#aa88fd'
         tagKeys={preview}
         setIsOpen={setIsOpen}
         company="Saysimple"
+        readMore={readMore}
       />
 
       <Modal isOpen={isOpen} onClose={() => setIsOpen(false)} title="Chat Widget for WhatsApp" maxWidth="700px">

@@ -18,6 +18,7 @@ import image from './img/image.webp';
 import podImage from './img/pod_light_background.png';
 import screenshot from './img/screenshot.webp';
 import videoCover from './img/video-cover.png';
+import mcTranslations from './i18n';
 
 const PodImageContainer = styled.div`
   text-align: center;
@@ -108,11 +109,15 @@ const splitPreviewAndAll = (keys = []) => {
 };
 
 const MissionControl = () => {
-  const { t } = useTranslation();
+  const { i18n } = useTranslation();
   const [isOpen, setIsOpen] = useState(false);
   const [showVideo, setShowVideo] = useState(false);
 
   const { preview, all } = splitPreviewAndAll(TECH_TAG_KEYS);
+
+  // Resolve current language and project-local translations
+  const lang = (i18n.language || 'en').split('-')[0];
+  const t = mcTranslations[lang] || mcTranslations.en;
 
   const handleVideoClick = () => {
     setShowVideo(true);
@@ -127,26 +132,26 @@ const MissionControl = () => {
     <>
       <ProjectItem
         imageSrc={image}
-        title="Mission Control"
-        description="Real-time vehicle management and safety monitoring system for the Delft Hyperloop pod during the SpaceX competition."
+        title={t.title}
+        description={t.description}
         color='#20cc8a'
         tagKeys={preview}
         setIsOpen={setIsOpen}
         company="Delft Hyperloop · SpaceX"
       />
 
-      <Modal isOpen={isOpen} onClose={handleModalClose} title="Mission Control" maxWidth="700px">
+      <Modal isOpen={isOpen} onClose={handleModalClose} title={t.title} maxWidth="700px">
         <PMContainer>
           {/* <PMTitle>Mission Control System</PMTitle> */}
           <PMText>
-            Developed a comprehensive real-time control interface for monitoring and managing the Delft Hyperloop pod during the SpaceX Hyperloop Pod Competition 2018. The system provided critical safety oversight and performance optimization capabilities.
+            {t.modal.intro}
           </PMText>
-          <PMSectionTitle>Competition Aftermovie</PMSectionTitle>
+          <PMSectionTitle>{t.modal.video.title}</PMSectionTitle>
           {!showVideo ? (
             <VideoPreview onClick={handleVideoClick}>
               <VideoCoverImage
                 src={videoCover}
-                alt="Delft Hyperloop Competition Aftermovie"
+                alt={t.modal.video.alt}
               />
               <PlayButton />
             </VideoPreview>
@@ -165,23 +170,24 @@ const MissionControl = () => {
             </div>
           )}
 
-          <PMSectionTitle>Technologies</PMSectionTitle>
+          <PMSectionTitle>{t.modal.technologies.title}</PMSectionTitle>
           <PMTechTagList items={all} />
 
-          <PMSectionTitle>Key Features</PMSectionTitle>
+          <PMSectionTitle>{t.modal.features.title}</PMSectionTitle>
           <PMFeatureList>
-            <li>Real-time vehicle telemetry monitoring</li>
-            <li>Automated safety checks and alerts</li>
-            <li>Performance optimization algorithms</li>
-            <li>Live data visualization dashboard</li>
-            <li>Emergency stop and control systems</li>
-            <li>MQTT-based communication protocol</li>
+            {t.modal.features.list.map((feature, index) => (
+              <li key={index}>{feature}</li>
+            ))}
           </PMFeatureList>
 
-          <PMSectionTitle>Impact</PMSectionTitle>
-          <PMText>
-            The mission control system was crucial for ensuring safe operations during high-speed testing and the final competition. It provided the team with real-time insights into pod performance and enabled quick response to any anomalies.
-          </PMText>
+          <PMSectionTitle>{t.modal.impact.title}</PMSectionTitle>
+          {Array.isArray(t.modal.impact.text) ? (
+            t.modal.impact.text.map((paragraph, index) => (
+              <PMText key={index}>{paragraph}</PMText>
+            ))
+          ) : (
+            <PMText>{t.modal.impact.text}</PMText>
+          )}
 
 
 

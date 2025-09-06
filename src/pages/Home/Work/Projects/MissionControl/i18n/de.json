@@ -1,0 +1,33 @@
+{
+  "title": "Mission Control",
+  "description": "Echtzeit‑Fahrzeugmanagement und Sicherheitsüberwachungssystem für die Delft Hyperloop‑Kapsel während des SpaceX‑Wettbewerbs.",
+  "modal": {
+    "title": "Mission Control",
+    "intro": "Entwickelte eine umfassende Echtzeit‑Steueroberfläche zur Überwachung und Steuerung der Delft Hyperloop‑Kapsel während des SpaceX Hyperloop Pod Competition 2018. Das System bot kritische Sicherheitsüberwachung und Leistungsoptimierung.",
+    "video": {
+      "title": "Wettbewerbs‑Aftermovie",
+      "alt": "Delft Hyperloop Wettbewerbs‑Aftermovie"
+    },
+    "technologies": {
+      "title": "Technologien"
+    },
+    "features": {
+      "title": "Hauptfunktionen",
+      "list": [
+        "Echtzeit‑Fahrzeugtelemetrie‑Überwachung",
+        "Automatisierte Sicherheitsprüfungen und Warnungen",
+        "Algorithmen zur Leistungsoptimierung",
+        "Live‑Datenvisualisierungs‑Dashboard",
+        "Not‑Aus und Steuerungssysteme",
+        "MQTT‑basiertes Kommunikationsprotokoll"
+      ]
+    },
+    "impact": {
+      "title": "Impact",
+      "text": [
+        "Mission Control war die zentrale Schnittstelle des Teams für sichere Hochgeschwindigkeitsläufe. Es ermöglichte den Operatoren, den Zustand der Kapsel auf einen Blick zu überprüfen, sofort auf Abweichungen zu reagieren und die Wettbewerbsregeln einzuhalten (Statusanzeige, externe Überwachung, Notstopp, Startfreigabe).",
+        "Das System wurde gründlich mit Unit‑Tests, End‑to‑End‑Tests und Vakuumtests des Communication Hubs validiert und erwies sich so als zuverlässig unter Wettbewerbsbedingungen. In der Praxis schlug Mission Control eine Brücke zwischen deterministischer Steuerung auf dem TI Hercules und flexibler Kommunikation auf dem Raspberry Pi und lieferte die notwendige Übersicht für sicheres Hochleistungstesten."
+      ]
+    }
+  }
+}
