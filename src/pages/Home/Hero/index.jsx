@@ -102,14 +102,17 @@ const Hero = () => {
           <HeroText>{t('hero.developer_intro')}</HeroText>
           <ButtonRow>
             {/* <Button onClick={handleScrollToContact}>{t('hero.contact_button')}</Button> */}
-            <Button onClick={() => {
-              const currentLang = i18next.language;
-              const pdfPath = currentLang === 'nl'
-                ? '/resume/Kevin-van-der-Toorn-CV.pdf'
-                : '/resume/Kevin-van-der-Toorn-Resume.pdf';
-              window.open(pdfPath, '_blank');
-            }}>
-              {/* <FaRegFilePdf /> */} {t('hero.resume_button')} <LuExternalLink />
+            <Button
+              externalLink
+              onClick={() => {
+                const currentLang = i18next.language;
+                const pdfPath = currentLang === 'nl'
+                  ? '/resume/Kevin-van-der-Toorn-CV.pdf'
+                  : '/resume/Kevin-van-der-Toorn-Resume.pdf';
+                window.open(pdfPath, '_blank');
+              }}
+            >
+              {/* <FaRegFilePdf /> */} {t('hero.resume_button')}
             </Button>
           </ButtonRow>
         </HeroIntro>

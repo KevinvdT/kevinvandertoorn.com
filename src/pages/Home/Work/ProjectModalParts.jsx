@@ -1,4 +1,5 @@
 import React from 'react';
+import { Trans } from 'react-i18next';
 import styled from 'styled-components';
 import { SectionText } from '../../../components/ui/Text';
 import { SectionTitle as BaseTitle } from '../../../components/ui/Title';
@@ -37,15 +38,17 @@ export const PMTechTags = styled.div`
 
 export const PMTechTag = styled(Tag)``;
 
-export const PMFeatureList = styled.ul`
+export const PMFeatureList = styled(SectionText).attrs({ as: 'ul' })`
   text-align: left;
   padding-left: 20px;
   margin: 16px 0 24px 0;
-  
+  list-style-type: disc;
+
   li {
     margin-bottom: 8px;
-    line-height: 1.5;
-    color: #555;
+    line-height: 1.8rem;
+    color: ${({ theme }) => theme.colors.light.secondaryText};
+    font-weight: 500;
 
     @media (prefers-color-scheme: dark) {
       color: ${({ theme }) => theme.colors.dark.secondaryText};
@@ -111,7 +114,9 @@ export const BulletList = ({ items, children }) => {
     return (
       <PMFeatureList>
         {items.map((item, index) => (
-          <li key={index}>{item}</li>
+          <li key={index}>
+            <Trans components={{ 1: <em /> }}>{item}</Trans>
+          </li>
         ))}
       </PMFeatureList>
     );

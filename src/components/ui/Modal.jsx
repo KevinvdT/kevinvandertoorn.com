@@ -1,5 +1,6 @@
 import React, { useEffect, useState, useRef } from 'react';
 import styled from 'styled-components';
+import { IoIosClose } from "react-icons/io";
 
 const ANIMATION_MS = 300;
 
@@ -92,7 +93,7 @@ const ModalHeader = styled.div`
 `;
 
 const ModalTitle = styled.h2`
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   font-weight: 600;
   margin: 0;
   font-family: 'Inter', 'Arial', sans-serif;
@@ -109,12 +110,12 @@ const CloseButton = styled.button`
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 18px;
-  font-weight: 600;
+  font-size: 28px;
+  font-weight: 400;
   transition: background-color 0.2s ease;
 
   &:hover {
-    background-color: #0056b3;
+    background-color: gray;
   }
 
   &:focus {
@@ -123,10 +124,11 @@ const CloseButton = styled.button`
   }
 
   @media (prefers-color-scheme: dark) {
-    background-color: ${({ theme }) => theme.colors.dark.primary};
+    background-color: #35393c;
+    color: #8f9396;
 
     &:hover {
-      background-color: #166bb3;
+      background-color: #404448;
     }
 
     &:focus {
@@ -221,7 +223,7 @@ const Modal = ({
         <ModalHeader>
           <ModalTitle>{title}</ModalTitle>
           <CloseButton onClick={onClose} aria-label="Close modal">
-            ×
+            <IoIosClose />
           </CloseButton>
         </ModalHeader>
         <ModalBody>

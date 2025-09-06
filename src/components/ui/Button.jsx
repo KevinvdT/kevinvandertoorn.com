@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { LuExternalLink } from 'react-icons/lu';
 
 // Styled component for the button
 const StyledButton = styled.button`
@@ -44,10 +45,15 @@ const StyledButton = styled.button`
   }
 `;
 
-const Button = ({ children, secondary, onClick }) => {
+const Button = ({ children, secondary, onClick, iconBefore, iconAfter, externalLink, ...props }) => {
+  // If externalLink is true, use LuExternalLink as iconAfter (unless iconAfter is explicitly provided)
+  const finalIconAfter = externalLink && !iconAfter ? <LuExternalLink /> : iconAfter;
+
   return (
-    <StyledButton secondary={secondary} onClick={onClick}>
+    <StyledButton secondary={secondary} onClick={onClick} {...props}>
+      {iconBefore && iconBefore}
       {children}
+      {finalIconAfter && finalIconAfter}
     </StyledButton>
   );
 };

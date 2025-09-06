@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Trans } from 'react-i18next';
 import styled from 'styled-components';
 import { SectionTitle } from '../../../components/ui/Title';
 import { SectionText } from '../../../components/ui/Text';
@@ -56,6 +57,15 @@ const ProjectDescription = styled(SectionText)`
   // }
 `;
 
+const ProjectCompany = styled.div`
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: #666;
+  margin-bottom: 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+`;
+
 const ProjectTitle = styled(SectionTitle)`
 font-family: 'Inter','Arial',sans-serif;
   font-size:  1.0625rem;
@@ -85,7 +95,7 @@ const ReadMoreRow = styled.div`
 `;
 
 // ProjectItem component that can handle both single and multiple descriptions
-const ProjectItem = ({ imageSrc, title, description, color, projectDetails, onReadMore, setIsOpen, tagKeys = [] }) => {
+const ProjectItem = ({ imageSrc, title, description, color, projectDetails, onReadMore, setIsOpen, tagKeys = [], company, readMore = true }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   // Back-compat: if legacy setIsOpen prop is provided, prefer it; else use onReadMore
@@ -102,13 +112,18 @@ const ProjectItem = ({ imageSrc, title, description, color, projectDetails, onRe
       <ProjectItemContainer aligntop>
         <ProjectImage src={imageSrc} alt={title} />
         <ProjectContent>
+          {company && <ProjectCompany>{company}</ProjectCompany>}
           <ProjectTitle as="h3" color={color}>{title}</ProjectTitle>
           {Array.isArray(description) ? (
             description.map((desc, index) => (
-              <ProjectDescription key={index} color={color}>{desc}</ProjectDescription>
+              <ProjectDescription key={index} color={color}>
+                <Trans components={{ 1: <em /> }}>{desc}</Trans>
+              </ProjectDescription>
             ))
           ) : (
-            <ProjectDescription color={color}>{description}</ProjectDescription>
+            <ProjectDescription color={color}>
+              <Trans components={{ 1: <em /> }}>{description}</Trans>
+            </ProjectDescription>
           )}
 
           {tagKeys.length > 0 && (
@@ -121,11 +136,11 @@ const ProjectItem = ({ imageSrc, title, description, color, projectDetails, onRe
             </TagsRow>
           )}
 
-          {/* {(onReadMore || setIsOpen) && (
+          {readMore && (onReadMore || setIsOpen) && (
             <ReadMoreRow>
               <ReadMoreLink onClick={handleReadMore} />
             </ReadMoreRow>
-          )} */}
+          )}
         </ProjectContent>
       </ProjectItemContainer>
 
@@ -135,7 +150,7 @@ const ProjectItem = ({ imageSrc, title, description, color, projectDetails, onRe
           onClose={closeModal}
           title={title}
         >
-          <ProjectDetails {...projectDetails} />
+          <div>Project details would go here</div>
         </Modal>
       )}
     </>
