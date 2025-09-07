@@ -1,0 +1,25 @@
+{
+  "title": "EftelTimes",
+  "company": "Persönliches Projekt",
+  "description": "EftelTimes, ein Wartezeiten-Tracker für den Efteling. Ein persönliches Projekt aus meiner Leidenschaft für den Park, gebaut mit React und Django, unter Verwendung der ThemeParks API mit Caching, um Live-Attraktionsdaten verantwortungsvoll bereitzustellen.",
+  "modal": {
+    "title": "EftelTimes",
+    "intro": "Entwickelte <1>EftelTimes</1>, einen <1>Wartezeiten-Tracker für Efteling-Attraktionen</1>. Als langjähriger Efteling-Fan wollte ich meine Liebe zum Park mit meinen technischen Fähigkeiten verbinden. Daraus entstand ein persönliches Projekt, das Live-Attraktionsdaten leicht zugänglich macht. Anstatt direkt die interne Efteling-API abzufragen, nutzt das System die <1>ThemeParks API</1>, die ausdrücklich für Anwendungen von Drittanbietern gedacht ist. Ein Django-Backend transformiert und cached die Ergebnisse, um unnötige Last zu vermeiden, und liefert sie an ein modernes React-Frontend.",
+    "technologies": {
+      "title": "Technologies"
+    },
+    "features": {
+      "title": "Key Features",
+      "list": [
+        "<1>Live-Wartezeiten</1>: verantwortungsvoll abgerufen über die ThemeParks API, mit Caching zur Vermeidung unnötiger Last.",
+        "<1>Responsives Design</1>: optimiert für Desktop und Mobilgeräte mit einer klaren, modernen Oberfläche.",
+        "<1>Robustes Backend</1>: Django-Service mit Caching und Daten-Transformation für stabile Leistung.",
+        "<1>Produktionsreifes Hosting</1>: bereitgestellt auf einem VPS mit Nginx, zusammen mit anderen Django-Apps."
+      ]
+    },
+    "impact": {
+      "title": "Impact",
+      "text": "EftelTimes <1>zeigt meine Erfahrung</1> im Entwerfen und Bereitstellen von <1>Full-Stack-Webanwendungen</1>. Über die technische Herausforderung hinaus spiegelt dieses Projekt vor allem meine <1>Leidenschaft für den Efteling</1> wider — indem es <1>verantwortungsvolle API-Integration</1>, Caching und Backend-Architektur mit einer <1>benutzerfreundlichen React-Oberfläche</1> verbindet. Es ist sowohl ein praktisches Werkzeug als auch ein Beispiel dafür, wie ich persönliche Interessen und berufliche Fähigkeiten zusammenführe."
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "title": "Queue Times Webapp for Efteling Park",
+  "company": "Personal Project",
+  "description": "Created <1>EftelTimes</1>, a <1>queue time tracker for Efteling</1>. A personal project born from my passion for the park, built with React and Django, using the <1>ThemeParks API</1> with caching to deliver live attraction data responsibly.",
+  "modal": {
+    "title": "EftelTimes",
+    "intro": "Developed <1>EftelTimes</1>, a <1>queue time tracker for Efteling attractions</1>. As a long-time Efteling fan, I wanted to combine my love for the park with my technical skills, resulting in a personal project that makes live attraction data easily accessible. Instead of querying Efteling’s internal API directly, the system uses the <1>ThemeParks API</1>, which is explicitly designed for third-party applications like this. A Django backend transforms and caches the results to avoid excessive load, and serves them to a modern React frontend.",
+    "technologies": {
+      "title": "Technologies"
+    },
+    "features": {
+      "title": "Key Features",
+      "list": [
+        "<1>Live queue times</1>: pulled responsibly through the ThemeParks API, with caching to avoid unnecessary load.",
+        "<1>Responsive design</1>: built for both desktop and mobile with a clean, modern UI.",
+        "<1>Robust backend</1>: Django service with caching and data transformation for stable performance.",
+        "<1>Production-ready hosting</1>: deployed on a VPS with Nginx, alongside other Django apps."
+      ]
+    },
+    "impact": {
+      "title": "Impact",
+      "text": "EftelTimes <1>reflects my experience</1> in designing and deploying <1>full-stack web applications</1>. Beyond the technical challenge, this project shows my <1>passion for Efteling</1> — combining <1>responsible API integration</1>, caching, and backend architecture with a <1>user-friendly React interface</1>. It’s both a practical tool and a showcase of how I bring personal interests and professional skills together."
+    }
+  }
+}

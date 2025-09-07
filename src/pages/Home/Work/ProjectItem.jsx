@@ -33,6 +33,7 @@ const ProjectImage = styled.img`
   flex-shrink: 0; // Prevent image from shrinking
   box-shadow: 0 2px 4px 0 rgba(0,0,0,0.08); // More subtle shadow
   border-radius: 20px;
+  cursor: ${({ onClick }) => (onClick ? 'pointer' : 'default')};
   @media (max-width: ${({ theme }) => theme.breakpoints.sm}) {
     max-width: 100%;
     margin-bottom: 10px;
@@ -73,6 +74,7 @@ font-family: 'Inter','Arial',sans-serif;
     // line-height: 0.5rem;
   }
   margin-bottom: 6px;
+  cursor: ${({ onClick }) => (onClick ? 'pointer' : 'default')};
 `;
 
 const TagsRow = styled.div`
@@ -110,10 +112,20 @@ const ProjectItem = ({ imageSrc, title, description, color, projectDetails, onRe
   return (
     <>
       <ProjectItemContainer aligntop>
-        <ProjectImage src={imageSrc} alt={title} />
+        <ProjectImage
+          src={imageSrc}
+          alt={title}
+          onClick={readMore && (onReadMore || setIsOpen) ? handleReadMore : undefined}
+        />
         <ProjectContent>
           {company && <ProjectCompany>{company}</ProjectCompany>}
-          <ProjectTitle as="h3" color={color}>{title}</ProjectTitle>
+          <ProjectTitle
+            as="h3"
+            color={color}
+            onClick={readMore && (onReadMore || setIsOpen) ? handleReadMore : undefined}
+          >
+            {title}
+          </ProjectTitle>
           {Array.isArray(description) ? (
             description.map((desc, index) => (
               <ProjectDescription key={index} color={color}>

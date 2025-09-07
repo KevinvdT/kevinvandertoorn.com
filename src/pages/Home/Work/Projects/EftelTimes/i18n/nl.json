@@ -1,0 +1,25 @@
+{
+  "title": "Wachttijden in de Efteling",
+  "company": "Persoonlijk Project",
+  "description": "EftelTimes, een wachttijdoverzicht voor de Efteling. Een persoonlijk project geboren uit mijn liefde voor het park, gebouwd met React en Django, en gebruikmakend van de ThemeParks API met caching om live attractiedata verantwoord te tonen.",
+  "modal": {
+    "title": "EftelTimes",
+    "intro": "Ontwikkelde <1>EftelTimes</1>, een <1>wachttijdoverzicht voor Efteling-attracties</1>. Als groot Efteling-liefhebber wilde ik mijn passie voor het park combineren met mijn technische vaardigheden. Dit resulteerde in een persoonlijk project dat live attractiedata eenvoudig toegankelijk maakt. In plaats van de interne API van de Efteling direct te bevragen, maakt het systeem gebruik van de <1>ThemeParks API</1>, die expliciet bedoeld is voor toepassingen van derden. Een Django-backend transformeert en cachet de gegevens om overbelasting te voorkomen, en levert ze aan een moderne React-frontend.",
+    "technologies": {
+      "title": "Technologies"
+    },
+    "features": {
+      "title": "Key Features",
+      "list": [
+        "<1>Live wachttijden</1>: verantwoord opgehaald via de ThemeParks API, met caching om onnodige belasting te vermijden.",
+        "<1>Responsief ontwerp</1>: geschikt voor zowel desktop als mobiel, met een moderne en overzichtelijke UI.",
+        "<1>Robuuste backend</1>: Django-service met caching en datatransformatie voor stabiele prestaties.",
+        "<1>Productieklaar gehost</1>: draait op een VPS met Nginx, samen met andere Django-apps."
+      ]
+    },
+    "impact": {
+      "title": "Impact",
+      "text": "EftelTimes <1>toont mijn ervaring</1> in het ontwerpen en uitrollen van <1>full‑stack webapplicaties</1>. Naast de technische uitdaging weerspiegelt dit project vooral mijn <1>liefde voor de Efteling</1> — waarin <1>verantwoorde API-integratie</1>, caching en backend‑architectuur samenkomen met een <1>gebruiksvriendelijke React-interface</1>. Het is zowel een praktisch hulpmiddel als een voorbeeld van hoe ik persoonlijke interesses en professionele vaardigheden weet te verbinden."
+    }
+  }
+}

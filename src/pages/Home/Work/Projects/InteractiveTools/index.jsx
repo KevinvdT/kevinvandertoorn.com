@@ -17,7 +17,7 @@ import image from './img/image.webp';
 import itTranslations from './i18n';
 
 // Technology tags for Interactive Tools
-const TECH_TAG_KEYS = ['html', 'css', 'javascript', '*react', '*svelte'];
+const TECH_TAG_KEYS = ['html', 'css', 'javascript', '*react', '*redux', '*svelte'];
 
 const splitPreviewAndAll = (keys = []) => {
   const cleaned = keys.map(k => String(k).trim());
