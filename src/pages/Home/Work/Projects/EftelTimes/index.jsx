@@ -11,6 +11,7 @@ import {
   PMActions
 } from '../../ProjectModalParts';
 import image from './img/image.webp';
+import imageDark from './img/image-dark.webp';
 import etTranslations from './i18n';
 import Button from '../../../../../components/ui/Button';
 
@@ -41,6 +42,7 @@ const EftelTimes = ({ readMore = true }) => {
     <>
       <ProjectItem
         imageSrc={image}
+        imageSrcDark={imageDark}
         title={t.title}
         description={t.description}
         color='#14b8a6'
@@ -52,9 +54,17 @@ const EftelTimes = ({ readMore = true }) => {
 
       <Modal isOpen={isOpen} onClose={() => setIsOpen(false)} title={t.title} maxWidth="700px">
         <PMContainer>
-          <PMText>
-            <Trans components={{ 1: <em /> }}>{t.modal.intro}</Trans>
-          </PMText>
+          {Array.isArray(t.modal.intro) ? (
+            t.modal.intro.map((paragraph, index) => (
+              <PMText key={index}>
+                <Trans components={{ 1: <em /> }}>{paragraph}</Trans>
+              </PMText>
+            ))
+          ) : (
+            <PMText>
+              <Trans components={{ 1: <em /> }}>{t.modal.intro}</Trans>
+            </PMText>
+          )}
 
           <PMSectionTitle>{t.modal.technologies.title}</PMSectionTitle>
           <PMTechTagList items={all} />
@@ -76,7 +86,7 @@ const EftelTimes = ({ readMore = true }) => {
 
         <PMActions>
           <Button as='a' href={'https://efteling.kevinvandertoorn.com'} target='_blank' rel='noopener noreferrer' externalLink>
-            {'Live Demo'}
+            {'Try it out'}
           </Button>
           <Button as='a' href={'https://github.com/KevinvdT/efteltimes'} target='_blank' rel='noopener noreferrer' secondary externalLink>
             {'Code on GitHub'}

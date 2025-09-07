@@ -1,5 +1,5 @@
 {
-  "title": "EftelTimes",
+  "title": "Wartezeiten im Efteling Park",
   "company": "Persönliches Projekt",
   "description": "EftelTimes, ein Wartezeiten-Tracker für den Efteling. Ein persönliches Projekt aus meiner Leidenschaft für den Park, gebaut mit React und Django, unter Verwendung der ThemeParks API mit Caching, um Live-Attraktionsdaten verantwortungsvoll bereitzustellen.",
   "modal": {
@@ -18,7 +18,7 @@
       ]
     },
     "impact": {
-      "title": "Impact",
+      "title": "Ergebnisse",
       "text": "EftelTimes <1>zeigt meine Erfahrung</1> im Entwerfen und Bereitstellen von <1>Full-Stack-Webanwendungen</1>. Über die technische Herausforderung hinaus spiegelt dieses Projekt vor allem meine <1>Leidenschaft für den Efteling</1> wider — indem es <1>verantwortungsvolle API-Integration</1>, Caching und Backend-Architektur mit einer <1>benutzerfreundlichen React-Oberfläche</1> verbindet. Es ist sowohl ein praktisches Werkzeug als auch ein Beispiel dafür, wie ich persönliche Interessen und berufliche Fähigkeiten zusammenführe."
     }
   }

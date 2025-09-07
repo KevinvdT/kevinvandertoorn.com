@@ -1,10 +1,14 @@
 {
-  "title": "Queue Times Webapp for Efteling Park",
+  "title": "Queue Times at Efteling",
   "company": "Personal Project",
-  "description": "Created <1>EftelTimes</1>, a <1>queue time tracker for Efteling</1>. A personal project born from my passion for the park, built with React and Django, using the <1>ThemeParks API</1> with caching to deliver live attraction data responsibly.",
+  "description": "EftelTimes is a personal project that combines my passion for Efteling with web development, making live queue times easily accessible.",
   "modal": {
     "title": "EftelTimes",
-    "intro": "Developed <1>EftelTimes</1>, a <1>queue time tracker for Efteling attractions</1>. As a long-time Efteling fan, I wanted to combine my love for the park with my technical skills, resulting in a personal project that makes live attraction data easily accessible. Instead of querying Efteling’s internal API directly, the system uses the <1>ThemeParks API</1>, which is explicitly designed for third-party applications like this. A Django backend transforms and caches the results to avoid excessive load, and serves them to a modern React frontend.",
+    "intro": [
+      "Developed <1>EftelTimes</1>, a <1>queue time tracker</1> for the Efteling park. I built this to combine my passion for the park with my technical skills.",
+      "The design is deliberately <1>Efteling-inspired</1>, using whimsical silhouettes and playful accents, but paired with a clean, approachable style influenced by Duolingo — making it clear this is a personal project rather than an official product.",
+      "Instead of querying Efteling’s internal API directly, the backend uses ThemeParks API, which is explicitly designed for third-party applications like this. A <1>Django</1> backend transforms and <1>caches the results</1> to avoid excessive load, and serves them to a modern <1>React</1> frontend."
+    ],
     "technologies": {
       "title": "Technologies"
     },
@@ -18,8 +22,8 @@
       ]
     },
     "impact": {
-      "title": "Impact",
-      "text": "EftelTimes <1>reflects my experience</1> in designing and deploying <1>full-stack web applications</1>. Beyond the technical challenge, this project shows my <1>passion for Efteling</1> — combining <1>responsible API integration</1>, caching, and backend architecture with a <1>user-friendly React interface</1>. It’s both a practical tool and a showcase of how I bring personal interests and professional skills together."
+      "title": "Results",
+      "text": "EftelTimes <1>reflects my experience</1> in designing and deploying <1>full-stack web applications</1>. Beyond the technical challenge, this project shows my <1>passion for Efteling</1> – combining <1>responsible API integration</1>, caching, and backend architecture with a <1>user-friendly React interface</1>. It’s both a practical tool and a showcase of how I bring personal interests and professional skills together."
     }
   }
 }
