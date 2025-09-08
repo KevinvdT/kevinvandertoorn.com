@@ -11,7 +11,7 @@ export const theme = {
       // background: '#030b2d',
       primaryText: '#ffffff',
       secondaryText: '#aaaaaa',
-      primary: '#1f7cce',
+      primary: '#2997ff',
     },
   },
   breakpoints: {

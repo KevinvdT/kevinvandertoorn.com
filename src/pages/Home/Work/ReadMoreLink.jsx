@@ -18,6 +18,10 @@ const Link = styled.a`
   &:hover {
     // text-decoration: underline;
   }
+
+  @media (prefers-color-scheme: dark) {
+    color: ${({ theme }) => theme.colors.dark.primary}; // #2997ff
+  }
 `;
 
 const ReadMoreLink = ({ onClick, children }) => {

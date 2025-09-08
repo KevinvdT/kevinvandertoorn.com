@@ -1,38 +1,48 @@
 {
   "hero": {
     "greeting": {
-      "morning": "Bonjour !",
-      "afternoon": "Bonjour !",
-      "evening": "Bonsoir !"
+      "morning": "Bonjour !",
+      "afternoon": "Bonjour !",
+      "evening": "Bonsoir !"
     },
     "introduction": "Je suis Kevin",
-    "developer_intro": "Développeur web basé aux Pays-Bas.",
-    "contact_button": "Dites « bonjour »",
-    "resume_button": "Curriculum Vitae"
+    "developer_intro": "Un développeur web qui transforme des problèmes complexes en expériences web fluides.",
+    "contact_button": "Contactez-moi",
+    "resume_button": "Voir le CV (en Anglais)"
   },
   "about": {
     "title": "Mon parcours",
-    "story": "Je suis un développeur web des Pays-Bas avec plus de {{years}} ans d’expérience, ayant commencé avec MS Frontpage et évolué continuellement depuis.",
-    "skills": "Je travaille maintenant avec React et Django pour créer des solutions web dynamiques. Je suis également toujours à la recherche de nouveaux outils pour offrir des résultats exceptionnels.",
-    "hobbies": "En dehors du travail, j’aime me balader dans le parc <0>Efteling</0>, un parc néerlandais avec un charme unique et enchanteur. J’aime aussi apprendre de nouvelles langues."
+    "story": "Développeur web des Pays-Bas avec <1>plus de 18 ans d’expérience</1>, ayant commencé avec MS Frontpage et progressant depuis.",
+    "uvp": "Passionné par <1>la résolution de problèmes complexes par le code</1> et la création de <1>solutions innovantes</1> qui aident les entreprises à grandir.",
+    "skills": "Aujourd’hui, je travaille avec <1>React</1> et <1>Django</1> pour créer des solutions web dynamiques. J’explore aussi de nouveaux outils pour offrir des <1>résultats exceptionnels</1>.",
+    "hobbies": "En dehors du travail, j’aime me promener à <1>Efteling</1>, un parc néerlandais au charme enchanteur unique. J’aime aussi apprendre des langues."
   },
   "work": {
-    "title": "Projets sur lesquels j'ai travaillé",
+    "title": "Projets\u00A0passionnants,\nrésultats\u00A0concrets",
     "projects": {
+      "delfthyperloop": {
+        "title": "Interface de contrôle et site web",
+        "description": {
+          "part1": "J’ai contribué à l’équipe Delft Hyperloop lors de la <1>SpaceX Hyperloop Pod Competition 2018</1>, fondée par Elon Musk. J’ai développé le site web de Delft Hyperloop, <1>attirant des sponsors et l’attention des médias</1>.",
+          "part2": "J’ai créé un système de test pour optimiser les performances de la capsule et une interface de contrôle pour la gestion en temps réel et les vérifications de sécurité, garantissant des opérations <1>fluides et sûres</1> pendant les tests et la compétition."
+        }
+      },
       "saysimple": {
         "title": "Outils web interactifs",
-        "description": "J'ai développé des éléments interactifs pour le site web de Saysimple, y compris un calculateur de prix basé sur des options configurables et un générateur de widget de chat personnalisable. Ces outils améliorent la fonctionnalité du site et offrent des solutions pratiques pour renforcer l'interaction client."
+        "description": "J’ai créé des éléments interactifs pour le site de Saysimple, dont un calculateur de prix basé sur des options configurables et un générateur de widget de chat personnalisable. Ces outils <1>améliorent la fonctionnalité du site</1> et offrent des solutions concrètes pour <1>renforcer l’interaction et l’engagement des clients</1>."
       },
       "ah": {
         "title": "Logiciel de signalisation numérique",
-        "description": "J'ai créé un logiciel de signalisation polyvalent pour la salle du personnel d'Albert Heijn, affichant l'heure, des diaporamas de photos, des annonces et bien plus encore. Ce logiciel améliore la communication interne et crée un environnement dynamique et informatif pour les employés."
+        "description": "J’ai créé un logiciel polyvalent pour l’écran de la salle du personnel d’Albert\u00A0Heijn, affichant l’heure et la date, des diaporamas photo, des annonces, et plus encore, ce qui <1>améliore la communication interne</1> et crée un <1>environnement dynamique et informatif</1> pour les employés."
       }
     },
-    "readMore": "Voir plus"
+    "seeMore": "Voir plus",
+    "seeLess": "Voir moins",
+    "readMore": "En savoir plus"
   },
   "skills": {
     "title": "Les outils avec lesquels je travaille",
-    "description": "J’ai développé mon expertise dans les technologies ci-dessous. Je suis également enthousiaste à l’idée de découvrir et maîtriser de nouveaux outils et frameworks pour offrir des solutions encore plus efficaces.",
+    "description": "J’ai développé mon expertise dans les technologies ci-dessous. Je suis également enthousiaste à l’idée d’explorer et de maîtriser de nouveaux outils et frameworks pour offrir des solutions encore meilleures.",
     "frontend": {
       "title": "Front-End"
     },
@@ -49,9 +59,9 @@
     }
   },
   "contact": {
-    "title": "Contactez-moi",
-    "text": "Prêt à faire évoluer votre entreprise ? Travaillons ensemble !",
-    "follow": "Suivez-moi"
+    "title": "Entrons en contact",
+    "text": "Ensemble, nous pouvons donner vie à vos objectifs.",
+    "follow": "Suivre"
   },
   "menu": {
     "home": "Accueil",

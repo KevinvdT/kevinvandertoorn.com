@@ -1,4 +1,28 @@
 {
   "title": "Chatwidget voor WhatsApp",
-  "description": "Ontwikkelde voor de website van Saysimple een lichte maar krachtige generator voor WhatsApp‑chatwidgets, zodat bedrijven bezoekers op een soepele, passende manier een WhatsApp‑gesprek kunnen laten starten."
+  "description": "Ontwikkelde voor de website van Saysimple een lichte maar krachtige generator voor WhatsApp‑chatwidgets, zodat bedrijven bezoekers op een soepele, passende manier een WhatsApp‑gesprek kunnen laten starten.",
+  "modal": {
+    "title": "WhatsApp Chatwidget‑generator",
+    "intro": "Bouwde een <1>WhatsApp‑chatwidgetgenerator</1> voor de <1>website van Saysimple</1> met React en Redux. De generator levert een lichtgewicht embed in Svelte op, bewust gekozen om geen zware bibliotheek mee te sturen en de bundel klein te houden. Bedrijven kunnen de snippet op hun site plakken om een op maat gemaakte WhatsApp‑instap te maken.",
+    "technologies": {
+      "title": "Technologieën"
+    },
+    "features": {
+      "title": "Belangrijkste functies",
+      "list": [
+        "<1>Generator in React + Redux</1> → levert een Svelte‑embed op (houdt bundel klein, geen extra library)",
+        "Configureerbare WhatsApp‑instap (call‑to‑action, thema, plaatsing)",
+        "Kopieer‑en‑plak embed‑snippet voor elke website",
+        "Lichtgewicht Svelte‑runtime"
+      ]
+    },
+    "impact": {
+      "title": "Impact",
+      "text": "De generator laat bedrijven in enkele minuten een WhatsApp‑instap op hun site configureren en publiceren. De Svelte‑embed laadt snel en schakelt over naar WhatsApp voor het gesprek, waardoor frictie afneemt en meer gesprekken starten. Daarnaast voegt een door mij gebouwde prijscalculator een extra interactief touchpoint toe op de site."
+    },
+    "actions": {
+      "widget": "Bekijk Widgetgenerator",
+      "calculator": "Bekijk Prijscalculator"
+    }
+  }
 }

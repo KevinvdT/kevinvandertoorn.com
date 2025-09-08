@@ -33,6 +33,7 @@ const ProjectImage = styled.img`
   flex-shrink: 0; // Prevent image from shrinking
   box-shadow: 0 2px 4px 0 rgba(0,0,0,0.08); // More subtle shadow
   border-radius: 20px;
+  cursor: ${({ onClick }) => (onClick ? 'pointer' : 'default')};
   @media (max-width: ${({ theme }) => theme.breakpoints.sm}) {
     max-width: 100%;
     margin-bottom: 10px;
@@ -60,10 +61,14 @@ const ProjectDescription = styled(SectionText)`
 const ProjectCompany = styled.div`
   font-size: 0.75rem;
   font-weight: 500;
-  color: #666;
+  color: ${({ theme }) => theme.colors.light.secondaryText};
   margin-bottom: 4px;
   text-transform: uppercase;
   letter-spacing: 0.5px;
+
+  @media (prefers-color-scheme: dark) {
+    color: ${({ theme }) => theme.colors.dark.secondaryText};
+  }
 `;
 
 const ProjectTitle = styled(SectionTitle)`
@@ -73,6 +78,7 @@ font-family: 'Inter','Arial',sans-serif;
     // line-height: 0.5rem;
   }
   margin-bottom: 6px;
+  cursor: ${({ onClick }) => (onClick ? 'pointer' : 'default')};
 `;
 
 const TagsRow = styled.div`
@@ -95,7 +101,7 @@ const ReadMoreRow = styled.div`
 `;
 
 // ProjectItem component that can handle both single and multiple descriptions
-const ProjectItem = ({ imageSrc, title, description, color, projectDetails, onReadMore, setIsOpen, tagKeys = [], company, readMore = true }) => {
+const ProjectItem = ({ imageSrc, imageSrcDark, title, description, color, projectDetails, onReadMore, setIsOpen, tagKeys = [], company, readMore = true }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   // Back-compat: if legacy setIsOpen prop is provided, prefer it; else use onReadMore
@@ -110,10 +116,31 @@ const ProjectItem = ({ imageSrc, title, description, color, projectDetails, onRe
   return (
     <>
       <ProjectItemContainer aligntop>
-        <ProjectImage src={imageSrc} alt={title} />
+        {imageSrcDark ? (
+          <picture>
+            <source srcSet={imageSrcDark} media="(prefers-color-scheme: dark)" />
+            <ProjectImage
+              src={imageSrc}
+              alt={title}
+              onClick={readMore && (onReadMore || setIsOpen) ? handleReadMore : undefined}
+            />
+          </picture>
+        ) : (
+          <ProjectImage
+            src={imageSrc}
+            alt={title}
+            onClick={readMore && (onReadMore || setIsOpen) ? handleReadMore : undefined}
+          />
+        )}
         <ProjectContent>
           {company && <ProjectCompany>{company}</ProjectCompany>}
-          <ProjectTitle as="h3" color={color}>{title}</ProjectTitle>
+          <ProjectTitle
+            as="h3"
+            color={color}
+            onClick={readMore && (onReadMore || setIsOpen) ? handleReadMore : undefined}
+          >
+            {title}
+          </ProjectTitle>
           {Array.isArray(description) ? (
             description.map((desc, index) => (
               <ProjectDescription key={index} color={color}>

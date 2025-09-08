@@ -22,6 +22,7 @@ export const PMTitle = styled(BaseTitle).attrs({ as: 'h3' })`
 
 export const PMText = styled(SectionText)`
   margin: 0 0 24px 0;
+
 `;
 
 export const PMSectionTitle = styled(BaseTitle).attrs({ as: 'h4' })`

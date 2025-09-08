@@ -7,6 +7,7 @@ import MissionControl from './Projects/MissionControl';
 import TestSetup from './Projects/TestSetup';
 import MainWebsite from './Projects/MainWebsite';
 import InteractiveTools from './Projects/InteractiveTools';
+import EftelTimes from './Projects/EftelTimes';
 import TransportNetworkModel from './Projects/TransportNetworkModel';
 
 const ProjectItemsWrapper = styled.div`
@@ -24,9 +25,10 @@ const Work = () => {
 
       <ProjectItemsWrapper>
         <MissionControl />
+        <InteractiveTools readMore={false} />
+        <EftelTimes />
         {/* <TestSetup /> */}
         {/* <MainWebsite /> */}
-        <InteractiveTools readMore={false} />
         {/* <TransportNetworkModel /> */}
       </ProjectItemsWrapper>
 

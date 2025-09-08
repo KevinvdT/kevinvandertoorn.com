@@ -16,6 +16,7 @@ export const COLORS = {
 // Registry for well-known tags. Only hex color and label are stored.
 export const TAGS = {
   react: { key: 'react', label: 'React', color: COLORS.BLUE },
+  redux: { key: 'redux', label: 'Redux', color: COLORS.PURPLE },
   nextjs: { key: 'nextjs', label: 'Next.js', color: COLORS.INDIGO },
   typescript: { key: 'typescript', label: 'TypeScript', color: COLORS.BLUE },
   javascript: { key: 'javascript', label: 'JavaScript', color: COLORS.YELLOW },

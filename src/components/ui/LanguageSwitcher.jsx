@@ -67,6 +67,9 @@ const LanguageSwitcher = () => {
     'en',
     'nl',
     'de',
+    // 'fr',
+    // 'es',
+    // 'da',
   ];
   const [currentLanguage, setCurrentLanguage] = useState(i18n.resolvedLanguage);
 
