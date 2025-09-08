@@ -1,4 +1,28 @@
 {
   "title": "Chat‑Widget für WhatsApp",
-  "description": "Entwickelte für die Website von Saysimple einen leichten, aber wirkungsvollen Generator für WhatsApp‑Chat‑Widgets. So können Unternehmen Besucher*innen einen einfachen, passenden Einstieg in ein WhatsApp‑Gespräch bieten."
+  "description": "Entwickelte für die Website von Saysimple einen leichten, aber wirkungsvollen Generator für WhatsApp‑Chat‑Widgets. So können Unternehmen Besucher*innen einen einfachen, passenden Einstieg in ein WhatsApp‑Gespräch bieten.",
+  "modal": {
+    "title": "WhatsApp‑Chat‑Widget‑Generator",
+    "intro": "Erstellte einen <1>WhatsApp‑Chat‑Widget‑Generator</1> für die <1>Saysimple‑Website</1> mit React und Redux. Der Generator erzeugt ein leichtgewichtiges Embed in Svelte, bewusst gewählt, um keine schwere Bibliothek einzubinden und die Bundle‑Größe klein zu halten. Unternehmen können den Snippet auf ihrer Website einfügen, um einen maßgeschneiderten WhatsApp‑Einstiegspunkt zu erstellen.",
+    "technologies": {
+      "title": "Technologien"
+    },
+    "features": {
+      "title": "Wichtigste Funktionen",
+      "list": [
+        "<1>Generator in React + Redux</1> → erzeugt ein Svelte‑Embed (kleines Bundle, keine zusätzliche Library)",
+        "Konfigurierbarer WhatsApp‑Einstieg (Call‑to‑Action, Theme, Platzierung)",
+        "Copy‑Paste‑Embed‑Snippet für jede Website",
+        "Leichtgewichtiges Svelte‑Runtime"
+      ]
+    },
+    "impact": {
+      "title": "Impact",
+      "text": "Der Generator ermöglicht es Unternehmen, in wenigen Minuten einen WhatsApp‑Einstiegspunkt auf ihrer Website zu konfigurieren und zu veröffentlichen. Das Svelte‑Embed lädt schnell und übergibt das Gespräch an WhatsApp, wodurch Reibung reduziert und mehr Konversationen gestartet werden. Zusätzlich sorgt ein von mir erstellter Preiskalkulator für einen weiteren interaktiven Touchpoint auf der Seite."
+    },
+    "actions": {
+      "widget": "Widget‑Generator ansehen",
+      "calculator": "Preiskalkulator ansehen"
+    }
+  }
 }

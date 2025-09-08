@@ -14,6 +14,7 @@ const StyledButton = styled.button`
   align-items: center;
   justify-content: center;
   gap: 8px;
+  height: 40px;
 
   /* Conditional styling based on the secondary prop */
   background-color: ${({ secondary }) =>

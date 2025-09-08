@@ -1,12 +1,12 @@
 {
-  "title": "Queue Times at Efteling",
+  "title": "Queue Times at Efteling Park",
   "company": "Personal Project",
   "description": "EftelTimes is a personal project that combines my passion for Efteling with web development, making live queue times easily accessible.",
   "modal": {
     "title": "EftelTimes",
     "intro": [
-      "Developed <1>EftelTimes</1>, a <1>queue time tracker</1> for the Efteling park. I built this to combine my passion for the park with my technical skills.",
-      "The design is deliberately <1>Efteling-inspired</1>, using whimsical silhouettes and playful accents, but paired with a clean, approachable style influenced by Duolingo — making it clear this is a personal project rather than an official product.",
+      "Developed <1>EftelTimes</1>, a <1>queue time tracker</1> for the Efteling park. I built this to combine my passion for the park with my technical know-how.",
+      "The design is inspired by typical Efteling elements, yet paired with a clean, approachable style influenced by Duolingo — making it clear this is a personal project rather than an official product.",
       "Instead of querying Efteling’s internal API directly, the backend uses ThemeParks API, which is explicitly designed for third-party applications like this. A <1>Django</1> backend transforms and <1>caches the results</1> to avoid excessive load, and serves them to a modern <1>React</1> frontend."
     ],
     "technologies": {
@@ -15,15 +15,16 @@
     "features": {
       "title": "Key Features",
       "list": [
-        "<1>Live queue times</1>: pulled responsibly through the ThemeParks API, with caching to avoid unnecessary load.",
+        "<1>Live queue times</1>: pulled responsibly from an API, with caching to avoid unnecessary load.",
         "<1>Responsive design</1>: built for both desktop and mobile with a clean, modern UI.",
-        "<1>Robust backend</1>: Django service with caching and data transformation for stable performance.",
-        "<1>Production-ready hosting</1>: deployed on a VPS with Nginx, alongside other Django apps."
+        "<1>Robust backend</1>: Django service with caching and data transformation for stable performance."
       ]
     },
     "impact": {
       "title": "Results",
-      "text": "EftelTimes <1>reflects my experience</1> in designing and deploying <1>full-stack web applications</1>. Beyond the technical challenge, this project shows my <1>passion for Efteling</1> – combining <1>responsible API integration</1>, caching, and backend architecture with a <1>user-friendly React interface</1>. It’s both a practical tool and a showcase of how I bring personal interests and professional skills together."
-    }
+      "text": "EftelTimes is an exercise in my knowledge of designing and deploying <1>full-stack web applications</1>. Beyond the technical challenge, this project let me combine my <1>passion for Efteling</1> with hands-on technical know-how, combining <1>responsible API integration</1>, caching, and backend architecture with a <1>user-friendly React interface</1>. The result is both a practical tool and a showcase of how I bring personal interests and professional skills together."
+    },
+    "liveDemo": "Try it out",
+    "viewCode": "Code on GitHub"
   }
 }

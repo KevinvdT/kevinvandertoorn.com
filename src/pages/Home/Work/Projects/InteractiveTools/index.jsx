@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useTranslation } from 'react-i18next';
+import { Trans, useTranslation } from 'react-i18next';
 import ProjectItem from '../../ProjectItem';
 import ReadMoreLink from '../../ReadMoreLink';
 import Modal from '../../../../../components/ui/Modal';
@@ -39,6 +39,15 @@ const InteractiveTools = ({ readMore = true }) => {
   const lang = (i18n.language || 'en').split('-')[0];
   const t = itTranslations[lang] || itTranslations.en;
 
+  // Localized Saysimple URLs for nl/es; default for others
+  const localizedLangs = new Set(['nl', 'es']);
+  const widgetUrl = localizedLangs.has(lang)
+    ? `https://www.saysimple.com/${lang}/whatsapp-chat-widget`
+    : 'https://www.saysimple.com/whatsapp-chat-widget';
+  const calculatorUrl = localizedLangs.has(lang)
+    ? `https://www.saysimple.com/${lang}/whatsapp-pricing-calculator`
+    : 'https://www.saysimple.com/whatsapp-pricing-calculator';
+
   return (
     <>
       <ProjectItem
@@ -52,37 +61,34 @@ const InteractiveTools = ({ readMore = true }) => {
         readMore={readMore}
       />
 
-      <Modal isOpen={isOpen} onClose={() => setIsOpen(false)} title="Chat Widget for WhatsApp" maxWidth="700px">
+      <Modal isOpen={isOpen} onClose={() => setIsOpen(false)} title={t.modal.title} maxWidth="700px">
         <PMContainer>
           {/* <PMTitle>WhatsApp Chat Widget Generator</PMTitle> */}
           <PMText>
-            Created a comprehensive WhatsApp chat widget generator for Saysimple's website, allowing businesses to easily integrate WhatsApp messaging into their websites. Also developed an additional interactive tool including a dynamic pricing calculator to enhance user engagement.
+            <Trans components={{ 1: <em /> }}>{t.modal.intro}</Trans>
           </PMText>
 
-          <PMSectionTitle>Technologies Used</PMSectionTitle>
+          <PMSectionTitle>{t.modal.technologies.title}</PMSectionTitle>
           <PMTechTagList items={all} />
 
-          <PMSectionTitle>Key Features</PMSectionTitle>
+          <PMSectionTitle>{t.modal.features.title}</PMSectionTitle>
           <PMFeatureList>
-            <li>WhatsApp chat widget generator with customization options</li>
-            <li>Easy integration with any website</li>
-            <li>Custom styling and branding options</li>
-            <li>Responsive design for all devices</li>
-            <li>Real-time messaging capabilities</li>
-            <li>Additional tool: dynamic pricing calculator</li>
+            {t.modal.features.list.map((item, idx) => (
+              <li key={idx}><Trans components={{ 1: <em /> }}>{item}</Trans></li>
+            ))}
           </PMFeatureList>
 
-          <PMSectionTitle>Impact</PMSectionTitle>
+          <PMSectionTitle>{t.modal.impact.title}</PMSectionTitle>
           <PMText>
-            The WhatsApp chat widget generator provided businesses with an easy way to integrate customer communication directly into their websites, significantly improving user engagement and conversion rates. The additional pricing calculator tool further enhanced the overall user experience.
+            {t.modal.impact.text}
           </PMText>
 
           <PMActions>
-            <Button externalLink as='a' href="https://www.saysimple.com/whatsapp-chat-widget" target='_blank' rel='noopener noreferrer'>
-              View Widget Generator
+            <Button externalLink as='a' href={widgetUrl} target='_blank' rel='noopener noreferrer'>
+              {t.modal.actions.widget}
             </Button>
-            <Button externalLink as='a' href="https://www.saysimple.com/whatsapp-pricing-calculator" target='_blank' rel='noopener noreferrer' secondary>
-              View Pricing Calculator
+            <Button externalLink as='a' href={calculatorUrl} target='_blank' rel='noopener noreferrer' secondary>
+              {t.modal.actions.calculator}
             </Button>
           </PMActions>
         </PMContainer>

@@ -1,4 +1,28 @@
 {
   "title": "Chat Widget for WhatsApp",
-  "description": "Developed a small-scale but impactful WhatsApp chat widget generator for Saysimple’s website, letting businesses offer a tailored way for customers to start a WhatsApp conversation."
+  "description": "Developed a small-scale but impactful WhatsApp chat widget generator for Saysimple’s website, letting businesses offer a tailored way for customers to start a WhatsApp conversation.",
+  "modal": {
+    "title": "WhatsApp Chat Widget Generator",
+    "intro": "Built a <1>WhatsApp chat widget generator</1> for <1>Saysimple’s website</1> using React and Redux. The generator produces a lightweight embed built in Svelte, chosen specifically to avoid a heavy library and keep the bundle size tiny. Businesses can paste it into their sites to create a tailored WhatsApp entry point.",
+    "technologies": {
+      "title": "Technologies"
+    },
+    "features": {
+      "title": "Key Features",
+      "list": [
+        "<1>Generator in React + Redux</1> → outputs a Svelte embed (keeps bundle small, no extra library)",
+        "Configurable WhatsApp entry (call-to-action, theme, placement)",
+        "Copy‑paste embed snippet for any website",
+        "Lightweight Svelte runtime"
+      ]
+    },
+    "impact": {
+      "title": "Impact",
+      "text": "The generator lets businesses configure and publish a WhatsApp entry point on their site in minutes. The Svelte embed loads fast and hands off to WhatsApp for the conversation, reducing friction and increasing conversation starts. Separately, a pricing calculator I built adds another interactive touchpoint on their site."
+    },
+    "actions": {
+      "widget": "View Widget Generator",
+      "calculator": "View Pricing Calculator"
+    }
+  }
 }

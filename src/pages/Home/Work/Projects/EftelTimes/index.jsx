@@ -86,10 +86,10 @@ const EftelTimes = ({ readMore = true }) => {
 
         <PMActions>
           <Button as='a' href={'https://efteling.kevinvandertoorn.com'} target='_blank' rel='noopener noreferrer' externalLink>
-            {'Try it out'}
+            {t.modal.liveDemo}
           </Button>
           <Button as='a' href={'https://github.com/KevinvdT/efteltimes'} target='_blank' rel='noopener noreferrer' secondary externalLink>
-            {'Code on GitHub'}
+            {t.modal.viewCode}
           </Button>
         </PMActions>
       </Modal>

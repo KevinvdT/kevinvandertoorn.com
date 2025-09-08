@@ -6,28 +6,38 @@
       "evening": "¡Buenas noches!"
     },
     "introduction": "Soy Kevin",
-    "developer_intro": "Desarrollador web con sede en los Países Bajos.",
-    "contact_button": "Di “hola”",
-    "resume_button": "Curriculum Vitae"
+    "developer_intro": "Un desarrollador web que convierte problemas complejos en experiencias web fluidas.",
+    "contact_button": "Contáctame",
+    "resume_button": "Ver CV (en Inglés)"
   },
   "about": {
     "title": "Mi historia",
-    "story": "Soy un desarrollador web de los Países Bajos con más de {{years}} años de experiencia, comenzando con MS Frontpage y mejorando continuamente desde entonces.",
-    "skills": "Ahora trabajo con React y Django para crear soluciones web dinámicas. Siempre estoy explorando nuevas herramientas para ofrecer resultados sobresalientes.",
-    "hobbies": "Fuera del trabajo, disfruto de paseos por el <0>Efteling</0>, un parque holandés con un encanto único y mágico. También me gusta aprender nuevos idiomas."
+    "story": "Desarrollador web de los Países Bajos con <1>más de 18 años de experiencia</1>, empecé con MS Frontpage y desde entonces he seguido avanzando.",
+    "uvp": "Me apasiona <1>resolver problemas complejos con código</1> y crear <1>soluciones innovadoras</1> que ayuden a las empresas a crecer.",
+    "skills": "Hoy trabajo con <1>React</1> y <1>Django</1> para crear soluciones web dinámicas. También exploro nuevas herramientas para ofrecer <1>resultados excepcionales</1>.",
+    "hobbies": "Fuera del trabajo, disfruto pasear por <1>Efteling</1>, un parque neerlandés con un encanto único y mágico. También me gusta aprender idiomas."
   },
   "work": {
-    "title": "Proyectos en los que he trabajado",
+    "title": "Proyectos\u00A0emocionantes,\nresultados\u00A0impactantes",
     "projects": {
+      "delfthyperloop": {
+        "title": "Interfaz de control y sitio web",
+        "description": {
+          "part1": "Contribuí al equipo de Delft Hyperloop en la <1>SpaceX Hyperloop Pod Competition 2018</1>, fundada por Elon Musk. Desarrollé el sitio web de Delft Hyperloop, <1>atrayendo a patrocinadores y atención mediática</1>.",
+          "part2": "Creé un sistema de pruebas para optimizar el rendimiento de la cápsula y una interfaz de control para la gestión en tiempo real y las comprobaciones de seguridad, garantizando <1>operaciones fluidas y seguras</1> durante las pruebas y la competición."
+        }
+      },
       "saysimple": {
         "title": "Herramientas web interactivas",
-        "description": "Desarrollé elementos interactivos para el sitio web de Saysimple, incluyendo un calculador de precios basado en opciones configurables y un generador de widgets de chat personalizable. Estas herramientas mejoran la funcionalidad del sitio y ofrecen soluciones prácticas para mejorar la interacción con los clientes."
+        "description": "Creé elementos interactivos para el sitio de Saysimple, incluido un calculador de precios basado en opciones configurables y un generador personalizable de widgets de chat. Estas herramientas <1>mejoran la funcionalidad del sitio</1> y ofrecen soluciones prácticas para <1>impulsar la interacción y el compromiso de los clientes</1>."
       },
       "ah": {
         "title": "Software de señalización digital",
-        "description": "Creé un software versátil de señalización para la sala del personal de Albert Heijn. El software muestra la hora, pases de diapositivas, anuncios y más, mejorando la comunicación interna y creando un ambiente dinámico e informativo para los empleados."
+        "description": "Creé un software de señalización versátil para la pantalla de la sala del personal de Albert\u00A0Heijn. El software muestra la hora y la fecha, pases de diapositivas de fotos, anuncios y más, <1>mejorando la comunicación interna</1> y creando un <1>entorno dinámico e informativo</1> para los empleados."
       }
     },
+    "seeMore": "Ver más",
+    "seeLess": "Ver menos",
     "readMore": "Leer más"
   },
   "skills": {
@@ -49,8 +59,8 @@
     }
   },
   "contact": {
-    "title": "Contáctame",
-    "text": "¿Listo para hacer crecer tu negocio? ¡Hagámoslo realidad!",
+    "title": "Conectemos",
+    "text": "Juntos, podemos hacer realidad tus objetivos empresariales.",
     "follow": "Sígueme"
   },
   "menu": {

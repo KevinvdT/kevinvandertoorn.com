@@ -6,33 +6,43 @@
       "evening": "God aften!"
     },
     "introduction": "Jeg er Kevin",
-    "developer_intro": "En webudvikler fra Holland.",
-    "contact_button": "Sig “hej”",
-    "resume_button": "CV"
+    "developer_intro": "En webudvikler, der gør komplekse problemer til smidige weboplevelser.",
+    "contact_button": "Kontakt mig",
+    "resume_button": "Se CV (på Engelsk)"
   },
   "about": {
     "title": "Min historie",
-    "story": "Jeg er en webudvikler fra Holland med over {{years}} års erfaring, der startede med MS Frontpage og har udviklet mig kontinuerligt siden da.",
-    "skills": "Jeg arbejder nu med React og Django for at skabe dynamiske web-løsninger. Jeg er også altid på udkig efter nye værktøjer til at levere exceptionelle resultater.",
-    "hobbies": "Når jeg ikke arbejder, nyder jeg at slentre i <0>Efteling</0>, en hollandsk eventyrpark inspireret af mange klassiske fortællinger, herunder dem af H.C. Andersen. Parken har en helt særlig, fortryllende atmosfære. Jeg elsker også at lære nye sprog."
+    "story": "Webudvikler fra Nederlandene med <1>18+ års erfaring</1>, begyndte med MS Frontpage og har løbende udviklet mig siden.",
+    "uvp": "Jeg brænder for <1>at løse komplekse problemer med kode</1> og levere <1>innovative løsninger</1>, der får virksomheder til at vokse.",
+    "skills": "I dag arbejder jeg med <1>React</1> og <1>Django</1> for at skabe dynamiske webløsninger. Jeg udforsker også nye værktøjer for at levere <1>exceptionelle resultater</1>.",
+    "hobbies": "Uden for arbejdet går jeg gerne ture i <1>Efteling</1>, en hollandsk eventyrpark med en helt særlig, fortryllende stemning – herunder dem af H.C. Andersen. Jeg elsker også at lære sprog."
   },
   "work": {
-    "title": "Projekter jeg har arbejdet på",
+    "title": "Spændende\u00A0projekter,\nvirkningsfulde\u00A0resultater",
     "projects": {
+      "delfthyperloop": {
+        "title": "Betjeningsgrænseflade og website",
+        "description": {
+          "part1": "Bidrog til Delft Hyperloop-holdet i <1>SpaceX Hyperloop Pod Competition 2018</1>, grundlagt af Elon Musk. Udviklede Delft Hyperloop-websitet, som <1>tiltrak sponsorer og medieopmærksomhed</1>.",
+          "part2": "Skabte et testsystem til at optimere kapslens ydeevne og en betjeningsgrænseflade til realtidsstyring og sikkerhedstjek, hvilket sikrede <1>smidige og sikre operationer</1> under tests og konkurrencen."
+        }
+      },
       "saysimple": {
         "title": "Interaktive webværktøjer",
-        "description": "Jeg har udviklet interaktive elementer til Saysimple's hjemmeside, herunder en prisberegner baseret på konfigurerbare muligheder og en tilpasselig chat-widget-generator. Disse værktøjer forbedrer webstedets funktionalitet og giver praktiske løsninger til at øge kundeinteraktionen."
+        "description": "Udviklede interaktive elementer til Saysimple’s website, bl.a. en prisberegner baseret på konfigurerbare muligheder og en tilpasselig chatwidget-generator. Disse værktøjer <1>forbedrer websitets funktionalitet</1> og giver praktiske løsninger, der <1>øger kundernes interaktion og engagement</1>."
       },
       "ah": {
-        "title": "Digital skiltning software",
-        "description": "Jeg udviklede alsidig software til digital skiltning til personalerummet hos Albert Heijn. Softwaren viser det aktuelle tidspunkt, fotoslideshows, meddelelser og mere, hvilket forbedrer intern kommunikation og skaber et dynamisk og informativt miljø for medarbejderne."
+        "title": "Software til digital skiltning",
+        "description": "Udviklede alsidig skiltningsoftware til Albert\u00A0Heijns personalerums-skærm. Softwaren viser aktuelt klokkeslæt og dato, fotoslideshows, meddelelser m.m., hvilket <1>styrker den interne kommunikation</1> og skaber et <1>dynamisk og informativt miljø</1> for medarbejderne."
       }
     },
+    "seeMore": "Se mere",
+    "seeLess": "Se mindre",
     "readMore": "Læs mere"
   },
   "skills": {
     "title": "Værktøjer jeg arbejder med",
-    "description": "Jeg har udviklet ekspertise i de nedenfor nævnte teknologier. Jeg er også altid begejstret for at udforske og mestre nye værktøjer og frameworks, der kan hjælpe mig med at levere endnu bedre løsninger.",
+    "description": "Jeg har opbygget ekspertise i teknologierne nedenfor og er altid nysgerrig efter at udforske og mestre nye værktøjer og frameworks, der kan hjælpe mig med at levere endnu bedre løsninger.",
     "frontend": {
       "title": "Front-End"
     },
@@ -49,8 +59,8 @@
     }
   },
   "contact": {
-    "title": "Kontakt mig",
-    "text": "Klar til at tage din virksomhed til næste niveau? Lad os gøre det!",
+    "title": "Lad os tage en snak",
+    "text": "Sammen kan vi gøre dine forretningsmål til virkelighed.",
     "follow": "Følg"
   },
   "menu": {
