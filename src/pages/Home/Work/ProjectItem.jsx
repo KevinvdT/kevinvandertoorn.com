@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Trans } from 'react-i18next';
+import { Trans, useTranslation } from 'react-i18next';
 import styled from 'styled-components';
 import { SectionTitle } from '../../../components/ui/Title';
 import { SectionText } from '../../../components/ui/Text';
@@ -9,6 +9,7 @@ import Button from '../../../components/ui/Button';
 import ProjectDetails from '../../../components/ui/ProjectDetails';
 import ReadMoreLink from './ReadMoreLink';
 import Tag from '../../../components/ui/Tag';
+import { IoStar } from 'react-icons/io5';
 import { resolveTags } from './tagsRegistry';
 
 // Styled components for ProjectItem
@@ -77,8 +78,34 @@ font-family: 'Inter','Arial',sans-serif;
   @media (max-width: ${({ theme }) => theme.breakpoints.sm}) {
     // line-height: 0.5rem;
   }
-  margin-bottom: 6px;
+  margin-bottom: 0;
   cursor: ${({ onClick }) => (onClick ? 'pointer' : 'default')};
+`;
+
+const TitleRow = styled.div`
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 6px;
+`;
+
+const FeaturedBadge = styled(Tag)`
+  padding: 4px 8px;
+  font-size: 12px;
+  line-height: 1;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: ${({ theme }) => theme.colors.light.primaryText};
+  background-color: rgba(0,0,0,0.08);
+  position: relative;
+  top: 1px; /* subtle nudge to better align with title baseline */
+  margin-left: 6px;
+
+  @media (prefers-color-scheme: dark) {
+    color: ${({ theme }) => theme.colors.dark.primaryText};
+    background-color: rgba(255,255,255,0.16);
+  }
 `;
 
 const TagsRow = styled.div`
@@ -101,7 +128,8 @@ const ReadMoreRow = styled.div`
 `;
 
 // ProjectItem component that can handle both single and multiple descriptions
-const ProjectItem = ({ imageSrc, imageSrcDark, title, description, color, projectDetails, onReadMore, setIsOpen, tagKeys = [], company, readMore = true }) => {
+const ProjectItem = ({ imageSrc, imageSrcDark, title, description, color, projectDetails, onReadMore, setIsOpen, tagKeys = [], company, readMore = true, featured = false }) => {
+  const { t } = useTranslation();
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   // Back-compat: if legacy setIsOpen prop is provided, prefer it; else use onReadMore
@@ -134,13 +162,21 @@ const ProjectItem = ({ imageSrc, imageSrcDark, title, description, color, projec
         )}
         <ProjectContent>
           {company && <ProjectCompany>{company}</ProjectCompany>}
-          <ProjectTitle
-            as="h3"
-            color={color}
-            onClick={readMore && (onReadMore || setIsOpen) ? handleReadMore : undefined}
-          >
-            {title}
-          </ProjectTitle>
+          <TitleRow>
+            <ProjectTitle
+              as="h3"
+              color={color}
+              onClick={readMore && (onReadMore || setIsOpen) ? handleReadMore : undefined}
+            >
+              {title}
+            </ProjectTitle>
+            {featured && (
+              <FeaturedBadge>
+                <IoStar aria-hidden="true" />
+                {t('work.featured')}
+              </FeaturedBadge>
+            )}
+          </TitleRow>
           {Array.isArray(description) ? (
             description.map((desc, index) => (
               <ProjectDescription key={index} color={color}>

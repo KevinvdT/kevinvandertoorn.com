@@ -1,11 +1,11 @@
 {
   "title": "Wachttijden in de Efteling",
   "company": "Persoonlijk Project",
-  "description": "EftelTimes is een persoonlijk project dat mijn liefde voor de Efteling combineert met webontwikkeling en live wachttijden eenvoudig toegankelijk maakt.",
+  "description": "The Eftel Times is een persoonlijk project dat mijn liefde voor de Efteling combineert met webontwikkeling en live wachttijden eenvoudig toegankelijk maakt.",
   "modal": {
-    "title": "EftelTimes",
+    "title": "The Eftel Times",
     "intro": [
-      "Ontwikkelde <1>EftelTimes</1>, een <1>wachttijdoverzicht</1> voor de Efteling. Dit project combineert mijn liefde voor het park met mijn technische kennis.",
+      "Ontwikkelde <1>The Eftel Times</1>, een <1>wachttijdoverzicht</1> voor de Efteling. Dit project combineert mijn liefde voor het park met mijn technische kennis.",
       "Het ontwerp is geïnspireerd op typische Efteling-elementen, maar gecombineerd met een speelse en toegankelijk stijl geïnspireerd op Duolingo, zodat duidelijk is dat dit een persoonlijk project is en geen officieel product.",
       "In plaats van de interne API van de Efteling direct te gebruiken, maakt de backend gebruik van ThemeParks API, die expliciet bedoeld is voor toepassingen van derden. Een <1>Django-backend</1> transformeert en <1>cachet de resultaten</1> om overbelasting te voorkomen, en levert deze aan een <1>moderne React-frontend</1>."
     ],
@@ -22,7 +22,7 @@
     },
     "impact": {
       "title": "Impact",
-      "text": "EftelTimes is een project waarin ik mijn kennis inzette voor het ontwerpen en uitrollen van <1>full-stack webapplicaties</1>. Tegelijk gaf het project me de kans mijn <1>liefde voor de Efteling</1> te combineren met mijn technische ervaring, waaronder <1>API-integratie</1>, caching en backend-architectuur, samengebracht in een <1>gebruiksvriendelijke React-interface</1>. Ik heb het project met veel plezier gemaakt."
+      "text": "The Eftel Times is een project waarin ik mijn kennis inzette voor het ontwerpen en uitrollen van <1>full-stack webapplicaties</1>. Tegelijk gaf het project me de kans mijn <1>liefde voor de Efteling</1> te combineren met mijn technische ervaring, waaronder <1>API-integratie</1>, caching en backend-architectuur, samengebracht in een <1>gebruiksvriendelijke React-interface</1>. Ik heb het project met veel plezier gemaakt."
     },
     "liveDemo": "Live demo",
     "viewCode": "Bekijk code op GitHub"
