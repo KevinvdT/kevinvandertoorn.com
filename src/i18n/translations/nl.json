@@ -21,7 +21,7 @@
     "title": "Inspirerende\u00A0projecten,\nimpactvolle\u00A0resultaten",
     "projects": {
       "delfthyperloop": {
-        "title": "Bedieningsinterface & website",
+        "title": "Bedieningsinterface &\u00A0website",
         "description": {
           "part1": "Was onderdeel van het Delft Hyperloop-team in de <1>SpaceX Hyperloop Pod Competition 2018</1>. Ontwikkelde de Delft Hyperloop-website (met Django), waarmee we <1>sponsors en media-aandacht aantrokken</1>.",
           "part2": "Daarnaast werkte ik aan een testsysteem om de prestaties van de pod te optimaliseren en een bedieningsinterface voor real-time voertuigbeheer en veiligheidscontroles, wat zorgde voor <1>soepele en veilige operaties</1> tijdens tests en de competitie."
@@ -45,10 +45,10 @@
     "title": "De tools die ik gebruik",
     "description": "Ik heb expertise opgebouwd in de onderstaande technologieën – en blijf me continu verdiepen in nieuwe tools en frameworks om nóg betere oplossingen te leveren.",
     "frontend": {
-      "title": "Front-end"
+      "title": "Frontend"
     },
     "backend": {
-      "title": "Back-end",
+      "title": "Backend",
       "drf": {
         "full": "Django REST Framework",
         "short": "Django REST Framew.",

@@ -7,7 +7,7 @@ import translationEN from './translations/en.json';
 import translationNL from './translations/nl.json';
 import translationDE from './translations/de.json';
 // import translationDA from './translations/da.json';
-// import translationFR from './translations/fr.json';
+import translationFR from './translations/fr.json';
 // import translationES from './translations/es.json';
 // import translationJA from './translations/ja.json';
 
@@ -24,9 +24,9 @@ const resources = {
   // da: {
   //   translation: translationDA,
   // },
-  // fr: {
-  //   translation: translationFR,
-  // },
+  fr: {
+    translation: translationFR,
+  },
   // es: {
   //   translation: translationES,
   // },

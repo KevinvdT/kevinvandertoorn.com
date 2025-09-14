@@ -12,8 +12,8 @@
   },
   "about": {
     "title": "Mon parcours",
-    "story": "Développeur web des Pays-Bas avec <1>plus de 18 ans d’expérience</1>, ayant commencé avec MS Frontpage et progressant depuis.",
-    "uvp": "Passionné par <1>la résolution de problèmes complexes par le code</1> et la création de <1>solutions innovantes</1> qui aident les entreprises à grandir.",
+    "story": "Développeur web néerlandais, je <1>crée des sites depuis le début des années 2000</1>.  J’ai commencé avec MS FrontPage et j’ai évolué depuis au fil des technologies.",
+    "uvp": "Ma passion est de créer des outils qui paraissent <1>simples en surface</1>, mais qui <1>relèvent en réalité des défis complexes</1> sous le capot.",
     "skills": "Aujourd’hui, je travaille avec <1>React</1> et <1>Django</1> pour créer des solutions web dynamiques. J’explore aussi de nouveaux outils pour offrir des <1>résultats exceptionnels</1>.",
     "hobbies": "En dehors du travail, j’aime me promener à <1>Efteling</1>, un parc néerlandais au charme enchanteur unique. J’aime aussi apprendre des langues."
   },
@@ -38,7 +38,8 @@
     },
     "seeMore": "Voir plus",
     "seeLess": "Voir moins",
-    "readMore": "En savoir plus"
+    "readMore": "En savoir plus",
+    "featured": "Mis en avant"
   },
   "skills": {
     "title": "Les outils avec lesquels je travaille",

@@ -8,7 +8,7 @@ import i18next from 'i18next'; // Import i18next for language toggling
 
 export default class App extends Component {
   // List of supported languages
-  languages = ['en', 'nl', 'de'];
+  languages = ['en', 'nl', 'de', 'fr'];
 
   // Function to toggle through languages in the list
   toggleLanguage = () => {
