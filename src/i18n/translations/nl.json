@@ -12,10 +12,10 @@
   },
   "about": {
     "title": "Mijn verhaal",
-    "story": "Webdeveloper uit Nederland met <1>ruim 18 jaar ervaring</1> – ooit begonnen met MS Frontpage en sindsdien continu blijven groeien.",
-    "uvp": "Ik ben een gedreven ontwikkelaar, met een passie voor het <1>vertalen van complexe vraagstukken naar slimme code</1>. Ik maak <1>innovatieve toepassingen</1> die bedrijven helpen groeien.",
-    "skills": "Tegenwoordig werk ik vooral met <1>React</1> en <1>Django</1> om dynamische webapplicaties te bouwen. Daarnaast blijf ik altijd bijleren en experimenteren met nieuwe tools – alles om <1>het beste resultaat</1> te leveren.",
-    "hobbies": "Buiten werk vertoef ik graag in de <1>Efteling</1>. Ook leer ik graag vreemde talen."
+    "story": "<1>Webdeveloper</1> uit Delft, <1>actief sinds de jaren 2000</1>. Ooit begonnen met MS FrontPage en sindsdien continu meegegroeid met de technologische ontwikkelingen.",
+    "uvp": "Het is mijn passie om tools te maken die <1>eenvoudig ogen</1>, maar ondertussen <1>complexe uitdagingen oplossen</1> onder de motorkap.",
+    "skills": "Ik hou ervan om met <1>React</1> en <1>Django</1> dynamische en betrouwbare webapps te bouwen. En ik blijf altijd bijleren en experimenteren met nieuwe tools om <1>het beste resultaat</1> te kunnen blijven leveren.",
+    "hobbies": "Buiten werk vertoef ik graag in de <1>Efteling</1>, speel ik Nintendo-spellen of leer ik vreemde talen."
   },
   "work": {
     "title": "Inspirerende\u00A0projecten,\nimpactvolle\u00A0resultaten",
@@ -38,7 +38,8 @@
     },
     "seeMore": "Meer zien",
     "seeLess": "Minder zien",
-    "readMore": "Lees meer"
+    "readMore": "Lees meer",
+    "featured": "Uitgelicht"
   },
   "skills": {
     "title": "De tools die ik gebruik",

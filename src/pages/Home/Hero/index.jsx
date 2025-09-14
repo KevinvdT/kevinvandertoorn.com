@@ -14,6 +14,7 @@ import ProfilePicture from './ProfilePicture';
 import { setActiveSection } from '../../../redux/slices/activeSectionSlice';
 import downarrow from './downarrow.svg';
 
+
 const HeroIntro = styled.div`
   margin-bottom: 25px;
   @media (max-width: ${({ theme }) => theme.breakpoints.sm}) {
@@ -103,7 +104,8 @@ const Hero = () => {
           <ButtonRow>
             {/* <Button onClick={handleScrollToContact}>{t('hero.contact_button')}</Button> */}
             <Button
-              externalLink
+              iconBefore={<FaRegFilePdf />}
+              // externalLink
               onClick={() => {
                 const currentLang = i18next.language;
                 const pdfPath = currentLang === 'nl'

@@ -12,10 +12,10 @@
   },
   "about": {
     "title": "Meine Geschichte",
-    "story": "Web-Deve aus den Niederlanden mit <1>über 18 Jahren Erfahrung</1>, angefangen mit MS Frontpage und seitdem kontinuierlich weiterentwickelt.",
-    "uvp": "Bin begeistert davon, <1>komplexe Probleme mit Code zu lösen</1> und <1>innovative Lösungen</1> zu liefern, die Unternehmen helfen zu wachsen.",
-    "skills": "Arbeite derzeit mit <1>React</1> und <1>Django</1>, um dynamische Weblösungen zu entwickeln. Entdecke auch immer gerne neue Tools, um <1>die besten Ergebnisse</1> zu liefern.",
-    "hobbies": "In meiner Freizeit genieße ich Spaziergänge im <1>Efteling</1>, einem niederländischen Park mit einzigartigem Charme. Außerdem lerne ich gerne Fremdsprachen."
+    "story": "<1>Webentwickler aus den Niederlanden</1>, <1>aktiv seit den 2000er-Jahren</1>. Angefangen mit MS FrontPage und seitdem stets mit den technologischen Entwicklungen gewachsen.",
+    "uvp": "Was mich antreibt, ist das Erschaffen von Tools, die auf den ersten Blick <1>einfach wirken</1>, aber im Hintergrund <1>komplexe Herausforderungen meistern</1>.",
+    "skills": "Ich entwickle gerne mit <1>React</1> und <1>Django</1> dynamische und zuverlässige Web-Apps und bleibe immer neugierig, neue Werkzeuge auszuprobieren, um <1>bessere Lösungen zu schaffen</1>.",
+    "hobbies": "In meiner Freizeit genieße ich Spaziergänge im <1>Efteling</1>, einem niederländischen Park mit einzigartigem Charme. Außerdem spiele ich gerne Nintendo-spiele oder lerne ich gerne Fremdsprachen."
   },
   "work": {
     "title": "Inspirierende\u00A0Projekte,\nwirkungsvolle\u00A0Ergebnisse",
@@ -38,7 +38,8 @@
     },
     "seeMore": "Mehr sehen",
     "seeLess": "Weniger sehen",
-    "readMore": "Weiterlesen"
+    "readMore": "Weiterlesen",
+    "featured": "Highlight"
   },
   "skills": {
     "title": "Tools die ich benutze",

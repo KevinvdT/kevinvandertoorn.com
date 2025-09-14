@@ -139,6 +139,7 @@ const MissionControl = () => {
         tagKeys={preview}
         setIsOpen={setIsOpen}
         company="Delft Hyperloop · SpaceX"
+        featured
       />
 
       <Modal isOpen={isOpen} onClose={handleModalClose} title={t.title} maxWidth="700px">
