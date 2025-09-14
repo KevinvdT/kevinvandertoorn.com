@@ -28,10 +28,10 @@
     "title": "Tools I Rock With",
     "description": "I have honed my expertise in the technologies listed below. I am also always excited to explore and master new tools and frameworks that can help me deliver even better solutions.",
     "frontend": {
-      "title": "Front-End"
+      "title": "Front End"
     },
     "backend": {
-      "title": "Back-End",
+      "title": "Back End",
       "drf": {
         "full": "Django REST Framework",
         "short": "Django REST Framew.",
