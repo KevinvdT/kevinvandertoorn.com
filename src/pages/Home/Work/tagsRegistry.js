@@ -24,7 +24,7 @@ export const TAGS = {
   html: { key: 'html', label: 'HTML', color: COLORS.ORANGE },
   python: { key: 'python', label: 'Python', color: COLORS.YELLOW },
   django: { key: 'django', label: 'Django', color: COLORS.GREEN },
-  drf: { key: 'drf', label: 'Django REST', color: COLORS.RED },
+  drf: { key: 'drf', label: 'Django REST Framework', color: COLORS.RED },
   electron: { key: 'electron', label: 'Electron', color: COLORS.BLUE },
   node: { key: 'node', label: 'Node.js', color: COLORS.GREEN },
   postgres: { key: 'postgres', label: 'Postgres', color: COLORS.TEAL },

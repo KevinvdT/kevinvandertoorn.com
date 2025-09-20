@@ -1,13 +1,13 @@
 {
-  "title": "Wartezeiten in der Efteling",
+  "title": "Wartezeiten im Freizeitpark Efteling",
   "company": "Persönliches Projekt",
-  "description": "EftelTimes ist ein persönliches Projekt, das meine Liebe zur Efteling mit Webentwicklung verbindet und Live-Wartezeiten einfach zugänglich macht.",
+  "description": "The Eftel Times ist ein persönliches Projekt, das meine Liebe zu Efteling mit Webentwicklung verbindet und Live-Wartezeiten einfach zugänglich macht.",
   "modal": {
-    "title": "EftelTimes",
+    "title": "The Eftel Times",
     "intro": [
-      "Entwickelte <1>EftelTimes</1>, eine <1>Übersicht der Wartezeiten</1> für die Efteling. Dieses Projekt verbindet meine Liebe für den Park mit meinem technischen Wissen.",
+      "Entwickelte <1>The Eftel Times</1>, eine <1>Übersicht der Wartezeiten</1> für Efteling. Dieses Projekt verbindet meine Liebe für den Park mit meinem technischen Wissen.",
       "Das Design ist inspiriert von typischen Efteling-Elementen, kombiniert mit einem spielerischen und zugänglichen Stil nach dem Vorbild von Duolingo, sodass klar ist, dass es sich um ein persönliches Projekt handelt und nicht um ein offizielles Produkt.",
-      "Anstatt die interne API der Efteling direkt zu nutzen, verwendet das Backend die ThemeParks API, die ausdrücklich für Anwendungen von Drittanbietern gedacht ist. Ein <1>Django-Backend</1> transformiert und <1>cached die Ergebnisse</1>, um Überlastung zu vermeiden, und stellt sie einem <1>modernen React-Frontend</1> zur Verfügung."
+      "Anstatt die interne API von Efteling direkt zu nutzen, verwendet das Backend die ThemeParks API, die ausdrücklich für Anwendungen von Drittanbietern gedacht ist. Ein <1>Django-Backend</1> transformiert und <1>cached die Ergebnisse</1>, um Überlastung zu vermeiden, und stellt sie einem <1>modernen React-Frontend</1> zur Verfügung."
     ],
     "technologies": {
       "title": "Technologien"
@@ -22,7 +22,7 @@
     },
     "impact": {
       "title": "Auswirkung",
-      "text": "EftelTimes ist ein Projekt, in dem ich mein Wissen über das Entwerfen und Bereitstellen von <1>Full-Stack-Webanwendungen</1> eingesetzt habe. Gleichzeitig gab mir das Projekt die Möglichkeit, meine <1>Liebe zur Efteling</1> mit meiner technischen Erfahrung zu verbinden – darunter <1>API-Integration</1>, Caching und Backend-Architektur, zusammengeführt in einer <1>benutzerfreundlichen React-Oberfläche</1>. Ich habe das Projekt mit viel Freude umgesetzt."
+      "text": "The Eftel Times ist ein Projekt, in dem ich mein Wissen über das Entwerfen und Bereitstellen von <1>Full-Stack-Webanwendungen</1> eingesetzt habe. Gleichzeitig gab mir das Projekt die Möglichkeit, meine <1>Liebe zu Efteling</1> mit meiner technischen Erfahrung zu verbinden – darunter <1>API-Integration</1>, Caching und Backend-Architektur, zusammengeführt in einer <1>benutzerfreundlichen React-Oberfläche</1>. Ich habe das Projekt mit viel Freude umgesetzt."
     },
     "liveDemo": "Live-Demo",
     "viewCode": "Code auf GitHub"

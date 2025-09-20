@@ -5,12 +5,12 @@
   "modal": {
     "title": "The Eftel Times",
     "intro": [
-      "Developed <1>The Eftel Times</1>, a <1>queue time tracker</1> for the Efteling park. I built this to combine my passion for the park with my technical know-how.",
+      "Once upon a time, I developed <1>The Eftel Times</1>, a <1>queue time tracker</1> for the Efteling park. I built this to combine my passion for the park with my technical know-how.",
       "The design is inspired by typical Efteling elements, yet paired with a clean, approachable style influenced by Duolingo — making it clear this is a personal project rather than an official product.",
       "Instead of querying Efteling’s internal API directly, the backend uses ThemeParks API, which is explicitly designed for third-party applications like this. A <1>Django</1> backend transforms and <1>caches the results</1> to avoid excessive load, and serves them to a modern <1>React</1> frontend."
     ],
     "technologies": {
-      "title": "Technologies"
+      "title": "Magical Ingredients"
     },
     "features": {
       "title": "Key Features",

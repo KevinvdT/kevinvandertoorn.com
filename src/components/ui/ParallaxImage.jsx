@@ -58,7 +58,7 @@ const ParallaxImage = ({ front, back }) => {
       const newOffsetY = (clientY - innerHeight / 2) / 100;
 
       // Clamp values to prevent excessive movement
-      setOffsetX(clamp(newOffsetX, -20, 20)); // Adjust min/max as needed
+      setOffsetX(clamp(newOffsetX, -20, 10)); // Adjust min/max as needed
       setOffsetY(clamp(newOffsetY, -20, 20)); // Adjust min/max as needed
     };
 
@@ -70,7 +70,7 @@ const ParallaxImage = ({ front, back }) => {
       const newOffsetY = beta / 3;
 
       // Clamp values to prevent excessive movement
-      setOffsetX(clamp(newOffsetX, -20, 20)); // Adjust min/max as needed
+      setOffsetX(clamp(newOffsetX, -20, 10)); // Adjust min/max as needed
       setOffsetY(clamp(newOffsetY, -20, 20)); // Adjust min/max as needed
     };
 

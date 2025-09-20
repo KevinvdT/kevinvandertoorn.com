@@ -105,7 +105,8 @@ const Hero = () => {
             {/* <Button onClick={handleScrollToContact}>{t('hero.contact_button')}</Button> */}
             <Button
               iconBefore={<FaRegFilePdf />}
-              // externalLink
+              externalLink
+              toggleIcons
               onClick={() => {
                 const currentLang = i18next.language;
                 const pdfPath = currentLang === 'nl'

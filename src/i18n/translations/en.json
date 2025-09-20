@@ -6,7 +6,7 @@
       "evening": "Good Evening!"
     },
     "introduction": "I’m Kevin",
-    "developer_intro": "A web developer who turns tricky problems into smooth web experiences.",
+    "developer_intro": "I design and build web tools that feel simple — but solve tough challenges behind the scenes.",
     "contact_button": "Contact Me",
     "resume_button": "View Résumé"
   },
@@ -15,7 +15,7 @@
     "story": "Web developer from the Netherlands <1>building websites since the early 2000s</1>, starting with MS FrontPage back in the day and continually advancing as technology evolved.",
     "uvp": "What drives me is creating tools that <1>feel simple</1> on the surface but <1>solve real challenges</1> underneath.",
     "skills": "I love working with <1>React</1> and <1>Django</1> to turn ideas into dynamic, reliable web apps, and I am always curious to explore new tools to <1>deliver better results</1>.",
-    "hobbies": "Outside of work, I enjoy strolling in <1>Efteling</1>, a Dutch park with a unique enchanting charm. I also like to play Nintendo games or learn (human) languages."
+    "hobbies": "Outside of work, I enjoy strolling in <1>Efteling</1>, a Dutch park with a unique enchanting charm. I also like to play Nintendo games and learn (human) languages."
   },
   "work": {
     "title": "Exciting\u00A0Projects, Impactful\u00A0Results",
