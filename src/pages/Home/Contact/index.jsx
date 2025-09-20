@@ -98,7 +98,9 @@ const Contact = () => {
   };
 
   // Check if Web Share API is supported
-  const isWebShareSupported = navigator.share && navigator.canShare;
+  // const isWebShareSupported = navigator.share && navigator.canShare;
+  // TODO: Enable button when design is ready
+  const isWebShareSupported = false;
 
   return (
     <Footer>

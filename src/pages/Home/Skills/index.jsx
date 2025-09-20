@@ -6,7 +6,7 @@ import TwoCol from '../../../components/layout/TwoCol';
 import { SectionTitle } from '../../../components/ui/Title';
 import { SectionText } from '../../../components/ui/Text';
 import SkillSet, { Skill } from './SkillSet';
-import useWindowWidth from './useWindowWidth';
+import useScreenSize from '../../../hooks/useScreenSize';
 import {
   FaReact as IconReact,
   FaHtml5 as IconHtml,
@@ -20,6 +20,7 @@ import {
 } from "react-icons/si";
 import { FaDocker as IconDocker } from "react-icons/fa";
 import { LuBraces as IconDrf } from "react-icons/lu";
+// import IconMatlab from './icon-matlab.svg';
 
 const SkillSetsWrapper = styled.div`
   margin-top: 30px;
@@ -27,13 +28,10 @@ const SkillSetsWrapper = styled.div`
 
 const Skills = () => {
   const { t } = useTranslation(); // Hook to get translation function
-  const windowWidth = useWindowWidth(); // Get the current window width
-  const xsBreakpoint = 436; // Convert the xs breakpoint to a number
-  const customBreakpoint = 383; // Define the custom breakpoint for 383px
+  const { isXs } = useScreenSize(); // Get screen size info
 
-  // Determine if the screen width is smaller than the custom or xs breakpoint
-  const isVerySmallScreen = windowWidth <= customBreakpoint;
-  const isSmallScreen = windowWidth > customBreakpoint && windowWidth < xsBreakpoint;
+  // Debug logging (remove in production)
+  console.log('isXs:', isXs);
 
   return (
     <Container id="skills">
@@ -51,11 +49,7 @@ const Skills = () => {
           <SkillSet title={t('skills.backend.title')}>
             <Skill icon={IconDjango} iconColor='#20cc8a'>Django (Python)</Skill>
             <Skill icon={IconDrf} iconColor='#ec3939'>
-              {isVerySmallScreen
-                ? t('skills.backend.drf.shortest')
-                : isSmallScreen
-                  ? t('skills.backend.drf.short')
-                  : t('skills.backend.drf.full')}
+              {isXs ? 'Django REST Fw.' : 'Django REST Framework'}
             </Skill>
             <Skill icon={IconDocker} iconColor='#1d63ed'>Docker</Skill>
           </SkillSet>
@@ -64,7 +58,7 @@ const Skills = () => {
         <SkillSet title={t('skills.datascience.title')}>
           <Skill icon={IconPython} iconColor='#409de3'>Python, Numpy, Matplotlib</Skill>
           <Skill icon={IconJulia} iconColor='#c869f4'>Julia</Skill>
-          <Skill icon={IconMatlab} iconColor='#ff680a'><span style={{ fontVariant: 'small-caps' }}>Matlab</span> / Octave</Skill>
+          <Skill icon={IconMatlab} iconColor='#ff680a'>Matlab / Octave</Skill>
         </SkillSet>
       </SkillSetsWrapper>
     </Container>
