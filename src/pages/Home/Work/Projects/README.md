@@ -1,6 +1,6 @@
 # Project Management System - React Components
 
-This directory contains all my portfolio projects as self-contained React components with built-in translations and maximum customizability.
+This directory contains all my portfolio projects as self-contained React components with built-in translations.
 
 ## 🏗️ **Project Structure**
 
@@ -10,22 +10,18 @@ Each project has its own directory with the following structure:
 Projects/
 ├── DelfHyperloop/
 │   ├── index.jsx              # Main project component
-│   ├── ModalContent.jsx       # Modal content component
 │   ├── i18n/                  # Project-specific translations
 │   │   ├── en.json            # English translations
 │   │   ├── nl.json            # Dutch translations
 │   │   ├── de.json            # German translations
 │   │   └── index.js           # Translations export
-│   └── styles.js              # Custom styled components (optional)
 ├── AlbertHeijn/
 │   ├── index.jsx
-│   ├── ModalContent.jsx
 │   ├── i18n/
 │   │   ├── en.json
 │   │   ├── nl.json
 │   │   ├── de.json
 │   │   └── index.js
-│   └── styles.js
 └── index.js                   # Project registry
 ```
 
@@ -46,8 +42,7 @@ I create an `i18n/` subdirectory with translation files:
     "title": "My Project",
     "description": "Detailed description...",
     "technologies": {
-      "title": "Technologies Used",
-      "list": ["Tech1", "Tech2", "Tech3"]
+      "title": "Technologies"
     }
   }
 }
@@ -62,8 +57,7 @@ I create an `i18n/` subdirectory with translation files:
     "title": "Mijn Project",
     "description": "Gedetailleerde beschrijving...",
     "technologies": {
-      "title": "Gebruikte Technologieën",
-      "list": ["Tech1", "Tech2", "Tech3"]
+      "title": "Technologieën"
     }
   }
 }
@@ -78,8 +72,7 @@ I create an `i18n/` subdirectory with translation files:
     "title": "Mein Projekt",
     "description": "Detaillierte Beschreibung...",
     "technologies": {
-      "title": "Verwendete Technologien",
-      "list": ["Tech1", "Tech2", "Tech3"]
+      "title": "Verwendete Technologien"
     }
   }
 }
@@ -158,7 +151,7 @@ const MyProject = () => {
         <ProjectTitle>{translations.title}</ProjectTitle>
         <ProjectDescription>
           <p>{translations.description}</p>
-        </ProjectContent>
+        </ProjectDescription>
       </ProjectContent>
     </ProjectContainer>
   );
@@ -288,17 +281,15 @@ const MyProject = () => {
 - **Easy maintenance**: I update translations in the project directory
 - **No namespace conflicts**: Each project has its own translation keys
 - **Better organization**: Related files stay together
-- **Easier collaboration**: Collaborators and I can work on projects independently
 
 ## ✨ **Benefits of This Approach**
 
-- **Maximum Customizability**: Each project can be completely unique
+- **Maximum Customizability**: Each project modal content can be completely unique
 - **Reusable Components**: I share common elements between projects
-- **Interactive Elements**: I add demos, charts, videos, etc.
+- **Interactive Elements**: I can add demos, charts, videos, etc.
 - **Self-contained**: Each project has its own i18n, styles, and components
 - **Easy Maintenance**: I update project info in one place
 - **Scalable**: It's easy for me to add new projects and features
-- **Type Safe**: Full React component benefits
 - **Performance**: I only load what I need
 
 ## 📱 **Usage in Components**
@@ -308,5 +299,3 @@ My Work section automatically:
 - Handles modal opening/closing
 - Manages project state
 - Provides a consistent layout
-
-My project components just focus on their unique content and styling!
