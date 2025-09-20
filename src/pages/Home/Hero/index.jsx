@@ -13,6 +13,7 @@ import Button from '../../../components/ui/Button';
 import ProfilePicture from './ProfilePicture';
 import { setActiveSection } from '../../../redux/slices/activeSectionSlice';
 import downarrow from './downarrow.svg';
+import { FaLinkedin } from "react-icons/fa";
 
 
 const HeroIntro = styled.div`
@@ -115,6 +116,15 @@ const Hero = () => {
               }}
             >
               {/* <FaRegFilePdf /> */} {t('hero.resume_button')}
+            </Button>
+            <Button
+              secondary
+              iconBefore={<FaLinkedin />}
+              onClick={() => {
+                window.open('https://www.linkedin.com/in/kevinvandertoorn/', '_blank');
+              }}
+            >
+              {t('hero.linkedin_button')}
             </Button>
           </ButtonRow>
         </HeroIntro>

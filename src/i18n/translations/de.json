@@ -8,7 +8,8 @@
     "introduction": "Ich bin Kevin",
     "developer_intro": "Ein Web-Developer, der schwierige Probleme in reibungslose Web-Erlebnisse verwandelt.",
     "contact_button": "Kontaktiere mich",
-    "resume_button": "Lebenslauf (Englisch)"
+    "resume_button": "Lebenslauf (Englisch)",
+    "linkedin_button": "LinkedIn"
   },
   "about": {
     "title": "Meine Geschichte",
@@ -61,7 +62,8 @@
   },
   "contact": {
     "title": "Lassen Sie uns verbinden",
-    "text": "Bereit, Ihr Unternehmen voranzubringen?\nLassen Sie es uns möglich machen!",
+    "text": "Gute Ergebnisse erreicht man gemeinsam.\nLassen Sie uns herausfinden, wie wir das gemeinsam möglich machen.",
+    "connect": "Kontakt",
     "follow": "Folgen",
     "share": {
       "title": "Kennen Sie jemanden, dem ich helfen kann?",

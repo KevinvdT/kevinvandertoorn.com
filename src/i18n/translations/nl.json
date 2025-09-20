@@ -8,7 +8,8 @@
     "introduction": "Ik ben Kevin",
     "developer_intro": "Ik maak webtools die eenvoudig te gebruiken zijn – en complexe problemen oplossen.",
     "contact_button": "Contact",
-    "resume_button": "Bekijk CV"
+    "resume_button": "Bekijk CV",
+    "linkedin_button": "Naar LinkedIn"
   },
   "about": {
     "title": "Mijn verhaal",
@@ -61,7 +62,8 @@
   },
   "contact": {
     "title": "Neem contact op",
-    "text": "Klaar om je bedrijf naar een hoger niveau te tillen?\nLaten we aan de slag gaan!",
+    "text": "Goede resultaten bereik je samen.\nLaten we ontdekken hoe we dat kunnen waarmaken.",
+    "connect": "Contact",
     "follow": "Volg",
     "share": {
       "title": "Ken je iemand die ik kan helpen?",

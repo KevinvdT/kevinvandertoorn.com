@@ -8,7 +8,8 @@
     "introduction": "I’m Kevin",
     "developer_intro": "I design and build web tools that feel simple — but solve tough challenges behind the scenes.",
     "contact_button": "Contact Me",
-    "resume_button": "View Résumé"
+    "resume_button": "View Résumé",
+    "linkedin_button": "Visit LinkedIn"
   },
   "about": {
     "title": "My Story",
@@ -43,8 +44,9 @@
     }
   },
   "contact": {
-    "title": "Let's Connect",
-    "text": "Together, we can bring your business goals to life.",
+    "title": "Let’s Connect",
+    "text": "Great results are achieved together.\nLet’s explore how we can make that a reality.",
+    "connect": "Connect",
     "follow": "Follow",
     "share": {
       "title": "Know someone who I can help?",

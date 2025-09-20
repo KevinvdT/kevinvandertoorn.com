@@ -111,7 +111,7 @@ const Contact = () => {
 
           <ContactTwoCol aligntop>
             <ContactCol>
-              <Label as="div">Connect</Label>
+              <Label as="div">{t('contact.connect')}</Label>
               <Email />
             </ContactCol>
             <ContactCol>
