@@ -62,7 +62,11 @@
   "contact": {
     "title": "Lassen Sie uns verbinden",
     "text": "Bereit, Ihr Unternehmen voranzubringen?\nLassen Sie es uns möglich machen!",
-    "follow": "Folgen"
+    "follow": "Folgen",
+    "share": {
+      "title": "Kennen Sie jemanden, dem ich helfen kann?",
+      "button": "Diese Seite teilen"
+    }
   },
   "menu": {
     "home": "Start",

@@ -7,6 +7,28 @@ import { SectionText } from '../../../components/ui/Text';
 import { ButtonLinkedIn, ButtonGithub } from "./Buttons";
 import TwoCol from '../../../components/layout/TwoCol';
 import Email from './Email';
+import Button from '../../../components/ui/Button';
+import { IoMdShare } from "react-icons/io";
+
+// Custom styled button that inherits from Button but uses SectionText colors
+const ShareButton = styled(Button)`
+  color: ${({ theme }) => theme.colors.light.secondaryText} !important;
+  border: 1px solid ${({ theme }) => theme.colors.light.secondaryText} !important;
+
+  &:hover {
+    color: black !important;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    color: ${({ theme }) => theme.colors.dark.secondaryText} !important;
+    border: 1px solid ${({ theme }) => theme.colors.dark.secondaryText} !important;
+
+    &:hover {
+      color: white !important;
+    }
+  }
+`;
+
 const Footer = styled.div`
   background: #F5F5F7;
   @media (prefers-color-scheme: dark) {
@@ -35,6 +57,23 @@ export const Label = styled(SectionText)`
 const Contact = () => {
   const { t } = useTranslation(); // Get the translation function
 
+  const handleShare = async () => {
+    const shareData = {
+      title: 'Kevin van der Toorn – Portfolio',
+      text: 'Check out this portfolio website',
+      url: 'https://kevinvandertoorn.com/'
+    };
+
+    try {
+      await navigator.share(shareData);
+    } catch (error) {
+      console.error('Error sharing:', error);
+    }
+  };
+
+  // Check if Web Share API is supported
+  const isWebShareSupported = navigator.share && navigator.canShare;
+
   return (
     <Footer>
       <PageContainer>
@@ -42,7 +81,7 @@ const Contact = () => {
           <SectionTitle>{t('contact.title')}</SectionTitle>
           <ContactText>{t('contact.text')}</ContactText>
 
-          <TwoCol aligntop>
+          <TwoCol aligntop style={{ marginBottom: '14px' }}>
             <div>
               <Label as="div">Connect</Label>
               <Email />
@@ -55,9 +94,17 @@ const Contact = () => {
               </div>
             </div>
           </TwoCol>
+          {isWebShareSupported && (
+            <TwoCol aligntop>
+              <div>
+                <Label as="div">{t('contact.share.title')}</Label>
+                <ShareButton secondary iconBefore={<IoMdShare />} onClick={handleShare}>{t('contact.share.button')}</ShareButton>
+              </div>
+            </TwoCol>
+          )}
         </Container>
       </PageContainer>
-    </Footer>
+    </Footer >
   );
 };
 

@@ -62,7 +62,11 @@
   "contact": {
     "title": "Entrons en contact",
     "text": "Ensemble, nous pouvons donner vie à vos objectifs.",
-    "follow": "Suivre"
+    "follow": "Suivre",
+    "share": {
+      "title": "Connaissez-vous quelqu'un que je peux aider ?",
+      "button": "Partager ce site"
+    }
   },
   "menu": {
     "home": "Accueil",

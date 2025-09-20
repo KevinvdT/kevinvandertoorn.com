@@ -62,7 +62,11 @@
   "contact": {
     "title": "Neem contact op",
     "text": "Klaar om je bedrijf naar een hoger niveau te tillen?\nLaten we aan de slag gaan!",
-    "follow": "Volg"
+    "follow": "Volg",
+    "share": {
+      "title": "Ken je iemand die ik kan helpen?",
+      "button": "Deel deze site"
+    }
   },
   "menu": {
     "home": "Home",

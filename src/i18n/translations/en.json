@@ -43,9 +43,13 @@
     }
   },
   "contact": {
-    "title": "Let’s Connect",
+    "title": "Let's Connect",
     "text": "Together, we can bring your business goals to life.",
-    "follow": "Follow"
+    "follow": "Follow",
+    "share": {
+      "title": "Know someone who I can help?",
+      "button": "Share this site"
+    }
   },
   "menu": {
     "home": "Home",
