@@ -9,6 +9,7 @@ import TwoCol from '../../../components/layout/TwoCol';
 import Email from './Email';
 import Button from '../../../components/ui/Button';
 import { IoMdShare } from "react-icons/io";
+import { IoShareOutline } from "react-icons/io5";
 
 // Custom styled button that inherits from Button but uses SectionText colors
 const ShareButton = styled(Button)`
@@ -26,6 +27,20 @@ const ShareButton = styled(Button)`
     &:hover {
       color: white !important;
     }
+  }
+`;
+
+// Styled TwoCol with no row gap
+const ContactTwoCol = styled(TwoCol)`
+  row-gap: 0;
+`;
+
+// Styled divs with consistent spacing
+const ContactCol = styled.div`
+  margin-bottom: 14px;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.sm}) {
+    margin-bottom: 1rem;
   }
 `;
 
@@ -57,6 +72,17 @@ export const Label = styled(SectionText)`
 const Contact = () => {
   const { t } = useTranslation(); // Get the translation function
 
+  // Detect Apple platforms
+  const isApplePlatform = () => {
+    const userAgent = navigator.userAgent.toLowerCase();
+    return /iphone|ipad|ipod|macintosh|mac os x/.test(userAgent);
+  };
+
+  // Get the appropriate share icon based on platform
+  const getShareIcon = () => {
+    return isApplePlatform() ? <IoShareOutline /> : <IoMdShare />;
+  };
+
   const handleShare = async () => {
     const shareData = {
       title: 'Kevin van der Toorn – Portfolio',
@@ -81,26 +107,26 @@ const Contact = () => {
           <SectionTitle>{t('contact.title')}</SectionTitle>
           <ContactText>{t('contact.text')}</ContactText>
 
-          <TwoCol aligntop style={{ marginBottom: '14px' }}>
-            <div>
+          <ContactTwoCol aligntop>
+            <ContactCol>
               <Label as="div">Connect</Label>
               <Email />
-            </div>
-            <div>
+            </ContactCol>
+            <ContactCol>
               <Label as="div">{t('contact.follow')}</Label>
               <div>
                 <ButtonLinkedIn />
                 <ButtonGithub />
               </div>
-            </div>
-          </TwoCol>
+            </ContactCol>
+          </ContactTwoCol>
           {isWebShareSupported && (
-            <TwoCol aligntop>
-              <div>
+            <ContactTwoCol aligntop>
+              <ContactCol>
                 <Label as="div">{t('contact.share.title')}</Label>
-                <ShareButton secondary iconBefore={<IoMdShare />} onClick={handleShare}>{t('contact.share.button')}</ShareButton>
-              </div>
-            </TwoCol>
+                <ShareButton secondary iconBefore={getShareIcon()} onClick={handleShare}>{t('contact.share.button')}</ShareButton>
+              </ContactCol>
+            </ContactTwoCol>
           )}
         </Container>
       </PageContainer>
