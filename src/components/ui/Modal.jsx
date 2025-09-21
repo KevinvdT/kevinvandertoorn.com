@@ -10,7 +10,7 @@ const ModalOverlay = styled.div`
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.6);
   z-index: 1000;
   opacity: 0;
   animation: ${({ closing }) => (closing ? 'fadeOut' : 'fadeIn')} 0.3s ease-out forwards;
@@ -140,6 +140,7 @@ const CloseButton = styled.button`
 const ModalBody = styled.div`
   padding: 24px;
   overflow-y: auto;
+  overflow-x: hidden;
   flex: 1;
   -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
   

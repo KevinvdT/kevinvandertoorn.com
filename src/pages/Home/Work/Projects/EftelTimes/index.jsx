@@ -14,6 +14,8 @@ import image from './img/image.webp';
 import imageDark from './img/image-dark.webp';
 import etTranslations from './i18n';
 import Button from '../../../../../components/ui/Button';
+import Ganzenhoedster from './Ganzenhoedster';
+import useScreenSize from '../../../../../hooks/useScreenSize';
 
 // Technology tags for EftelTimes
 const TECH_TAG_KEYS = ['html', 'css', 'javascript', '*react', '*redux', 'tailwind', 'styled', '*django', 'drf'];
@@ -37,6 +39,7 @@ const EftelTimes = ({ readMore = true }) => {
   // Resolve current language and project-local translations
   const lang = (i18n.language || 'en').split('-')[0];
   const t = etTranslations[lang] || etTranslations.en;
+  const { isXs } = useScreenSize();
 
   return (
     <>
@@ -54,6 +57,10 @@ const EftelTimes = ({ readMore = true }) => {
 
       <Modal isOpen={isOpen} onClose={() => setIsOpen(false)} title={t.title} maxWidth="700px">
         <PMContainer>
+          <Ganzenhoedster
+            style={{ float: 'right', width: isXs ? '150px' : '200px', margin: '0 -40px' }}
+            title={t.modal.ganzenhoedster}
+          />
           {Array.isArray(t.modal.intro) ? (
             t.modal.intro.map((paragraph, index) => (
               <PMText key={index}>
