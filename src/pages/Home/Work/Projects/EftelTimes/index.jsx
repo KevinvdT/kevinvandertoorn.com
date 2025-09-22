@@ -1,3 +1,8 @@
+// De Ganzenhoedster (The Goose Girl) is one of my favorite statues in Efteling,
+// so I wanted to include it here. I traced a photo of the statue in Sketch,
+// exported it as SVG, and converted it into this JSX component.
+// When you hover over the image, the water streams appear.
+
 import React, { useState } from 'react';
 import { Trans, useTranslation } from 'react-i18next';
 import ProjectItem from '../../ProjectItem';
@@ -89,16 +94,16 @@ const EftelTimes = ({ readMore = true }) => {
           <PMText>
             <Trans components={{ 1: <em /> }}>{t.modal.impact.text}</Trans>
           </PMText>
+          <PMActions>
+            <Button as='a' href={'https://efteling.kevinvandertoorn.com'} target='_blank' rel='noopener noreferrer' externalLink>
+              {t.modal.liveDemo}
+            </Button>
+            <Button as='a' href={'https://github.com/KevinvdT/efteltimes'} target='_blank' rel='noopener noreferrer' secondary externalLink>
+              {t.modal.viewCode}
+            </Button>
+          </PMActions>
         </PMContainer>
 
-        <PMActions>
-          <Button as='a' href={'https://efteling.kevinvandertoorn.com'} target='_blank' rel='noopener noreferrer' externalLink>
-            {t.modal.liveDemo}
-          </Button>
-          <Button as='a' href={'https://github.com/KevinvdT/efteltimes'} target='_blank' rel='noopener noreferrer' secondary externalLink>
-            {t.modal.viewCode}
-          </Button>
-        </PMActions>
       </Modal>
     </>
   );

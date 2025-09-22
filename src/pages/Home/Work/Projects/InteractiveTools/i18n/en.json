@@ -1,24 +1,24 @@
 {
-  "title": "Chat Widget for WhatsApp",
-  "description": "Developed a small-scale but impactful WhatsApp chat widget generator for Saysimple’s website, letting businesses offer a tailored way for customers to start a WhatsApp conversation.",
+  "title": "WhatsApp Chat Widget",
+  "description": "Created a <1>widget generator</1> for Saysimple that lets businesses add a custom WhatsApp <1>entry point</1> to their site in just minutes.",
   "modal": {
     "title": "WhatsApp Chat Widget Generator",
-    "intro": "Built a <1>WhatsApp chat widget generator</1> for <1>Saysimple’s website</1> using React and Redux. The generator produces a lightweight embed built in Svelte, chosen specifically to avoid a heavy library and keep the bundle size tiny. Businesses can paste it into their sites to create a tailored WhatsApp entry point.",
+    "intro": "I built a <1>WhatsApp chat widget generator</1> for <1>Saysimple’s website</1> using <1>React</1> and <1>Redux</1>. The tool outputs a tiny <1>Svelte embed</1>, chosen over heavier libraries to keep performance snappy. Businesses simply copy-paste the snippet into their site to offer a branded, configurable way for customers to start a WhatsApp conversation.",
     "technologies": {
       "title": "Technologies"
     },
     "features": {
       "title": "Key Features",
       "list": [
-        "<1>Generator in React + Redux</1> → outputs a Svelte embed (keeps bundle small, no extra library)",
-        "Configurable WhatsApp entry (call-to-action, theme, placement)",
-        "Copy‑paste embed snippet for any website",
-        "Lightweight Svelte runtime"
+        "Built with <1>React</1> and <1>Redux</1>, outputs a <1>Svelte embed</1> for minimal bundle size",
+        "Customizable <1>call-to-action</1>, theme, and placement",
+        "Instant <1>copy-paste embed</1> for any website",
+        "<1>Lightweight Svelte runtime</1> ensures fast load"
       ]
     },
     "impact": {
       "title": "Impact",
-      "text": "The generator lets businesses configure and publish a WhatsApp entry point on their site in minutes. The Svelte embed loads fast and hands off to WhatsApp for the conversation, reducing friction and increasing conversation starts. Separately, a pricing calculator I built adds another interactive touchpoint on their site."
+      "text": "This generator makes it easy for businesses to publish a WhatsApp entry point <1>without technical overhead</1>. The lightweight embed loads instantly and hands off directly to WhatsApp, lowering friction and <1>driving more conversations</1>. Alongside it, I also developed a <1>pricing calculator</1> that adds <1>another interactive touchpoint</1> to Saysimple’s website."
     },
     "actions": {
       "widget": "View Widget Generator",

@@ -10,7 +10,7 @@
       "Anstatt die interne API von Efteling direkt zu nutzen, verwendet das Backend die ThemeParks API, die ausdrücklich für Anwendungen von Drittanbietern gedacht ist. Ein <1>Django-Backend</1> transformiert und <1>cached die Ergebnisse</1>, um Überlastung zu vermeiden, und stellt sie einem <1>modernen React-Frontend</1> zur Verfügung."
     ],
     "technologies": {
-      "title": "Technologien"
+      "title": "Magische Zutaten"
     },
     "features": {
       "title": "Wichtige Funktionen",

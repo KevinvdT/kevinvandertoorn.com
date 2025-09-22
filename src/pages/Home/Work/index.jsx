@@ -25,7 +25,7 @@ const Work = () => {
 
       <ProjectItemsWrapper>
         <MissionControl />
-        <InteractiveTools readMore={false} />
+        <InteractiveTools readMore={true} />
         <EftelTimes />
         {/* <TestSetup /> */}
         {/* <MainWebsite /> */}

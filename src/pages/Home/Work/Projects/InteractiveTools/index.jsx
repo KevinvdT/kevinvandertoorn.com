@@ -80,7 +80,7 @@ const InteractiveTools = ({ readMore = true }) => {
 
           <PMSectionTitle>{t.modal.impact.title}</PMSectionTitle>
           <PMText>
-            {t.modal.impact.text}
+            <Trans components={{ 1: <em /> }}>{t.modal.impact.text}</Trans>
           </PMText>
 
           <PMActions>

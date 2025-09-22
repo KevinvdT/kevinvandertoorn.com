@@ -1,7 +1,24 @@
+// De Ganzenhoedster (The Goose Girl) is one of my favorite statues in Efteling,
+// so I wanted to include it here. I traced a photo of the statue in Sketch,
+// exported it as SVG, and converted it into this JSX component.
+// When you hover over the image, the water streams appear.
+
 import React from 'react';
 
 const Ganzenhoedster = ({ title, ...props }) => {
   const [showWater, setShowWater] = React.useState(false);
+  // --- Water animation refs and state ---
+  const leftRef = React.useRef(null);
+  const rightRef = React.useRef(null);
+  const [lengths, setLengths] = React.useState({ left: 0, right: 0 });
+  const [ready, setReady] = React.useState(false);
+  React.useEffect(() => {
+    const leftLen = leftRef.current ? leftRef.current.getTotalLength() : 0;
+    const rightLen = rightRef.current ? rightRef.current.getTotalLength() : 0;
+    setLengths({ left: leftLen, right: rightLen });
+    setReady(true);
+  }, []);
+  // ---
   return (<svg
     viewBox="0 0 525 483"
     version="1.1"
@@ -32,7 +49,7 @@ const Ganzenhoedster = ({ title, ...props }) => {
           stroke="#44687D"
           strokeLinecap="square"
           strokeOpacity="0.506528628"
-          strokeWidth={3}
+          strokeWidth={6}
           style={{
             opacity: showWater ? 1 : 0,
             transition: 'opacity 500ms ease',
@@ -42,11 +59,34 @@ const Ganzenhoedster = ({ title, ...props }) => {
           <path
             d="M140.290919,11 C105.798498,42.7903839 -1.69722897,323.988794 0.0203484984,367.752442"
             id="water-links"
+            ref={leftRef}
+            style={{
+              strokeDasharray: showWater ? (lengths.left || 1) : 0,
+              strokeDashoffset: showWater ? 0 : lengths.left,
+              transition: ready
+                ? (showWater
+                  ? 'stroke-dashoffset 1240ms ease-out'
+                  : 'stroke-dasharray 860ms linear, stroke-dashoffset 860ms linear')
+                : 'none',
+              strokeLinecap: 'round'
+            }}
           />
           <path
             d="M515.290919,0 C480.798498,31.7903839 373.302771,312.988794 375.020348,356.752442"
             id="water-rechts"
-            transform="translate(445.1455, 178.3762) scale(-1, 1) translate(-445.1455, -178.3762)"
+            ref={rightRef}
+            transform="translate(445.1455, 178.3762) scale(-1, 1) translate(-440.1455, -178.3762)"
+            style={{
+              strokeDasharray: showWater ? (lengths.right || 1) : 0,
+              strokeDashoffset: showWater ? 0 : lengths.right,
+              transition: ready
+                ? (showWater
+                  ? 'stroke-dashoffset 1240ms ease-out'
+                  : 'stroke-dasharray 860ms linear, stroke-dashoffset 860ms linear')
+                : 'none',
+              transitionDelay: ready ? (showWater ? '60ms' : '40ms') : '0ms',
+              strokeLinecap: 'round'
+            }}
           />
         </g>
         <rect

@@ -1,24 +1,24 @@
 {
   "title": "Chat‑Widget für WhatsApp",
-  "description": "Entwickelte für die Website von Saysimple einen leichten, aber wirkungsvollen Generator für WhatsApp‑Chat‑Widgets. So können Unternehmen Besucher*innen einen einfachen, passenden Einstieg in ein WhatsApp‑Gespräch bieten.",
+  "description": "Entwickelte einen <1>Widget‑Generator</1> für Saysimple, mit dem Unternehmen in wenigen Minuten einen eigenen <1>WhatsApp‑Einstiegspunkt</1> auf ihrer Website einfügen können.",
   "modal": {
     "title": "WhatsApp‑Chat‑Widget‑Generator",
-    "intro": "Erstellte einen <1>WhatsApp‑Chat‑Widget‑Generator</1> für die <1>Saysimple‑Website</1> mit React und Redux. Der Generator erzeugt ein leichtgewichtiges Embed in Svelte, bewusst gewählt, um keine schwere Bibliothek einzubinden und die Bundle‑Größe klein zu halten. Unternehmen können den Snippet auf ihrer Website einfügen, um einen maßgeschneiderten WhatsApp‑Einstiegspunkt zu erstellen.",
+    "intro": "Ich entwickelte einen <1>WhatsApp‑Chat‑Widget‑Generator</1> für die <1>Saysimple‑Website</1> mit <1>React</1> und <1>Redux</1>. Der Generator liefert ein kompaktes <1>Svelte‑Embed</1> – bewusst gewählt, um die Bundle‑Größe klein und die Ladezeiten schnell zu halten. Unternehmen müssen nur den Snippet einfügen, um einen anpassbaren WhatsApp‑Einstiegspunkt auf ihrer Seite bereitzustellen.",
     "technologies": {
       "title": "Technologien"
     },
     "features": {
       "title": "Wichtigste Funktionen",
       "list": [
-        "<1>Generator in React + Redux</1> → erzeugt ein Svelte‑Embed (kleines Bundle, keine zusätzliche Library)",
-        "Konfigurierbarer WhatsApp‑Einstieg (Call‑to‑Action, Theme, Platzierung)",
-        "Copy‑Paste‑Embed‑Snippet für jede Website",
-        "Leichtgewichtiges Svelte‑Runtime"
+        "Gebaut mit <1>React</1> und <1>Redux</1>, liefert ein kompaktes <1>Svelte‑Embed</1>",
+        "Anpassbare <1>Call‑to‑Action</1>, <1>Theme</1> und <1>Platzierung</1>",
+        "Einfacher <1>Copy‑Paste‑Snippet</1> für jede Website",
+        "Leichtgewichtiges <1>Svelte‑Runtime</1> für schnelle Ladezeiten"
       ]
     },
     "impact": {
       "title": "Impact",
-      "text": "Der Generator ermöglicht es Unternehmen, in wenigen Minuten einen WhatsApp‑Einstiegspunkt auf ihrer Website zu konfigurieren und zu veröffentlichen. Das Svelte‑Embed lädt schnell und übergibt das Gespräch an WhatsApp, wodurch Reibung reduziert und mehr Konversationen gestartet werden. Zusätzlich sorgt ein von mir erstellter Preiskalkulator für einen weiteren interaktiven Touchpoint auf der Seite."
+      "text": "Mit diesem Generator können Unternehmen <1>ohne technischen Aufwand</1> innerhalb weniger Minuten einen WhatsApp‑Einstiegspunkt veröffentlichen. Das schlanke Embed lädt sofort und leitet nahtlos zu WhatsApp weiter, was die Hürde senkt und <1>mehr Gespräche</1> ermöglicht. Zusätzlich entwickelte ich einen <1>Preiskalkulator</1>, der einen <1>weiteren interaktiven Kontaktpunkt</1> auf der Seite schafft."
     },
     "actions": {
       "widget": "Widget‑Generator ansehen",
