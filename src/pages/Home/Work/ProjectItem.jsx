@@ -11,6 +11,7 @@ import ReadMoreLink from './ReadMoreLink';
 import Tag from '../../../components/ui/Tag';
 import { IoStar } from 'react-icons/io5';
 import { resolveTags } from './tagsRegistry';
+import useScreenSize from '../../../hooks/useScreenSize';
 
 // Styled components for ProjectItem
 const ProjectItemContainer = styled(TwoCol)`
@@ -20,12 +21,8 @@ const ProjectItemContainer = styled(TwoCol)`
     flex: initial;  /* Ensures that each child (column) DOESN'T take up equal space */
   }
 
-  padding-top: 2.25rem; /* Adjusted padding */
-  padding-bottom: 2.25rem; /* Adjusted padding */
-  @media (max-width: ${({ theme }) => theme.breakpoints.sm}) {
-    padding-top: 1.5rem; /* Adjusted padding */
-    padding-bottom: 1.5rem; /* Adjusted padding */
-  }
+  padding-top: ${({ isMobile }) => isMobile ? '1.5rem' : '2.25rem'};
+  padding-bottom: ${({ isMobile }) => isMobile ? '1.5rem' : '2.25rem'};
 `;
 
 const ProjectImage = styled.img`
@@ -35,10 +32,8 @@ const ProjectImage = styled.img`
   box-shadow: 0 2px 4px 0 rgba(0,0,0,0.08); // More subtle shadow
   border-radius: 20px;
   cursor: ${({ onClick }) => (onClick ? 'pointer' : 'default')};
-  @media (max-width: ${({ theme }) => theme.breakpoints.sm}) {
-    max-width: 100%;
-    margin-bottom: 10px;
-  }
+  max-width: ${({ isMobile }) => isMobile ? '100%' : '356px'};
+  margin-bottom: ${({ isMobile }) => isMobile ? '10px' : '0'};
 `;
 
 const ProjectContent = styled.div`
@@ -49,11 +44,8 @@ const ProjectContent = styled.div`
 const ProjectDescription = styled(SectionText)`
   font-size: 0.9375rem; // Description font size
   white-space: pre-line; // Support newlines
-  line-height: 1.7rem;
+  line-height: ${({ isMobile }) => isMobile ? '1.71875rem' : '1.7rem'};
   margin-bottom: 10px;
-  @media (max-width: ${({ theme }) => theme.breakpoints.sm}) {
-    line-height: 1.71875rem;
-  }
   // &::selection, & em::selection {
   //   background-color: ${({ color }) => color}55;
   // }
@@ -75,9 +67,6 @@ const ProjectCompany = styled.div`
 const ProjectTitle = styled(SectionTitle)`
 font-family: 'Inter','Arial',sans-serif;
   font-size:  1.0625rem;
-  @media (max-width: ${({ theme }) => theme.breakpoints.sm}) {
-    // line-height: 0.5rem;
-  }
   margin-bottom: 0;
   cursor: ${({ onClick }) => (onClick ? 'pointer' : 'default')};
 `;
@@ -131,6 +120,7 @@ const ReadMoreRow = styled.div`
 const ProjectItem = ({ imageSrc, imageSrcDark, title, description, color, projectDetails, onReadMore, setIsOpen, tagKeys = [], company, readMore = true, featured = false }) => {
   const { t } = useTranslation();
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const { maxMobile } = useScreenSize();
 
   // Back-compat: if legacy setIsOpen prop is provided, prefer it; else use onReadMore
   const handleReadMore = () => {
@@ -143,7 +133,7 @@ const ProjectItem = ({ imageSrc, imageSrcDark, title, description, color, projec
 
   return (
     <>
-      <ProjectItemContainer aligntop>
+      <ProjectItemContainer aligntop isMobile={maxMobile}>
         {imageSrcDark ? (
           <picture>
             <source srcSet={imageSrcDark} media="(prefers-color-scheme: dark)" />
@@ -151,6 +141,7 @@ const ProjectItem = ({ imageSrc, imageSrcDark, title, description, color, projec
               src={imageSrc}
               alt={title}
               onClick={readMore && (onReadMore || setIsOpen) ? handleReadMore : undefined}
+              isMobile={maxMobile}
             />
           </picture>
         ) : (
@@ -158,6 +149,7 @@ const ProjectItem = ({ imageSrc, imageSrcDark, title, description, color, projec
             src={imageSrc}
             alt={title}
             onClick={readMore && (onReadMore || setIsOpen) ? handleReadMore : undefined}
+            isMobile={maxMobile}
           />
         )}
         <ProjectContent>
@@ -179,12 +171,12 @@ const ProjectItem = ({ imageSrc, imageSrcDark, title, description, color, projec
           </TitleRow>
           {Array.isArray(description) ? (
             description.map((desc, index) => (
-              <ProjectDescription key={index} color={color}>
+              <ProjectDescription key={index} color={color} isMobile={maxMobile}>
                 <Trans components={{ 1: <em /> }}>{desc}</Trans>
               </ProjectDescription>
             ))
           ) : (
-            <ProjectDescription color={color}>
+            <ProjectDescription color={color} isMobile={maxMobile}>
               <Trans components={{ 1: <em /> }}>{description}</Trans>
             </ProjectDescription>
           )}

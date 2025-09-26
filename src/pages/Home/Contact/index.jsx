@@ -10,6 +10,7 @@ import Email from './Email';
 import Button from '../../../components/ui/Button';
 import { IoMdShare } from "react-icons/io";
 import { IoShareOutline } from "react-icons/io5";
+import useScreenSize from '../../../hooks/useScreenSize';
 
 // Custom styled button that inherits from Button but uses SectionText colors
 const ShareButton = styled(Button)`
@@ -37,20 +38,14 @@ const ContactTwoCol = styled(TwoCol)`
 
 // Styled divs with consistent spacing
 const ContactCol = styled.div`
-  margin-bottom: 14px;
-
-  @media (max-width: ${({ theme }) => theme.breakpoints.sm}) {
-    margin-bottom: 1rem;
-  }
+  margin-bottom: ${({ isMobile }) => isMobile ? '1rem' : '14px'};
 `;
 
 const Footer = styled.div`
   background: #F5F5F7;
+  padding-bottom: ${({ isMobile }) => isMobile ? '60px' : '0'};
   @media (prefers-color-scheme: dark) {
     background: #0d0d0d;
-  }
-  @media (max-width: ${({ theme }) => theme.breakpoints.sm}) {
-    padding-bottom: 60px;
   }
 `;
 
@@ -71,6 +66,7 @@ export const Label = styled(SectionText)`
 
 const Contact = () => {
   const { t } = useTranslation(); // Get the translation function
+  const { maxMobile } = useScreenSize();
 
   // Detect Apple platforms
   const isApplePlatform = () => {
@@ -103,18 +99,18 @@ const Contact = () => {
   const isWebShareSupported = false;
 
   return (
-    <Footer>
+    <Footer isMobile={maxMobile}>
       <PageContainer>
         <Container id="contact">
-          <SectionTitle>{t('contact.title')}</SectionTitle>
+          <SectionTitle isMobile={maxMobile}>{t('contact.title')}</SectionTitle>
           <ContactText>{t('contact.text')}</ContactText>
 
           <ContactTwoCol aligntop>
-            <ContactCol>
+            <ContactCol isMobile={maxMobile}>
               <Label as="div">{t('contact.connect')}</Label>
               <Email />
             </ContactCol>
-            <ContactCol>
+            <ContactCol isMobile={maxMobile}>
               <Label as="div">{t('contact.follow')}</Label>
               <div>
                 <ButtonLinkedIn />
@@ -124,7 +120,7 @@ const Contact = () => {
           </ContactTwoCol>
           {isWebShareSupported && (
             <ContactTwoCol aligntop>
-              <ContactCol>
+              <ContactCol isMobile={maxMobile}>
                 <Label as="div">{t('contact.share.title')}</Label>
                 <ShareButton secondary iconBefore={getShareIcon()} onClick={handleShare}>{t('contact.share.button')}</ShareButton>
               </ContactCol>

@@ -1,19 +1,18 @@
+// TODO: Move this to Hero section since it's only used there
+
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
+import useScreenSize from "../../hooks/useScreenSize";
 
 // Styled components for layers
 const ParallaxContainer = styled.div`
   position: relative;
-  width: 327px; /* Adjust size as needed */
-  height: 327px; /* Adjust size as needed */
+  width: ${({ isMobile }) => isMobile ? '220px' : '327px'};
+  height: ${({ isMobile }) => isMobile ? '220px' : '327px'};
   border-radius: 50%; /* This makes the container a circle */
   overflow: hidden; /* Ensures the images are clipped inside the circle */
   perspective: 1000px;
   /* margin: auto; */
-  @media (max-width: ${({ theme }) => theme.breakpoints.sm}) {
-    width: 195px;
-    height: 195px;
-  }
 `;
 
 const BackgroundLayer = styled.img`
@@ -47,6 +46,7 @@ const clamp = (value, min, max) => {
 const ParallaxImage = ({ front, back }) => {
   const [offsetX, setOffsetX] = useState(0);
   const [offsetY, setOffsetY] = useState(0);
+  const { maxMobile } = useScreenSize();
 
   useEffect(() => {
     const handleMouseMove = (event) => {
@@ -87,7 +87,7 @@ const ParallaxImage = ({ front, back }) => {
   }, []);
 
   return (
-    <ParallaxContainer>
+    <ParallaxContainer isMobile={maxMobile}>
       <BackgroundLayer
         src={back}
         alt="Background of profile picture"

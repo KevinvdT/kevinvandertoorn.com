@@ -19,12 +19,6 @@ export const SectionText = styled.p`
       color: ${({ theme }) => theme.colors.dark.primaryText} 
     }
   }
-
-  @media (max-width: ${({ theme }) => theme.breakpoints.sm}) {
-    font-size: 1rem;
-  }
-
-  
 `;
 
 // Hero Text Component that inherits from SectionText without any additional styling
