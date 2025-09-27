@@ -102,7 +102,7 @@ const Contact = () => {
     <Footer isMobile={maxMobile}>
       <PageContainer>
         <Container id="contact">
-          <SectionTitle isMobile={maxMobile}>{t('contact.title')}</SectionTitle>
+          <SectionTitle>{t('contact.title')}</SectionTitle>
           <ContactText>{t('contact.text')}</ContactText>
 
           <ContactTwoCol aligntop>

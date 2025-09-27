@@ -4,10 +4,11 @@ import profileImage from './profile-picture.jpg';
 import back from './back.png';
 import front from './front.png';
 import ParallaxImage from '../../../../components/ui/ParallaxImage';
+import useScreenSize from '../../../../hooks/useScreenSize';
 
 // Styled component for the circular profile picture
 const StyledProfilePicture = styled.img`
-  width: 327px;  /* Adjust the size as needed */
+  width: ${({ isMobile }) => isMobile ? '195px' : '327px'};
   max-width: 90%;
   height: auto; /* Adjust the size as needed */
   border-radius: 50%; /* Makes the image circular */
@@ -15,25 +16,18 @@ const StyledProfilePicture = styled.img`
 
   @media (prefers-color-scheme: dark) {
   }
-
-  @media (max-width: ${({ theme }) => theme.breakpoints.sm}) {
-    width: 195px;
-  }
 `;
 
 // Wrapper to align the profile picture to the right
 const ProfileWrapper = styled.div`
   display: flex;
   width: 100%; /* Ensures the wrapper takes full width of the parent container */
-  justify-content: flex-end; /* Aligns content to the right */
-
-  @media (max-width: ${({ theme }) => theme.breakpoints.sm}) {
-    justify-content: center; /* Align items to the top when stacked vertically */
-  
-  }
+  justify-content: ${({ isMobile }) => isMobile ? 'center' : 'flex-end'};
 `;
 
 const ProfilePicture = () => {
+  const { maxMobile } = useScreenSize();
+
   // return (
   //   <ProfileWrapper>
   //     <StyledProfilePicture
@@ -43,7 +37,7 @@ const ProfilePicture = () => {
   //   </ProfileWrapper>
   // );
   return (
-    <ProfileWrapper>
+    <ProfileWrapper isMobile={maxMobile}>
       <ParallaxImage
         front={front}
         back={back}

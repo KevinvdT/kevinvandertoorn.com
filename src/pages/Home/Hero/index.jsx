@@ -23,40 +23,98 @@ const HeroIntro = styled.div`
 `;
 
 const HeroContainer = styled(Container)`
-  padding-top: ${({ isMobile }) => isMobile ? '0' : '150px'};
-  height: ${({ isMobile }) => isMobile ? '100vh' : 'auto'};
+  padding-top: ${({ isMobile }) => isMobile ? '10svh' : '150px'};
+  padding-bottom: ${({ isMobile }) => isMobile ? '0' : '8.125rem'};
+  height: ${({ isMobile }) => isMobile ? 'calc(100svh + 2px)' : 'auto'};
   justify-content: ${({ isMobile }) => isMobile ? 'center' : 'flex-start'};
+  // border: 1px solid red;
 `;
 
 const ButtonRow = styled.div`
   display: flex;
   flex-direction: row;
-  margin-top: 40px;
+  margin-top: 27px;
   gap: 1.3125rem;
   justify-content: ${({ isMobile }) => isMobile ? 'center' : 'flex-start'};
+  @media (max-width: ${({ theme }) => theme.breakpoints.sm}) {
+    margin-top: 45px;
+  }
 `;
 
 const DownArrow = styled.div`
   @keyframes jumpInfinite {
     0% {
-      transform: translateY(0);
+      transform: translateY(-10px);
     }
-    40% {
+    30% {
       transform: translateY(20px);
     }
-    80% {
-      transform: translateY(0);
+    70% {
+      transform: translateY(20px);
+    }
+    100% {
+      transform: translateY(-10px);
     }
   }
+  
+  @keyframes fadeInOut {
+    0% {
+      opacity: 0;
+    }
+    10% {
+      opacity: 0;
+    }
+    15% {
+      opacity: 1;
+    }
+    75% {
+      opacity: 1;
+    }
+    80% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  
   display: ${({ isMobile }) => isMobile ? 'flex' : 'none'};
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
   cursor: pointer;
-  margin-top: 30px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 20px;
+  border-radius: 50%;
+  transition: background-color 0.2s ease;
+  position: relative;
+  
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+  }
+  
   & > img {
     display: relative;
     width: 16px;
-    animation: jumpInfinite 4s infinite;
+    animation: jumpInfinite 6s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+  }
+`;
+
+const DownArrowText = styled.span`
+  font-size: 0.75rem;
+  // color: ${({ theme }) => theme.colors.light.secondaryText};
+  font-weight: 500;
+  text-align: center;
+  animation: fadeInOut 6s infinite;
+  position: absolute;
+  top: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #5D5D5D;
+  font-weight: 500;
+  @media (prefers-color-scheme: dark) {
+    // color: ${({ theme }) => theme.colors.dark.secondaryText};
   }
 `;
 
@@ -91,7 +149,7 @@ const Hero = () => {
       <TwoCol reverse>
         <ProfilePicture />
         <HeroIntro isMobile={maxMobile}>
-          <HeroTitle isMobile={maxMobile}>{t(greetingKey)}<br />{t('hero.introduction')}</HeroTitle>
+          <HeroTitle>{t(greetingKey)}<br />{t('hero.introduction')}</HeroTitle>
           <HeroText>{t('hero.developer_intro')}</HeroText>
           <ButtonRow isMobile={maxMobile}>
             {/* <Button onClick={handleScrollToContact}>{t('hero.contact_button')}</Button> */}
@@ -120,7 +178,10 @@ const Hero = () => {
           </ButtonRow>
         </HeroIntro>
       </TwoCol>
-      <DownArrow isMobile={maxMobile}><img src={downarrow} onClick={handleScrollToAbout} alt="Scroll down" /></DownArrow>
+      <DownArrow isMobile={maxMobile} onClick={handleScrollToAbout}>
+        <img src={downarrow} alt="Scroll down" />
+        <DownArrowText>{t('hero.scroll_down')}</DownArrowText>
+      </DownArrow>
     </HeroContainer>
   );
 };

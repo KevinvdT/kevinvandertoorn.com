@@ -102,7 +102,7 @@ const TagsRow = styled.div`
   align-items: center; /* center items vertically */
   gap: 12px;
   min-height: 32px; /* approximate chip height to stabilize alignment */
-  margin-bottom: 14px;
+  margin-bottom: ${({ isMobile }) => (isMobile ? '24px' : '14px')};
 `;
 
 const TagsWrap = styled.div`
@@ -182,7 +182,7 @@ const ProjectItem = ({ imageSrc, imageSrcDark, title, description, color, projec
           )}
 
           {tagKeys.length > 0 && (
-            <TagsRow>
+            <TagsRow isMobile={maxMobile}>
               <TagsWrap>
                 {resolveTags(tagKeys).map(tag => (
                   <Tag key={tag.key} color={tag.color}>{tag.label}</Tag>

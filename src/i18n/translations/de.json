@@ -8,12 +8,13 @@
     "introduction": "Ich bin Kevin",
     "developer_intro": "Ein Web-Developer, der schwierige Probleme in reibungslose Web-Erlebnisse verwandelt.",
     "contact_button": "Kontaktiere mich",
-    "resume_button": "Lebenslauf (Englisch)",
-    "linkedin_button": "LinkedIn"
+    "resume_button": "Lebenslauf",
+    "linkedin_button": "LinkedIn",
+    "scroll_down": "Mehr entdecken"
   },
   "about": {
     "title": "Meine Geschichte",
-    "story": "<1>Webentwickler aus den Niederlanden</1>, <1>aktiv seit den 2000er-Jahren</1>. Angefangen mit MS FrontPage und seitdem stets mit den technologischen Entwicklungen gewachsen.",
+    "story": "<1>Webentwickler aus den Niederlanden</1>, <1>aktiv seit den 2000er-Jahren</1>. Angefangen mit MS\u00A0FrontPage und seitdem stets mit den technologischen Entwicklungen gewachsen.",
     "uvp": "Was mich antreibt, ist das Erschaffen von Tools, die auf den ersten Blick <1>einfach wirken</1>, aber im Hintergrund <1>komplexe Herausforderungen meistern</1>.",
     "skills": "Ich entwickle gerne mit <1>React</1> und <1>Django</1> dynamische und zuverlässige Web-Apps und bleibe immer neugierig, neue Werkzeuge auszuprobieren, um <1>bessere Lösungen zu schaffen</1>.",
     "hobbies": "In meiner Freizeit genieße ich Spaziergänge im <1>Efteling</1>, einem niederländischen Park mit einzigartigem Charme. Außerdem spiele ich gerne Nintendo-spiele und lerne ich gerne Fremdsprachen."
