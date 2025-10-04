@@ -18,7 +18,7 @@ const PageContainer = styled.main`
 
 // Container Component: Provides internal padding for its content
 const Container = styled.section`
-  //border: 1px solid red;
+  // border: 1px solid blue;
   max-width: 100%; /* Ensures the container doesn't stretch too wide on larger screens */
   margin: 0 auto; /* Centers the container */
   padding: 8.125rem 4rem; /* Provides top/bottom and side padding for the container content */

@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { useTranslation } from 'react-i18next';
 import { Container } from '../../../components/layout/Container';
 import { SectionTitle } from '../../../components/ui/Title';
+import useScreenSize from '../../../hooks/useScreenSize';
 import MissionControl from './Projects/MissionControl';
 import TestSetup from './Projects/TestSetup';
 import MainWebsite from './Projects/MainWebsite';
@@ -18,6 +19,7 @@ const ProjectItemsWrapper = styled.div`
 
 const Work = () => {
   const { t } = useTranslation(); // Hook to get translation function
+  const { maxMobile } = useScreenSize();
 
   return (
     <Container id="work">

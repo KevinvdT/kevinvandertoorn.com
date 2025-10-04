@@ -28,7 +28,7 @@ const SkillSetsWrapper = styled.div`
 
 const Skills = () => {
   const { t } = useTranslation(); // Hook to get translation function
-  const { isXs } = useScreenSize(); // Get screen size info
+  const { isXs, maxMobile } = useScreenSize(); // Get screen size info
 
   // Debug logging (remove in production)
   console.log('isXs:', isXs);

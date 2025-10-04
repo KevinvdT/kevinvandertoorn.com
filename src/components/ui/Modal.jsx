@@ -1,6 +1,7 @@
 import React, { useEffect, useState, useRef } from 'react';
 import styled from 'styled-components';
 import { IoIosClose } from "react-icons/io";
+import useScreenSize from '../../hooks/useScreenSize';
 
 const ANIMATION_MS = 300;
 
@@ -57,17 +58,15 @@ const ModalContent = styled.div`
     }
   }
 
-  @media (max-width: ${({ theme }) => theme.breakpoints.sm}) {
-    max-width: 95vw;
-    max-height: 90vh;
+  max-width: ${({ isMobile }) => isMobile ? '95vw' : '800px'};
+  max-height: ${({ isMobile }) => isMobile ? '90vh' : 'calc(100svh - 50px)'};
 
-    @supports (height: 100svh) {
-      max-height: calc(100svh - 15px);
-    }
+  @supports (height: 100svh) {
+    max-height: ${({ isMobile }) => isMobile ? 'calc(100svh - 15px)' : 'calc(100svh - 50px)'};
+  }
 
-    @supports (height: 100dvh) {
-      max-height: calc(100dvh - 15px);
-    }
+  @supports (height: 100dvh) {
+    max-height: ${({ isMobile }) => isMobile ? 'calc(100dvh - 15px)' : 'calc(100svh - 50px)'};
   }
 
   /* Dark mode */
@@ -186,6 +185,7 @@ const Modal = ({
   const [shouldRender, setShouldRender] = useState(isOpen);
   const [closing, setClosing] = useState(false);
   const listenerRef = useRef(null);
+  const { maxMobile } = useScreenSize();
 
   useEffect(() => {
     const handleEscape = (e) => {
@@ -220,7 +220,7 @@ const Modal = ({
 
   return (
     <ModalOverlay closing={closing} onClick={onClose}>
-      <ModalContent closing={closing} onClick={(e) => e.stopPropagation()} maxWidth={maxWidth}>
+      <ModalContent closing={closing} onClick={(e) => e.stopPropagation()} maxWidth={maxWidth} isMobile={maxMobile}>
         <ModalHeader>
           <ModalTitle>{title}</ModalTitle>
           <CloseButton onClick={onClose} aria-label="Close modal">

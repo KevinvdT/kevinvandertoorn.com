@@ -6,6 +6,7 @@ import TwoCol from '../../../components/layout/TwoCol';
 import { SectionTitle } from '../../../components/ui/Title';
 import { SectionText } from '../../../components/ui/Text';
 import Photos from './Photos';
+import useScreenSize from '../../../hooks/useScreenSize';
 
 // Styled components specific to About
 const Emph = styled.em``;
@@ -27,6 +28,7 @@ const Efteling = styled.span`
 
 const About = () => {
   const { t } = useTranslation();
+  const { maxMobile } = useScreenSize();
 
   return (
     <Container id="about">
