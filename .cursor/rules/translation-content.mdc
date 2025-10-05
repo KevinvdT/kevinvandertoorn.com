@@ -1,0 +1,189 @@
+---
+description: apply when working with translations and i18n content
+globs: 
+alwaysApply: true
+---
+
+# Translation Content Guidelines
+
+When working with translations and i18n content, follow these principles:
+
+## Translation Quality
+
+### Natural Language
+- Write text that **appears to be originally written in that language**, not like a (literal) translation
+- Adapt content to **cultural context** and local conventions
+- Use **appropriate tone** for the target audience (professional but approachable)
+- Maintain a **confident but not arrogant** tone across all languages - be convincing (overtuigend) without being boastful
+- Ensure the tone **matches the portfolio's purpose** of attracting clients and showcasing expertise
+
+### Consistency
+- Maintain **consistent terminology** across all translations
+- Use the same **technical terms** throughout (e.g., "Django REST Framework" stays the same)
+- Keep **brand names and proper nouns** consistent across languages, with exceptions for official local names (e.g., "Delft University of Technology" / "Technische Universiteit Delft")
+
+### Length and Formatting
+- **Adapt text length** to fit UI constraints in each language
+- Some languages are naturally longer/shorter - adjust accordingly
+- Preserve **line breaks and formatting** where they serve a purpose
+- Use **non-breaking spaces** (`\u00A0`) for proper text flow
+
+## Content Adaptation
+
+### Cultural Context
+- **Localize examples** and references when appropriate
+- Consider **cultural differences** in communication style
+- Adapt **idioms and expressions** to natural equivalents
+
+### Technical Content
+- Keep **technical terms** consistent across languages
+- Use **established translations** for common tech terms
+- Maintain **code examples and URLs** unchanged
+
+### Dynamic Content
+- Preserve **numbered placeholders** (`<1>`, `<2>`) exactly as they appear
+- Ensure **placeholder context** makes sense in each language
+- Test **placeholder positioning** in different text lengths
+
+## Language-Specific Formatting
+
+### English
+- Use **title case** in places where title case is normally used (headings, titles)
+- Use **Oxford comma** in lists (e.g., "red, white, and blue")
+- Use **em-dashes** (—) for emphasis and breaks
+
+### Dutch, German, and Other Languages
+- **Avoid em-dashes** — use language-appropriate punctuation instead
+- Follow **local capitalization rules** (e.g., German nouns are capitalized, Dutch titles use sentence case)
+- Use **language-appropriate comma rules** (no Oxford comma in Dutch/German)
+- Use **informal address** for Dutch (je/jij) and **formal address** for French (vous) and German (Sie)
+
+## Examples
+
+### Good Translation Examples
+
+**Natural Language:**
+```json
+// English
+"developer_intro": "I design and build web tools that feel simple — but solve tough challenges behind the scenes."
+
+// Dutch (natural, not literal)
+"developer_intro": "Ik maak webtools die eenvoudig te gebruiken zijn – en complexe problemen oplossen."
+
+// German (confident but not arrogant)
+"developer_intro": "Ich entwickle Web-Tools, die einfach wirken – aber komplexe Herausforderungen im Hintergrund lösen."
+```
+
+**Cultural Adaptation:**
+```json
+// English
+"hobbies": "Outside of work, I enjoy strolling in Efteling, a Dutch park with a unique enchanting charm."
+
+// Dutch (local context)
+"hobbies": "Buiten werk vertoef ik graag in de Efteling, speel ik Nintendo-spellen of leer ik vreemde talen."
+
+// German (adapted for German audience)
+"hobbies": "In meiner Freizeit genieße ich Spaziergänge im Efteling, einem niederländischen Park mit einzigartigem Charme."
+```
+
+**V/T Distinction:**
+```json
+// Dutch (informal - je/jij)
+"contact": {
+  "text": "Goede resultaten bereik je samen. Laten we ontdekken hoe we dat kunnen waarmaken."
+}
+
+// German (formal - Sie)
+"contact": {
+  "text": "Gute Ergebnisse erreicht man gemeinsam. Lassen Sie uns herausfinden, wie wir das gemeinsam möglich machen."
+}
+
+// French (formal - vous)
+"contact": {
+  "text": "De bons résultats s'obtiennent ensemble. Explorons comment nous pouvons y parvenir."
+}
+```
+
+**Technical Consistency:**
+```json
+// Keep technical terms consistent across languages
+"backend": {
+  "drf": {
+    "full": "Django REST Framework",  // Same in all languages
+    "short": "Django REST Framew.",
+    "shortest": "Django REST Fw."
+  }
+}
+```
+
+### What to Avoid
+
+**Literal Translations:**
+```json
+// Original (English) → Bad (literal Dutch) → Good (natural Dutch)
+"developer_intro": {
+  "original": "I design and build web tools that feel simple — but solve tough challenges behind the scenes.",
+  "bad": "Ik ontwerp en bouw webtools die eenvoudig voelen — maar moeilijke uitdagingen achter de schermen oplossen.",
+  "good": "Ik maak webtools die eenvoudig te gebruiken zijn – en complexe problemen oplossen."
+}
+
+// Original (English) → Bad (literal German) → Good (natural German)
+"project_description": {
+  "original": "I built a website that runs very fast and can handle many users.",
+  "bad": "Ich habe eine Website gebaut, die sehr schnell läuft und viele Benutzer handhaben kann.",
+  "good": "Ich entwickelte eine hochperformante Website mit hoher Benutzerkapazität."
+}
+
+// Original (English) → Bad (literal French) → Good (natural French)
+"about_me": {
+  "original": "I am a passionate developer who loves creating amazing things.",
+  "bad": "Je suis un développeur passionné qui aime créer des choses incroyables.",
+  "good": "Développeur passionné, j'aime créer des solutions innovantes."
+}
+
+// Original (Dutch) → Bad (literal German) → Good (natural German)
+"contact_text": {
+  "original": "Goede resultaten bereik je samen. Laten we ontdekken hoe we dat kunnen waarmaken.",
+  "bad": "Gute Ergebnisse erreichst du zusammen. Lass uns entdecken, wie wir das verwirklichen können.",
+  "good": "Gute Ergebnisse erreicht man gemeinsam. Lassen Sie uns herausfinden, wie wir das gemeinsam möglich machen."
+}
+
+// Original (English) → Bad (literal French) → Good (natural French)
+"contact_cta": {
+  "original": "Let's talk about your next project.",
+  "bad": "Parlons de votre prochain projet.",
+  "good": "Parlons de votre prochain projet."
+}
+
+// Original (English) → Bad (literal German) → Good (natural German)
+"skills_title": {
+  "original": "Tools I Rock With",
+  "bad": "Werkzeuge mit denen ich rocke",
+  "good": "Tools die ich benutze"
+}
+```
+
+**Inconsistent Tone:**
+```json
+// ❌ Bad - too formal for portfolio
+"contact_button": "Veuillez me contacter"
+
+// ✅ Good - confident but approachable
+"contact_button": "Contact"
+```
+
+**Cultural Missteps:**
+```json
+// ❌ Bad - em-dash in Dutch
+"developer_intro": "Ik maak webtools die eenvoudig zijn — en complexe problemen oplossen."
+
+// ✅ Good - appropriate punctuation
+"developer_intro": "Ik maak webtools die eenvoudig te gebruiken zijn – en complexe problemen oplossen."
+```
+
+## Maintenance
+
+- **Review translations** with native speakers when possible
+- **Test UI layout** with different text lengths
+- **Keep translations in sync** when content changes
+- **Document translation decisions** for complex content

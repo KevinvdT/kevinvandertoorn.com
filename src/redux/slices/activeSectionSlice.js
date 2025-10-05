@@ -1,6 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit';
 import i18next from 'i18next'; // Import i18next
 import sectionNames from '../../constants/sectionNames';
+import posthog from 'posthog-js';
 
 // TODO: Add a way to set the active section from the URL
 
@@ -55,6 +56,15 @@ const activeSectionSlice = createSlice({
           window.history.replaceState(null, '', `/${urlSectionName}`);
           document.title = `Kevin van der Toorn · ${translatedSectionName}`;
         }
+
+        // Track section changes with PostHog
+        posthog.capture('section_view', {
+          section: sectionId,
+          section_name: translatedSectionName,
+          language: i18next.resolvedLanguage,
+          url: window.location.href,
+          timestamp: new Date().toISOString()
+        });
       }
     },
   },
