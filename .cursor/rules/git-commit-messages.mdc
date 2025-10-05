@@ -1,0 +1,59 @@
+---
+description: apply when generating git commit messages
+globs: 
+alwaysApply: true
+---
+
+# Git Commit Message Generation
+
+When generating git commit messages, follow these principles:
+
+## State Facts, Not Assumptions
+
+- Describe what was changed, and why only if the reason is known or obvious
+- Use concrete, observable changes (e.g., "Add user authentication form" not "Improve user experience")
+- Focus on the actual modifications made to files and code
+
+## Avoid Speculation
+
+- Do not infer the developer's intent or reasoning unless it's explicitly obvious from the changes
+- Do not add explanatory context that isn't directly visible in the diff
+- Do not assume business logic or user-facing impact unless clearly evident
+
+## Use Clear, Concise Language
+
+- Start with a verb in imperative mood (Add, Fix, Update, Remove, etc.)
+- Keep the subject line under 50 characters when possible
+- Be specific about what was modified (file names, function names, features)
+- Use scope prefixes when helpful: feat:, fix:, refactor:, docs:, style:, test:, chore:
+
+## Common Change Types
+
+- **New features**: "Add user profile editing"
+- **Bug fixes**: "Fix memory leak in data processing"
+- **Refactoring**: "Refactor authentication middleware"
+- **Dependencies**: "Update React to v18.2.0"
+- **Configuration**: "Add ESLint rules for TypeScript"
+- **Documentation**: "Update API documentation"
+
+## Breaking Changes
+
+- Use "BREAKING CHANGE:" in the body for breaking changes
+- Example: "feat: change API response format\n\nBREAKING CHANGE: user object now includes 'id' field"
+
+## Examples
+
+**Good:**
+- "Add login form validation"
+- "Fix responsive layout in mobile view"
+- "Update package.json dependencies"
+- "Remove unused CSS classes"
+- "feat: add dark mode toggle"
+- "fix: resolve memory leak in image processing"
+
+**Avoid:**
+- "Improve user experience by adding validation" (assumes intent)
+- "Fix bug that was causing issues" (vague, assumes problem)
+- "Update code for better performance" (assumes optimization intent)
+- "WIP" or "temp" (too vague)
+- "Fix stuff" (not descriptive)

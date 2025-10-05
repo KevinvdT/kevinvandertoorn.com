@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import { useTranslation } from 'react-i18next';
+import posthog from 'posthog-js';
 
 const SwitcherContainer = styled.div`
   position: absolute;
@@ -76,10 +77,27 @@ const LanguageSwitcher = () => {
   useEffect(() => {
     // Update currentLanguage whenever i18n.resolvedLanguage changes
     setCurrentLanguage(i18n.resolvedLanguage);
+
+    // Track initial language detection
+    posthog.capture('language_detected', {
+      detected_language: i18n.resolvedLanguage,
+      browser_language: navigator.language,
+      timestamp: new Date().toISOString(),
+      url: window.location.href
+    });
   }, [i18n.resolvedLanguage]);
 
   const handleLanguageChange = (language) => {
+    const previousLanguage = i18n.resolvedLanguage;
     i18n.changeLanguage(language); // Switch to the selected language
+
+    // Track language change with PostHog
+    posthog.capture('language_changed', {
+      from_language: previousLanguage,
+      to_language: language,
+      timestamp: new Date().toISOString(),
+      url: window.location.href
+    });
   };
 
   return (
