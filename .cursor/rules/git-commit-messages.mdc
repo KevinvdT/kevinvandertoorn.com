@@ -1,9 +1,7 @@
 ---
 description: apply when generating git commit messages
-globs: 
-alwaysApply: true
+alwaysApply: false
 ---
-
 # Git Commit Message Generation
 
 When generating git commit messages, follow these principles:
