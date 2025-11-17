@@ -1,62 +1,115 @@
 ---
-description: apply when working with translations and i18n content
-globs: 
 alwaysApply: true
+description: guidelines for copywriting, translation, and i18n consistency
 ---
+# Copywriting, Translation & i18n Guidelines
 
-# Translation Content Guidelines
+## Core Principles
 
 When working with translations and i18n content, follow these principles:
 
-## Translation Quality
+> **Note:** These are guidelines, not rigid rules. Natural, authentic language should always take precedence over strict adherence to formatting rules. When in doubt, ask.
 
-### Natural Language
+## Writing & Translation Quality
+
+### Translation Quality
+
+#### Natural Language
 - Write text that **appears to be originally written in that language**, not like a (literal) translation
 - Adapt content to **cultural context** and local conventions
 - Use **appropriate tone** for the target audience (professional but approachable)
 - Maintain a **confident but not arrogant** tone across all languages - be convincing (overtuigend) without being boastful
 - Ensure the tone **matches the portfolio's purpose** of attracting clients and showcasing expertise
 
-### Consistency
+#### Consistency
 - Maintain **consistent terminology** across all translations
 - Use the same **technical terms** throughout (e.g., "Django REST Framework" stays the same)
 - Keep **brand names and proper nouns** consistent across languages, with exceptions for official local names (e.g., "Delft University of Technology" / "Technische Universiteit Delft")
 
-### Length and Formatting
+#### Length and Formatting
 - **Adapt text length** to fit UI constraints in each language
 - Some languages are naturally longer/shorter - adjust accordingly
 - Preserve **line breaks and formatting** where they serve a purpose
 - Use **non-breaking spaces** (`\u00A0`) for proper text flow
 
-## Content Adaptation
-
-### Cultural Context
-- **Localize examples** and references when appropriate
-- Consider **cultural differences** in communication style
-- Adapt **idioms and expressions** to natural equivalents
-
 ### Technical Content
 - Keep **technical terms** consistent across languages
 - Use **established translations** for common tech terms
-- Maintain **code examples and URLs** unchanged
+- Maintain **code examples and URLs** unchanged, except when the example text itself depends on language context (e.g., inline comments, string literals, or visible placeholder text).
 
 ### Dynamic Content
 - Preserve **numbered placeholders** (`<1>`, `<2>`) exactly as they appear
 - Ensure **placeholder context** makes sense in each language
 - Test **placeholder positioning** in different text lengths
 
+## Localization Guidelines
+
+### Cultural Context
+- **Localize examples** and references when appropriate
+- Consider **cultural differences** in communication style
+- Adapt **idioms and expressions** to natural equivalents
+
+### Localization vs. Global Context
+When referencing culturally specific places, institutions, or expressions, consider the **typical audience** for each language — the group the vast majority of readers in that locale will belong to — and when in doubt, **err on the side of brief explanation**.
+- **Local audiences:** assume familiarity and keep references natural.
+- **International audiences:** add short clarifiers to maintain understanding without breaking flow.
+
+> For example, for Dutch content the **typical audience** includes readers in the Netherlands and Flanders, who are naturally familiar with local references such as *de Efteling* or *TU Delft*. (While Dutch is also spoken in places like Suriname and the Caribbean, readers there generally have some familiarity with the Netherlands. The tone and references primarily reflect Dutch as used in the Netherlands and Flanders, without excluding broader Dutch-speaking audiences.)
+
+**Examples:**
+```json
+// Dutch (local audience - no explanation needed)
+"hobbies": "Buiten werk vertoef ik graag in de Efteling."
+
+// English (international audience - brief clarification added)
+"hobbies": "Outside of work, I enjoy strolling in Efteling, a Dutch theme park known for its enchanting atmosphere."
+
+// French (partial familiarity - subtle context)
+"hobbies": "En dehors du travail, j’aime me promener à l’Efteling, un parc néerlandais au charme féerique."
+```
+
 ## Language-Specific Formatting
 
+> **Language Standards:**  
+> Translations follow the standard variants for each language to maintain consistency:
+> - **English:** United States  
+> - **Dutch:** Netherlands  
+> - **French:** France  
+> - **German:** Germany  
+> These standards define spelling, grammar, and stylistic conventions unless a localized adaptation is clearly more natural for the audience.  
+>  
+> When possible, prefer a **neutral or generally accepted form** that feels natural across variants — though in some cases, a slightly more colloquial phrasing can better convey authenticity and tone. These are **guidelines, not rigid rules** — clarity and authenticity always take priority.
+
 ### English
+- Use **American spelling** (e.g., "organize" not "organise", "center" not "centre")
+- Prefer **neutral English variants** for a global audience when natural instead of choosing between American or British variants (applies to vocabulary, phrasing, and expressions, not just spelling)
+- Use **British day/month/year order** for dates in a non-ambiguous way (e.g., "15 March 2024" not "March 15, 2024" or "15/03/2024"), or automatically determine the order based on user locale/location
+- Use **curly quotation marks and apostrophes** (“…”, ‘…’, …’s) instead of straight ones ("…", '…') for natural typography.
 - Use **title case** in places where title case is normally used (headings, titles)
 - Use **Oxford comma** in lists (e.g., "red, white, and blue")
-- Use **em-dashes** (—) for emphasis and breaks
+- Use **em-dashes** (—) for emphasis and breaks, but use them **sparingly** to avoid feeling AI-generated (they are nowadays often seen as  indicators of AI-written content)
 
-### Dutch, German, and Other Languages
+### Dutch, German, French,and Other Languages
 - **Avoid em-dashes** — use language-appropriate punctuation instead
 - Follow **local capitalization rules** (e.g., German nouns are capitalized, Dutch titles use sentence case)
 - Use **language-appropriate comma rules** (no Oxford comma in Dutch/German)
 - Use **informal address** for Dutch (je/jij) and **formal address** for French (vous) and German (Sie)
+- Use **curly quotation marks and apostrophes** appropriate to the language:  
+  - **English:** “…” and ‘…’  
+  - **German:** „…“ and ‚…‘  
+  - **Dutch:** “…” and ‘…’  
+  - **French:** « … » (with thin non-breaking spaces) and curly apostrophes (’).  
+  
+  Avoid straight quotes ("…", '…') for proper typography.
+
+## Capitalization & Punctuation
+
+- Use **title case** in places where title case is normally used (headings, titles) in English.
+- Use **sentence case** for Dutch titles.
+- Use **em-dashes** (—) sparingly in English for emphasis and breaks.
+- Avoid em-dashes in Dutch, German, and other languages; use language-appropriate punctuation instead.
+- Use **Oxford comma** in English lists; avoid it in Dutch and German.
+- Use **curly quotation marks and apostrophes** appropriate to each language as specified in Language-Specific Formatting.
 
 ## Examples
 
@@ -100,7 +153,7 @@ When working with translations and i18n content, follow these principles:
 
 // French (formal - vous)
 "contact": {
-  "text": "De bons résultats s'obtiennent ensemble. Explorons comment nous pouvons y parvenir."
+  "text": "De bons résultats s’obtiennent ensemble. Explorons comment nous pouvons y parvenir."
 }
 ```
 
@@ -138,7 +191,7 @@ When working with translations and i18n content, follow these principles:
 "about_me": {
   "original": "I am a passionate developer who loves creating amazing things.",
   "bad": "Je suis un développeur passionné qui aime créer des choses incroyables.",
-  "good": "Développeur passionné, j'aime créer des solutions innovantes."
+  "good": "Développeur passionné, j’aime créer des solutions innovantes."
 }
 
 // Original (Dutch) → Bad (literal German) → Good (natural German)
@@ -150,7 +203,7 @@ When working with translations and i18n content, follow these principles:
 
 // Original (English) → Bad (literal French) → Good (natural French)
 "contact_cta": {
-  "original": "Let's talk about your next project.",
+  "original": "Let’s talk about your next project.",
   "bad": "Parlons de votre prochain projet.",
   "good": "Parlons de votre prochain projet."
 }
@@ -183,7 +236,7 @@ When working with translations and i18n content, follow these principles:
 
 ## Maintenance
 
-- **Review translations** with native speakers when possible
-- **Test UI layout** with different text lengths
-- **Keep translations in sync** when content changes
-- **Document translation decisions** for complex content
+- **Regularly revalidate output** for tone, clarity, and correctness when models or prompts are updated.
+- **Test UI layout** with generated content to ensure design integrity across varying text lengths.
+- **Keep prompts, glossaries, and terminology files in sync** with content updates.
+- **Document stylistic or contextual decisions** (e.g., tone adjustments, audience-specific phrasing) to maintain consistency across future outputs.
