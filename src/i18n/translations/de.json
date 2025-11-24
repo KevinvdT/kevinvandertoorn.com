@@ -14,7 +14,7 @@
   },
   "about": {
     "title": "Meine Geschichte",
-    "story": "<1>Webentwickler aus den Niederlanden</1>, <1>aktiv seit den 2000er-Jahren</1>. Angefangen mit MS\u00A0FrontPage und seitdem stets mit den technologischen Entwicklungen gewachsen.",
+    "story": "<1>Entwickler aus den Niederlanden</1>, <1>aktiv seit den 2000er-Jahren</1>. Angefangen mit MS\u00A0FrontPage und seitdem stets mit den technologischen Entwicklungen gewachsen.",
     "uvp": "Was mich antreibt, ist das Erschaffen von Tools, die auf den ersten Blick <1>einfach wirken</1>, aber im Hintergrund <1>komplexe Herausforderungen meistern</1>.",
     "skills": "Ich entwickle gerne mit <1>React</1> und <1>Django</1> dynamische und zuverlässige Web-Apps und bleibe immer neugierig, neue Werkzeuge auszuprobieren, um <1>bessere Lösungen zu schaffen</1>.",
     "hobbies": "In meiner Freizeit genieße ich Spaziergänge im <1>Efteling</1>, einem niederländischen Park mit einzigartigem Charme. Außerdem spiele ich gerne Nintendo-spiele und lerne ich gerne Fremdsprachen."
@@ -44,7 +44,7 @@
     "featured": "Highlight"
   },
   "skills": {
-    "title": "Tools die ich benutze",
+    "title": "Tools, die ich benutze",
     "description": "Ich habe Fachkenntnisse in den unten aufgeführten Technologien entwickelt. Bin auch immer begeistert, neue Tools und Frameworks zu erkunden und zu meistern, die mir helfen, noch bessere Lösungen zu liefern.",
     "frontend": {
       "title": "Front-End"

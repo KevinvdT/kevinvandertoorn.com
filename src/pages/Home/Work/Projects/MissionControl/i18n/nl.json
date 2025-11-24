@@ -24,8 +24,8 @@
     "impact": {
       "title": "Impact",
       "text": [
-        "Mission Control was de <1>primaire interface</1> van het team tijdens veilige, hogesnelheidsritten. Operators konden in één oogopslag de gezondheid van de pod verifiëren, direct reageren op afwijkingen en voldoen aan de strikte wedstrijdregels van SpaceX (statusdisplay, externe monitoring, noodstop, lanceringstoestemming).",
-        "Het systeem werd <1>grondig gevalideerd</1> met unittests, end-to-end tests en vacuümtesten van de Communication Hub, en bewees zo <1>betrouwbaar te zijn onder wedstrijdcondities</1>. Mission Control sloeg een brug tussen deterministische besturing op de TI Hercules en flexibele communicatie op de Raspberry Pi, waardoor het team veilig de grenzen van de prestaties kon opzoeken."
+        "Mission Control fungeerde als de <1>primaire interface</1> van het team tijdens veilige hogesnelheidsritten. Operators konden in één oogopslag de gezondheid van de pod beoordelen, onmiddellijk reageren op afwijkingen en <1>voldoen aan de strikte wedstrijdvereisten van SpaceX</1> (statusdisplay, externe monitoring, noodstop, lanceringsprocedure).",
+        "Het systeem werd <1>grondig gevalideerd</1> met unittests, end-to-end tests en vacuümtesten van de Communication Hub, en bewees zo <1>betrouwbaar te zijn onder wedstrijdcondities</1>. Mission Control vormde de schakel tussen deterministische besturing op de TI Hercules en flexibele communicatie op de Raspberry Pi, waardoor het team gecontroleerd de grenzen van de prestaties kon opzoeken."
       ]
     }
   }

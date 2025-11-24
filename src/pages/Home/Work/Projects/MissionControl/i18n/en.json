@@ -24,8 +24,8 @@
     "impact": {
       "title": "Impact",
       "text": [
-        "Mission Control was the team’s <1>primary interface for safe, high-speed runs</1>. It enabled operators to <1>verify pod health at a glance</1>, react instantly to anomalies, and comply with competition rules (health display, external monitoring, remote stop, launch gating).",
-        "The system was <1>thoroughly validated</1> through unit tests, end-to-end chain tests, and vacuum testing of the Communication Hub, ensuring <1>reliability under competition conditions</1>. Mission Control bridged deterministic control on the TI Hercules with flexible communication on the Raspberry Pi, providing the <1>oversight that made safe high-performance testing possible</1>."
+        "Mission Control served as the team’s <1>primary interface for safe, high-speed runs</1>. It enabled operators to <1>assess pod health at a glance</1>, react immediately to anomalies, and <1>meet the strict competition requirements of SpaceX</1> (health display, external monitoring, remote stop, launch gating).",
+        "The system was <1>validated extensively</1> through unit tests, end-to-end chain tests, and vacuum testing of the Communication Hub, demonstrating <1>reliability under competition conditions</1>. Mission Control bridged deterministic control on the TI Hercules with flexible communication on the Raspberry Pi, giving the team the visibility and safeguards needed to conduct <1>safe, high-performance testing</1>."
       ]
     }
   }
