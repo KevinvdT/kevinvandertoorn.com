@@ -9,19 +9,18 @@ const EmailText = styled(SectionText)`
   transition: all 0.2s ease;
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 12px;
 `;
 
 const CopyIcon = styled(MdContentCopy)`
   flex-shrink: 0;
   vertical-align: middle;
-  opacity: ${props => props.$isVisible ? 1 : 0};
-  transition: opacity 0.2s ease;
+  transform: scale(-1, 1);
+  font-size: 1.05em;
 `;
 
 const Email = () => {
   const { t } = useTranslation();
-  const [isHovered, setIsHovered] = useState(false);
   const [isCopied, setIsCopied] = useState(false);
 
   // Simple obfuscation: email with extra characters that get removed
@@ -48,12 +47,10 @@ const Email = () => {
 
   return (
     <EmailText
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
       onClick={handleCopy}
     >
       {getDisplayText()}
-      <CopyIcon $isVisible={isHovered} />
+      <CopyIcon />
     </EmailText>
   );
 };
