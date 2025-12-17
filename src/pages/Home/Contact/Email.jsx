@@ -17,6 +17,17 @@ const CopyIcon = styled(MdContentCopy)`
   vertical-align: middle;
   transform: scale(-1, 1);
   font-size: 1.05em;
+  transition: color 0.2s ease;
+
+  ${EmailText}:hover & {
+    color: ${({ theme }) => theme.colors.light.primaryText};
+  }
+
+  @media (prefers-color-scheme: dark) {
+    ${EmailText}:hover & {
+      color: ${({ theme }) => theme.colors.dark.primaryText};
+    }
+  }
 `;
 
 const Email = () => {
@@ -34,7 +45,7 @@ const Email = () => {
       setIsCopied(true);
       setTimeout(() => {
         setIsCopied(false);
-      }, 2000);
+      }, 3200);
     } catch (err) {
       console.error('Failed to copy email:', err);
     }
