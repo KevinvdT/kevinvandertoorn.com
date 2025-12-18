@@ -1,0 +1,33 @@
+{
+  "title": "Flood Risk Assessment",
+  "company": "Delft University of Technology",
+  "description": "Computer vision system estimating ground-floor elevation from street-level imagery as an input for large-scale flood risk assessment.",
+  "modal": {
+    "title": "Flood Risk Assessment from Street View Imagery",
+    "intro": "For my <1>Bachelor Graduation Project</1>, I worked on a computer vision system that estimates the <1>ground-floor elevation of houses</1> from street-level imagery, as an input for <1>flood risk assessment</1>. Floods account for a large share of natural disasters worldwide, yet detailed elevation data is often costly or unavailable. This project explored whether <1>widely available street-view imagery</1> can help bridge part of that gap through a carefully designed, end-to-end pipeline.",
+    "video": {
+      "title": "Pipeline Visualization",
+      "alt": "Pipeline Visualization"
+    },
+    "technologies": {
+      "title": "Technologies"
+    },
+    "features": {
+      "title": "Key Components",
+      "list": [
+        "<1>End-to-end vision pipeline</1>: A three-stage system combining preprocessing, object detection, and post-processing to produce a single elevation estimate per image.",
+        "<1>Object detection model</1>: A YOLOv8-based detector trained on manually annotated street-view images to detect houses, doors, and steps across diverse urban environments.",
+        "<1>Post-processing beyond confidence scores</1>: Low confidence thresholds were used to maximize recall, followed by geometric filtering, clustering, and overlap removal to eliminate false positives.",
+        "<1>Structural reasoning in images</1>: Detected steps were grouped into staircases using density-based clustering, with scene-level constraints applied to select the staircase belonging to the centered house.",
+        "<1>Evaluation tied to the real problem</1>: Performance was assessed using both object-detection metrics (precision, recall, F1) and regression-style metrics (RMSE in number of steps), reflecting real-world flood risk usage."
+      ]
+    },
+    "impact": {
+      "title": "Results & Impact",
+      "text": [
+        "The final system achieved a <1>precision of 0.908</1> for step detection and an <1>RMSE of 1.19 steps per image</1> on a held-out test set of 111 images, while remaining fast enough for large-scale analysis.",
+        "Rather than relying on a single model’s confidence, the project demonstrated how <1>engineering judgment and transparent post-processing</1> can compensate for limited data and imperfect detections, resulting in a system that is both interpretable and practically usable."
+      ]
+    }
+  }
+}

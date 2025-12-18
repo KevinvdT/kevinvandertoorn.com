@@ -37,6 +37,9 @@ export const TAGS = {
   matlab: { key: 'matlab', label: 'Matlab', color: COLORS.ORANGE },
   mqtt: { key: 'mqtt', label: 'MQTT', color: COLORS.PINK },
   rabbitmq: { key: 'rabbitmq', label: 'RabbitMQ', color: COLORS.ORANGE },
+  pytorch: { key: 'pytorch', label: 'PyTorch', color: COLORS.ORANGE },
+  yolov8: { key: 'yolov8', label: 'YOLOv8', color: COLORS.PURPLE },
+  opencv: { key: 'opencv', label: 'OpenCV', color: COLORS.RED },
 };
 
 export const resolveTags = (keys = []) => keys

@@ -10,6 +10,7 @@ import MainWebsite from './Projects/MainWebsite';
 import InteractiveTools from './Projects/InteractiveTools';
 import EftelTimes from './Projects/EftelTimes';
 import TransportNetworkModel from './Projects/TransportNetworkModel';
+import FloodRisk from './Projects/FloodRisk';
 
 const ProjectItemsWrapper = styled.div`
   // margin-top: 1.5rem; /* Adjusted margin */
@@ -28,6 +29,7 @@ const Work = () => {
       <ProjectItemsWrapper>
         <MissionControl />
         <InteractiveTools readMore={true} />
+        <FloodRisk />
         <EftelTimes />
         {/* <TestSetup /> */}
         {/* <MainWebsite /> */}
