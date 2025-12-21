@@ -102,8 +102,8 @@ const CloseButton = styled.button`
   width: 32px;
   height: 32px;
   border-radius: 50%;
-  background-color: gray;
-  color: white;
+  background-color: #e8e8ed;
+  color: #6e6e73;
   border: none;
   cursor: pointer;
   display: flex;
@@ -111,10 +111,12 @@ const CloseButton = styled.button`
   justify-content: center;
   font-size: 28px;
   font-weight: 400;
-  transition: background-color 0.2s ease;
+  // transition: background-color 0.2s ease;
+  transition: color .1s linear,background .2s linear;
 
   &:hover {
-    background-color: gray;
+    background-color: #ececf0;
+    color: #000000b8;
   }
 
   &:focus {
