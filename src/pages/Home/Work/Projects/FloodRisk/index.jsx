@@ -5,6 +5,8 @@ import ProjectItem from '../../ProjectItem';
 import ReadMoreLink from '../../ReadMoreLink';
 import Modal from '../../../../../components/ui/Modal';
 import Button from '../../../../../components/ui/Button';
+import useScreenSize from '../../../../../hooks/useScreenSize';
+import useColorScheme from '../../../../../hooks/useColorScheme';
 import {
   PMContainer,
   PMTitle,
@@ -16,18 +18,20 @@ import {
   BulletList
 } from '../../ProjectModalParts';
 import image from './img/image.webp';
-import podImage from './img/pod_light_background.png';
+import pipelineImage from './img/pipeline.webp';
+import pipelineImageDark from './img/pipeline-dark.webp';
 import screenshot from './img/screenshot.webp';
 import videoCover from './img/video-cover.png';
 import frTranslations from './i18n';
 
-const PodImageContainer = styled.div`
+const PipelineImageContainer = styled.div`
   text-align: center;
   margin-top: 58px;
 `;
 
-const PodImage = styled.img`
-  width: 30%;
+const PipelineImage = styled.img`
+  width: calc(100% - ${({ isMobile }) => isMobile ? '0rem' : '6rem'});
+  margin: 0 ${({ isMobile }) => isMobile ? '0rem' : '3rem'};
   height: auto;
   opacity: 0.85;
   transition: opacity 0.3s ease;
@@ -113,6 +117,8 @@ const FloodRisk = () => {
   const { i18n } = useTranslation();
   const [isOpen, setIsOpen] = useState(false);
   const [showVideo, setShowVideo] = useState(false);
+  const { maxMobile } = useScreenSize();
+  const { isDark } = useColorScheme();
 
   const { preview, all } = splitPreviewAndAll(TECH_TAG_KEYS);
 
@@ -201,12 +207,13 @@ const FloodRisk = () => {
 
 
 
-          <PodImageContainer>
-            <PodImage
-              src={podImage}
-              alt="Delft Hyperloop ATLAS Pod"
+          <PipelineImageContainer>
+            <PipelineImage
+              src={isDark ? pipelineImageDark : pipelineImage}
+              alt="Pipeline"
+              isMobile={maxMobile}
             />
-          </PodImageContainer>
+          </PipelineImageContainer>
 
           {/* <PMActions>
             <Button as='a' href="#" target='_blank' rel='noopener noreferrer'>

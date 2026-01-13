@@ -27,7 +27,7 @@ export const PMText = styled(SectionText)`
 
 export const PMSectionTitle = styled(BaseTitle).attrs({ as: 'h4' })`
   font-size: 1rem;
-  margin: 24px 0 12px 0;
+  margin: 32px 0 12px 0;
   font-family: 'Inter', 'Arial', sans-serif;
 `;
 
@@ -35,7 +35,8 @@ export const PMTechTags = styled.div`
   display: flex;
   gap: 10px;
   flex-wrap: wrap;
-  margin-bottom: 20px;
+  margin-bottom: 36px;
+  margin-top: 21px;
 `;
 
 export const PMTechTag = styled(Tag)``;

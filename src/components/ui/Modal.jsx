@@ -58,7 +58,7 @@ const ModalContent = styled.div`
     }
   }
 
-  max-width: ${({ isMobile }) => isMobile ? '95vw' : '800px'};
+  max-width: ${({ isMobile }) => isMobile ? '100vw' : '800px'};
   max-height: ${({ isMobile }) => isMobile ? '90vh' : 'calc(100svh - 50px)'};
 
   @supports (height: 100svh) {
