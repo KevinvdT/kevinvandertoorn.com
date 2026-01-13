@@ -153,6 +153,9 @@ const FloodRisk = () => {
           <PMText>
             <Trans components={{ 1: <em /> }}>{t.modal.intro}</Trans>
           </PMText>
+          <PMText>
+            <Trans components={{ 1: <em /> }}>{t.modal.collaboration}</Trans>
+          </PMText>
 
           <PMSectionTitle>{t.modal.technologies.title}</PMSectionTitle>
           <PMTechTagList items={all} />

@@ -1,10 +1,11 @@
 {
-  "title": "Flood Risk Assessment",
+  "title": "Flood Risk Assessment using Computer Vision",
   "company": "Delft University of Technology",
-  "description": "Computer vision system estimating ground-floor elevation from street-level imagery as an input for large-scale flood risk assessment.",
+  "description": "End-to-end pipeline estimating ground-floor elevation from street-level imagery for large-scale flood risk analysis.",
   "modal": {
     "title": "Flood Risk Assessment from Street View Imagery",
-    "intro": "For my <1>Bachelor Graduation Project</1>, I worked on a computer vision system that estimates the <1>ground-floor elevation of houses</1> from street-level imagery, as an input for <1>flood risk assessment</1>. Floods account for a large share of natural disasters worldwide, yet detailed elevation data is often costly or unavailable. This project explored whether <1>widely available street-view imagery</1> can help bridge part of that gap through a carefully designed, end-to-end pipeline.",
+    "intro": "For my <1>Bachelor Graduation Project</1>, I worked on a computer vision system that estimates the <1>ground-floor elevation of houses</1> from street-level imagery, as an input for <1>flood risk assessment</1>. While floods account for a large share of natural disasters worldwide, detailed elevation data is often costly, incomplete, or unavailable. This project explored whether <1>widely available street-view imagery</1> can help bridge part of that gap through a carefully designed, end-to-end pipeline.",
+    "collaboration": "The project was conducted at <1>Delft University of Technology</1>, in collaboration with researchers at <1>Nanyang Technological University</1> in <1>Singapore</1>.",
     "video": {
       "title": "Pipeline Visualization",
       "alt": "Pipeline Visualization"
