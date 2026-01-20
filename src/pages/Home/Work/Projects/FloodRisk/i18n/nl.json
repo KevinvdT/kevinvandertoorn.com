@@ -16,10 +16,10 @@
     "features": {
       "title": "Belangrijkste onderdelen",
       "list": [
-        "<1>End-to-end vision pipeline</1>: Een systeem in drie stappen — preprocessing, objectdetectie en post-processing — dat per beeld één hoogte-inschatting oplevert.",
+        "<1>End-to-end vision pipeline</1>: Een drievoudig systeem bestaande uit preprocessing, objectdetectie en postprocessing, dat per beeld één hoogte-inschatting oplevert.",
         "<1>Objectdetectiemodel</1>: Een YOLOv8-gebaseerde detector, getraind op handmatig geannoteerde streetview-beelden, voor het detecteren van huizen, deuren en treden in uiteenlopende stedelijke omgevingen.",
         "<1>Post-processing voorbij confidence-scores</1>: Lage confidence-drempels werden gebruikt om de recall te maximaliseren, gevolgd door geometrische filtering, clustering en het verwijderen van overlap om false positives te elimineren.",
-        "<1>Structurele redenering in beelden</1>: Gedetecteerde treden werden met behulp van density-based clustering gegroepeerd tot trappen, waarna scène-niveau-constraints werden toegepast om de trap behorend bij het gecentreerde huis te selecteren.",
+        "<1>Structurele redenering in beelden</1>: Gedetecteerde treden werden met behulp van density-based clustering gegroepeerd tot trappen, waarna constraints op scène-niveau werden toegepast om de trap behorend bij het gecentreerde huis te selecteren.",
         "<1>Evaluatie gekoppeld aan het echte probleem</1>: De prestaties werden beoordeeld met zowel objectdetectiemetingen (precisie, recall, F1-score) als regressiemetingen (RMSE in aantal treden), passend bij praktisch gebruik in overstromingsrisico-analyse."
       ]
     },
