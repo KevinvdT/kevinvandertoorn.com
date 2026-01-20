@@ -1,31 +1,33 @@
 {
-  "title": "Mission Control",
-  "description": "Realtime operatorinterface voor de Delft Hyperloop-pod tijdens de SpaceX Hyperloop Pod Competition 2018, met telemetrie, navigatie-inzichten en missiekritieke commando’s.",
+  "title": "Overstromingsrisico bepalen met computer vision",
+  "company": "TU Delft",
+  "description": "End-to-end pipeline die op grote schaal overstromingsrisico inschat met behulp van streetview-beelden.",
   "modal": {
-    "title": "Mission Control",
-    "intro": "Ontwikkelde de <1>realtime operatorinterface</1> voor de Delft Hyperloop-pod tijdens de SpaceX Hyperloop Pod Competition (2018). Mission Control vormde de externe helft van het communicatiesysteem, werkend in tandem met de on-board Communication Hub. Het verzamelde live telemetrie van <1>meer dan 20 sensorstromen</1>, visualiseerde de status van de pod binnen 30 seconden zoals door SpaceX vereist, en stelde operators in staat <1>missiekritieke commando’s</1> te geven, zoals lanceren en noodstop.",
+    "title": "Overstromingsrisico via streetview-beelden",
+    "intro": "Voor mijn <1>Bachelor Eindproject</1> ontwikkelde ik een computer-vision-systeem dat de <1>begane-grondhoogte van woningen</1> schat op basis van streetview-beelden, als input voor <1>de analyse van overstromingsrisico</1>. Hoewel overstromingen wereldwijd een groot aandeel vormen van natuurrampen, zijn gedetailleerde hoogtegegevens vaak duur, onvolledig of niet beschikbaar. Dit project onderzocht of <1>breed beschikbare streetview-beelden</1> kunnen helpen om een deel van die kloof te overbruggen, via een zorgvuldig ontworpen end-to-end pipeline.",
+    "collaboration": "Het project werd uitgevoerd aan de <1>TU Delft</1>, in samenwerking met onderzoekers van <1>Nanyang Technological University</1> in <1>Singapore</1>.",
     "video": {
-      "title": "Competitie Aftermovie",
-      "alt": "Delft Hyperloop Competitie Aftermovie"
+      "title": "Pipeline-visualisatie",
+      "alt": "Pipeline-visualisatie"
     },
     "technologies": {
       "title": "Technologieën"
     },
     "features": {
-      "title": "Belangrijkste functies",
+      "title": "Belangrijkste onderdelen",
       "list": [
-        "<1>Live telemetrie & status</1>: Realtime dashboard met <1>meer dan 20 sensorstromen</1> (IMU, encoder, reflectiestripsensoren, remdrukken, BMS, temperaturen, vering) met kleurgecodeerde statusindicatoren.",
-        "<1>Commando’s met veiligheidsinterlocks</1>: Lancering, toestandovergangen en Pod Stop met ingebouwde veiligheidsmechanismen; heartbeat-bewaking activeert automatische de noodrem bij verlies van communicatie.",
-        "<1>Navigatie-inzichten</1>: Toonde positie, snelheid en versnelling, geschat via een <1>Kalmanfilter</1> dat meerdere sensoren combineerde, inclusief rempuntcontext.",
-        "<1>Anomaliebewaking</1>: Duidelijke alarmen, drempels en redundantie-indicatoren voor veiligheidskritieke systemen zoals remmen, aandrijving en batterijen.",
-        "<1>Draagbare tool</1>: <1>Cross-platform Electron-app</1> ontworpen voor gebruik ter plaatse, geïntegreerd met SpaceX-systemen en voorzien van redundante logging."
+        "<1>End-to-end vision pipeline</1>: Een systeem in drie stappen — preprocessing, objectdetectie en post-processing — dat per beeld één hoogte-inschatting oplevert.",
+        "<1>Objectdetectiemodel</1>: Een YOLOv8-gebaseerde detector, getraind op handmatig geannoteerde streetview-beelden, voor het detecteren van huizen, deuren en treden in uiteenlopende stedelijke omgevingen.",
+        "<1>Post-processing voorbij confidence-scores</1>: Lage confidence-drempels werden gebruikt om de recall te maximaliseren, gevolgd door geometrische filtering, clustering en het verwijderen van overlap om false positives te elimineren.",
+        "<1>Structurele redenering in beelden</1>: Gedetecteerde treden werden met behulp van density-based clustering gegroepeerd tot trappen, waarna scène-niveau-constraints werden toegepast om de trap behorend bij het gecentreerde huis te selecteren.",
+        "<1>Evaluatie gekoppeld aan het echte probleem</1>: De prestaties werden beoordeeld met zowel objectdetectiemetingen (precisie, recall, F1-score) als regressiemetingen (RMSE in aantal treden), passend bij praktisch gebruik in overstromingsrisico-analyse."
       ]
     },
     "impact": {
-      "title": "Impact",
+      "title": "Resultaten & impact",
       "text": [
-        "Mission Control fungeerde als de <1>primaire interface</1> van het team tijdens veilige hogesnelheidsritten. Operators konden in één oogopslag de gezondheid van de pod beoordelen, onmiddellijk reageren op afwijkingen en <1>voldoen aan de strikte wedstrijdvereisten van SpaceX</1> (statusdisplay, externe monitoring, noodstop, lanceringsprocedure).",
-        "Het systeem werd <1>grondig gevalideerd</1> met unittests, end-to-end tests en vacuümtesten van de Communication Hub, en bewees zo <1>betrouwbaar te zijn onder wedstrijdcondities</1>. Mission Control vormde de schakel tussen deterministische besturing op de TI Hercules en flexibele communicatie op de Raspberry Pi, waardoor het team gecontroleerd de grenzen van de prestaties kon opzoeken."
+        "Het uiteindelijke systeem behaalde een <1>precisie van 0,908</1> voor tredendetectie en een <1>RMSE van 1,19 treden per beeld</1> op een onafhankelijke testset van 111 beelden, terwijl het snel genoeg bleef voor grootschalige analyse.",
+        "In plaats van te vertrouwen op de confidence-score van één enkel model, laat dit project zien hoe <1>technisch inzicht en transparante post-processing</1> beperkte data en imperfecte detecties kunnen compenseren, met een systeem dat zowel interpreteerbaar als praktisch toepasbaar is."
       ]
     }
   }

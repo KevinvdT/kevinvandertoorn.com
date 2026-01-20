@@ -101,6 +101,9 @@ const ModalTitle = styled.h2`
 const CloseButton = styled.button`
   width: 32px;
   height: 32px;
+  min-width: 32px;
+  min-height: 32px;
+  flex-shrink: 0;
   border-radius: 50%;
   background-color: #e8e8ed;
   color: #6e6e73;

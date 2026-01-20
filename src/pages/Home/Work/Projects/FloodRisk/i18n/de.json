@@ -1,31 +1,33 @@
 {
-  "title": "Mission Control",
-  "description": "Echtzeit-Bedienoberfläche für die Delft Hyperloop-Kapsel bei der SpaceX Hyperloop Pod Competition 2018, mit Telemetrie, Navigationsdaten und sicherheitskritischen Befehlen.",
+  "title": "Hochwasserrisiko bestimmen mit Computer Vision",
+  "company": "TU Delft",
+  "description": "End-to-end-Pipeline zur großskaligen Bestimmung des Hochwasserrisikos mithilfe von Streetview-Bildern.",
   "modal": {
-    "title": "Mission Control",
-    "intro": "Entwickelte die <1>Echtzeit-Bedienoberfläche</1> für die <1>Delft Hyperloop-Kapsel</1> bei der <1>SpaceX Hyperloop Pod Competition (2018)</1>. Mission Control war die externe Hälfte des Kommunikationssystems und arbeitete eng mit dem On-Board Communication Hub zusammen. Es sammelte <1>Live-Telemetrie aus über 20 Sensorströmen</1>, stellte den Kapselzustand innerhalb von 30 Sekunden dar (wie von SpaceX gefordert) und ermöglichte den Operatoren, <1>sicherheitskritische Befehle</1> wie Start und Notstopp auszuführen.",
+    "title": "Hochwasserrisiko bestimmen mit Computer Vision",
+    "intro": "Für mein <1>Bachelorabschlussprojekt</1> entwickelte ich ein Computer-Vision-System, das die <1>Erdgeschosshöhe von Wohngebäuden</1> auf Basis von Streetview-Bildern schätzt, als Input zur <1>Bestimmung des Hochwasserrisikos</1>. Obwohl Überschwemmungen weltweit einen großen Anteil an Naturkatastrophen ausmachen, sind detaillierte Höhendaten häufig teuer, unvollständig oder nicht verfügbar. Dieses Projekt untersuchte, ob <1>breit verfügbare Streetview-Bilder</1> dazu beitragen können, einen Teil dieser Lücke durch eine sorgfältig konzipierte End-to-end-Pipeline zu überbrücken.",
+    "collaboration": "Das Projekt wurde an der <1>TU Delft</1> durchgeführt, in Zusammenarbeit mit Forschenden der <1>Nanyang Technological University</1> in <1>Singapur</1>.",
     "video": {
-      "title": "Wettbewerbs-Aftermovie",
-      "alt": "Delft Hyperloop Wettbewerbs-Aftermovie"
+      "title": "Pipeline-Visualisierung",
+      "alt": "Pipeline-Visualisierung"
     },
     "technologies": {
       "title": "Technologien"
     },
     "features": {
-      "title": "Wichtigste Funktionen",
+      "title": "Zentrale Komponenten",
       "list": [
-        "<1>Live-Telemetrie & Status</1>: Echtzeit-Dashboard mit über 20 Sensorströmen (IMU, Encoder, Reflektionsstreifensensoren, Bremsdrücke, BMS, Temperaturen, Federung) mit farbcodierten Statusanzeigen.",
-        "<1>Befehlsweg mit Sicherheitsinterlocks</1>: Start, Zustandswechsel und Pod Stop mit eingebauten Sicherheitsmechanismen; <1>Heartbeat-Überwachung löste automatische Notbremsung aus</1> bei Kommunikationsverlust.",
-        "<1>Navigationsübersicht</1>: Anzeige von Position, Geschwindigkeit und Beschleunigung, berechnet über einen <1>Kalman-Filter</1>, der mehrere Sensoren kombinierte, inklusive Bremspunkt-Kontext.",
-        "<1>Anomalieerkennung</1>: Klare Alarme, Grenzwerte und Redundanzanzeigen für sicherheitskritische Systeme wie Bremsen, Antrieb und Batterien.",
-        "<1>Mobiles Wettbewerbstool</1>: <1>Cross-Plattform Electron-App</1>, für den Einsatz vor Ort entwickelt, integriert mit den SpaceX-Systemen und mit redundanter Datenaufzeichnung."
+        "<1>End-to-end-Vision-Pipeline</1>: Ein dreistufiges System aus Preprocessing, Objekterkennung und Post-Processing, das pro Bild eine einzelne Höhenabschätzung liefert.",
+        "<1>Objekterkennungsmodell</1>: Ein YOLOv8-basierter Detektor, trainiert auf manuell annotierten Streetview-Bildern, zur Erkennung von Häusern, Türen und Stufen in vielfältigen urbanen Umgebungen.",
+        "<1>Post-Processing jenseits von Confidence-Scores</1>: Niedrige Confidence-Schwellen wurden eingesetzt, um den Recall zu maximieren, gefolgt von geometrischer Filterung, Clustering und dem Entfernen von Überlappungen zur Reduktion von False Positives.",
+        "<1>Strukturelles Schlussfolgern in Bildern</1>: Erkannte Stufen wurden mithilfe von density-based Clustering zu Treppen gruppiert, wobei szenenbezogene Constraints genutzt wurden, um die Treppe des zentrierten Hauses auszuwählen.",
+        "<1>Evaluation mit Bezug zum realen Problem</1>: Die Leistung wurde sowohl mit Objekterkennungsmetriken (Präzision, Recall, F1-Score) als auch mit Regressionsmetriken (RMSE in Anzahl der Stufen) bewertet, passend zur praktischen Anwendung bei der Bestimmung des Hochwasserrisikos."
       ]
     },
     "impact": {
-      "title": "Impact",
+      "title": "Ergebnisse & Wirkung",
       "text": [
-        "Mission Control war die <1>zentrale Schnittstelle</1> des Teams für <1>sichere Hochgeschwindigkeitsläufe</1>. Es ermöglichte den Operatoren, den Zustand der Kapsel <1>auf einen Blick zu prüfen</1>, sofort auf Abweichungen zu reagieren und die Wettbewerbsregeln einzuhalten (Statusanzeige, externe Überwachung, Notstopp, Startfreigabe).",
-        "Das System wurde <1>gründlich validiert</1> durch Unit-Tests, End-to-End-Tests und Vakuumtests des Communication Hubs und erwies sich als <1>zuverlässig unter Wettbewerbsbedingungen</1>. Mission Control schlug eine Brücke zwischen <1>deterministischer Steuerung</1> auf dem TI Hercules und <1>flexibler Kommunikation</1> auf dem Raspberry Pi und bot die <1>Übersicht, die sicheres Hochleistungstesten möglich machte</1>."
+        "Das finale System erreichte eine <1>Präzision von 0,908</1> bei der Stufenerkennung sowie eine <1>RMSE von 1,19 Stufen pro Bild</1> auf einem unabhängigen Testdatensatz mit 111 Bildern und blieb dabei schnell genug für großskalige Analysen.",
+        "Anstatt sich auf die Confidence eines einzelnen Modells zu verlassen, zeigt das Projekt, wie <1>technisches Urteilsvermögen und transparentes Post-Processing</1> begrenzte Daten und unvollkommene Detektionen kompensieren können, mit einem System, das sowohl interpretierbar als auch praktisch einsetzbar ist."
       ]
     }
   }
