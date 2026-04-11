@@ -1,6 +1,6 @@
 {
   "title": "WhatsApp Chat Widget",
-  "description": "Created a <1>widget generator</1> for Saysimple that lets businesses add a custom WhatsApp <1>entry point</1> to their site in just minutes.",
+  "description": "Created a widget generator for Saysimple that lets businesses add a custom WhatsApp entry point to their site in just minutes.",
   "modal": {
     "title": "WhatsApp Chat Widget Generator",
     "intro": "I built a <1>WhatsApp chat widget generator</1> for <1>Saysimple’s website</1> using <1>React</1> and <1>Redux</1>. The tool outputs a tiny <1>Svelte embed</1>, chosen over heavier libraries to keep performance snappy. Businesses simply copy-paste the snippet into their site to offer a branded, configurable way for customers to start a WhatsApp conversation.",

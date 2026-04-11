@@ -1,6 +1,6 @@
 {
   "title": "Chat‑Widget für WhatsApp",
-  "description": "Entwickelte einen <1>Widget‑Generator</1> für Saysimple, mit dem Unternehmen in wenigen Minuten einen eigenen <1>WhatsApp‑Einstiegspunkt</1> auf ihrer Website einfügen können.",
+  "description": "Entwickelte einen Widget‑Generator für Saysimple, mit dem Unternehmen in wenigen Minuten einen eigenen WhatsApp‑Einstiegspunkt auf ihrer Website einfügen können.",
   "modal": {
     "title": "WhatsApp‑Chat‑Widget‑Generator",
     "intro": "Ich entwickelte einen <1>WhatsApp‑Chat‑Widget‑Generator</1> für die <1>Saysimple‑Website</1> mit <1>React</1> und <1>Redux</1>. Der Generator liefert ein kompaktes <1>Svelte‑Embed</1> – bewusst gewählt, um die Bundle‑Größe klein und die Ladezeiten schnell zu halten. Unternehmen müssen nur den Snippet einfügen, um einen anpassbaren WhatsApp‑Einstiegspunkt auf ihrer Seite bereitzustellen.",

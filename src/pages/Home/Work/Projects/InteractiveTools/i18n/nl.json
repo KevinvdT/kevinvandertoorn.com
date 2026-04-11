@@ -1,6 +1,6 @@
 {
   "title": "Chatwidget voor WhatsApp",
-  "description": "Ontwikkelde een <1>widgetgenerator</1> voor Saysimple, waarmee bedrijven in een handomdraai een eigen <1>WhatsApp‑chatknop</1> op hun site kunnen plaatsen.",
+  "description": "Ontwikkelde een widgetgenerator voor Saysimple, waarmee bedrijven in een handomdraai een eigen WhatsApp‑chatknop op hun site kunnen plaatsen.",
   "modal": {
     "title": "WhatsApp Chatwidget‑generator",
     "intro": "Ik bouwde een <1>WhatsApp‑chatwidgetgenerator</1> voor de website van Saysimple met <1>React</1> en <1>Redux</1>. De generator levert een compacte <1>Svelte‑embed</1> op: bewust gekozen om de bundel klein en snel te houden. Bedrijven hoeven alleen de snippet te plakken om een eigen, configureerbare WhatsApp‑chatknop aan hun site toe te voegen.",
