@@ -1,54 +1,53 @@
-import React, { useState } from 'react';
+import React, { useLayoutEffect, useRef, useState } from 'react';
 import { Trans, useTranslation } from 'react-i18next';
 import styled from 'styled-components';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { SectionTitle } from '../../../components/ui/Title';
 import { SectionText } from '../../../components/ui/Text';
 import TwoCol from '../../../components/layout/TwoCol';
 import Modal from '../../../components/ui/Modal';
-import Button from '../../../components/ui/Button';
-import ProjectDetails from '../../../components/ui/ProjectDetails';
 import ReadMoreLink from './ReadMoreLink';
 import Tag from '../../../components/ui/Tag';
 import { IoStar } from 'react-icons/io5';
 import { resolveTags } from './tagsRegistry';
 import useScreenSize from '../../../hooks/useScreenSize';
 
-// Styled components for ProjectItem
+gsap.registerPlugin(ScrollTrigger);
+
 const ProjectItemContainer = styled(TwoCol)`
-  column-gap: 54px; // Adjust the spacing between the image and content
+  column-gap: 54px;
   row-gap: 27px;
+
   > * {
-    flex: initial;  /* Ensures that each child (column) DOESN'T take up equal space */
+    flex: initial;
   }
 
-  padding-top: ${({ isMobile }) => isMobile ? '1.5rem' : '2.25rem'};
-  padding-bottom: ${({ isMobile }) => isMobile ? '1.5rem' : '2.25rem'};
+  padding-top: ${({ isMobile }) => (isMobile ? '1.5rem' : '2.25rem')};
+  padding-bottom: ${({ isMobile }) => (isMobile ? '1.5rem' : '2.25rem')};
 `;
 
 const ProjectImage = styled.img`
-  width: 356px; // Adjust width as needed
-  height: auto; // Maintain aspect ratio
-  flex-shrink: 0; // Prevent image from shrinking
-  box-shadow: 0 2px 4px 0 rgba(0,0,0,0.08); // More subtle shadow
+  width: 356px;
+  height: auto;
+  flex-shrink: 0;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.08);
   border-radius: 20px;
   cursor: ${({ onClick }) => (onClick ? 'pointer' : 'default')};
-  max-width: ${({ isMobile }) => isMobile ? '100%' : '356px'};
-  margin-bottom: ${({ isMobile }) => isMobile ? '10px' : '0'};
+  max-width: ${({ isMobile }) => (isMobile ? '100%' : '356px')};
+  margin-bottom: ${({ isMobile }) => (isMobile ? '10px' : '0')};
 `;
 
 const ProjectContent = styled.div`
-  flex-grow: 1; // Allow content to grow
-  
+  flex-grow: 1;
 `;
 
 const ProjectDescription = styled(SectionText)`
-  font-size: 0.9375rem; // Description font size
-  white-space: pre-line; // Support newlines
-  line-height: ${({ isMobile }) => isMobile ? '1.71875rem' : '1.7rem'};
+  font-size: 0.9375rem;
+  white-space: pre-line;
+  line-height: ${({ isMobile }) =>
+    isMobile ? '1.71875rem' : '1.7rem'};
   margin-bottom: 10px;
-  // &::selection, & em::selection {
-  //   background-color: ${({ color }) => color}55;
-  // }
 `;
 
 const ProjectCompany = styled.div`
@@ -65,8 +64,8 @@ const ProjectCompany = styled.div`
 `;
 
 const ProjectTitle = styled(SectionTitle)`
-font-family: 'Inter','Arial',sans-serif;
-  font-size:  1.0625rem;
+  font-family: 'Inter', 'Arial', sans-serif;
+  font-size: 1.0625rem;
   margin-bottom: 0;
   cursor: ${({ onClick }) => (onClick ? 'pointer' : 'default')};
 `;
@@ -86,22 +85,22 @@ const FeaturedBadge = styled(Tag)`
   align-items: center;
   gap: 6px;
   color: ${({ theme }) => theme.colors.light.primaryText};
-  background-color: rgba(0,0,0,0.08);
+  background-color: rgba(0, 0, 0, 0.08);
   position: relative;
-  top: 1px; /* subtle nudge to better align with title baseline */
+  top: 1px;
   margin-left: 6px;
 
   @media (prefers-color-scheme: dark) {
     color: ${({ theme }) => theme.colors.dark.primaryText};
-    background-color: rgba(255,255,255,0.16);
+    background-color: rgba(255, 255, 255, 0.16);
   }
 `;
 
 const TagsRow = styled.div`
   display: flex;
-  align-items: center; /* center items vertically */
+  align-items: center;
   gap: 12px;
-  min-height: 32px; /* approximate chip height to stabilize alignment */
+  min-height: 32px;
   margin-bottom: ${({ isMobile }) => (isMobile ? '24px' : '14px')};
 `;
 
@@ -109,38 +108,90 @@ const TagsWrap = styled.div`
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
-  align-items: center; /* ensure chips align center */
+  align-items: center;
 `;
 
 const ReadMoreRow = styled.div`
   margin-top: 6px;
 `;
 
-// ProjectItem component that can handle both single and multiple descriptions
-const ProjectItem = ({ imageSrc, imageSrcDark, title, description, color, projectDetails, onReadMore, setIsOpen, tagKeys = [], company, readMore = true, featured = false }) => {
+const ProjectItem = ({
+  imageSrc,
+  imageSrcDark,
+  title,
+  description,
+  color,
+  projectDetails,
+  onReadMore,
+  setIsOpen,
+  tagKeys = [],
+  company,
+  readMore = true,
+  featured = false,
+}) => {
   const { t } = useTranslation();
   const [isModalOpen, setIsModalOpen] = useState(false);
   const { maxMobile } = useScreenSize();
+  const containerRef = useRef(null);
 
-  // Back-compat: if legacy setIsOpen prop is provided, prefer it; else use onReadMore
+  useLayoutEffect(() => {
+    const context = gsap.context(() => {
+      gsap.fromTo(
+        containerRef.current,
+        {
+          opacity: 0,
+          y: 30,
+        },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 0.8,
+          ease: 'power2.out',
+          scrollTrigger: {
+            trigger: containerRef.current,
+            start: 'top 80%',
+            once: true,
+            // markers: true,
+          },
+        }
+      );
+    }, containerRef);
+
+    return () => context.revert();
+  }, []);
+
   const handleReadMore = () => {
-    if (typeof onReadMore === 'function') onReadMore();
-    else if (typeof setIsOpen === 'function') setIsOpen(true);
-    else setIsModalOpen(true);
+    if (typeof onReadMore === 'function') {
+      onReadMore();
+    } else if (typeof setIsOpen === 'function') {
+      setIsOpen(true);
+    } else {
+      setIsModalOpen(true);
+    }
   };
 
   const closeModal = () => setIsModalOpen(false);
 
+  const canOpenProject = readMore && (onReadMore || setIsOpen);
+
   return (
     <>
-      <ProjectItemContainer aligntop isMobile={maxMobile}>
+      <ProjectItemContainer
+        ref={containerRef}
+        aligntop
+        isMobile={maxMobile}
+      >
         {imageSrcDark ? (
           <picture>
-            <source srcSet={imageSrcDark} media="(prefers-color-scheme: dark)" />
+            <source
+              srcSet={imageSrcDark}
+              media="(prefers-color-scheme: dark)"
+            />
+
             <ProjectImage
               src={imageSrc}
               alt={title}
-              onClick={readMore && (onReadMore || setIsOpen) ? handleReadMore : undefined}
+              onClick={canOpenProject ? handleReadMore : undefined}
               isMobile={maxMobile}
             />
           </picture>
@@ -148,20 +199,23 @@ const ProjectItem = ({ imageSrc, imageSrcDark, title, description, color, projec
           <ProjectImage
             src={imageSrc}
             alt={title}
-            onClick={readMore && (onReadMore || setIsOpen) ? handleReadMore : undefined}
+            onClick={canOpenProject ? handleReadMore : undefined}
             isMobile={maxMobile}
           />
         )}
+
         <ProjectContent>
           {company && <ProjectCompany>{company}</ProjectCompany>}
+
           <TitleRow>
             <ProjectTitle
               as="h3"
               color={color}
-              onClick={readMore && (onReadMore || setIsOpen) ? handleReadMore : undefined}
+              onClick={canOpenProject ? handleReadMore : undefined}
             >
               {title}
             </ProjectTitle>
+
             {featured && (
               <FeaturedBadge>
                 <IoStar aria-hidden="true" />
@@ -169,9 +223,14 @@ const ProjectItem = ({ imageSrc, imageSrcDark, title, description, color, projec
               </FeaturedBadge>
             )}
           </TitleRow>
+
           {Array.isArray(description) ? (
             description.map((desc, index) => (
-              <ProjectDescription key={index} color={color} isMobile={maxMobile}>
+              <ProjectDescription
+                key={index}
+                color={color}
+                isMobile={maxMobile}
+              >
                 <Trans components={{ 1: <em /> }}>{desc}</Trans>
               </ProjectDescription>
             ))
@@ -185,13 +244,15 @@ const ProjectItem = ({ imageSrc, imageSrcDark, title, description, color, projec
             <TagsRow isMobile={maxMobile}>
               <TagsWrap>
                 {resolveTags(tagKeys).map(tag => (
-                  <Tag key={tag.key} color={tag.color}>{tag.label}</Tag>
+                  <Tag key={tag.key} color={tag.color}>
+                    {tag.label}
+                  </Tag>
                 ))}
               </TagsWrap>
             </TagsRow>
           )}
 
-          {readMore && (onReadMore || setIsOpen) && (
+          {canOpenProject && (
             <ReadMoreRow>
               <ReadMoreLink onClick={handleReadMore} />
             </ReadMoreRow>
