@@ -54,7 +54,7 @@ When referencing culturally specific places, institutions, or expressions, consi
 - **Local audiences:** assume familiarity and keep references natural.
 - **International audiences:** add short clarifiers to maintain understanding without breaking flow.
 
-> For example, for Dutch content the **typical audience** includes readers in the Netherlands and Flanders, who are naturally familiar with local references such as *de Efteling* or *TU Delft*. (While Dutch is also spoken in places like Suriname and the Caribbean, readers there generally have some familiarity with the Netherlands. The tone and references primarily reflect Dutch as used in the Netherlands and Flanders, without excluding broader Dutch-speaking audiences.)
+> For example, for Dutch content the **typical audience** includes readers in the Netherlands and Flanders, who are naturally familiar with local references such as *de Efteling* or *TU Delft*. (While Dutch is also spoken in places like Suriname and the Caribbean, readers there generally have some familiarity with the Netherlands. The tone and references primarily reflect Dutch as used in the Netherlands, without excluding broader Dutch-speaking audiences.)
 
 **Examples:**
 ```json

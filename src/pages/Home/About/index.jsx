@@ -51,6 +51,11 @@ const About = () => {
             </Trans>
           </SectionText>
           <SectionText>
+            <Trans i18nKey="about.job">
+              I’m currently working as Full-Stack Developer at <em>Albert&nbsp;Heijn</em>, where I work on technology that enables millions of people to get their grocery essentials every day.
+            </Trans>
+          </SectionText>
+          <SectionText>
             <Trans i18nKey="about.hobbies" components={{ 1: <Efteling /> }} />
           </SectionText>
         </div>

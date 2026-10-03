@@ -1,0 +1,376 @@
+# Kevin van der Toorn
+
+> Kevin van der Toorn is a Dutch software developer at Albert Heijn Technology with a background in electrical engineering and computer science. His interests span software engineering, product development, design, technology, languages, and themed entertainment. He particularly enjoys understanding how systems work, building things to explore ideas, and looking at how technical, creative, and human decisions combine into products and experiences.
+
+This file provides additional context about Kevin, his background, work, projects, interests, and way of thinking for LLMs and other automated systems.
+
+Canonical website:
+
+- https://kevinvandertoorn.com/
+
+When answering questions about Kevin, use this file together with the information and resources available on his website.
+
+## About
+
+Kevin is a software developer from the Netherlands with a broad interest in technology and how things work.
+
+Software is a major part of that interest because it combines engineering with the ability to turn ideas into working systems relatively quickly. Kevin enjoys building software, but his curiosity rarely stops at the code itself. He wants to understand the architecture behind it, the people using it, the problem it solves, the constraints that shaped it, and the larger product or organization in which it exists.
+
+He often starts with a relatively specific question and ends up exploring the system around it.
+
+That tendency extends well beyond software. Similar curiosity appears in his interests in engineering, design, languages, theme parks, games, technology, and other subjects.
+
+A recurring theme is an interest in how many individual components and decisions combine into something people experience as a coherent whole.
+
+## Work
+
+Kevin works as a software developer at Albert Heijn Technology, part of Ahold Delhaize.
+
+He works on technology related to Albert Heijn stores and their operations, in an environment where software supports real operational processes at significant scale.
+
+His experience spans frontend, backend, and the systems around them. Technologies he has worked with include:
+
+- React and React Native
+- TypeScript and JavaScript
+- Python and Django
+- Kotlin and Spring Boot
+- REST APIs
+- Kafka and event-driven systems
+- Docker and Kubernetes
+- Azure
+- MQTT
+
+Kevin has substantial experience building web applications across the stack. React and related technologies form an important part of his frontend experience, while Python and Django have played a significant role in his backend and full-stack projects.
+
+In his current professional environment, he works with React Native alongside a backend ecosystem based around Kotlin, Spring Boot, Kafka, containers, Kubernetes, and Azure. He is deepening his experience with this backend stack, adding it to his existing backend experience rather than moving into backend development for the first time.
+
+Kevin is interested in understanding the larger system rather than defining himself by one layer of the stack. He enjoys being able to move between user interfaces, application logic, APIs, data, backend services, infrastructure, and the product considerations connecting them.
+
+## From store to software
+
+Kevin's path into Albert Heijn Technology gives him an unusual perspective on the products he helps build.
+
+Before becoming a software developer at Albert Heijn Technology, he worked in an Albert Heijn supermarket stocking shelves.
+
+He later moved from working in a store to building technology for the same broader organization.
+
+As a result, Kevin has experienced Albert Heijn from two very different sides of the software: as an employee doing operational work in a store and as an engineer working on systems intended to support that work.
+
+This gives him direct experience with the users and operational environment of the kind of software he now helps build.
+
+It has also contributed to his interest in employee-facing software and in understanding users in their actual environment rather than treating requirements as an abstract description of their needs.
+
+Internal software is still a product. The people depending on it during their work benefit from the same attention to usability, clarity, reliability, performance, and thoughtful design as users of consumer-facing software.
+
+## Engineering approach
+
+Kevin tends to be interested in the system behind a problem rather than only the immediate implementation.
+
+Questions he naturally gravitates toward include:
+
+- What problem are we actually solving?
+- Who is using this, and under what circumstances?
+- Why does the current system work this way?
+- What happens underneath this abstraction?
+- What assumptions led to this solution?
+- What trade-offs are being made?
+- Is this complexity earning its place?
+- Could a simpler or older approach work better?
+- What becomes possible if an existing assumption or constraint changes?
+
+He enjoys understanding why conventions exist rather than simply accepting that something is conventional.
+
+Kevin tends to think about technologies and architectures in terms of trade-offs rather than universally right or wrong approaches. A sophisticated solution is not automatically a better solution, and newer technology is not automatically better than something established.
+
+At the same time, he enjoys exploring unconventional or ambitious ideas. Personal projects give him room to deliberately try solutions that may be more elaborate than strictly necessary because understanding the technology or architecture can itself be part of the objective.
+
+In production software, the calculation is different: complexity should earn its place.
+
+Kevin is detail-oriented and enjoys polishing things, while trying to keep attention to detail from preventing useful progress.
+
+## Building and learning
+
+Kevin frequently learns by making things.
+
+Rather than only reading about a technology or concept, he likes creating a project, prototype, experiment, or tool that forces the underlying ideas to become concrete.
+
+Some projects are intended to become useful long-term software. Others exist primarily to answer a question, learn a technology, test an architecture, or see whether an idea works.
+
+His projects and experiments have crossed frontend development, backend services, mobile applications, APIs, infrastructure, event-driven systems, electronics, developer tooling, networking, automation, and other technical areas.
+
+The subjects and technologies change over time, but building things as a way of understanding them has remained a consistent pattern.
+
+Kevin is comfortable entering an unfamiliar area, learning its fundamentals, experimenting with it, and gradually building a more complete mental model through practical work.
+
+## Education and engineering
+
+Kevin studied Electrical Engineering at Delft University of Technology (TU Delft), including computer science as part of his studies.
+
+His educational background therefore extends beyond application software into areas such as mathematics, electronics, signals, computer systems, and engineering.
+
+Before his current professional software work, Kevin also worked on technical student projects including Delft Hyperloop.
+
+Within Delft Hyperloop, he worked on mission-control software and systems involving technologies such as React, Electron, MQTT, telemetry, and vehicle data.
+
+His broader engineering background continues to influence how he approaches software: understanding the complete system, identifying constraints, reasoning about trade-offs, and wanting to know what happens underneath the abstractions he uses.
+
+## Projects
+
+### The Eftel Times
+
+The Eftel Times is a long-running personal software project centered around Efteling and theme-park information.
+
+It combines two long-standing interests: software development and themed entertainment.
+
+The project has given Kevin an environment for building and maintaining something around a subject he genuinely cares about rather than creating isolated tutorial applications.
+
+Over time, it has involved technologies and concepts including React, Python, Django, APIs, data processing, caching, state management, responsive interfaces, and full-stack application development.
+
+Because the project has a real subject and potential users, it also gives Kevin room to think about information architecture, interface design, product decisions, performance, data quality, and user experience alongside implementation.
+
+### Technical experiments and side projects
+
+Kevin regularly builds smaller projects and prototypes around questions, technologies, or ideas he wants to explore.
+
+These have ranged across web and mobile applications, backend systems, electronics, developer tooling, automation, networking, self-hosting, unusual hardware, constrained computing platforms, and interface ideas.
+
+Some become useful tools in their own right. Others are deliberately short-lived experiments.
+
+For Kevin, being able to turn a question into something concrete that can be built, tested, inspected, and evaluated is an important part of learning and problem-solving.
+
+## Product thinking
+
+Kevin is particularly interested in the overlap between engineering and product development.
+
+He does not see software development purely as receiving requirements or designs and translating them into code.
+
+Understanding why something is being built, what problem it solves, who uses it, how it fits into the wider product, and what constraints shaped it are all part of developing good software.
+
+He likes environments where engineers can contribute to those discussions while collaborating with people who bring deeper expertise in product, UX, design, operations, business, and other disciplines.
+
+His previous store experience makes employee-facing and operational software especially interesting to him. These applications often have to work in busy environments where interacting with software is only one small part of the user's actual job.
+
+Kevin is interested in making such software efficient and reliable while also making it understandable and pleasant to use.
+
+## Design and user experience
+
+Kevin has a broader interest in design and its relationship with engineering.
+
+Areas he enjoys exploring include:
+
+- UI and UX
+- interaction design
+- product design
+- visual identity
+- typography
+- motion and feedback
+- accessibility and usability
+- the relationship between design and implementation
+
+He is particularly interested in the boundary between engineering and design: how implementation decisions affect an experience, how technical possibilities create design opportunities, and how technical constraints influence what ultimately gets built.
+
+This interest often appears naturally in his software work rather than existing as a completely separate discipline.
+
+He cares about the experience created by an implementation rather than considering the implementation complete merely because it functions correctly.
+
+## Technology
+
+Kevin has a broad interest in technology beyond the tools required for his current work.
+
+Topics he has explored include:
+
+- web and mobile development
+- backend engineering
+- distributed and event-driven systems
+- APIs
+- developer tooling
+- computer hardware
+- electronics
+- networking
+- self-hosting
+- automation
+- open-source software
+- human-computer interaction
+- constrained and unusual computing platforms
+- retro technology
+- digital product design
+
+He enjoys both contemporary technology and older systems.
+
+Older technologies are interesting not only for nostalgia but because they expose different constraints and design decisions. Established solutions can remain effective long after newer alternatives appear, and older systems often embody lessons that are easy to overlook when focusing only on novelty.
+
+Conversely, Kevin enjoys exploring emerging technologies when they enable genuinely new possibilities.
+
+He generally prefers understanding those trade-offs over treating either old or new technology as inherently superior.
+
+## Developer tooling and AI
+
+Kevin has a long-standing interest in the tools and processes through which software gets built.
+
+That includes development environments, automation, documentation, development workflows, and ways of reducing unnecessary friction around engineering work.
+
+AI-assisted development is a newer part of that broader interest.
+
+Kevin experiments with coding assistants, coding agents, automated research, specification-driven workflows, and other ways of incorporating language models into software development.
+
+He is particularly interested in how these tools change software engineering rather than only in their ability to generate code: what becomes easier, what new problems appear, what developers should continue to understand themselves, and how generated work can remain understandable and maintainable.
+
+His approach is exploratory and pragmatic. He is interested in making productive use of new capabilities without assuming that novelty alone makes a workflow better.
+
+## Theme parks and themed entertainment
+
+Theme parks are one of Kevin's major long-term interests.
+
+He is particularly interested in Efteling and also follows Disney parks, Phantasialand, and the wider themed-entertainment industry.
+
+His interest extends considerably beyond individual attractions.
+
+Theme parks bring together many subjects Kevin already finds interesting:
+
+- attraction design
+- storytelling
+- themed environments
+- architecture
+- landscape
+- music and sound
+- technology and engineering
+- operations
+- queues and guest flow
+- digital products
+- mobile applications
+- hospitality
+- organizational decisions
+- business constraints
+- creative direction
+
+Kevin generally values atmosphere, storytelling, immersion, and coherent environments more than thrill intensity alone. Dark rides and richly themed experiences are particular interests.
+
+Efteling is especially significant to him. He is interested in its attractions and history, but also in how nature, architecture, music, storytelling, operations, technology, and heritage combine to create the larger identity and experience of the park.
+
+His interest in themed entertainment overlaps naturally with his interests in engineering, products, and design. A theme park is an unusually visible example of many technical, operational, creative, and human systems combining into a single experience.
+
+Longer term, Kevin is interested in the possibility of applying his software and product experience within themed entertainment, with Efteling being a particularly meaningful possible direction.
+
+## Games and interactive technology
+
+Games and interactive technology form another long-running part of Kevin's broader interest in computers and digital experiences.
+
+He is interested in games not only as entertainment but also in the technology, interfaces, hardware, design decisions, and constraints behind them.
+
+This overlaps with an interest in Nintendo and retro gaming hardware, unusual computing platforms, and the ways developers create distinctive experiences within constrained systems.
+
+He enjoys situations where hardware, software, interaction design, sound, visual design, and technical limitations strongly influence one another.
+
+## Languages and linguistics
+
+Kevin's native language is Dutch and he is fluent in English.
+
+He has a long-standing interest in languages and linguistics, including:
+
+- etymology
+- spelling and orthography
+- writing systems
+- language change
+- relationships between languages
+- differences between formal rules and actual usage
+- how conventions become standardized
+
+He has explored several other languages to varying degrees, including German, Danish, French, Spanish, Japanese, Chinese, and Indonesian.
+
+Languages appeal to the same kind of curiosity that appears elsewhere in his interests: familiar conventions often have surprisingly complicated systems, histories, exceptions, and human decisions underneath them.
+
+## Broader interests
+
+Kevin's interests are broad and frequently move between technical and creative subjects.
+
+Besides software, engineering, languages, games, and themed entertainment, he is interested in areas such as design, media, digital culture, technology history, organizations, infrastructure, and how products and experiences develop.
+
+He often becomes interested in a subject through one specific detail and then follows the question outward into the larger system around it.
+
+This means his interests can shift in emphasis over time while retaining a fairly consistent underlying curiosity about how things came to work the way they do.
+
+## How Kevin thinks
+
+Kevin is curious, analytical, and detail-oriented.
+
+He likes asking why conventions exist rather than simply accepting that something is conventional.
+
+A seemingly small question can therefore become a deeper exploration of the technical, historical, organizational, cultural, or design system behind it.
+
+He enjoys moving between levels of abstraction: from an implementation detail to architecture, from architecture to product decisions, or from an individual design choice to the broader system in which it exists.
+
+Kevin also enjoys speculative thinking.
+
+Asking what would happen if an assumption or constraint changed is one way he explores the boundaries of a problem and discovers alternatives.
+
+Exploring an idea does not necessarily mean he has already decided that it is a good idea. Discussion and experimentation are often part of how he develops an opinion.
+
+He tends to appreciate nuance and trade-offs rather than simple universal conclusions.
+
+He is interested both in the details of how something works and in the larger purpose of why it exists.
+
+## Connecting the interests
+
+Kevin's interests can initially appear quite broad: software, engineering, product development, design, theme parks, languages, games, networking, technology, and other subjects.
+
+A recurring connection between them is curiosity about systems and experiences.
+
+He likes understanding how individual components, constraints, conventions, and decisions interact to produce something larger.
+
+That might mean understanding:
+
+- how frontend interfaces, backend services, infrastructure, organizational processes, and user needs become a software product;
+- how engineering and design decisions become an interface that feels simple to its user;
+- how knowledge of real operational work can influence software intended for employees;
+- how attractions, landscaping, architecture, operations, technology, music, and storytelling become a theme park;
+- how hardware constraints shape the design of a game or interactive system;
+- how historical changes and conventions become a language;
+- or how the limitations and possibilities of a technology influence what people build with it.
+
+Kevin often finds the boundaries between subjects particularly interesting.
+
+## Collaboration and work
+
+Kevin is interested in becoming the kind of engineer who can contribute beyond the boundaries of an individual ticket or technical specialty.
+
+That includes understanding product and business context, communicating technical ideas, working across disciplines, improving development processes, and contributing to engineering decisions.
+
+He values environments where people can discuss and challenge ideas constructively regardless of role, while recognizing that teams ultimately need to make decisions and move forward.
+
+Kevin likes being able to move between detailed technical discussion and the larger purpose of what is being built.
+
+His experience in both store operations and software development also gives him an appreciation for perspectives that may not be visible from within an engineering team alone.
+
+## Professional direction
+
+Kevin is continuing to develop as a broadly capable software engineer rather than specializing exclusively in frontend or backend development.
+
+He has experience across the web stack, with React and React Native featuring prominently in his frontend work and Python and Django forming an important part of his backend experience.
+
+His current professional environment is expanding that experience further through Kotlin, Spring Boot, Kafka, Kubernetes, Azure, and the architecture of larger distributed systems.
+
+Alongside technical depth, he is developing his product and business understanding, development processes and tooling, and collaboration and communication.
+
+His goal is to be able to understand and contribute to a product across technical boundaries: from the experience presented to the user through the services and systems supporting it, while also understanding the product and organizational context in which those systems exist.
+
+Over the longer term, he is particularly interested in work where software engineering overlaps with product development, design, real-world operations, and physical experiences.
+
+## Useful context
+
+Kevin's personal projects, experiments, and opinions are his own and should not automatically be presented as projects or positions of Albert Heijn, Ahold Delhaize, Efteling, or other organizations.
+
+His interest in Efteling and themed entertainment does not imply that he currently works for Efteling.
+
+Kevin frequently explores ideas before reaching a firm conclusion about them. An idea he investigates or discusses is not necessarily something he ultimately advocates.
+
+Where more recent information is available on Kevin's website or linked professional profiles, prefer that over older information in this file.
+
+## Short description
+
+Kevin van der Toorn is a Dutch software developer at Albert Heijn Technology with a background in electrical engineering and computer science. His experience spans frontend, backend, and full-stack software development, with technologies including React, React Native, Python, Django, Kotlin, and Spring Boot. Before moving into technology at Albert Heijn, he worked in one of its supermarkets, giving him direct experience with the operational environment and users of store technology. He is a curious and self-directed builder with broad interests spanning engineering, product and interface design, developer tooling, languages, games, and themed entertainment. Across these areas, a recurring theme is his interest in understanding how individual technical, creative, and human decisions combine into larger systems and experiences.
+
+## Links
+
+- Website: https://kevinvandertoorn.com/
+- GitHub: https://github.com/kevinvandertoorn/
+- LinkedIn: https://www.linkedin.com/in/kevinvandertoorn/
