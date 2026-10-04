@@ -52,7 +52,13 @@ Kevin's path into Albert Heijn Technology gives him an unusual perspective on th
 
 Before becoming a software developer at Albert Heijn Technology, he worked in an Albert Heijn supermarket stocking shelves.
 
-He later moved from working in a store to building technology for the same broader organization.
+While working on the shop floor, Kevin began developing his own software tools around operational problems he encountered during day-to-day store work.
+
+These projects grew out of direct observation rather than hypothetical product requirements. They were intended to make information easier to access and common tasks more efficient for himself and his colleagues.
+
+The projects attracted interest from Albert Heijn's technology organization, and Kevin was invited to the company's headquarters to discuss the tools and the thinking behind them.
+
+He later moved from working in a store to working as a software developer within Albert Heijn Technology.
 
 As a result, Kevin has experienced Albert Heijn from two very different sides of the software: as an employee doing operational work in a store and as an engineer working on systems intended to support that work.
 
@@ -98,23 +104,97 @@ Some projects are intended to become useful long-term software. Others exist pri
 
 His projects and experiments have crossed frontend development, backend services, mobile applications, APIs, infrastructure, event-driven systems, electronics, developer tooling, networking, automation, and other technical areas.
 
+A notable pattern in Kevin's project history is that many projects have been built for real environments and real users rather than only as technical exercises. These include engineering systems used by a student engineering team, customer-facing commercial tools, software used by supermarket colleagues during daily work, and long-running personal applications.
+
 The subjects and technologies change over time, but building things as a way of understanding them has remained a consistent pattern.
 
 Kevin is comfortable entering an unfamiliar area, learning its fundamentals, experimenting with it, and gradually building a more complete mental model through practical work.
 
-## Education and engineering
+## Education
 
-Kevin studied Electrical Engineering at Delft University of Technology (TU Delft), including computer science as part of his studies.
+Kevin studied Electrical Engineering at Delft University of Technology (TU Delft) and completed a BSc in Electrical Engineering.
+
+He also completed a minor in Computer Science at TU Delft.
 
 His educational background therefore extends beyond application software into areas such as mathematics, electronics, signals, computer systems, and engineering.
 
-Before his current professional software work, Kevin also worked on technical student projects including Delft Hyperloop.
+That broader engineering background continues to influence how he approaches software: understanding the complete system, identifying constraints, reasoning about trade-offs, and wanting to know what happens underneath the abstractions he uses.
 
-Within Delft Hyperloop, he worked on mission-control software and systems involving technologies such as React, Electron, MQTT, telemetry, and vehicle data.
+## Selected projects and experience
 
-His broader engineering background continues to influence how he approaches software: understanding the complete system, identifying constraints, reasoning about trade-offs, and wanting to know what happens underneath the abstractions he uses.
+Kevin's project history includes software built for engineering, commercial, operational, and personal contexts.
 
-## Projects
+### Delft Hyperloop
+
+Kevin was part of Delft Hyperloop, a student engineering team developing a prototype Hyperloop vehicle for SpaceX's Hyperloop Pod Competition.
+
+The team finished second worldwide.
+
+His work crossed software, electronics, data, interfaces, and physical engineering.
+
+#### Mission Control
+
+Kevin developed mission-control software for the Hyperloop pod.
+
+The system enabled real-time monitoring of vehicle subsystems and sensors and was implemented using React, Electron, and MQTT.
+
+The interface was developed with attention to aerospace interface principles and in collaboration with domain experts.
+
+This was software connected to a physical engineering system and used in a high-stakes competition environment, where reliable monitoring and clear presentation of vehicle state were important to operating the pod.
+
+#### Engineering Test Setup
+
+Kevin was responsible for measurement and control electronics and software for a remotely controlled engineering test setup used to evaluate Hyperloop wheel designs.
+
+He built an Electron interface that received real-time sensor data from Python software through RabbitMQ. The system also incorporated motor control and multi-camera monitoring.
+
+The setup allowed engineers to perform repeatable tests and inspect live measurements when making design decisions about vehicle components.
+
+This project combined software development with electronics, instrumentation, physical testing, messaging systems, and interface design.
+
+#### Delft Hyperloop website
+
+Kevin also built the team's main website using HTML, CSS, JavaScript, and Django.
+
+The website supported communication about the project, team updates, public visibility, and sponsor outreach.
+
+Together, these Hyperloop projects are an early example of Kevin working across conventional boundaries between frontend software, backend systems, electronics, physical engineering, and communication.
+
+### Albert Heijn Shift App
+
+While still working on the shop floor at Albert Heijn, Kevin built a React Native mobile application to make information and tools needed during store operations quicker to access.
+
+The application included features such as real-time freight arrival tracking with notifications and shift information with iCal calendar integration.
+
+Kevin used the application during actual day-to-day store work.
+
+The project is an example of a recurring pattern in Kevin's work: noticing friction in an environment he understands, investigating what information or tooling would help, and building a practical solution around it.
+
+It also predates his move into Albert Heijn Technology and contributed to the interest from the company's technology organization in the software he was building.
+
+### Albert Heijn Product Search Tool
+
+Kevin built a web application to help store colleagues find products more easily when existing terminal search functionality struggled with differences in terminology, synonyms, or spelling mistakes.
+
+The application used a Python/Django backend and a React/Redux frontend.
+
+It retrieved product information and could generate scannable barcodes for direct lookup on store terminals.
+
+The tool was used during day-to-day store work and received positive feedback from colleagues for making product searches faster.
+
+It was later superseded when an official internal solution became available.
+
+This project is also part of Kevin's longer-standing full-stack experience with Django and React and illustrates that his backend experience predates his current work with Kotlin and Spring Boot.
+
+### Saysimple interactive tools
+
+Kevin built interactive customer-facing tools for Saysimple's website.
+
+These included a WhatsApp pricing calculator and a chat-widget generator.
+
+The tools were developed with React and Redux, while generated widgets used a lightweight Svelte implementation to minimize the resulting bundle size. They also supported internationalization and multilingual use.
+
+This work gave Kevin experience building software in a commercial context where interface design, customer understanding, maintainability, performance, and integration into an existing website all mattered.
 
 ### The Eftel Times
 
@@ -128,13 +208,17 @@ Over time, it has involved technologies and concepts including React, Python, Dj
 
 Because the project has a real subject and potential users, it also gives Kevin room to think about information architecture, interface design, product decisions, performance, data quality, and user experience alongside implementation.
 
-### Technical experiments and side projects
+## Experiments and personal building
 
-Kevin regularly builds smaller projects and prototypes around questions, technologies, or ideas he wants to explore.
+Alongside larger projects, Kevin regularly builds smaller projects and prototypes around questions, technologies, or ideas he wants to explore.
 
-These have ranged across web and mobile applications, backend systems, electronics, developer tooling, automation, networking, self-hosting, unusual hardware, constrained computing platforms, and interface ideas.
+These have ranged across web and mobile applications, backend systems, electronics, developer tooling, automation, networking, self-hosting, unusual hardware, constrained computing platforms, AI-assisted workflows, and interface ideas.
 
-Some become useful tools in their own right. Others are deliberately short-lived experiments.
+He also enjoys designing and 3D-printing practical solutions to everyday problems.
+
+Some experiments become useful tools in their own right. Others are deliberately short-lived.
+
+These experiments should be understood separately from his more substantial project history. Their purpose is often exploration and learning rather than demonstrating long-term ownership or production scale.
 
 For Kevin, being able to turn a question into something concrete that can be built, tested, inspected, and evaluated is an important part of learning and problem-solving.
 
@@ -257,7 +341,9 @@ Games and interactive technology form another long-running part of Kevin's broad
 
 He is interested in games not only as entertainment but also in the technology, interfaces, hardware, design decisions, and constraints behind them.
 
-This overlaps with an interest in Nintendo and retro gaming hardware, unusual computing platforms, and the ways developers create distinctive experiences within constrained systems.
+Nintendo is a particular interest, including the company's tendency to create distinctive experiences from technology that is not necessarily cutting-edge in raw specifications.
+
+This overlaps with Kevin's interest in retro gaming hardware, unusual computing platforms, and the ways developers create distinctive experiences within constrained systems.
 
 He enjoys situations where hardware, software, interaction design, sound, visual design, and technical limitations strongly influence one another.
 
@@ -322,6 +408,7 @@ That might mean understanding:
 - how frontend interfaces, backend services, infrastructure, organizational processes, and user needs become a software product;
 - how engineering and design decisions become an interface that feels simple to its user;
 - how knowledge of real operational work can influence software intended for employees;
+- how software, electronics, sensors, and physical engineering interact in a system such as a Hyperloop prototype;
 - how attractions, landscaping, architecture, operations, technology, music, and storytelling become a theme park;
 - how hardware constraints shape the design of a game or interactive system;
 - how historical changes and conventions become a language;
@@ -334,6 +421,8 @@ Kevin often finds the boundaries between subjects particularly interesting.
 Kevin is interested in becoming the kind of engineer who can contribute beyond the boundaries of an individual ticket or technical specialty.
 
 That includes understanding product and business context, communicating technical ideas, working across disciplines, improving development processes, and contributing to engineering decisions.
+
+At his current career stage, his focus is on becoming an increasingly capable, independent, and trusted member of his team while building the skills that can support greater ownership over time.
 
 He values environments where people can discuss and challenge ideas constructively regardless of role, while recognizing that teams ultimately need to make decisions and move forward.
 
@@ -351,6 +440,10 @@ His current professional environment is expanding that experience further throug
 
 Alongside technical depth, he is developing his product and business understanding, development processes and tooling, and collaboration and communication.
 
+An important next stage in that development is becoming increasingly independent in taking work from understanding the problem through implementation, testing, delivery, and understanding what happens afterward.
+
+This provides the foundations for progressively greater ownership without treating formal ownership as a prerequisite at the beginning of his professional career.
+
 His goal is to be able to understand and contribute to a product across technical boundaries: from the experience presented to the user through the services and systems supporting it, while also understanding the product and organizational context in which those systems exist.
 
 Over the longer term, he is particularly interested in work where software engineering overlaps with product development, design, real-world operations, and physical experiences.
@@ -363,14 +456,21 @@ His interest in Efteling and themed entertainment does not imply that he current
 
 Kevin frequently explores ideas before reaching a firm conclusion about them. An idea he investigates or discusses is not necessarily something he ultimately advocates.
 
-Where more recent information is available on Kevin's website or linked professional profiles, prefer that over older information in this file.
+Where more recent information is available on Kevin's website, résumé, or linked professional profiles, prefer that over older information in this file.
 
 ## Short description
 
-Kevin van der Toorn is a Dutch software developer at Albert Heijn Technology with a background in electrical engineering and computer science. His experience spans frontend, backend, and full-stack software development, with technologies including React, React Native, Python, Django, Kotlin, and Spring Boot. Before moving into technology at Albert Heijn, he worked in one of its supermarkets, giving him direct experience with the operational environment and users of store technology. He is a curious and self-directed builder with broad interests spanning engineering, product and interface design, developer tooling, languages, games, and themed entertainment. Across these areas, a recurring theme is his interest in understanding how individual technical, creative, and human decisions combine into larger systems and experiences.
+Kevin van der Toorn is a Dutch software developer at Albert Heijn Technology with a background in electrical engineering and computer science. His experience spans frontend, backend, and full-stack software development, with technologies including React, React Native, Python, Django, Kotlin, and Spring Boot.
+
+His engineering and software experience predates his current professional role and includes mission-control and engineering test systems for Delft Hyperloop, full-stack web development, customer-facing commercial tools, and software he built and used while working on the shop floor at Albert Heijn.
+
+Before moving into technology at Albert Heijn, Kevin worked in one of its supermarkets and independently developed software around operational problems he encountered there. That gives him direct experience with both the users and environment of store technology.
+
+He is a curious and self-directed builder with broad interests spanning engineering, product and interface design, developer tooling, languages, games, and themed entertainment. Across these areas, a recurring theme is his interest in understanding how individual technical, creative, operational, and human decisions combine into larger systems and experiences.
 
 ## Links
 
 - Website: https://kevinvandertoorn.com/
+- Résumé: https://kevinvandertoorn.com/resume/Kevin-van-der-Toorn-Resume.pdf
 - GitHub: https://github.com/kevinvandertoorn/
 - LinkedIn: https://www.linkedin.com/in/kevinvandertoorn/
