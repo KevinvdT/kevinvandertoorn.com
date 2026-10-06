@@ -120,6 +120,16 @@ His educational background therefore extends beyond application software into ar
 
 That broader engineering background continues to influence how he approaches software: understanding the complete system, identifying constraints, reasoning about trade-offs, and wanting to know what happens underneath the abstractions he uses.
 
+### Bachelor Thesis — Computer Vision for Flood Risk Assessment
+
+- **Title:** Optimizing Object Detection Models for Flood Risk Assessment by Street View Imagery
+- **Institution:** Delft University of Technology (TU Delft), 2023
+- **Authors:** Rienk Marsman, Kevin van der Toorn, Tjeerd Wams
+- **Repository:** https://repository.tudelft.nl/record/uuid:80e14cd1-2fa3-406f-a283-00c54528e3f0
+- Applied computer vision to estimate building entrance elevation from street-view imagery for flood-risk assessment.
+- Used YOLOv8 to detect houses, doors, and steps, combined with domain-specific post-processing.
+- The resulting system achieved 0.908 precision for step detection and an RMSE of 1.19 steps per image on a 111-image test set.
+
 ## Selected projects and experience
 
 Kevin's project history includes software built for engineering, commercial, operational, and personal contexts.
