@@ -1,5 +1,6 @@
 {
   "title": "Chatwidget voor WhatsApp",
+  "slug": "whatsapp-chatwidget",
   "description": "Ontwikkelde een widgetgenerator voor Saysimple, waarmee bedrijven in een handomdraai een eigen WhatsApp‑chatknop op hun site kunnen plaatsen.",
   "modal": {
     "title": "WhatsApp Chatwidget‑generator",

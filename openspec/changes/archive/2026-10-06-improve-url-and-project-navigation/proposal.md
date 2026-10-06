@@ -7,7 +7,7 @@ The site changes the URL as visitors move between sections, but opening a sectio
 ## What Changes
 
 - Open the right section when its URL is used, even if the URL is in another language. Then change it to the path for the selected language.
-- Update the current section or project URL as soon as the visitor changes languages. Do not put the language code in the URL.
+- Update the current section or project URL and browser title as soon as the visitor changes languages. Do not put the language code in the URL.
 - Give each project detail its own URL. Keep its slug translations with that project, and use its English slug when another language has no slug.
 - Open project details from their URLs. Back and Forward close or reopen project details; moving between sections does not add history entries.
 - Handle only the site's known sections and projects. Do not add a routing library.

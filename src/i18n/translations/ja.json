@@ -57,7 +57,13 @@
     "home": "Home",
     "about": "About",
     "work": "Work",
-    "skills": "Skills",
+    "skills": "Skill",
     "contact": "Contact"
+  },
+  "urlSlugs": {
+    "about": "about",
+    "work": "project",
+    "skills": "skill",
+    "contact": "contact"
   }
 }

@@ -69,5 +69,11 @@
     "work": "Proyectos",
     "skills": "Habilidades",
     "contact": "Contacto"
+  },
+  "urlSlugs": {
+    "about": "sobre-mi",
+    "work": "proyectos",
+    "skills": "habilidades",
+    "contact": "contacto"
   }
 }

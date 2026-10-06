@@ -9,6 +9,7 @@ See `proposal.md` for the reason for this change. The active section is stored i
 **Goals:**
 - Open the right section or project when its URL is loaded or reached with Back or Forward.
 - Keep each section and project identifiable across languages, while showing the URL in the selected language.
+- Keep the browser title synchronized with the resolved section or project in the selected language.
 - Keep project translations and modal content with their projects.
 - Use a small list of known URLs and the browser's built-in history features.
 
@@ -34,6 +35,12 @@ Scrolling to or selecting a section changes the current history entry; section c
 If a project URL is opened directly, show its modal even though the visitor did not first open the Work section. Closing that modal changes the URL to the translated Work path instead of taking the visitor away from the site. Record when a project URL was opened from within the app so closing it can return to the previous section.
 
 Keep URL changes and page scrolling out of Redux reducers. Use one small navigation helper to read and write known URLs and respond to Back and Forward. The menu, language switcher, and project modals call it when needed.
+
+### Keep browser titles synchronized with navigation state
+
+After resolving a section or project, update the browser title promptly. This includes initial loads, Back and Forward navigation, direct project URLs, project close actions, and language changes.
+
+For a section, derive the title from that section's current localized menu label. For a project, derive it from the project registry's localized title, using its established fallback when a translation is unavailable. Keep the portfolio name prefix and update the title together with URL canonicalization so it does not lag behind the visible content.
 
 ### Keep current paths working
 

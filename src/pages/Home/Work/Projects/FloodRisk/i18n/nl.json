@@ -1,5 +1,6 @@
 {
   "title": "Overstromingsrisico bepalen met computer vision",
+  "slug": "overstromingsrisico-onderzoek",
   "company": "TU Delft",
   "description": "End-to-end pipeline die op grote schaal overstromingsrisico inschat met behulp van streetview-beelden.",
   "modal": {

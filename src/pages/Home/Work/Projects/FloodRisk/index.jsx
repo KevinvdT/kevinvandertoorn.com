@@ -113,10 +113,12 @@ const splitPreviewAndAll = (keys = []) => {
   return { preview, all };
 };
 
-const FloodRisk = () => {
+const FloodRisk = ({ projectId = 'flood-risk', activeProjectId, onProjectOpen, onRouteClose }) => {
   const { i18n } = useTranslation();
   const [isOpen, setIsOpen] = useState(false);
   const [showVideo, setShowVideo] = useState(false);
+  // Route state lets direct links and browser history reopen this local modal.
+  const isModalOpen = isOpen || activeProjectId === projectId;
   const { maxMobile } = useScreenSize();
   const { isDark } = useColorScheme();
 
@@ -133,11 +135,16 @@ const FloodRisk = () => {
   const handleModalClose = () => {
     setIsOpen(false);
     setShowVideo(false); // Reset video state when modal closes
+    if (activeProjectId === projectId) onRouteClose?.();
   };
 
   return (
     <>
       <ProjectItem
+        projectId={projectId}
+        // Slug text stays in this project's own translation files.
+        slug={t.slug || frTranslations.en.slug}
+        onOpenProject={onProjectOpen}
         imageSrc={image}
         title={t.title}
         description={t.description}
@@ -147,7 +154,7 @@ const FloodRisk = () => {
         company={t.company}
       />
 
-      <Modal isOpen={isOpen} onClose={handleModalClose} title={t.title} maxWidth="700px">
+      <Modal isOpen={isModalOpen} onClose={handleModalClose} title={t.title} maxWidth="700px">
         <PMContainer>
           {/* <PMTitle>Mission Control System</PMTitle> */}
           <PMText>

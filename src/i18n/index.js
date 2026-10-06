@@ -6,12 +6,13 @@ import LanguageDetector from 'i18next-browser-languagedetector'; // Add this
 import translationEN from './translations/en.json';
 import translationNL from './translations/nl.json';
 import translationDE from './translations/de.json';
-// import translationDA from './translations/da.json';
+import translationDA from './translations/da.json';
 import translationFR from './translations/fr.json';
-// import translationES from './translations/es.json';
-// import translationJA from './translations/ja.json';
+import translationES from './translations/es.json';
+import translationJA from './translations/ja.json';
+import { createSectionUrlResolver } from '../utils/sectionUrlResolver';
 
-const resources = {
+export const resources = {
   en: {
     translation: translationEN,
   },
@@ -34,6 +35,19 @@ const resources = {
   //   translation: translationJA,
   // },
 };
+
+// Inactive locales stay out of the language switcher but their links still resolve.
+const urlTranslations = Object.fromEntries(
+  Object.entries(resources).map(([language, resource]) => [language, resource.translation])
+);
+
+Object.assign(urlTranslations, {
+  da: translationDA,
+  es: translationES,
+  ja: translationJA,
+});
+
+export const sectionUrlResolver = createSectionUrlResolver(urlTranslations);
 
 i18n
   .use(LanguageDetector) // Use the language detector

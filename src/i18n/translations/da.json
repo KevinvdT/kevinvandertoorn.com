@@ -69,5 +69,11 @@
     "work": "Projekter",
     "skills": "Færdigheder",
     "contact": "Kontakt"
+  },
+  "urlSlugs": {
+    "about": "om-mig",
+    "work": "projekter",
+    "skills": "faerdigheder",
+    "contact": "kontakt"
   }
 }

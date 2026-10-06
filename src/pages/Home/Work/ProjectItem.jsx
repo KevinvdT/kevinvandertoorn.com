@@ -116,6 +116,8 @@ const ReadMoreRow = styled.div`
 `;
 
 const ProjectItem = ({
+  projectId,
+  slug,
   imageSrc,
   imageSrcDark,
   title,
@@ -123,6 +125,7 @@ const ProjectItem = ({
   color,
   projectDetails,
   onReadMore,
+  onOpenProject,
   setIsOpen,
   tagKeys = [],
   company,
@@ -161,7 +164,10 @@ const ProjectItem = ({
   }, []);
 
   const handleReadMore = () => {
-    if (typeof onReadMore === 'function') {
+    if (typeof onOpenProject === 'function') {
+      // The Work parent owns the route and modal state for listed projects.
+      onOpenProject(projectId, slug);
+    } else if (typeof onReadMore === 'function') {
       onReadMore();
     } else if (typeof setIsOpen === 'function') {
       setIsOpen(true);
@@ -172,12 +178,14 @@ const ProjectItem = ({
 
   const closeModal = () => setIsModalOpen(false);
 
-  const canOpenProject = readMore && (onReadMore || setIsOpen);
+  const canOpenProject = readMore && (onOpenProject || onReadMore || setIsOpen);
 
   return (
     <>
       <ProjectItemContainer
         ref={containerRef}
+        data-project-id={projectId}
+        data-project-slug={slug}
         aligntop
         isMobile={maxMobile}
       >

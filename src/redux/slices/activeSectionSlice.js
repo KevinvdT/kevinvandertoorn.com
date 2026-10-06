@@ -1,74 +1,63 @@
 import { createSlice } from '@reduxjs/toolkit';
-import i18next from 'i18next'; // Import i18next
-import sectionNames from '../../constants/sectionNames';
+import i18next from 'i18next';
 import posthog from 'posthog-js';
-
-// TODO: Add a way to set the active section from the URL
+import { sectionUrlResolver } from '../../i18n';
 
 const initialState = {
   activeSection: 'home',
-};
-
-// Utility function to convert special characters to URL-friendly format
-const toUrlFriendly = (str) => {
-  return str
-    .toLowerCase()
-    .replace(/ä/g, 'ae')
-    .replace(/ö/g, 'oe')
-    .replace(/ü/g, 'ue')
-    .replace(/ß/g, 'ss')
-    .replace(/[^a-z0-9]/g, '-'); // Replace any non-alphanumeric characters with hyphens
+  activeProjectId: null,
 };
 
 const activeSectionSlice = createSlice({
   name: 'activeSection',
   initialState,
   reducers: {
-    setActiveSection: (state, action) => {
-      const { sectionId, scroll = true } = action.payload; // Destructure with a default value for `scroll`
-      const section = document.getElementById(sectionId);
-
-      if (section) {
-        if (scroll) {
-          const sectionTop = section.getBoundingClientRect().top + window.scrollY;
-          const currentScrollPosition = window.scrollY;
-
-          // Scroll if not already at the section
-          if (Math.abs(sectionTop - currentScrollPosition) > 1) {
-            section.scrollIntoView({ behavior: 'smooth' });
-          }
-        }
-
-        // Update the active section in the state
-        state.activeSection = sectionId;
-
-        // Get the translated section name using the correct translation key
-        const translatedSectionName = i18next.t(`menu.${sectionId}`);
-
-        // Convert the translated section name to a URL-friendly format
-        const urlSectionName = toUrlFriendly(translatedSectionName);
-
-        // Update the URL and document title with the translated section name
-        if (sectionId === 'home') {
-          window.history.replaceState(null, '', '/');
-          document.title = `Kevin van der Toorn`;
-        } else {
-          window.history.replaceState(null, '', `/${urlSectionName}`);
-          document.title = `Kevin van der Toorn · ${translatedSectionName}`;
-        }
-
-        // Track section changes with PostHog
-        posthog.capture('section_view', {
-          section: sectionId,
-          section_name: translatedSectionName,
-          language: i18next.resolvedLanguage,
-          url: window.location.href,
-          timestamp: new Date().toISOString()
-        });
-      }
+    setActiveSectionState: (state, action) => {
+      state.activeSection = action.payload;
+    },
+    setActiveProjectId: (state, action) => {
+      state.activeProjectId = action.payload;
     },
   },
 });
 
-export const { setActiveSection } = activeSectionSlice.actions;
+const { setActiveProjectId } = activeSectionSlice.actions;
+const { setActiveSectionState } = activeSectionSlice.actions;
+
+// Keep DOM, history, and analytics effects out of the reducer.
+export const setActiveSection = ({ sectionId, scroll = true, updateUrl = true }) => (dispatch) => {
+  const section = document.getElementById(sectionId);
+  if (!section) return;
+
+  if (scroll) {
+    const sectionTop = section.getBoundingClientRect().top + window.scrollY;
+    const currentScrollPosition = window.scrollY;
+
+    if (Math.abs(sectionTop - currentScrollPosition) > 1) {
+      section.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
+
+  dispatch(setActiveSectionState(sectionId));
+
+  const translatedSectionName = i18next.t(`menu.${sectionId}`);
+  const sectionPath = sectionUrlResolver.getSectionPath(sectionId, i18next.resolvedLanguage);
+  if (updateUrl && sectionPath) {
+    window.history.replaceState(window.history.state, '', sectionPath);
+  }
+
+  document.title = sectionId === 'home'
+    ? 'Kevin van der Toorn'
+    : `Kevin van der Toorn · ${translatedSectionName}`;
+
+  posthog.capture('section_view', {
+    section: sectionId,
+    section_name: translatedSectionName,
+    language: i18next.resolvedLanguage,
+    url: window.location.href,
+    timestamp: new Date().toISOString()
+  });
+};
+
+export { setActiveProjectId };
 export default activeSectionSlice.reducer;

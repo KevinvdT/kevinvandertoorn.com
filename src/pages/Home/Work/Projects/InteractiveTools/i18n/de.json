@@ -1,5 +1,6 @@
 {
   "title": "Chat‑Widget für WhatsApp",
+  "slug": "whatsapp-chatwidget",
   "description": "Entwickelte einen Widget‑Generator für Saysimple, mit dem Unternehmen in wenigen Minuten einen eigenen WhatsApp‑Einstiegspunkt auf ihrer Website einfügen können.",
   "modal": {
     "title": "WhatsApp‑Chat‑Widget‑Generator",

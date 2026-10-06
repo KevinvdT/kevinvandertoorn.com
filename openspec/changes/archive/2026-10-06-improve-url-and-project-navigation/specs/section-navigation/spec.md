@@ -28,9 +28,20 @@ The system SHALL update the current history entry when scrolling or navigating b
 - **WHEN** a visitor closes a project detail or navigates Back from its project URL
 - **THEN** the previously active section URL is restored without adding section movement to history
 
-### Requirement: Language changes preserve the active section URL
-The system SHALL keep the active section unchanged and immediately canonicalize its URL using the newly selected language's configured section path.
+### Requirement: Section titles follow resolved navigation state
+The system SHALL update the browser title promptly to identify the active section in the selected language whenever a section is resolved or the language changes.
+
+#### Scenario: Open a section URL directly
+- **WHEN** a visitor opens a configured section URL
+- **THEN** the browser title identifies the resolved section in the selected language
 
 #### Scenario: Change language while viewing a section
 - **WHEN** a visitor changes the language while a section is active
-- **THEN** the same section remains active and its URL changes to that language's configured path
+- **THEN** the browser title changes to that section's title in the newly selected language
+
+### Requirement: Language changes preserve the active section URL and title
+The system SHALL keep the active section unchanged and immediately canonicalize its URL and browser title using the newly selected language's configured section path and title.
+
+#### Scenario: Change language while viewing a section
+- **WHEN** a visitor changes the language while a section is active
+- **THEN** the same section remains active, its URL changes to that language's configured path, and its browser title identifies that section in the newly selected language

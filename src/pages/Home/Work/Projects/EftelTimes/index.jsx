@@ -35,9 +35,11 @@ const splitPreviewAndAll = (keys = []) => {
   return { preview, all };
 };
 
-const EftelTimes = ({ readMore = true }) => {
+const EftelTimes = ({ projectId = 'eftel-times', activeProjectId, onProjectOpen, onRouteClose, readMore = true }) => {
   const { i18n } = useTranslation();
   const [isOpen, setIsOpen] = useState(false);
+  // Route state lets direct links and browser history reopen this local modal.
+  const isModalOpen = isOpen || activeProjectId === projectId;
 
   const { preview, all } = splitPreviewAndAll(TECH_TAG_KEYS);
 
@@ -49,6 +51,10 @@ const EftelTimes = ({ readMore = true }) => {
   return (
     <>
       <ProjectItem
+        projectId={projectId}
+        // Slug text stays in this project's own translation files.
+        slug={t.slug || etTranslations.en.slug}
+        onOpenProject={onProjectOpen}
         imageSrc={image}
         imageSrcDark={imageDark}
         title={t.title}
@@ -60,7 +66,15 @@ const EftelTimes = ({ readMore = true }) => {
         readMore={readMore}
       />
 
-      <Modal isOpen={isOpen} onClose={() => setIsOpen(false)} title={t.title} maxWidth="700px">
+      <Modal
+        isOpen={isModalOpen}
+        onClose={() => {
+          setIsOpen(false);
+          if (activeProjectId === projectId) onRouteClose?.();
+        }}
+        title={t.title}
+        maxWidth="700px"
+      >
         <PMContainer>
           <Ganzenhoedster
             style={{ float: 'right', width: isXs ? '150px' : '200px', margin: '0 -40px' }}

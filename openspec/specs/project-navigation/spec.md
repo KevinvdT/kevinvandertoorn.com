@@ -1,10 +1,10 @@
-# Spec Delta
+# project-navigation Specification
 
 ## Purpose
 
 Defines stable, directly addressable navigation for project details while allowing each self-contained project to provide localized URL slugs with an English fallback.
 
-## ADDED Requirements
+## Requirements
 
 ### Requirement: Project details have localized URLs
 The system SHALL identify each project by a stable internal ID and use `/{work-section-slug}/{project-slug}` for its detail URL. The Work section slug follows the active language, and a project uses its localized slug or falls back to its English slug.
@@ -43,9 +43,20 @@ The system SHALL represent opening a project detail as a distinct history entry 
 - **WHEN** a visitor navigates Forward to a project history entry
 - **THEN** the corresponding project detail opens again
 
-### Requirement: Language changes preserve an open project
-The system SHALL keep an open project detail visible and immediately update its URL to use the newly selected language's Work path and project slug, applying the English slug fallback when necessary.
+### Requirement: Project titles follow resolved navigation state
+The system SHALL update the browser title promptly to identify an open project in the selected language whenever its detail view is resolved or the language changes.
+
+#### Scenario: Open a project URL directly
+- **WHEN** a visitor opens a valid project URL in a fresh page load
+- **THEN** the browser title identifies the resolved project in the selected language
 
 #### Scenario: Change language while a project is open
 - **WHEN** a visitor changes language while viewing a project detail
-- **THEN** the same project remains open and its URL reflects the newly selected language where translations are available
+- **THEN** the browser title changes to that project's title in the newly selected language, using the established fallback when necessary
+
+### Requirement: Language changes preserve an open project URL and title
+The system SHALL keep an open project detail visible and immediately update its URL and browser title to use the newly selected language's Work path, project slug, and title, applying the English slug fallback when necessary.
+
+#### Scenario: Change language while a project is open
+- **WHEN** a visitor changes language while viewing a project detail
+- **THEN** the same project remains open, its URL reflects the newly selected language where translations are available, and its browser title identifies the project in that language

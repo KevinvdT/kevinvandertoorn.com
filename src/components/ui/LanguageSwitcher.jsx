@@ -1,7 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import { useTranslation } from 'react-i18next';
+import { useSelector } from 'react-redux';
 import posthog from 'posthog-js';
+import { sectionUrlResolver } from '../../i18n';
+import { getProjectTitle, projectUrlResolver } from '../../pages/Home/Work/Projects';
 
 const SwitcherContainer = styled.div`
   position: absolute;
@@ -64,6 +67,8 @@ const LanguageButton = styled.button`
 
 const LanguageSwitcher = () => {
   const { i18n } = useTranslation();
+  const activeSection = useSelector((state) => state.activeSection.activeSection);
+  const activeProjectId = useSelector((state) => state.activeSection.activeProjectId);
   const languages = [
     'en',
     'nl',
@@ -89,14 +94,27 @@ const LanguageSwitcher = () => {
 
   const handleLanguageChange = (language) => {
     const previousLanguage = i18n.resolvedLanguage;
-    i18n.changeLanguage(language); // Switch to the selected language
+    i18n.changeLanguage(language).then(() => {
+      // Preserve the open project route, otherwise update the current section route.
+      const currentPath = activeProjectId
+        ? projectUrlResolver.getProjectPath(activeProjectId, language)
+        : sectionUrlResolver.getSectionPath(activeSection, language);
+      if (currentPath) {
+        window.history.replaceState(window.history.state, '', currentPath);
+      }
 
-    // Track language change with PostHog
-    posthog.capture('language_changed', {
-      from_language: previousLanguage,
-      to_language: language,
-      timestamp: new Date().toISOString(),
-      url: window.location.href
+      const projectTitle = activeProjectId && getProjectTitle(activeProjectId, language);
+      const pageTitle = projectTitle || i18n.t(`menu.${activeSection}`, { lng: language });
+      document.title = activeSection === 'home' && !activeProjectId
+        ? 'Kevin van der Toorn'
+        : `Kevin van der Toorn · ${pageTitle}`;
+
+      posthog.capture('language_changed', {
+        from_language: previousLanguage,
+        to_language: language,
+        timestamp: new Date().toISOString(),
+        url: window.location.href
+      });
     });
   };
 

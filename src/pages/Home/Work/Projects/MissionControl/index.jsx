@@ -109,10 +109,12 @@ const splitPreviewAndAll = (keys = []) => {
   return { preview, all };
 };
 
-const MissionControl = () => {
+const MissionControl = ({ projectId = 'mission-control', activeProjectId, onProjectOpen, onRouteClose }) => {
   const { i18n } = useTranslation();
   const [isOpen, setIsOpen] = useState(false);
   const [showVideo, setShowVideo] = useState(false);
+  // Route state lets direct links and browser history reopen this local modal.
+  const isModalOpen = isOpen || activeProjectId === projectId;
 
   const { preview, all } = splitPreviewAndAll(TECH_TAG_KEYS);
 
@@ -127,11 +129,16 @@ const MissionControl = () => {
   const handleModalClose = () => {
     setIsOpen(false);
     setShowVideo(false); // Reset video state when modal closes
+    if (activeProjectId === projectId) onRouteClose?.();
   };
 
   return (
     <>
       <ProjectItem
+        projectId={projectId}
+        // Slug text stays in this project's own translation files.
+        slug={t.slug || mcTranslations.en.slug}
+        onOpenProject={onProjectOpen}
         imageSrc={image}
         title={t.title}
         description={t.description}
@@ -142,7 +149,7 @@ const MissionControl = () => {
         featured
       />
 
-      <Modal isOpen={isOpen} onClose={handleModalClose} title={t.title} maxWidth="700px">
+      <Modal isOpen={isModalOpen} onClose={handleModalClose} title={t.title} maxWidth="700px">
         <PMContainer>
           {/* <PMTitle>Mission Control System</PMTitle> */}
           <PMText>

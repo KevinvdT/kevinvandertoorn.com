@@ -61,5 +61,11 @@
     "work": "Work",
     "skills": "Skills",
     "contact": "Contact"
+  },
+  "urlSlugs": {
+    "about": "about",
+    "work": "work",
+    "skills": "skills",
+    "contact": "contact"
   }
 }

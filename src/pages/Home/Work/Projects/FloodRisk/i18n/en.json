@@ -1,5 +1,6 @@
 {
   "title": "Flood Risk Assessment using Computer Vision",
+  "slug": "flood-risk-analysis",
   "company": "Delft University of Technology",
   "description": "End-to-end pipeline estimating ground-floor elevation from street-level imagery for large-scale flood risk analysis.",
   "modal": {

@@ -1,5 +1,6 @@
 {
   "title": "Hochwasserrisiko bestimmen mit Computer Vision",
+  "slug": "hochwasserrisiko-forschung",
   "company": "TU Delft",
   "description": "End-to-end-Pipeline zur großskaligen Bestimmung des Hochwasserrisikos mithilfe von Streetview-Bildern.",
   "modal": {

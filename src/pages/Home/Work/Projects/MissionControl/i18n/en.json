@@ -1,5 +1,6 @@
 {
   "title": "Mission Control",
+  "slug": "mission-control",
   "description": "Real-time operator interface for Delft Hyperloop’s pod at the SpaceX Hyperloop Pod Competition 2018, providing telemetry, navigation insights, and mission-critical commands.",
   "modal": {
     "title": "Mission Control",

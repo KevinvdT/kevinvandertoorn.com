@@ -75,5 +75,11 @@
     "work": "Projets",
     "skills": "Compétences",
     "contact": "Contact"
+  },
+  "urlSlugs": {
+    "about": "a-propos",
+    "work": "projets",
+    "skills": "competences",
+    "contact": "contact"
   }
 }

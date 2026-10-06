@@ -29,9 +29,11 @@ const splitPreviewAndAll = (keys = []) => {
   return { preview, all };
 };
 
-const InteractiveTools = ({ readMore = true }) => {
+const InteractiveTools = ({ projectId = 'interactive-tools', activeProjectId, onProjectOpen, onRouteClose, readMore = true }) => {
   const { i18n } = useTranslation();
   const [isOpen, setIsOpen] = useState(false);
+  // Route state lets direct links and browser history reopen this local modal.
+  const isModalOpen = isOpen || activeProjectId === projectId;
 
   const { preview, all } = splitPreviewAndAll(TECH_TAG_KEYS);
 
@@ -51,6 +53,10 @@ const InteractiveTools = ({ readMore = true }) => {
   return (
     <>
       <ProjectItem
+        projectId={projectId}
+        // Slug text stays in this project's own translation files.
+        slug={t.slug || itTranslations.en.slug}
+        onOpenProject={onProjectOpen}
         imageSrc={image}
         title={t.title}
         description={t.description}
@@ -61,7 +67,15 @@ const InteractiveTools = ({ readMore = true }) => {
         readMore={readMore}
       />
 
-      <Modal isOpen={isOpen} onClose={() => setIsOpen(false)} title={t.modal.title} maxWidth="700px">
+      <Modal
+        isOpen={isModalOpen}
+        onClose={() => {
+          setIsOpen(false);
+          if (activeProjectId === projectId) onRouteClose?.();
+        }}
+        title={t.modal.title}
+        maxWidth="700px"
+      >
         <PMContainer>
           {/* <PMTitle>WhatsApp Chat Widget Generator</PMTitle> */}
           <PMText>

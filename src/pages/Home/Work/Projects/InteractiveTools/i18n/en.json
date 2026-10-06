@@ -1,5 +1,6 @@
 {
   "title": "WhatsApp Chat Widget",
+  "slug": "whatsapp-chatwidget",
   "description": "Created a widget generator for Saysimple that lets businesses add a custom WhatsApp entry point to their site in just minutes.",
   "modal": {
     "title": "WhatsApp Chat Widget Generator",
