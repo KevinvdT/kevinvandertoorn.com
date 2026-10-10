@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { Trans, useTranslation } from 'react-i18next';
 import styled from 'styled-components';
 import ProjectItem from '../../ProjectItem';
@@ -24,9 +24,71 @@ import screenshot from './img/screenshot.webp';
 import videoCover from './img/video-cover.png';
 import frTranslations from './i18n';
 
+const ThesisSection = styled.div`
+  display: flow-root;
+  margin-top: 24px;
+  padding-bottom: 80px;
+`;
+
+const ThesisTrigger = styled.div`
+  height: 1px;
+`;
+
+const ThesisActions = styled(PMActions)`
+  position: fixed;
+  bottom: 36px;
+  left: 24px;
+  right: 24px;
+  z-index: 1;
+  margin: 0;
+  padding: 0;
+  pointer-events: none;
+
+  > a {
+    pointer-events: ${({ $revealed }) => $revealed ? 'auto' : 'none'};
+    opacity: ${({ $revealed }) => $revealed ? 1 : 0};
+    transform: translateY(${({ $revealed }) => $revealed ? '0' : 'calc(100% + 36px)'});
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+    transition-duration: ${({ $revealed }) => $revealed ? '0.5s' : '0.2s'};
+
+    @media (prefers-reduced-motion: reduce) {
+      transform: none;
+      transition: none;
+    }
+  }
+`;
+
+const ThesisAction = ({ label }) => {
+  const triggerRef = useRef(null);
+  const [revealed, setRevealed] = useState(false);
+
+  useEffect(() => {
+    let scrollRoot = triggerRef.current.parentElement;
+    while (scrollRoot && !/(auto|scroll)/.test(getComputedStyle(scrollRoot).overflowY)) {
+      scrollRoot = scrollRoot.parentElement;
+    }
+    const observer = new IntersectionObserver(([entry]) => {
+      setRevealed(entry.isIntersecting || entry.boundingClientRect.top < entry.rootBounds.top);
+    }, { root: scrollRoot, rootMargin: '0px 0px -64px 0px' });
+    observer.observe(triggerRef.current);
+    return () => observer.disconnect();
+  }, []);
+
+  return (
+    <>
+      <ThesisTrigger ref={triggerRef} aria-hidden="true" />
+      <ThesisActions $revealed={revealed} aria-hidden={!revealed}>
+        <Button as='a' href="https://resolver.tudelft.nl/uuid:80e14cd1-2fa3-406f-a283-00c54528e3f0" target='_blank' rel='noopener noreferrer' externalLink tabIndex={revealed ? 0 : -1}>
+          {label}
+        </Button>
+      </ThesisActions>
+    </>
+  );
+};
+
 const PipelineImageContainer = styled.div`
   text-align: center;
-  margin-top: 58px;
+  margin-top: 20px;
 `;
 
 const PipelineImage = styled.img`
@@ -200,6 +262,7 @@ const FloodRisk = ({ projectId = 'flood-risk', activeProjectId, onProjectOpen, o
               ></iframe>
             </div>
           )}
+          <ThesisAction label={t.modal.viewThesis} />
           <PMSectionTitle>{t.modal.impact.title}</PMSectionTitle>
           {Array.isArray(t.modal.impact.text) ? (
             t.modal.impact.text.map((paragraph, index) => (
@@ -217,19 +280,16 @@ const FloodRisk = ({ projectId = 'flood-risk', activeProjectId, onProjectOpen, o
 
 
 
-          <PipelineImageContainer>
-            <PipelineImage
-              src={isDark ? pipelineImageDark : pipelineImage}
-              alt="Pipeline"
-              isMobile={maxMobile}
-            />
-          </PipelineImageContainer>
+          <ThesisSection>
+            <PipelineImageContainer>
+              <PipelineImage
+                src={isDark ? pipelineImageDark : pipelineImage}
+                alt="Pipeline"
+                isMobile={maxMobile}
+              />
+            </PipelineImageContainer>
 
-          {/* <PMActions>
-            <Button as='a' href="#" target='_blank' rel='noopener noreferrer'>
-              View Competition Results
-            </Button>
-          </PMActions> */}
+          </ThesisSection>
         </PMContainer>
       </Modal>
     </>

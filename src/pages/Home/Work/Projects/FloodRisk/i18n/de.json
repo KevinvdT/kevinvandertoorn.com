@@ -5,6 +5,7 @@
   "description": "End-to-end-Pipeline zur großskaligen Bestimmung des Hochwasserrisikos mithilfe von Streetview-Bildern.",
   "modal": {
     "title": "Hochwasserrisiko bestimmen mit Computer Vision",
+    "viewThesis": "Abschlussarbeit ansehen",
     "intro": "Für mein <1>Bachelorabschlussprojekt</1> entwickelte ich ein Computer-Vision-System, das die <1>Erdgeschosshöhe von Wohngebäuden</1> auf Basis von Streetview-Bildern schätzt, als Input zur <1>Bestimmung des Hochwasserrisikos</1>. Obwohl Überschwemmungen weltweit einen großen Anteil an Naturkatastrophen ausmachen, sind detaillierte Höhendaten häufig teuer, unvollständig oder nicht verfügbar. Dieses Projekt untersuchte, ob <1>breit verfügbare Streetview-Bilder</1> dazu beitragen können, einen Teil dieser Lücke durch eine sorgfältig konzipierte End-to-end-Pipeline zu überbrücken.",
     "collaboration": "Das Projekt wurde an der <1>TU Delft</1> durchgeführt, in Zusammenarbeit mit Forschenden der <1>Nanyang Technological University</1> in <1>Singapur</1>.",
     "video": {

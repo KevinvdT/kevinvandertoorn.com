@@ -5,6 +5,7 @@
   "description": "End-to-end pipeline die op grote schaal overstromingsrisico inschat met behulp van streetview-beelden.",
   "modal": {
     "title": "Overstromingsrisico via streetview-beelden",
+    "viewThesis": "Bekijk scriptie",
     "intro": "Voor mijn <1>Bachelor Eindproject</1> ontwikkelde ik een computer-vision-systeem dat de <1>begane-grondhoogte van woningen</1> schat op basis van streetview-beelden, als input voor <1>de analyse van overstromingsrisico</1>. Hoewel overstromingen wereldwijd een groot aandeel vormen van natuurrampen, zijn gedetailleerde hoogtegegevens vaak duur, onvolledig of niet beschikbaar. Dit project onderzocht of <1>breed beschikbare streetview-beelden</1> kunnen helpen om een deel van die kloof te overbruggen, via een zorgvuldig ontworpen end-to-end pipeline.",
     "collaboration": "Het project werd uitgevoerd aan de <1>TU Delft</1>, in samenwerking met onderzoekers van <1>Nanyang Technological University</1> in <1>Singapore</1>.",
     "video": {
