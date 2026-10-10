@@ -46,6 +46,35 @@ const MenuContainer = styled.nav`
       outline: 1px solid #424242;
     }
   }
+
+  > canvas {
+    visibility: hidden;
+  }
+
+  &[data-glass-state='ready'] {
+    background-color: transparent;
+    backdrop-filter: none;
+    outline: none;
+    box-shadow: none;
+
+    > canvas {
+      visibility: visible;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      border-radius: inherit;
+      pointer-events: none;
+      background-color: ${({ theme }) => theme.colors.light.background}88;
+
+      @media (prefers-color-scheme: dark) {
+        background-color: ${({ theme }) => theme.colors.dark.background}88;
+      }
+    }
+  }
 `;
 
 const MenuItem = styled.a`

@@ -1,4 +1,5 @@
 import { useEffect, useRef } from 'react';
+import styled from 'styled-components';
 import { useDispatch } from 'react-redux';
 import { useTranslation } from 'react-i18next';
 import { PageContainer } from '../../components/layout/Container';
@@ -13,10 +14,34 @@ import LanguageSwitcher from '../../components/ui/LanguageSwitcher';
 import { sectionUrlResolver } from '../../i18n';
 import { getProjectTitle, projectUrlResolver } from './Work/Projects';
 import { setActiveProjectId, setActiveSection } from '../../redux/slices/activeSectionSlice';
+import useNavigationGlass from '../../hooks/useNavigationGlass';
+
+const GlassRoot = styled.div`
+  position: relative;
+
+  > main,
+  > :last-child {
+    position: relative;
+  }
+`;
+
+const GlassBackground = styled.div`
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background-color: ${({ theme }) => theme.colors.light.background};
+
+  @media (prefers-color-scheme: dark) {
+    background-color: ${({ theme }) => theme.colors.dark.background};
+  }
+`;
 
 const Home = () => {
   const dispatch = useDispatch();
   const { i18n } = useTranslation();
+  const glassRoot = useRef(null);
+  useNavigationGlass(glassRoot, i18n.resolvedLanguage);
   // React StrictMode remounts effects in development; initialize the incoming URL once.
   const initializedUrl = useRef(false);
 
@@ -67,21 +92,23 @@ const Home = () => {
   return (
     <>
       <LanguageSwitcher />
-      <PageContainer>
+      <GlassRoot ref={glassRoot}>
+        <GlassBackground aria-hidden="true" />
         <Menu />
+        <PageContainer>
+          <Hero />
+          <Divider />
 
-        <Hero />
-        <Divider />
+          <About />
+          <Divider />
 
-        <About />
-        <Divider />
+          <Work />
+          <Divider />
 
-        <Work />
-        <Divider />
-
-        <Skills />
-      </PageContainer>
-      <Contact />
+          <Skills />
+        </PageContainer>
+        <Contact />
+      </GlassRoot>
     </>
   );
 };
