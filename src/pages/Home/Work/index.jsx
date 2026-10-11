@@ -6,6 +6,7 @@ import { SectionTitle } from '../../../components/ui/Title';
 import { sectionUrlResolver } from '../../../i18n';
 import { setActiveProjectId } from '../../../redux/slices/activeSectionSlice';
 import { getProjectTitle, getVisibleProjects } from './Projects';
+import useScrollReveal from '../../../hooks/useScrollReveal';
 
 const ProjectItemsWrapper = styled.div`
   // margin-top: 1.5rem; /* Adjusted margin */
@@ -17,6 +18,7 @@ const Work = () => {
   const { t, i18n } = useTranslation();
   const dispatch = useDispatch();
   const activeProjectId = useSelector((state) => state.activeSection.activeProjectId);
+  const revealRef = useScrollReveal();
 
   const openProject = (projectId, slug) => {
     // Project details are separate history entries; section movement replaces its entry.
@@ -51,8 +53,8 @@ const Work = () => {
   };
 
   return (
-    <Container id="work">
-      <SectionTitle>{t('work.title')}</SectionTitle>
+    <Container id="work" ref={revealRef}>
+      <SectionTitle data-scroll-reveal-item>{t('work.title')}</SectionTitle>
 
       <ProjectItemsWrapper>
         {/* The same visible-project list powers both rendering and URL resolution. */}

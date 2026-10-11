@@ -7,6 +7,7 @@ import { SectionTitle } from '../../../components/ui/Title';
 import { SectionText } from '../../../components/ui/Text';
 import Photos from './Photos';
 import useScreenSize from '../../../hooks/useScreenSize';
+import useScrollReveal from '../../../hooks/useScrollReveal';
 
 // Styled components specific to About
 const Emph = styled.em``;
@@ -29,33 +30,34 @@ const Efteling = styled.span`
 const About = () => {
   const { t } = useTranslation();
   const { maxMobile } = useScreenSize();
+  const revealRef = useScrollReveal();
 
   return (
-    <Container id="about">
+    <Container id="about" ref={revealRef}>
       <TwoCol reverse>
         <div>
-          <SectionTitle>{t('about.title')}</SectionTitle>
-          <SectionText>
+          <SectionTitle data-scroll-reveal-item>{t('about.title')}</SectionTitle>
+          <SectionText data-scroll-reveal-item>
             <Trans i18nKey="about.story">
               Web developer from the Netherlands with <em>18 years of experience</em>, starting with MS Frontpage back in the day and continually advancing since then.
             </Trans>
           </SectionText>
-          <SectionText>
+          <SectionText data-scroll-reveal-item>
             <Trans i18nKey="about.uvp">
               I'm passionate about <em>solving complex problems with code</em> and delivering <em>innovative solutions</em> that help businesses grow.
             </Trans>
           </SectionText>
-          <SectionText>
+          <SectionText data-scroll-reveal-item>
             <Trans i18nKey="about.skills">
               I'm now working with <em>React</em> and <em>Django</em> to create dynamic web solutions. I'm also always exploring new tools to deliver <em>exceptional results</em>.
             </Trans>
           </SectionText>
-          <SectionText>
+          <SectionText data-scroll-reveal-item>
             <Trans i18nKey="about.job">
               I’m currently working as Full-Stack Developer at <em>Albert&nbsp;Heijn</em>, where I work on technology that enables millions of people to get their grocery essentials every day.
             </Trans>
           </SectionText>
-          <SectionText>
+          <SectionText data-scroll-reveal-item>
             <Trans i18nKey="about.hobbies" components={{ 1: <Efteling /> }} />
           </SectionText>
         </div>

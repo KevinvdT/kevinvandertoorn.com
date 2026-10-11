@@ -20,6 +20,7 @@ import {
 } from "react-icons/si";
 import { FaDocker as IconDocker } from "react-icons/fa";
 import { LuBraces as IconDrf } from "react-icons/lu";
+import useScrollReveal from '../../../hooks/useScrollReveal';
 // import IconMatlab from './icon-matlab.svg';
 
 const SkillSetsWrapper = styled.div`
@@ -29,14 +30,15 @@ const SkillSetsWrapper = styled.div`
 const Skills = () => {
   const { t } = useTranslation(); // Hook to get translation function
   const { isXs, maxMobile } = useScreenSize(); // Get screen size info
+  const revealRef = useScrollReveal();
 
   // Debug logging (remove in production)
   console.log('isXs:', isXs);
 
   return (
-    <Container id="skills">
-      <SectionTitle>{t('skills.title')}</SectionTitle>
-      <SectionText>{t('skills.description')}</SectionText>
+    <Container id="skills" ref={revealRef}>
+      <SectionTitle data-scroll-reveal-item>{t('skills.title')}</SectionTitle>
+      <SectionText data-scroll-reveal-item>{t('skills.description')}</SectionText>
 
       <SkillSetsWrapper>
         <TwoCol aligntop fixed>

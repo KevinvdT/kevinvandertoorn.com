@@ -49,7 +49,7 @@ const SkillItemName = styled(SectionText)`
 `;
 
 const SkillSet = ({ title, children }) => (
-  <SkillSetContainer>
+  <SkillSetContainer data-scroll-reveal-item>
     <SkillSetTitle as="div">{title}</SkillSetTitle>
     <SkillList>
       {children}

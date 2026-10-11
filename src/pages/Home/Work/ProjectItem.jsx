@@ -1,8 +1,6 @@
-import React, { useLayoutEffect, useRef, useState } from 'react';
+import React, { useState } from 'react';
 import { Trans, useTranslation } from 'react-i18next';
 import styled from 'styled-components';
-import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { SectionTitle } from '../../../components/ui/Title';
 import { SectionText } from '../../../components/ui/Text';
 import TwoCol from '../../../components/layout/TwoCol';
@@ -12,8 +10,6 @@ import Tag from '../../../components/ui/Tag';
 import { IoStar } from 'react-icons/io5';
 import { resolveTags } from './tagsRegistry';
 import useScreenSize from '../../../hooks/useScreenSize';
-
-gsap.registerPlugin(ScrollTrigger);
 
 const ProjectItemContainer = styled(TwoCol)`
   column-gap: 54px;
@@ -135,33 +131,6 @@ const ProjectItem = ({
   const { t } = useTranslation();
   const [isModalOpen, setIsModalOpen] = useState(false);
   const { maxMobile } = useScreenSize();
-  const containerRef = useRef(null);
-
-  useLayoutEffect(() => {
-    const context = gsap.context(() => {
-      gsap.fromTo(
-        containerRef.current,
-        {
-          opacity: 0,
-          y: 30,
-        },
-        {
-          opacity: 1,
-          y: 0,
-          duration: 0.8,
-          ease: 'power2.out',
-          scrollTrigger: {
-            trigger: containerRef.current,
-            start: 'top 80%',
-            once: true,
-            // markers: true,
-          },
-        }
-      );
-    }, containerRef);
-
-    return () => context.revert();
-  }, []);
 
   const handleReadMore = () => {
     if (typeof onOpenProject === 'function') {
@@ -183,7 +152,7 @@ const ProjectItem = ({
   return (
     <>
       <ProjectItemContainer
-        ref={containerRef}
+        data-scroll-reveal-item
         data-project-id={projectId}
         data-project-slug={slug}
         aligntop

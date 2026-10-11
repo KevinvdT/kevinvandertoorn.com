@@ -178,7 +178,7 @@ const CaptionText = styled.span`
 `;
 
 const Photos = () => (
-  <Wrapper>
+  <Wrapper data-scroll-reveal-item>
     <Collage>
       <Polaroid data-polaroid="spacex">
         <Shadow />

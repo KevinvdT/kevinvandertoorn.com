@@ -11,6 +11,7 @@ import Button from '../../../components/ui/Button';
 import { IoMdShare } from "react-icons/io";
 import { IoShareOutline } from "react-icons/io5";
 import useScreenSize from '../../../hooks/useScreenSize';
+import useScrollReveal from '../../../hooks/useScrollReveal';
 
 // Custom styled button that inherits from Button but uses SectionText colors
 const ShareButton = styled(Button)`
@@ -67,6 +68,7 @@ export const Label = styled(SectionText)`
 const Contact = () => {
   const { t } = useTranslation(); // Get the translation function
   const { maxMobile } = useScreenSize();
+  const revealRef = useScrollReveal();
 
   // Detect Apple platforms
   const isApplePlatform = () => {
@@ -101,16 +103,16 @@ const Contact = () => {
   return (
     <Footer isMobile={maxMobile}>
       <PageContainer>
-        <Container id="contact">
-          <SectionTitle>{t('contact.title')}</SectionTitle>
-          <ContactText>{t('contact.text')}</ContactText>
+        <Container id="contact" ref={revealRef}>
+          <SectionTitle data-scroll-reveal-item>{t('contact.title')}</SectionTitle>
+          <ContactText data-scroll-reveal-item>{t('contact.text')}</ContactText>
 
           <ContactTwoCol aligntop>
-            <ContactCol isMobile={maxMobile}>
+            <ContactCol isMobile={maxMobile} data-scroll-reveal-item>
               <Label as="div">{t('contact.connect')}</Label>
               <Email />
             </ContactCol>
-            <ContactCol isMobile={maxMobile}>
+            <ContactCol isMobile={maxMobile} data-scroll-reveal-item>
               <Label as="div">{t('contact.follow')}</Label>
               <div>
                 <ButtonLinkedIn />
